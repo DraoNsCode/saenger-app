@@ -25,6 +25,10 @@ Abgelöst, nicht weiterentwickeln:
 
 - Der Leitfaden als Notenzeile in `js/views/weg.js`. Bis zum Klostergarten zeigt sie nur die nötigen Stationen, die freiwilligen stehen im Blatt ihrer nötigen Station.
 
+In Frage gestellt (nicht weiterentwickeln, bis das neue System steht):
+
+- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“).
+
 Vorläufig:
 
 - Die Gestaltung in `css/app.css`. Die Optik wird erst nach der Geschichte des Weges gesucht.
@@ -35,7 +39,7 @@ Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
 
-Nächster Schritt: laut Fahrplan Baustein B (der Weg als Klostergarten: Bild und Optik). Die übrigen Stationen testet Daniel nebenher.
+Nächster Schritt: Baustein J (gezielt üben nach dem Weg, Verbindung zum Fortschritt im Garten) als Konzept in einer eigenen Sitzung, danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

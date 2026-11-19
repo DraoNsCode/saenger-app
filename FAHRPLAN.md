@@ -17,14 +17,16 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Bedarf von Daniel festgehalten (ENTSCHEIDUNGEN.md, 19.11.2026); Konzept offen; vor B | A |
 
 ## Vorgeschlagene Reihenfolge
 
 1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
-2. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet.
-3. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
-4. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
-5. **C, D, F, G, H** danach in der Reihenfolge, die gerade passt. C am besten in Paketen je Etappe. Über die Reihenfolge der Etappen will Daniel nachdenken, wenn alle Inhalte stehen.
+2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss.
+3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet.
+4. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
+5. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
+6. **C, D, F, G, H** danach in der Reihenfolge, die gerade passt. C am besten in Paketen je Etappe. Über die Reihenfolge der Etappen will Daniel nachdenken, wenn alle Inhalte stehen.
 
 ## Konten: Prüfung vom 19.11.2026
 

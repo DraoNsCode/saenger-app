@@ -1,4 +1,6 @@
 // Themen: gezielt üben
+// IN FRAGE GESTELLT: Daniel will ein besseres System für das gezielte Üben nach dem Weg, ohne Auswahl nach
+// Leicht, Mittel und Schwer (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“, 19.11.2026). Nicht weiterentwickeln.
 import { h, icon } from '../ui.js';
 import { THEMEN, STUFEN, STUFEN_NAME, thema, verfuegbar, uebungenImThema } from '../lernweg.js';
 import { zustand } from '../speicher.js';

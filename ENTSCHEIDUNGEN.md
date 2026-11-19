@@ -78,6 +78,13 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - „Die Stimmen im Chorsatz“ hat nur eine Stufe, auch im Reiter „Themen“.
 - Rückmeldung nach der Umsetzung (19.11.2026): Die Stationen von „Im Schlag tippen“, „Schritt oder Sprung“ und „Höher oder tiefer“ sowie der Abschluss passen. Die übrigen Stationen bleiben vorläufig, bis Daniel sie getestet hat.
 
+## Gezielt üben nach dem Weg (19.11.2026)
+
+- Wer einfach dem Weg folgt, für den passt die Auswahl der Übungen. Wer danach bestimmte Themen noch einmal üben will, braucht ein besseres System als den jetzigen Reiter „Themen“.
+- Die Auswahl nach Leicht, Mittel und Schwer gefällt Daniel nicht.
+- Außerdem braucht es ein System, das bisher nicht bearbeitete Übungen mit dem sichtbaren Fortschritt im Garten verknüpft und diese Verbindung zeigt.
+- Das wird vor Baustein B (Bild und Optik des Gartens) in einer eigenen Sitzung angegangen. Wie das System aussieht, ist offen.
+
 ## Arbeitsweise und Speichern (19.11.2026)
 
 - Welches Werkzeug für eine Aufgabe genutzt wird (Chat, Claude Code im Web, Desktop-App), überlässt Daniel Claude, je nachdem, was besser ist.
