@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md) und [WEG.md](WEG.md) und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
 
 ## Ziel und Rahmen
 
@@ -36,12 +36,12 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 
 ## Erste Version (19.11.2026)
 
-- Der Lernweg-Entwurf vom 18.11.2026 wird nicht weiterverfolgt. Der Lernweg wird neu entworfen.
+- Der Lernweg-Entwurf vom 18.11.2026 wird nicht weiterverfolgt. Der Lernweg wird neu entworfen. (Erledigt: Der neue Vorschlag steht in LERNWEG.md, Daniels Rückmeldung dazu im nächsten Abschnitt.)
 - Umfang der ersten Version: das Gerüst und spielbare Übungen für die ersten beiden Etappen.
 - Für das Bild des Leitfadens hat Daniel zunächst keine Vorgabe gemacht. (Später am selben Tag: Klostergarten, siehe unten.)
 - Die App liegt in einem eigenen GitHub-Repository und läuft über GitHub Pages.
 
-## Rückmeldung zum Lernweg-Vorschlag (19.11.2026, vorläufig)
+## Rückmeldung zum neuen Lernweg-Vorschlag in LERNWEG.md (19.11.2026, vorläufig)
 
 - Die Idee „eine Etappe, ein Thema“ und die Reihenfolge der elf Etappen passen erst einmal. Wenn alle Inhalte stehen, wird über die Reihenfolge noch einmal nachgedacht.
 - Die Notennamen kommen erst einmal vor den Ziffern.
