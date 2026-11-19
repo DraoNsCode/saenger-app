@@ -76,6 +76,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Wie schwer die nötigen Stationen bei Übungen zum Hören und Tippen sind, schätzt Claude selbst ein. Daniel korrigiert, falls nötig.
 - Die Abschluss-Station am Ende jeder Etappe bleibt eine nötige Station. Sie mischt Aufgaben aus den nötigen Stationen der Etappe.
 - „Die Stimmen im Chorsatz“ hat nur eine Stufe, auch im Reiter „Themen“.
+- Rückmeldung nach der Umsetzung (19.11.2026): Die Stationen von „Im Schlag tippen“, „Schritt oder Sprung“ und „Höher oder tiefer“ sowie der Abschluss passen. Die übrigen Stationen bleiben vorläufig, bis Daniel sie getestet hat.
 
 ## Arbeitsweise und Speichern (19.11.2026)
 

@@ -28,14 +28,14 @@ Abgelöst, nicht weiterentwickeln:
 Vorläufig:
 
 - Die Gestaltung in `css/app.css`. Die Optik wird erst nach der Geschichte des Weges gesucht.
-- Die Aufteilung der Stationen (LERNWEG.md, „Stationen der Etappen 1 und 2“), bis Daniel sie in der App getestet hat.
+- Die Aufteilung der Stationen (LERNWEG.md, „Stationen der Etappen 1 und 2“), bis Daniel sie in der App getestet hat. Bestätigt sind schon „Im Schlag tippen“, „Schritt oder Sprung“, „Höher oder tiefer“ und der Abschluss (ENTSCHEIDUNGEN.md).
 - Wann sich freiwillige Stationen öffnen (sobald die nötige Station derselben Übung geschafft ist): Vorschlag von Claude, so umgesetzt.
 
 Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
 
-Nächster Schritt: Daniel testet die Stationen in der App. Danach laut Fahrplan Baustein B (der Weg als Klostergarten: Bild und Optik).
+Nächster Schritt: laut Fahrplan Baustein B (der Weg als Klostergarten: Bild und Optik). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 
