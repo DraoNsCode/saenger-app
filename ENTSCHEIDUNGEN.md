@@ -9,7 +9,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Die Nutzung ist freiwillig, ein paar Minuten, ohne direkten Bezug zur Probe. Ziel ist die allgemeine musikalische Weiterentwicklung des Chors. Erfolg heißt: einige nutzen die App regelmäßig.
 - Web-App ohne Kosten, betreut von Daniel, möglichst über einige Jahre.
 - **15.11.2026:** Ein Teil der App ist nicht spielerisch, sondern unterstützt das eigene Üben, etwa Stimmbildung und das Üben der Lieder aus dem Repertoire.
-- **15.11.2026:** Speicherung pro Gerät reicht vorerst. Konten fände Daniel auch gut.
+- **15.11.2026:** Speicherung pro Gerät reicht vorerst. Konten fände Daniel auch gut. (Präzisiert am 19.11.2026, siehe „Arbeitsweise und Speichern“.)
 
 ## Spielprinzip und Inhalte (18.11.2026)
 
@@ -63,3 +63,10 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Spätblüher: Eine freiwillige Stufe, die Wissen aus einer späteren Etappe braucht, erscheint in ihrem Gartenbereich erst, wenn man diese Etappe erreicht hat.
 - Nicht alle Übungen funktionieren in verschiedenen Schwierigkeitsstufen, manche sind immer einfach.
 - Als Gedanken behalten: Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken aus dem Garten und Urkunden. Themen und Abzeichen im Beet sichtbar machen, aber nur, wenn es passt. Weiterüben nach dem Ziel, zum Beispiel über Gartenjahre, überzeugt noch nicht ganz.
+
+## Arbeitsweise und Speichern (19.11.2026)
+
+- Welches Werkzeug für eine Aufgabe genutzt wird (Chat, Claude Code im Web, Desktop-App), überlässt Daniel Claude, je nachdem, was besser ist.
+- Claude prüft vor neuen Arten von Aufgaben selbst, ob es passende Werkzeuge gibt (Bibliotheken, Skills, Plugins), und legt sie als Vorschlag vor. Dafür gibt es nur eine Regel in CLAUDE.md, keinen eigenen Skill und keine regelmäßige Prüfung.
+- Welche Strukturen sinnvoll sind (Plan, Prüf-Blickwinkel, Simulationen), überlässt Daniel Claude. Claude hat einen groben Fahrplan als Vorschlag ([FAHRPLAN.md](FAHRPLAN.md)) und einen Prüf-Blickwinkel für Texte (CLAUDE.md) gewählt.
+- Speichern: Konten, wenn sie kostenlos umsetzbar sind. Wenn nicht, ein Hinweis, die App auf dem Home-Bildschirm abzulegen (Safari löscht den Fortschritt sonst nach sieben Tagen ohne Besuch). Claude hat am 19.11.2026 geprüft, ob Konten kostenlos gehen. Das Ergebnis steht in FAHRPLAN.md und ist von Daniel noch nicht bestätigt.

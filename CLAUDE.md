@@ -5,7 +5,7 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 ## Welche Datei gilt
 
 - **ENTSCHEIDUNGEN.md** ist maßgeblich. Nur dort steht, was Daniel festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere.
-- **LERNWEG.md** und **WEG.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
+- **LERNWEG.md**, **WEG.md** und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
 - **Der Code** zeigt den umgesetzten Stand. Er kann hinter den Entscheidungen zurückliegen. Was abgelöst ist, steht in README.md unter „Stand“ und als Kommentar in der betroffenen Datei.
 - **Der Stand** (umgesetzt, abgelöst, vorläufig, nächster Schritt) steht nur in README.md unter „Stand“. Zu Beginn einer Sitzung dort nachlesen.
 
@@ -16,6 +16,13 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 - Daniel Belege zeigen statt nur „fertig“ zu melden: Testausgabe, Bericht, Screenshots der geänderten Stellen.
 - Claude kann nichts hören. Klang, musikalischen Inhalt und wie sich das Üben anfühlt, prüft Daniel. Bei Änderungen daran sagen, was er ausprobieren soll.
 - Die Tests halten auch Entscheidungen fest (6 aus 8, Schlüssel je Stimme). Ändert sich eine Entscheidung, den Test im selben Schritt anpassen.
+- Neue oder geänderte Texte für die Sänger (Fragen, Erklärungen, Rückmeldungen) zusätzlich in frischem Kontext, etwa durch einen Subagenten, aus Sicht eines Sängers ohne Notenkenntnis lesen lassen. Nur Unklares melden lassen, keine Stilfragen.
+
+## Arbeitsweise
+
+- Welches Werkzeug passt (Chat, Claude Code im Web, Desktop-App mit Vorschau), überlässt Daniel Claude. Ist für eine Aufgabe ein anderes Werkzeug deutlich besser, das zu Beginn kurz sagen.
+- Vor einer neuen Art von Aufgabe (z. B. Mikrofon, Grafik, Konten) kurz prüfen, ob eine erprobte Bibliothek, ein Skill oder ein Plugin sie besser oder einfacher löst. Treffer als Vorschlag mit Vor- und Nachteilen vorlegen. Nichts ohne Daniels Zustimmung einbauen.
+- FAHRPLAN.md zeigt, wo ein Auftrag im Ganzen steht. Ist ein Baustein fertig oder ändert sich etwas, die Tabelle dort anpassen.
 
 ## Regeln für Dokumente
 

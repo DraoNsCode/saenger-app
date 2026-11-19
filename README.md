@@ -5,6 +5,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 - [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md): was Daniel festgelegt hat, mit Datum. Diese Datei gilt.
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
 - [WEG.md](WEG.md): Vorschlag für den Weg als Klostergarten
+- [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für Bausteine und Reihenfolge der Entwicklung
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 
 ## Stand
