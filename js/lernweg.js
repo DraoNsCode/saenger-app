@@ -82,8 +82,15 @@ export const THEMEN = [
 export const STUFEN = ['leicht', 'mittel', 'schwer'];
 export const STUFEN_NAME = { leicht: 'Leicht', mittel: 'Mittel', schwer: 'Schwer', gemischt: 'Gemischt' };
 
-// Eine Runde gilt als geschafft ab diesem Anteil richtiger Aufgaben (6 von 8, bestätigt am 19.11.2026).
-export const SCHAFFT_AB = 0.75;
+// Wie viele richtige Aufgaben eine Runde braucht (ENTSCHEIDUNGEN.md, 19.11.2026):
+// 6 von 8; bei Runden mit 4 Aufgaben (Tipp-Übungen) alle 4.
+// Andere Rundenlängen gibt es nicht. Für sie ist nichts entschieden, deshalb hier ein Fehler statt einer Annahme.
+const NOETIG = { 8: 6, 4: 4 };
+
+export function noetigeRichtige(gesamt) {
+  if (!(gesamt in NOETIG)) throw new Error(`Für Runden mit ${gesamt} Aufgaben ist nicht festgelegt, wie viele richtig sein müssen.`);
+  return NOETIG[gesamt];
+}
 
 export function thema(id) {
   return THEMEN.find((t) => t.id === id);

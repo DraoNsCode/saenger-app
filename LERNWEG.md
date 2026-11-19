@@ -55,7 +55,7 @@ Im Code gibt es jede Übungsart in drei Schwierigkeiten. Was „mittel“ und �
 So ist es derzeit umgesetzt. Die Grenze von 6 aus 8 hat Daniel bestätigt.
 
 - Eine Runde hat 8 Aufgaben, bei den Übungen zum Tippen 4.
-- Eine Runde gilt als geschafft ab 75 % richtigen Aufgaben, also ab 6 von 8 oder 3 von 4.
+- Eine Runde gilt als geschafft ab 6 von 8 richtigen Aufgaben. Bei Runden mit 4 Aufgaben müssen alle 4 richtig sein (ENTSCHEIDUNGEN.md, 19.11.2026).
 - Eine Station ist geschafft, wenn eine Runde dort geschafft ist. Dann öffnet sich die nächste. Geschaffte Stationen bleiben offen.
 - Im Reiter „Themen“ sind alle fertigen Themen frei zugänglich, unabhängig vom Leitfaden.
 - Vor der ersten Runde einer Übung kommt eine kurze Erklärung. Sie lässt sich jederzeit über das Fragezeichen öffnen.

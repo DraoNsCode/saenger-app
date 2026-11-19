@@ -1,7 +1,7 @@
 // Der Leitfaden als geschwungene Notenzeile. Stationen sind Notenköpfe.
 // ABGELÖST: Diese Darstellung wird durch den Klostergarten ersetzt (ENTSCHEIDUNGEN.md, WEG.md). Nicht weiterentwickeln.
 import { h, icon, blatt } from '../ui.js';
-import { THEMEN, SCHAFFT_AB, verfuegbar } from '../lernweg.js';
+import { THEMEN, noetigeRichtige, verfuegbar } from '../lernweg.js';
 import { stationGeschafft, naechsteStation, fortschrittGesamt, zustand } from '../speicher.js';
 import { UEBUNGEN } from '../uebungen/index.js';
 import { zeigeErklaerung } from '../runde.js';
@@ -103,7 +103,7 @@ function stationBlatt(s, t, ti, zustandName) {
   const u = s.uebung ? UEBUNGEN[s.uebung] : null;
   const st = zustand().stationen[s.id];
   const aufgaben = u ? u.aufgaben : 8;
-  const noetig = Math.ceil(aufgaben * SCHAFFT_AB);
+  const noetig = noetigeRichtige(aufgaben);
   const teile = [
     h('p', { class: 'blatt-ueber' }, `Etappe ${ti + 1}: ${t.titel}`),
     h('h2', { class: 'blatt-titel' }, s.titel),

@@ -8,7 +8,8 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Zielgruppe sind alle Sängerinnen und Sänger, die wollen. Viele können keine Noten lesen. Sprache Deutsch, Geräte Handy, Tablet und PC.
 - Die Nutzung ist freiwillig, ein paar Minuten, ohne direkten Bezug zur Probe. Ziel ist die allgemeine musikalische Weiterentwicklung des Chors. Erfolg heißt: einige nutzen die App regelmäßig.
 - Web-App ohne Kosten, betreut von Daniel, möglichst über einige Jahre.
-- **15.11.2026:** Ein Teil der App ist nicht spielerisch, sondern unterstützt das eigene Üben, etwa Stimmbildung und das Üben der Lieder aus dem Repertoire.
+- Die Inhalte entstehen überwiegend neu. Die Sammlung im Repository „chor-uebungen“ dient nur bei Bedarf als Steinbruch.
+- **15.11.2026:** Ein Teil der App ist nicht spielerisch, sondern unterstützt das eigene Üben, etwa Stimmbildung und das Üben der Lieder aus dem Repertoire. Stimmbildungsübungen ersetzen keinen Lehrer, sie unterstützen das Üben zu Hause.
 - **15.11.2026:** Speicherung pro Gerät reicht vorerst. Konten fände Daniel auch gut. (Präzisiert am 19.11.2026, siehe „Arbeitsweise und Speichern“.)
 
 ## Spielprinzip und Inhalte (18.11.2026)
@@ -23,7 +24,8 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Das Mikrofon ist nur ein Zusatz, die meisten Übungen kommen ohne aus.
 - Intervalle, Notennamen und weitere musikalische Grundlagen gehören dazu. Stimme und Atem eher nur im Übe-Teil, nicht im Leitfaden.
 - Liedstellen können einen Schritt abschließen, sind aber nicht verpflichtend. Intervalle später mit Liedanfängen aus dem Chorliederbuch als Merklieder verbinden.
-- Die Lieder des Chorliederbuchs liegen nur als PDF vor.
+- Die Lieder des Chorliederbuchs liegen nur als PDF vor. Für das Übertragen in Noten gibt es Daniels Skill „noten-uebertragen“.
+- Etwas Gemeinsames für alle, zum Beispiel eine gemeinsame Aufgabe, ist auf eine spätere Version verschoben.
 
 ## Sprache des Chors
 
@@ -47,6 +49,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Die Notennamen kommen erst einmal vor den Ziffern.
 - Die Abzeichen bleiben erst einmal so. Später kann das Thema Abzeichen ganz neu angegangen werden.
 - Eine Runde gilt ab 6 von 8 richtigen Aufgaben als geschafft.
+- Bei Runden mit 4 Aufgaben (die Tipp-Übungen „Im Schlag tippen“ und „Rhythmus klopfen“) müssen alle 4 richtig sein. Für andere Rundenlängen ist nichts entschieden.
 - Das Bild des Leitfadens als Notenzeile mit Notenköpfen als Stationen passt. (Am selben Tag abgelöst, siehe „Der Weg als Klostergarten“.)
 - Die App spricht die Sängerinnen und Sänger mit „du“ an.
 
@@ -61,6 +64,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Nötige und freiwillige Stationen: Das Ziel erreicht man, wenn alle nötigen Stationen geschafft sind. Schwerere Stufen sind freiwillig. Sie entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten. (Die andere Möglichkeit, für das Ziel alle Stufen zu verlangen, ist damit verworfen.)
 - Nötig ist bei jeder Übung die Stufe, die den Kern ihrer Etappe abdeckt. Das ist nicht immer die leichteste Stufe. Übungen, die immer einfach sind, bekommen nur eine Station.
 - Spätblüher: Eine freiwillige Stufe, die Wissen aus einer späteren Etappe braucht, erscheint in ihrem Gartenbereich erst, wenn man diese Etappe erreicht hat.
+- Noch offen: Was mit leichteren Stufen unterhalb der nötigen Stufe passiert. Daniel hält es für logisch, sie als Vorstufe ebenfalls nötig zu machen, will das aber erst später entscheiden.
 - Nicht alle Übungen funktionieren in verschiedenen Schwierigkeitsstufen, manche sind immer einfach.
 - Als Gedanken behalten: Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken aus dem Garten und Urkunden. Themen und Abzeichen im Beet sichtbar machen, aber nur, wenn es passt. Weiterüben nach dem Ziel, zum Beispiel über Gartenjahre, überzeugt noch nicht ganz.
 

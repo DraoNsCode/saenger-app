@@ -5,7 +5,7 @@ import { audio, stopAlles } from './klang.js';
 import { UEBUNGEN } from './uebungen/index.js';
 import { zustand, aendere, ergebnisErfassen, naechsteStation } from './speicher.js';
 import { neueAbzeichen } from './abzeichen.js';
-import { SCHAFFT_AB, STUFEN_NAME, thema } from './lernweg.js';
+import { noetigeRichtige, STUFEN_NAME, thema } from './lernweg.js';
 import { medaille } from './medaille.js';
 
 const LOB = ['Richtig.', 'Genau.', 'Stimmt.', 'Gut gemacht.'];
@@ -224,7 +224,7 @@ export function starteRunde(wurzel, opt) {
     const { geschafft, stationNeu } = ergebnisErfassen({ themaId, uebungId, stufe, stationId, richtig, gesamt: anzahl });
     const neu = neueAbzeichen();
     const naechste = naechsteStation();
-    const noetig = Math.ceil(anzahl * SCHAFFT_AB);
+    const noetig = noetigeRichtige(anzahl);
     let satz;
     if (stationNeu) satz = naechste ? 'Die Station ist geschafft. Die nächste ist jetzt offen.' : 'Die Station ist geschafft.';
     else if (geschafft) satz = richtig === anzahl ? 'Alles richtig.' : 'Die Runde ist geschafft.';

@@ -8,7 +8,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
-| A. Stationen: nötig, freiwillig, Spätblüher | entschieden, nicht umgesetzt | – |
+| A. Stationen: nötig, freiwillig, Spätblüher | entschieden, nicht umgesetzt; offen, was mit leichteren Stufen unter der nötigen passiert (ENTSCHEIDUNGEN.md) | – |
 | B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden; Bild und Optik offen | A |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |

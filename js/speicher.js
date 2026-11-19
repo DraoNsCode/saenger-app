@@ -1,5 +1,5 @@
 // Fortschritt pro Gerät im Browser (localStorage).
-import { alleStationen, thema, verfuegbar, THEMEN, SCHAFFT_AB } from './lernweg.js';
+import { alleStationen, thema, verfuegbar, THEMEN, noetigeRichtige } from './lernweg.js';
 
 const SCHLUESSEL = 'choristen-app/v1';
 
@@ -63,7 +63,7 @@ function heute() {
 
 // Ergebnis einer Runde eintragen
 export function ergebnisErfassen({ themaId, uebungId, stufe, stationId, richtig, gesamt }) {
-  const geschafft = richtig / gesamt >= SCHAFFT_AB;
+  const geschafft = richtig >= noetigeRichtige(gesamt);
   let stationNeu = false;
   aendere((s) => {
     const tag = heute();

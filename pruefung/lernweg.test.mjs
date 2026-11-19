@@ -12,7 +12,7 @@ globalThis.localStorage = {
   removeItem: (k) => ablage.delete(k),
 };
 
-const { THEMEN, STUFEN, SCHAFFT_AB, alleStationen } = await import('../js/lernweg.js');
+const { THEMEN, STUFEN, noetigeRichtige, alleStationen } = await import('../js/lernweg.js');
 const { UEBUNGEN } = await import('../js/uebungen/index.js');
 const { ergebnisErfassen, zuruecksetzen } = await import('../js/speicher.js');
 
@@ -36,14 +36,25 @@ test('Themen: eindeutige ids', () => {
   assert.equal(new Set(ids).size, ids.length);
 });
 
-// Entscheidung vom 19.11.2026 (ENTSCHEIDUNGEN.md): Eine Runde gilt ab 6 von 8 richtigen als geschafft.
-test('Runde: ab 6 von 8 richtigen geschafft', () => {
-  assert.equal(Math.ceil(8 * SCHAFFT_AB), 6);
+// Entscheidungen vom 19.11.2026 (ENTSCHEIDUNGEN.md): Eine Runde gilt ab 6 von 8 richtigen als geschafft,
+// bei Runden mit 4 Aufgaben müssen alle 4 richtig sein.
+test('Runde: 6 von 8, bei 4 Aufgaben alle 4', () => {
+  assert.equal(noetigeRichtige(8), 6);
+  assert.equal(noetigeRichtige(4), 4);
   const station = alleStationen()[0];
   const runde = { themaId: station.themaId, uebungId: station.uebung, stufe: station.stufe, stationId: station.id, gesamt: 8 };
 
   zuruecksetzen();
   assert.equal(ergebnisErfassen({ ...runde, richtig: 5 }).geschafft, false, '5 von 8 darf nicht reichen');
   assert.equal(ergebnisErfassen({ ...runde, richtig: 6 }).geschafft, true, '6 von 8 muss reichen');
+  assert.equal(ergebnisErfassen({ ...runde, gesamt: 4, richtig: 3 }).geschafft, false, '3 von 4 darf nicht reichen');
+  assert.equal(ergebnisErfassen({ ...runde, gesamt: 4, richtig: 4 }).geschafft, true, '4 von 4 muss reichen');
   zuruecksetzen();
+});
+
+// Für andere Rundenlängen ist nichts entschieden. Braucht eine Übung eine andere Zahl, zuerst Daniel fragen.
+test('Rundenlängen: nur 8 oder 4 Aufgaben', () => {
+  for (const [id, u] of Object.entries(UEBUNGEN)) {
+    assert.ok([8, 4].includes(u.aufgaben), `${id} hat ${u.aufgaben} Aufgaben; dafür ist keine Grenze entschieden`);
+  }
 });
