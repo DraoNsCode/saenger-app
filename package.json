@@ -1,0 +1,14 @@
+{
+  "name": "saenger-app",
+  "private": true,
+  "type": "module",
+  "description": "Nur für die Prüfung während der Entwicklung. Die App selbst braucht weder npm noch einen Build-Schritt.",
+  "scripts": {
+    "test": "node --test pruefung/*.test.mjs",
+    "klicktest": "node pruefung/klicktest.mjs",
+    "pruefen": "node --test pruefung/*.test.mjs && node pruefung/klicktest.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.65.1"
+  }
+}
