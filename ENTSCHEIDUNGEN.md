@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md) und gelten erst, wenn Daniel sie bestätigt.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md) und [WEG.md](WEG.md) und gelten erst, wenn sie hier eingetragen sind.
 
 ## Ziel und Rahmen
 
@@ -38,7 +38,7 @@ Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen 
 
 - Der Lernweg-Entwurf vom 18.11.2026 wird nicht weiterverfolgt. Der Lernweg wird neu entworfen.
 - Umfang der ersten Version: das Gerüst und spielbare Übungen für die ersten beiden Etappen.
-- Für das Bild des Leitfadens hat Daniel keine Vorgabe gemacht.
+- Für das Bild des Leitfadens hat Daniel zunächst keine Vorgabe gemacht. (Später am selben Tag: Klostergarten, siehe unten.)
 - Die App liegt in einem eigenen GitHub-Repository und läuft über GitHub Pages.
 
 ## Rückmeldung zum Lernweg-Vorschlag (19.11.2026, vorläufig)
@@ -50,7 +50,7 @@ Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen 
 - Das Bild des Leitfadens als Notenzeile mit Notenköpfen als Stationen passt. (Am selben Tag abgelöst, siehe „Der Weg als Klostergarten“.)
 - Die App spricht die Sängerinnen und Sänger mit „du“ an.
 
-## Der Weg als Klostergarten (19.11.2026, in Arbeit)
+## Der Weg als Klostergarten (19.11.2026)
 
 - Die Logik des Weges bleibt: Fortschrittsanzeige und Leitfaden durch die Themen. Darstellung und Optik sollen sich ändern, ein Weg aus Notenzeilen ist zu langweilig.
 - Zuerst wird die Geschichte oder das Bild gesucht, danach die passende Optik, eventuell für die ganze App.
@@ -58,6 +58,8 @@ Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen 
 - Die Etappen sollen eine logische Reihenfolge und ein richtiges Ziel haben. Das Ziel ist die Kapelle.
 - Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md).
 - Der Garten zieht sich in die Länge: Man beginnt unten und bewegt sich beim Scrollen nach oben. Vorstellbar ist die Ansicht von oben oder schräg von oben.
-- Offen: Entweder erreicht man das Ziel erst nach allen Übungen in allen Schwierigkeitsstufen. Oder man erreicht es nach allen Übungen auf einer einfacheren Stufe, und die schweren Übungen entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten.
+- Nötige und freiwillige Stationen: Das Ziel erreicht man, wenn alle nötigen Stationen geschafft sind. Schwerere Stufen sind freiwillig. Sie entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten. (Die andere Möglichkeit, für das Ziel alle Stufen zu verlangen, ist damit verworfen.)
+- Nötig ist bei jeder Übung die Stufe, die den Kern ihrer Etappe abdeckt. Das ist nicht immer die leichteste Stufe. Übungen, die immer einfach sind, bekommen nur eine Station.
+- Spätblüher: Eine freiwillige Stufe, die Wissen aus einer späteren Etappe braucht, erscheint in ihrem Gartenbereich erst, wenn man diese Etappe erreicht hat.
 - Nicht alle Übungen funktionieren in verschiedenen Schwierigkeitsstufen, manche sind immer einfach.
 - Als Gedanken behalten: Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken aus dem Garten und Urkunden. Themen und Abzeichen im Beet sichtbar machen, aber nur, wenn es passt. Weiterüben nach dem Ziel, zum Beispiel über Gartenjahre, überzeugt noch nicht ganz.

@@ -1,4 +1,4 @@
-// Abzeichen (Vorschlag von Claude; Zahlen und Arten sind zur Prüfung gedacht).
+// Abzeichen. Vorläufig bestätigt (19.11.2026); das Thema soll später eventuell ganz neu angegangen werden (ENTSCHEIDUNGEN.md).
 import { THEMEN, verfuegbar } from './lernweg.js';
 import { zustand, aendere, rundenImThema, etappeGeschafft, fortschrittGesamt } from './speicher.js';
 

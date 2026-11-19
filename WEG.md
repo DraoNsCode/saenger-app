@@ -1,6 +1,6 @@
 # Der Weg als Klostergarten – Vorschlag zur Prüfung
 
-Stand 19.11.2026. Alles auf dieser Seite ist ein Vorschlag von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht.
+Stand 19.11.2026. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht; dort stehen auch Ziel (Kapelle), Richtung (von unten nach oben) und die Aufteilung in nötige und freiwillige Stationen. Im Code ist der Garten noch nicht umgesetzt.
 
 ## Gartenbereiche
 
@@ -23,7 +23,8 @@ Der Weg beginnt unten am Tor und führt nach oben zur Kapelle. Ein Bach begleite
 
 ## Offene Punkte
 
-- Ob das Ziel alle Schwierigkeitsstufen verlangt oder nur eine einfachere Stufe (siehe ENTSCHEIDUNGEN.md).
-- Welche Stufen bei jeder Übung sinnvoll sind.
-- Was an einer Station im Garten passiert und wie ein fertiger Bereich aussieht.
+- Für jede vorhandene Übung: welche Stufen sinnvoll sind, welche Station nötig ist, welche freiwillig sind und welche davon Spätblüher. Das ist der nächste Schritt.
+- Was an einer Station im Garten passiert.
+- Wie man sieht, wie weit ein Bereich ausgebaut ist. Vorschlag: angelegt (nötige Stationen geschafft), blühend, in voller Pracht (alle freiwilligen geschafft).
 - Vögel als musikalisches Element, wenn ein Bereich fertig ist.
+- Ansicht von oben oder schräg von oben.

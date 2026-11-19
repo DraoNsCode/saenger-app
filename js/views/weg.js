@@ -1,4 +1,5 @@
 // Der Leitfaden als geschwungene Notenzeile. Stationen sind Notenköpfe.
+// ABGELÖST: Diese Darstellung wird durch den Klostergarten ersetzt (ENTSCHEIDUNGEN.md, WEG.md). Nicht weiterentwickeln.
 import { h, icon, blatt } from '../ui.js';
 import { THEMEN, SCHAFFT_AB, verfuegbar } from '../lernweg.js';
 import { stationGeschafft, naechsteStation, fortschrittGesamt, zustand } from '../speicher.js';

@@ -1,15 +1,17 @@
-# Lernweg – Vorschlag zur Prüfung
+# Lernweg – Vorschlag
 
-Stand 19.11.2026. Alles auf dieser Seite ist ein Vorschlag von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht.
+Stand 19.11.2026. Diese Seite enthält Vorschläge von Claude. Was Daniel davon bestätigt oder geändert hat, steht in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md); bei Widersprüchen gilt ENTSCHEIDUNGEN.md.
 
 ## Die Idee
 
 - **Zwei Ebenen statt drei.** Der Leitfaden besteht aus Themen. Jedes Thema ist eine Etappe mit einigen Stationen. Dieselben Themen kann man im Reiter „Themen“ gezielt üben. Es gibt keine eigene Ebene „Bereiche“ mehr neben den Themen.
 - **Eine Etappe, ein musikalisches Thema.** Innerhalb einer Etappe bleibt man bei einer Sache. Tonhöhe und Rhythmus wechseln sich von Etappe zu Etappe ab.
-- **Eine Station ist eine Übungsart in einer Schwierigkeit.** Die letzte Station jeder Etappe mischt Aufgaben aus der ganzen Etappe.
+- **Stationen.** Im Code ist derzeit eine Station eine Übungsart in einer Schwierigkeit, und die letzte Station jeder Etappe mischt Aufgaben aus der ganzen Etappe. Inzwischen ist eine Aufteilung in nötige und freiwillige Stationen entschieden (ENTSCHEIDUNGEN.md, 19.11.2026). Sie ist noch nicht ausgearbeitet.
 - **Notennamen unabhängig von den Ziffern.** Alle Notennamen kommen in einer eigenen Etappe. Die Ziffern folgen später mit der Tonleiter, und zwar in jeder Tonart gleich.
 
 ## Die Etappen
+
+Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 
 | Nr. | Thema | Inhalt | Stand |
 | --- | --- | --- | --- |
@@ -25,7 +27,9 @@ Stand 19.11.2026. Alles auf dieser Seite ist ein Vorschlag von Claude. Festgeleg
 | 10 | Vorzeichen und Tonarten | Kreuz, Be und Auflösungszeichen, die 1 finden, Moll | |
 | 11 | Feinheiten im Rhythmus | Synkopen, Triolen und Sechzehntel | |
 
-## Stationen der Etappen 1 und 2
+## Stationen der Etappen 1 und 2 (derzeit im Code)
+
+Diese Aufteilung wird überarbeitet: je Übung eine nötige Station, dazu freiwillige Stufen und Spätblüher (ENTSCHEIDUNGEN.md, 19.11.2026). Die Spalte „Im Leitfaden“ beschreibt nur den jetzigen Code.
 
 | Etappe | Station | Übungsart | Im Leitfaden |
 | --- | --- | --- | --- |
@@ -44,9 +48,11 @@ Stand 19.11.2026. Alles auf dieser Seite ist ein Vorschlag von Claude. Festgeleg
 | 2 | Rhythmus klopfen | Einen Rhythmus lesen und tippen | leicht |
 | 2 | Abschluss | gemischt | leicht und mittel |
 
-Jede Übungsart gibt es in drei Schwierigkeiten. Was „mittel“ und „schwer“ jeweils bedeuten, steht in der App bei jeder Übung. Die Aufgaben entstehen jedes Mal neu.
+Im Code gibt es jede Übungsart in drei Schwierigkeiten. Was „mittel“ und „schwer“ jeweils bedeuten, steht in der App bei jeder Übung. Nicht bei jeder Übung sind drei Stufen sinnvoll; das wird mit der neuen Aufteilung geprüft. Die Aufgaben entstehen jedes Mal neu.
 
 ## Runden
+
+So ist es derzeit umgesetzt. Die Grenze von 6 aus 8 hat Daniel bestätigt.
 
 - Eine Runde hat 8 Aufgaben, bei den Übungen zum Tippen 4.
 - Eine Runde gilt als geschafft ab 75 % richtigen Aufgaben, also ab 6 von 8 oder 3 von 4.
@@ -55,6 +61,8 @@ Jede Übungsart gibt es in drei Schwierigkeiten. Was „mittel“ und „schwer�
 - Vor der ersten Runde einer Übung kommt eine kurze Erklärung. Sie lässt sich jederzeit über das Fragezeichen öffnen.
 
 ## Abzeichen
+
+Vorläufig bestätigt (19.11.2026). Später soll das Thema Abzeichen eventuell ganz neu angegangen werden, siehe ENTSCHEIDUNGEN.md.
 
 | Gruppe | Abzeichen | Bedingung |
 | --- | --- | --- |
@@ -68,15 +76,8 @@ Die Zahlen für Bronze, Silber und Gold gehen auf Daniels spontanes Beispiel zur
 
 ## Das Bild des Leitfadens
 
-Der Weg ist eine geschwungene Notenzeile mit fünf Linien. Die Stationen sind Notenköpfe darauf:
-
-- **geschafft:** ausgefüllter Notenkopf
-- **als Nächstes:** hohler Notenkopf mit goldenem Rand, leicht pulsierend
-- **noch nicht offen:** blasser hohler Notenkopf
-- **Abschluss einer Etappe:** größerer Notenkopf wie eine Ganze, golden, wenn geschafft
-
-Zwischen den Etappen steht eine Karte mit Nummer und Titel. Etappen in Vorbereitung sind gestrichelt und zeigen ihren Inhalt.
+Die Notenzeile, die im Code noch zu sehen ist, ist abgelöst. Der Leitfaden wird zum Klostergarten, siehe [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) und [WEG.md](WEG.md).
 
 ## Rückmeldung
 
-Am 19.11.2026 hat Daniel die Grundidee, die Reihenfolge, die Abzeichen, die Grenze für eine geschaffte Runde, das Bild und die Anrede vorläufig bestätigt. Die Einzelheiten stehen in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md).
+Am 19.11.2026 hat Daniel Grundidee, Reihenfolge, Abzeichen, die Grenze für eine geschaffte Runde und die Anrede vorläufig bestätigt. Das Bild als Notenzeile hat er zunächst bestätigt und am selben Tag durch den Klostergarten ersetzt.

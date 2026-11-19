@@ -2,12 +2,24 @@
 
 Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, Rhythmus und Gehör spielerisch üben. Ein Leitfaden führt durch die Themen, jedes Thema lässt sich auch gezielt üben, und es gibt Abzeichen.
 
-- [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md): was festgelegt ist
-- [LERNWEG.md](LERNWEG.md): der aktuelle Vorschlag für Lernweg, Abzeichen und Bild
+- [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md): was Daniel festgelegt hat, mit Datum. Diese Datei gilt.
+- [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
+- [WEG.md](WEG.md): Vorschlag für den Weg als Klostergarten
+- [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 
 ## Stand
 
-Das Gerüst steht: Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen. Spielbar sind die Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten in je drei Schwierigkeiten. Der Fortschritt wird im Browser des Geräts gespeichert.
+Umgesetzt (19.11.2026):
+
+- Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
+- Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten in je drei Schwierigkeiten
+- Fortschritt im Browser des Geräts
+
+Entschieden, aber noch nicht umgesetzt:
+
+- Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel. Die Notenzeile im Code ist abgelöst.
+- Stationen werden in nötige und freiwillige aufgeteilt, dazu Spätblüher.
+- Die Optik wird nach der Geschichte des Weges neu gesucht. Die jetzige Gestaltung ist ein erster Vorschlag.
 
 ## Technik
 

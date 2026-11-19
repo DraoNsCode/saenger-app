@@ -1,6 +1,7 @@
-// Der Lernweg (Vorschlag von Claude, zur Prüfung durch Daniel).
+// Der Lernweg. Grundidee und Reihenfolge der Etappen sind vorläufig bestätigt (ENTSCHEIDUNGEN.md, 19.11.2026).
 // Jedes Thema ist eine Etappe im Leitfaden. Dieselben Themen kann man gezielt üben.
-// Eine Station ist eine Übungsart in einer Schwierigkeit; die letzte Station einer Etappe mischt.
+// Stand des Codes: Eine Station ist eine Übungsart in einer Schwierigkeit; die letzte Station einer Etappe mischt.
+// Entschieden, aber noch nicht umgesetzt: nötige und freiwillige Stationen mit Spätblühern (ENTSCHEIDUNGEN.md).
 
 export const THEMEN = [
   {
@@ -81,7 +82,7 @@ export const THEMEN = [
 export const STUFEN = ['leicht', 'mittel', 'schwer'];
 export const STUFEN_NAME = { leicht: 'Leicht', mittel: 'Mittel', schwer: 'Schwer', gemischt: 'Gemischt' };
 
-// Eine Runde gilt als geschafft ab diesem Anteil richtiger Aufgaben (Vorschlag).
+// Eine Runde gilt als geschafft ab diesem Anteil richtiger Aufgaben (6 von 8, bestätigt am 19.11.2026).
 export const SCHAFFT_AB = 0.75;
 
 export function thema(id) {
