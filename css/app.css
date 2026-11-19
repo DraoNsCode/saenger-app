@@ -1,0 +1,1194 @@
+/* Choristen-App – Gestaltung
+   Farben angelehnt an das Chorliederbuch (Marineblau und Gold), Schrift für gute Lesbarkeit. */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+/* Ziffern aus Figtree: Atkinson Hyperlegible zeichnet die Null durchgestrichen */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/figtree-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/figtree-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('../fonts/eb-garamond-latin-500-normal.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('../fonts/eb-garamond-latin-600-normal.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --papier: #edf0f5;
+  --blatt: #ffffff;
+  --tinte: #15233f;
+  --tinte-2: #4b5a78;
+  --tinte-3: #7b87a0;
+  --linie: #cdd4e0;
+  --zeile: #94a2bb;
+  --gold: #d4af37;
+  --gold-tief: #9c7a12;
+  --gruen: #2d7a57;
+  --gruen-hell: #e2f2ea;
+  --rot: #b03a35;
+  --rot-hell: #f9e5e3;
+  --schatten: 0 1px 2px rgba(21, 35, 63, 0.08), 0 4px 14px rgba(21, 35, 63, 0.06);
+  --rad: 14px;
+  --schrift: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --titel: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --reiter-hoehe: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--tinte);
+  font: 18px/1.5 var(--schrift);
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100dvh;
+}
+
+#inhalt {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 18px calc(var(--reiter-hoehe) + 96px + env(safe-area-inset-bottom));
+}
+body.in-runde #inhalt {
+  padding-bottom: 0;
+}
+body.in-runde .reiter {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+h1 {
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 2.15rem;
+  line-height: 1.1;
+  margin: 0;
+}
+p {
+  text-wrap: pretty;
+}
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Kopf einer Seite */
+.seiten-kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 28px;
+  margin-bottom: 16px;
+}
+.unterzeile {
+  color: var(--tinte-2);
+  margin: 6px 0 0;
+  font-size: 1rem;
+}
+.abschnitt-titel {
+  font-size: 1.1rem;
+  margin: 28px 0 10px;
+}
+.zurueck-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+  color: var(--tinte-2);
+  text-decoration: none;
+  font-weight: 700;
+  min-height: 44px;
+}
+
+/* Knöpfe */
+.knopf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  font: 700 1.05rem/1.2 var(--schrift);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  color: var(--tinte);
+  background: var(--blatt);
+}
+.knopf.haupt {
+  background: var(--tinte);
+  color: #fff;
+}
+.knopf.haupt:hover {
+  background: #22345a;
+}
+.knopf.zweit {
+  border-color: var(--linie);
+}
+.knopf.zweit:hover {
+  border-color: var(--tinte-3);
+}
+.knopf.text {
+  background: transparent;
+  color: var(--tinte-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
+}
+.knopf.warnung {
+  background: var(--rot);
+  color: #fff;
+}
+.knopf.warnung-text {
+  background: transparent;
+  color: var(--rot);
+  border-color: #e7c3bf;
+}
+.knopf.breit {
+  width: 100%;
+}
+.icon-knopf {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--tinte);
+  cursor: pointer;
+}
+.icon-knopf:hover {
+  background: rgba(21, 35, 63, 0.07);
+}
+.text-knopf {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  color: var(--tinte-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.knopfreihe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.knopfreihe > * {
+  flex: 1 1 150px;
+}
+.knopfspalte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Reiter unten */
+.reiter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--blatt);
+  border-top: 1px solid var(--linie);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.reiter a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: var(--reiter-hoehe);
+  color: var(--tinte-3);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.reiter a[aria-current='page'] {
+  color: var(--tinte);
+  font-weight: 700;
+}
+.reiter a[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--gold);
+}
+@media (min-width: 700px) {
+  .reiter {
+    left: 50%;
+    right: auto;
+    width: 600px;
+    transform: translateX(-50%);
+    border: 1px solid var(--linie);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* Der Weg */
+.weg {
+  position: relative;
+  margin: 8px -6px 0;
+}
+.weg-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.etappe-karte {
+  position: relative;
+  z-index: 1;
+  max-width: 330px;
+  margin: -10px auto;
+  padding: 12px 18px 14px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+  text-align: center;
+}
+.etappe-karte:first-child {
+  margin-top: 0;
+}
+.etappe-karte.fertig {
+  box-shadow: inset 0 0 0 2px var(--gold), var(--schatten);
+}
+.etappe-karte.kommt {
+  background: var(--papier);
+  box-shadow: none;
+  border: 1.5px dashed var(--linie);
+}
+.etappe-karte.ziel {
+  background: var(--tinte);
+  color: #fff;
+}
+.etappe-karte.ziel .etappe-kurz {
+  color: #d5dbe7;
+}
+.etappe-nr {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--tinte-2);
+}
+.etappe-titel {
+  margin: 0;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+.kommt .etappe-titel {
+  color: var(--tinte-2);
+}
+.etappe-kurz {
+  margin: 6px 0 0;
+  font-size: 0.93rem;
+  line-height: 1.4;
+  color: var(--tinte-2);
+}
+.etappe-bald {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-tief);
+}
+
+.notenzeile .linie {
+  stroke: var(--zeile);
+}
+.notenzeile .grund {
+  stroke: var(--papier);
+}
+.notenzeile.blass {
+  opacity: 0.4;
+}
+.station .tippziel {
+  fill: transparent;
+}
+.station [role='button'] {
+  cursor: pointer;
+  outline: none;
+}
+.station [role='button']:focus-visible .tippziel {
+  stroke: var(--gold-tief);
+  stroke-width: 2.5;
+  stroke-dasharray: 5 4;
+}
+.station .kopf {
+  fill: var(--papier);
+  stroke: #a9b4c8;
+  stroke-width: 2;
+}
+.station.geschafft .kopf {
+  fill: var(--tinte);
+  stroke: var(--tinte);
+}
+.station.abschluss.geschafft .kopf {
+  fill: var(--gold);
+  stroke: var(--gold-tief);
+}
+.station .loch {
+  fill: var(--blatt);
+}
+.station.naechste .kopf {
+  fill: var(--blatt);
+  stroke: var(--gold-tief);
+  stroke-width: 3.4;
+}
+.station .halo {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: puls 2.4s ease-out infinite;
+}
+@keyframes puls {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  75%,
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+.station-titel {
+  font: 700 17px var(--schrift);
+  fill: var(--tinte);
+}
+.station.gesperrt .station-titel {
+  font-weight: 400;
+  fill: var(--tinte-2);
+}
+.station-zustand {
+  font: 14px var(--schrift);
+  fill: var(--tinte-2);
+}
+.station.naechste .station-zustand {
+  fill: var(--gold-tief);
+  font-weight: 700;
+}
+
+.weiter-leiste {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--reiter-hoehe) + env(safe-area-inset-bottom));
+  z-index: 15;
+  padding: 18px 18px 12px;
+  background: linear-gradient(to top, var(--papier) 62%, rgba(237, 240, 245, 0));
+  pointer-events: none;
+}
+.weiter-leiste .knopf {
+  display: flex;
+  max-width: 564px;
+  margin: 0 auto;
+  pointer-events: auto;
+  box-shadow: 0 6px 18px rgba(21, 35, 63, 0.18);
+}
+
+/* Blatt von unten */
+.blatt-huelle {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(21, 35, 63, 0);
+  transition: background 0.18s;
+}
+.blatt-huelle.auf {
+  background: rgba(21, 35, 63, 0.38);
+}
+.blatt-huelle.zu {
+  background: rgba(21, 35, 63, 0);
+}
+.blatt {
+  width: 100%;
+  max-width: 600px;
+  max-height: 88dvh;
+  overflow: auto;
+  padding: 8px 22px calc(22px + env(safe-area-inset-bottom));
+  border-radius: 20px 20px 0 0;
+  background: var(--blatt);
+  transform: translateY(100%);
+  transition: transform 0.2s ease-out;
+}
+.blatt-huelle.auf .blatt {
+  transform: none;
+}
+.blatt-huelle.zu .blatt {
+  transform: translateY(100%);
+}
+.blatt-griff {
+  width: 42px;
+  height: 5px;
+  margin: 4px auto 14px;
+  border-radius: 3px;
+  background: var(--linie);
+}
+.blatt-ueber {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--tinte-2);
+}
+.blatt-titel {
+  margin: 0 0 8px;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.65rem;
+  line-height: 1.15;
+}
+.blatt-hinweis {
+  color: var(--tinte-2);
+}
+.blatt-frage {
+  font-size: 1.1rem;
+  margin: 4px 0;
+}
+@media (min-width: 700px) {
+  .blatt-huelle {
+    align-items: center;
+  }
+  .blatt {
+    border-radius: 20px;
+    transform: translateY(24px);
+    opacity: 0;
+    transition: transform 0.2s ease-out, opacity 0.2s;
+  }
+  .blatt-huelle.auf .blatt {
+    opacity: 1;
+  }
+}
+
+/* Erklärung */
+.erklaerung {
+  margin: 0 0 10px;
+}
+.erklaerung-beispiele {
+  margin-top: 14px;
+}
+.runde-body > .erklaerung-inhalt {
+  padding: 18px 18px 8px;
+  margin-bottom: 16px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+}
+.erklaerung-inhalt .noten-karte {
+  box-shadow: none;
+  border: 1px solid var(--linie);
+}
+
+/* Notenbild */
+.noten-karte {
+  margin: 0 auto 16px;
+  padding: 14px 10px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+}
+.noten-karte.klein {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.noten-huelle {
+  margin: 0 auto;
+}
+.noten-huelle svg {
+  pointer-events: none;
+}
+.markiert path,
+.klingt path {
+  fill: var(--gold-tief) !important;
+  stroke: var(--gold-tief) !important;
+}
+.noten-karte .treffer path {
+  fill: var(--gruen) !important;
+  stroke: var(--gruen) !important;
+}
+.noten-karte .daneben path {
+  fill: var(--rot) !important;
+  stroke: var(--rot) !important;
+}
+.luecke {
+  fill: var(--gold-tief) !important;
+  font-weight: 700;
+}
+
+/* Runde */
+.runde {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.runde-kopf {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0 4px;
+  background: var(--papier);
+}
+.fortschritt {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.fp {
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #a9b4c8;
+  transform: rotate(-24deg);
+}
+.fp.jetzt {
+  border-color: var(--gold-tief);
+  border-width: 2.6px;
+}
+.fp.gut {
+  background: var(--tinte);
+  border-color: var(--tinte);
+}
+.fp.schlecht {
+  background: var(--rot-hell);
+  border-color: var(--rot);
+}
+.runde-titel {
+  margin: 2px 0 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--tinte-2);
+}
+.runde-stufe {
+  margin-left: 0.6em;
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: rgba(21, 35, 63, 0.07);
+  font-size: 0.8rem;
+}
+.runde-stufe:empty {
+  display: none;
+}
+.runde-body {
+  flex: 1;
+}
+.aufgabe-art {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--tinte-2);
+}
+.frage {
+  margin: 0 0 14px;
+  text-align: center;
+  font: 700 1.3rem/1.3 var(--schrift);
+}
+.frage-hinweis {
+  margin: -6px 0 12px;
+  text-align: center;
+  color: var(--tinte-2);
+}
+.anhoeren {
+  display: flex;
+  margin: 0 auto 16px;
+}
+
+.optionen {
+  display: grid;
+  gap: 10px;
+}
+.spalten-1 {
+  grid-template-columns: 1fr;
+}
+.spalten-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.spalten-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.spalten-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 60px;
+  padding: 10px 6px;
+  border-radius: 12px;
+  border: 2px solid var(--linie);
+  background: var(--blatt);
+  color: var(--tinte);
+  font: 700 1.08rem/1.2 var(--schrift);
+  cursor: pointer;
+}
+.option:hover {
+  border-color: var(--tinte-3);
+}
+.option.mit-bild {
+  padding: 4px 6px;
+}
+.option-noten {
+  width: 100%;
+}
+.mit-bild .option-text {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--tinte-2);
+}
+.beantwortet .option {
+  cursor: default;
+}
+.beantwortet .option:not(.richtig):not(.falsch):not(.loesung) {
+  opacity: 0.5;
+}
+.option.richtig,
+.option.loesung {
+  border-color: var(--gruen);
+  background: var(--gruen-hell);
+}
+.option.falsch {
+  border-color: var(--rot);
+  background: var(--rot-hell);
+}
+
+.runde-fuss {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 18px -18px 0;
+  padding: 14px 18px calc(14px + env(safe-area-inset-bottom));
+  border-top: 3px solid var(--linie);
+  background: var(--blatt);
+  box-shadow: 0 -6px 20px rgba(21, 35, 63, 0.08);
+  animation: hoch 0.18s ease-out;
+}
+.runde-fuss[hidden] {
+  display: none;
+}
+.runde-fuss.ist-richtig {
+  border-top-color: var(--gruen);
+}
+.runde-fuss.ist-richtig strong {
+  color: var(--gruen);
+}
+.runde-fuss.ist-falsch {
+  border-top-color: var(--rot);
+}
+.runde-fuss.ist-falsch strong {
+  color: var(--rot);
+}
+.runde-fuss .knopf {
+  width: 100%;
+}
+@keyframes hoch {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+
+/* Tippen */
+.tipp-status {
+  min-height: 2.4em;
+  margin: 4px 0;
+  text-align: center;
+  font-weight: 700;
+}
+.zaehlen {
+  font-family: var(--titel);
+  font-size: 2.1rem;
+  line-height: 1;
+  color: var(--gold-tief);
+}
+.tipp-flaeche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  height: 156px;
+  margin-top: 12px;
+  border-radius: 18px;
+  border: 2px dashed var(--linie);
+  background: var(--blatt);
+  color: var(--tinte);
+  font: 700 1.2rem var(--schrift);
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+.tipp-flaeche small {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--tinte-3);
+}
+.tipp-flaeche:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.tipp-flaeche:not(:disabled) {
+  border-style: solid;
+  border-color: var(--tinte);
+}
+.tipp-flaeche.gedrueckt {
+  background: var(--tinte);
+  color: #fff;
+}
+.tipp-flaeche.gedrueckt small {
+  color: #c9d1e0;
+}
+.schlag-punkte {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: -4px 0 10px;
+}
+.schlag-punkt {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d7dde7;
+}
+.schlag-punkt.an {
+  background: var(--gold);
+}
+.schlag-punkt.treffer {
+  background: var(--gruen);
+}
+.schlag-punkt.daneben {
+  background: var(--rot-hell);
+  box-shadow: inset 0 0 0 2.5px var(--rot);
+}
+.knopfreihe.nachher {
+  justify-content: center;
+  margin-top: 12px;
+}
+.knopfreihe.nachher:empty {
+  display: none;
+}
+
+/* Ergebnis */
+.ergebnis {
+  padding-top: 52px;
+  text-align: center;
+}
+.ergebnis-zahl {
+  font-size: 3rem;
+}
+.ergebnis-punkte {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.ergebnis-satz {
+  max-width: 30em;
+  margin: 10px auto 26px;
+  font-size: 1.1rem;
+}
+.neue-abzeichen {
+  max-width: 380px;
+  margin: 0 auto 24px;
+  padding: 14px 16px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+  text-align: left;
+}
+.neue-abzeichen h3 {
+  margin: 0 0 8px;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.abzeichen-neu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0;
+}
+.abzeichen-neu div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.abzeichen-neu span {
+  font-size: 0.9rem;
+  color: var(--tinte-2);
+}
+
+/* Themen */
+.themen-liste,
+.uebungen-liste,
+.abzeichen-raster,
+.ueben-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.themen-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.themen-eintrag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+  text-decoration: none;
+}
+.themen-eintrag.kommt {
+  background: transparent;
+  box-shadow: none;
+  border: 1.5px dashed var(--linie);
+  color: var(--tinte-2);
+}
+.themen-nr {
+  flex: none;
+  width: 1.5em;
+  text-align: center;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--gold-tief);
+}
+.kommt .themen-nr {
+  color: var(--tinte-3);
+}
+.themen-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+.themen-text span {
+  margin-top: 2px;
+  font-size: 0.92rem;
+  color: var(--tinte-2);
+}
+.themen-metall {
+  flex: none;
+  display: grid;
+}
+.thema-medaillen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 4px 0 16px;
+}
+.thema-medaille {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 6px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+  text-align: center;
+  font-size: 0.9rem;
+}
+.thema-medaille span {
+  font-size: 0.82rem;
+  color: var(--tinte-2);
+}
+.thema-gemischt {
+  margin-bottom: 16px;
+}
+.uebungen-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.uebung-karte {
+  padding: 14px 16px 16px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+}
+.uebung-kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.uebung-kopf h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.stufen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.stufe-knopf {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 96px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid var(--linie);
+  text-decoration: none;
+}
+.stufe-knopf:hover {
+  border-color: var(--tinte-3);
+}
+.stufe-text {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: var(--tinte-2);
+}
+.stufe-zahl {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-tief);
+}
+
+/* Abzeichen */
+.abzeichen-gruppe h2 {
+  margin: 24px 0 2px;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.gruppe-text {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: var(--tinte-2);
+}
+.abzeichen-raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.abzeichen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+  text-align: center;
+}
+.abzeichen:not(.an) {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: none;
+}
+.abzeichen strong {
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+.abzeichen-stand {
+  font-size: 0.82rem;
+  color: var(--tinte-2);
+}
+.balken {
+  width: 80%;
+  height: 5px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #dde2ea;
+}
+.balken span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+}
+
+/* Üben */
+.ueben-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ueben-karte {
+  padding: 18px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+}
+.ueben-karte h2 {
+  margin: 0 0 6px;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.ueben-karte p {
+  margin: 0 0 6px;
+  color: var(--tinte-2);
+}
+
+/* Start und Einstellungen */
+.seite-start {
+  padding-top: 56px;
+}
+.start-titel {
+  font-size: 2.7rem;
+}
+.start-text {
+  max-width: 32em;
+  font-size: 1.12rem;
+}
+.seite-start h2 {
+  margin: 32px 0 0;
+  font-size: 1.25rem;
+}
+.stimm-wahl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+.stimm-knopf {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--linie);
+  background: var(--blatt);
+  color: var(--tinte);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.stimm-knopf:hover {
+  border-color: var(--tinte-3);
+}
+.stimm-knopf strong {
+  font-size: 1.2rem;
+}
+.stimm-knopf span {
+  font-size: 0.9rem;
+  color: var(--tinte-2);
+}
+.stimm-knopf.gewaehlt {
+  border-color: var(--tinte);
+  box-shadow: inset 0 0 0 1px var(--tinte);
+}
+.lautstaerke {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.lautstaerke input[type='range'] {
+  flex: 1 1 160px;
+  accent-color: var(--tinte);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .station .halo {
+    opacity: 0.5;
+  }
+}
