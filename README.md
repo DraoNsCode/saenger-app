@@ -39,11 +39,13 @@ Vorläufig:
 Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
-- Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist. Heute sind im Reiter „Themen“ alle fertigen Themen sofort frei.
+- Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist, also wenn seine nötigen Stationen geschafft sind (Claudes Wahl, ENTSCHEIDUNGEN.md). Der Reiter „Themen“ zeigt alle Themen, gesperrte sichtbar. Heute sind dort alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 - Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen für lange nicht geübte oder fehleranfällige Übungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
 
-Nächster Schritt: Baustein J abschließen. Offen sind noch zwei Fragen in GEZIELT-UEBEN.md: wann ein Thema als freigeschaltet gilt (Frage 1) und welche Themen der Reiter „Themen“ zeigt (Frage 8). Danach Baustein B. Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
+Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
+
+Nächster Schritt: Baustein B (Bild und Optik des Gartens). Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher. Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

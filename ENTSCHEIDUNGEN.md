@@ -88,7 +88,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 Klärung am 19.11.2026 (Baustein J):
 
 - „Nach dem Weg“ meint beides: nach einer Etappe, während man noch unterwegs ist, und nach der Kapelle.
-- Ein Thema kann man erst gezielt üben, wenn man es im Weg freigeschaltet hat. Im Code sind im Reiter „Themen“ noch alle fertigen Themen sofort frei. Ob ein Thema mit dem Erreichen seines Bereichs freigeschaltet ist oder erst mit seinen nötigen Stationen, ist nicht entschieden.
+- Ein Thema kann man erst gezielt üben, wenn man es im Weg freigeschaltet hat. Im Code sind im Reiter „Themen“ noch alle fertigen Themen sofort frei. Ob ein Thema mit dem Erreichen seines Bereichs freigeschaltet ist oder erst mit seinen nötigen Stationen, hat Daniel am selben Tag Claude überlassen (siehe unten).
 - Üben außerhalb des Weges zählt für den Garten. Im Code zählen Runden im Reiter „Themen“ noch nicht für die Stationen.
 - Daniel sieht keinen Unterschied zwischen „gezielt üben“ und „eine freiwillige Station machen“.
 - Wer im Weg den nächsten Bereich erreicht, hat im alten Thema nur die nötigen Stationen geschafft, nicht alles. Auch an der Kapelle können in den Bereichen noch Stellen offen sein oder sich mit freiwilligen Übungen weiter ausbauen lassen.
@@ -108,7 +108,7 @@ Antworten auf die offenen Fragen in GEZIELT-UEBEN.md (19.11.2026, Baustein J):
 - Daniel geht weiter von zwei Zugängen aus: dem Garten (Weg) und dem Reiter „Themen“.
 - Vorstellbar, nicht entschieden: Der Reiter „Themen“ listet alle Themen, dort wählt man selbst. Eine Unterseite im Weg zeigt nur den Fortschritt und wählt die passenden offenen Übungen automatisch.
 - Bronze, Silber und Gold, die heute an Leicht, Mittel und Schwer hängen, werden erst in Baustein F neu gefasst.
-- Noch offen: wann ein Thema als freigeschaltet gilt (Daniel hat nach dem Unterschied gefragt; Erklärung in GEZIELT-UEBEN.md, Frage 1). Die Richtung ist am selben Tag gewählt, siehe unten.
+- ~~Noch offen: wann ein Thema als freigeschaltet gilt.~~ (Am selben Tag Claude überlassen, siehe unten.) Die Richtung ist am selben Tag gewählt, siehe unten.
 
 Gewählte Richtung (19.11.2026, Baustein J):
 
@@ -116,6 +116,12 @@ Gewählte Richtung (19.11.2026, Baustein J):
 - Ausbau: Was geschafft ist, bleibt geschafft. Der Fortschritt eines Themas steigt nur.
 - Pflege: Die App stößt zusätzlich Wiederholungen an, für Übungen, die lange nicht geübt wurden oder oft Fehler hatten. Kleine Zeichen im Garten zeigen das. Verloren geht dabei nichts.
 - Nicht entschieden: wie die Zeichen aussehen, ab wann eine Übung als lange nicht geübt oder fehleranfällig gilt und in welcher Reihenfolge die App auswählt. Die Einzelheiten von Richtung 3 in GEZIELT-UEBEN.md bleiben Vorschlag.
+
+Von Daniel Claude überlassen (19.11.2026, Baustein J). So hat Claude gewählt, Daniel korrigiert, falls nötig:
+
+- Freischalten: Ein Thema ist im Reiter „Themen“ und in der automatischen Auswahl frei, sobald seine nötigen Stationen geschafft sind, also mit dem Abschluss seiner Etappe. Im Weg ändert sich dadurch nichts. Begründung: Der Weg bringt Neues, der Reiter wiederholt und baut aus. Das passt zu „gezielt üben nach einer Etappe“, und Weg und Reiter zeigen für das aktuelle Thema nicht dasselbe.
+- Der Reiter „Themen“ zeigt alle Themen. Noch nicht freigeschaltete stehen sichtbar, aber gesperrt in der Liste. Begründung: Man sieht, was noch kommt, und es entspricht Daniels Idee, dort alle Themen aufzulisten.
+- Damit ist das Konzept für Baustein J abgeschlossen. Was erst in Baustein B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
 
 ## Arbeitsweise und Speichern (19.11.2026)
 

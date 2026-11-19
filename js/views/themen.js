@@ -1,7 +1,8 @@
 // Themen: gezielt üben
 // IN FRAGE GESTELLT: Daniel will ein besseres System für das gezielte Üben nach dem Weg, ohne Auswahl nach
 // Leicht, Mittel und Schwer (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“, 19.11.2026). Nicht weiterentwickeln.
-// Entschieden, hier noch nicht umgesetzt (19.11.2026): Ein Thema übt man erst, wenn es im Weg freigeschaltet ist;
+// Entschieden, hier noch nicht umgesetzt (19.11.2026): Ein Thema übt man erst, wenn es im Weg freigeschaltet ist,
+// d. h. seine nötigen Stationen geschafft sind; die Liste zeigt alle Themen, gesperrte sichtbar (Claudes Wahl);
 // Üben außerhalb des Weges zählt für den Garten. Gewählt ist Richtung 3 aus GEZIELT-UEBEN.md (Ausbau und Pflege,
 // ENTSCHEIDUNGEN.md, 19.11.2026); die Einzelheiten sind noch Vorschlag.
 import { h, icon } from '../ui.js';

@@ -17,12 +17,12 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
-| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Richtung 3 gewählt: Ausbau und Pflege (ENTSCHEIDUNGEN.md, 19.11.2026); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; offen: Freischalten, Inhalt des Reiters „Themen“; vor B | A |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege (ENTSCHEIDUNGEN.md); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen | A |
 
 ## Vorgeschlagene Reihenfolge
 
 1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
-2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss.
+2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss. (Konzept erledigt am 19.11.2026.) Die Teile von J ohne Gartenbild könnten vor oder mit B umgesetzt werden, offene Stellen und Pflege-Zeichen im Garten gehören zu B (GEZIELT-UEBEN.md).
 3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet.
 4. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
 5. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
