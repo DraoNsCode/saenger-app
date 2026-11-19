@@ -17,7 +17,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
-| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Klärung und Antworten eingetragen (ENTSCHEIDUNGEN.md, 19.11.2026); drei Richtungen als Vorschlag in GEZIELT-UEBEN.md; offen: Richtung, Freischalten; vor B | A |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Richtung 3 gewählt: Ausbau und Pflege (ENTSCHEIDUNGEN.md, 19.11.2026); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; offen: Freischalten, Inhalt des Reiters „Themen“; vor B | A |
 
 ## Vorgeschlagene Reihenfolge
 

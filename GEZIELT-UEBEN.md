@@ -1,6 +1,6 @@
 # Gezielt üben und der Garten – Vorschlag zur Prüfung
 
-Stand 19.11.2026, Baustein J. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht (Abschnitt „Gezielt üben nach dem Weg“). Daniel hat noch keine Richtung gewählt.
+Stand 19.11.2026, Baustein J. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht (Abschnitt „Gezielt üben nach dem Weg“). Am 19.11.2026 hat Daniel **Richtung 3** gewählt, Ausbau und Pflege nebeneinander. Was davon festgelegt ist, steht in ENTSCHEIDUNGEN.md. Die Einzelheiten unten bleiben Vorschlag. Die Richtungen 1 und 2 bleiben zum Nachlesen stehen.
 
 Die Richtungen gehen vom Ziel aus, nicht vom heutigen Code. Im Code gibt es noch den Reiter „Themen“ mit Leicht, Mittel und Schwer; er ist in Frage gestellt (README.md, „Stand“).
 
@@ -108,7 +108,7 @@ Gemeinsam ist allen drei Richtungen, was Daniel am 19.11.2026 geklärt hat (ENTS
 
 ## Fragen, die in jeder Richtung offen sind
 
-Daniels Antworten vom 19.11.2026 stehen in ENTSCHEIDUNGEN.md. Offen sind noch Frage 1 und die Wahl der Richtung.
+Daniels Antworten vom 19.11.2026 stehen in ENTSCHEIDUNGEN.md. Offen sind noch Frage 1 und Frage 8.
 
 1. **Wann ist ein Thema freigeschaltet?** Sobald man seinen Bereich im Weg erreicht, oder erst, wenn seine nötigen Stationen geschafft sind? Der Unterschied betrifft das Thema, in dem man gerade unterwegs ist:
    - *Mit Erreichen des Bereichs:* Das aktuelle Thema steht schon im Reiter „Themen“, und die automatische Auswahl kann daraus vorschlagen, während man im Weg dessen nötige Stationen noch nicht alle hat. Mehr Freiheit, aber Weg und Reiter zeigen für das aktuelle Thema dasselbe, und man kann sich im Ausbau verlieren, bevor die Etappe fertig ist.
@@ -120,6 +120,7 @@ Daniels Antworten vom 19.11.2026 stehen in ENTSCHEIDUNGEN.md. Offen sind noch Fr
 5. **Ist der Garten selbst das Menü?** Bereich antippen, Balken und Knopf sehen. Dann bräuchte es keinen eigenen Reiter für die Themen. Oder beides.
 6. **Über alle Themen oder je Thema?** Ein „Heute üben“ über alle freigeschalteten Themen, eines je Thema, oder beides.
 7. **Bronze, Silber und Gold** zählen heute Runden nach Leicht, Mittel und Schwer. Fällt diese Auswahl weg, brauchen sie eine neue Grundlage. Jetzt mitentscheiden oder erst bei Baustein F?
+8. **Welche Themen stehen im Reiter „Themen“?** Zu Daniels Idee, dort alle Themen aufzulisten: Stehen noch nicht freigeschaltete Themen sichtbar, aber gesperrt in der Liste, oder nur die freigeschalteten? Und wonach wählt man dort statt nach Leicht, Mittel und Schwer? Naheliegend wären die Inhalte der Stationen, etwa „mit Hilfslinien“ oder „ohne Klick“.
 
 ## Was „bisher nicht bearbeitet“ und „Schwierigkeit“ heißen können
 

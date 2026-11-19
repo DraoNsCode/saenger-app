@@ -28,7 +28,7 @@ Abgelöst, nicht weiterentwickeln:
 
 In Frage gestellt (nicht weiterentwickeln, bis das neue System steht):
 
-- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“). Drei Richtungen dafür stehen als Vorschlag in GEZIELT-UEBEN.md, keine ist gewählt.
+- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“). Daniel hat Richtung 3 aus GEZIELT-UEBEN.md gewählt (Ausbau und Pflege nebeneinander). Die Einzelheiten sind noch Vorschlag.
 
 Vorläufig:
 
@@ -41,8 +41,9 @@ Entschieden, aber noch nicht umgesetzt:
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
 - Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist. Heute sind im Reiter „Themen“ alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
+- Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen für lange nicht geübte oder fehleranfällige Übungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
 
-Nächster Schritt: Baustein J abschließen. Offen sind noch die Richtung (oder eine Mischung) aus GEZIELT-UEBEN.md und die Frage, wann ein Thema als freigeschaltet gilt. Die übrigen Fragen hat Daniel beantwortet (ENTSCHEIDUNGEN.md). Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
+Nächster Schritt: Baustein J abschließen. Offen sind noch zwei Fragen in GEZIELT-UEBEN.md: wann ein Thema als freigeschaltet gilt (Frage 1) und welche Themen der Reiter „Themen“ zeigt (Frage 8). Danach Baustein B. Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

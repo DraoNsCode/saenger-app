@@ -83,7 +83,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Wer einfach dem Weg folgt, für den passt die Auswahl der Übungen. Wer danach bestimmte Themen noch einmal üben will, braucht ein besseres System als den jetzigen Reiter „Themen“.
 - Die Auswahl nach Leicht, Mittel und Schwer gefällt Daniel nicht.
 - Außerdem braucht es ein System, das bisher nicht bearbeitete Übungen mit dem sichtbaren Fortschritt im Garten verknüpft und diese Verbindung zeigt.
-- Das wird vor Baustein B (Bild und Optik des Gartens) in einer eigenen Sitzung angegangen. Wie das System aussieht, ist offen. (Klärung in derselben Sitzung siehe unten. Drei Richtungen als Vorschlag in [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), keine davon gewählt.)
+- Das wird vor Baustein B (Bild und Optik des Gartens) in einer eigenen Sitzung angegangen. Wie das System aussieht, ist offen. (Klärung in derselben Sitzung siehe unten. Drei Richtungen als Vorschlag in [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md); Daniel hat am selben Tag Richtung 3 gewählt, siehe unten.)
 
 Klärung am 19.11.2026 (Baustein J):
 
@@ -108,7 +108,14 @@ Antworten auf die offenen Fragen in GEZIELT-UEBEN.md (19.11.2026, Baustein J):
 - Daniel geht weiter von zwei Zugängen aus: dem Garten (Weg) und dem Reiter „Themen“.
 - Vorstellbar, nicht entschieden: Der Reiter „Themen“ listet alle Themen, dort wählt man selbst. Eine Unterseite im Weg zeigt nur den Fortschritt und wählt die passenden offenen Übungen automatisch.
 - Bronze, Silber und Gold, die heute an Leicht, Mittel und Schwer hängen, werden erst in Baustein F neu gefasst.
-- Noch offen: wann ein Thema als freigeschaltet gilt (Daniel hat nach dem Unterschied gefragt) und welche Richtung aus GEZIELT-UEBEN.md weiterverfolgt wird.
+- Noch offen: wann ein Thema als freigeschaltet gilt (Daniel hat nach dem Unterschied gefragt; Erklärung in GEZIELT-UEBEN.md, Frage 1). Die Richtung ist am selben Tag gewählt, siehe unten.
+
+Gewählte Richtung (19.11.2026, Baustein J):
+
+- Daniel wählt Richtung 3 aus GEZIELT-UEBEN.md: Ausbau und Pflege nebeneinander.
+- Ausbau: Was geschafft ist, bleibt geschafft. Der Fortschritt eines Themas steigt nur.
+- Pflege: Die App stößt zusätzlich Wiederholungen an, für Übungen, die lange nicht geübt wurden oder oft Fehler hatten. Kleine Zeichen im Garten zeigen das. Verloren geht dabei nichts.
+- Nicht entschieden: wie die Zeichen aussehen, ab wann eine Übung als lange nicht geübt oder fehleranfällig gilt und in welcher Reihenfolge die App auswählt. Die Einzelheiten von Richtung 3 in GEZIELT-UEBEN.md bleiben Vorschlag.
 
 ## Arbeitsweise und Speichern (19.11.2026)
 
