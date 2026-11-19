@@ -1,5 +1,5 @@
 // Abzeichen. Vorläufig bestätigt (19.11.2026); das Thema soll später eventuell ganz neu angegangen werden (ENTSCHEIDUNGEN.md).
-import { THEMEN, verfuegbar } from './lernweg.js';
+import { THEMEN, verfuegbar, noetigeStationen } from './lernweg.js';
 import { zustand, aendere, rundenImThema, etappeGeschafft, fortschrittGesamt } from './speicher.js';
 
 // Themen-Abzeichen in Stufen. Eine Runde zählt, wenn sie geschafft ist.
@@ -46,7 +46,9 @@ export function alleAbzeichen() {
 
   THEMEN.forEach((t, i) => {
     if (!verfuegbar(t)) return;
-    const geschafft = t.stationen.filter((s) => z.stationen[s.id] && z.stationen[s.id].geschafft).length;
+    // Nur nötige Stationen zählen (ENTSCHEIDUNGEN.md, 19.11.2026)
+    const noetige = noetigeStationen(t);
+    const geschafft = noetige.filter((s) => z.stationen[s.id] && z.stationen[s.id].geschafft).length;
     liste.push({
       id: `etappe-${t.id}`,
       gruppe: 'weg',
@@ -54,7 +56,7 @@ export function alleAbzeichen() {
       titel: `Etappe ${i + 1} geschafft`,
       text: t.titel,
       ist: geschafft,
-      soll: t.stationen.length,
+      soll: noetige.length,
       erreicht: etappeGeschafft(t.id),
     });
   });

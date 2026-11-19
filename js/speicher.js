@@ -1,5 +1,5 @@
 // Fortschritt pro Gerät im Browser (localStorage).
-import { alleStationen, thema, verfuegbar, THEMEN, noetigeRichtige } from './lernweg.js';
+import { thema, verfuegbar, THEMEN, noetigeRichtige, noetigeStationen, noetigeStationVon, station } from './lernweg.js';
 
 const SCHLUESSEL = 'choristen-app/v1';
 
@@ -102,24 +102,48 @@ export function stationGeschafft(id) {
   return !!(z.stationen[id] && z.stationen[id].geschafft);
 }
 
-// Die nächste offene Station im Leitfaden (nur gebaute Etappen)
+// Die nächste offene nötige Station im Leitfaden (nur gebaute Etappen). Freiwillige Stationen zählen nicht.
 export function naechsteStation() {
-  return alleStationen().find((s) => !stationGeschafft(s.id)) || null;
+  return noetigeStationen().find((s) => !stationGeschafft(s.id)) || null;
 }
 
+// Eine Etappe ist erreicht, wenn alle nötigen Stationen der Etappen davor geschafft sind.
+export function etappeErreicht(themaId) {
+  const index = THEMEN.findIndex((t) => t.id === themaId);
+  if (index < 0) return false;
+  return THEMEN.slice(0, index).every((t) => noetigeStationen(t).every((s) => stationGeschafft(s.id)));
+}
+
+// Spätblüher erscheinen erst, wenn die Etappe erreicht ist, deren Wissen sie brauchen (ENTSCHEIDUNGEN.md, 19.11.2026).
+export function stationSichtbar(id) {
+  const s = station(id);
+  if (!s) return false;
+  return !s.abThema || etappeErreicht(s.abThema);
+}
+
+// Nötige Stationen öffnen sich nacheinander. Freiwillige öffnen sich, sobald die nötige Station
+// derselben Übung geschafft ist (Vorschlag in LERNWEG.md); Spätblüher zusätzlich erst, wenn sie sichtbar sind.
 export function stationOffen(id) {
+  const s = station(id);
+  if (!s) return false;
   if (stationGeschafft(id)) return true;
+  if (s.freiwillig) {
+    const n = noetigeStationVon(s);
+    return !!n && stationGeschafft(n.id) && stationSichtbar(id);
+  }
   const n = naechsteStation();
   return !!n && n.id === id;
 }
 
+// Eine Etappe ist geschafft, wenn ihre nötigen Stationen geschafft sind.
 export function etappeGeschafft(themaId) {
   const t = thema(themaId);
-  return verfuegbar(t) && t.stationen.every((s) => stationGeschafft(s.id));
+  return verfuegbar(t) && noetigeStationen(t).every((s) => stationGeschafft(s.id));
 }
 
+// Fortschritt im Leitfaden: nur nötige Stationen
 export function fortschrittGesamt() {
-  const alle = alleStationen();
+  const alle = noetigeStationen();
   return { geschafft: alle.filter((s) => stationGeschafft(s.id)).length, gesamt: alle.length };
 }
 

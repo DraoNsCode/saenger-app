@@ -14,8 +14,7 @@ export default {
   themaId: 'schlag-takt',
   aufgaben: 8,
   stufen: {
-    leicht: 'Im 4/4-Takt fehlt die letzte Note',
-    mittel: 'Auch im 3/4-Takt und mit Pausen',
+    leicht: 'Die letzte Note fehlt, im 4/4- und 3/4-Takt, auch mit Pausen',
     schwer: 'Den richtig gefüllten Takt finden',
   },
   erklaerung: [
@@ -24,7 +23,8 @@ export default {
   ],
   neu(stufe, k) {
     const schluessel = STIMMEN[k.stimme].schluessel;
-    const takt = stufe === 'leicht' ? 4 : waehle([4, 3]);
+    // Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): Pausen und der 3/4-Takt gehören schon zur nötigen Station.
+    const takt = waehle([4, 3]);
 
     if (stufe === 'schwer') {
       const richtig = zufallsTakt(takt, { pausen: Math.random() < 0.5 ? 1 : 0 });
@@ -56,7 +56,7 @@ export default {
 
     // Selten ist der ganze 4/4-Takt leer: Dann passt die Ganze.
     const fehlt = takt === 4 && Math.random() < 0.12 ? 4 : waehle([1, 2]);
-    const vorhanden = fehlt === 4 ? [] : zufallsTakt(takt - fehlt, { pausen: stufe === 'mittel' && Math.random() < 0.5 ? 1 : 0, halbeVersetzt: true });
+    const vorhanden = fehlt === 4 ? [] : zufallsTakt(takt - fehlt, { pausen: Math.random() < 0.5 ? 1 : 0, halbeVersetzt: true });
     const tonAnzahl = vorhanden.filter((n) => !n.pause).length;
     const dias = tonAnzahl ? diasAusPositionen(k.stimme, melodiePositionen(tonAnzahl, { min: 2, max: 6 })) : [];
     const noten = vorhanden.length ? abcMelodie([vorhanden], dias).replace(/ \|\]$/, '') : '';

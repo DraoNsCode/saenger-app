@@ -12,9 +12,19 @@ globalThis.localStorage = {
   removeItem: (k) => ablage.delete(k),
 };
 
-const { THEMEN, STUFEN, noetigeRichtige, alleStationen } = await import('../js/lernweg.js');
+const { THEMEN, STUFEN, noetigeRichtige, alleStationen, noetigeStationen, freiwilligeZu, mischungsPaare, verfuegbar, uebungenImThema } =
+  await import('../js/lernweg.js');
 const { UEBUNGEN } = await import('../js/uebungen/index.js');
-const { ergebnisErfassen, zuruecksetzen } = await import('../js/speicher.js');
+const { ergebnisErfassen, zuruecksetzen, naechsteStation, stationOffen, stationSichtbar, etappeGeschafft, etappeErreicht, fortschrittGesamt } =
+  await import('../js/speicher.js');
+
+const gebaut = THEMEN.filter(verfuegbar);
+
+// Station mit einer geschafften Runde abschließen
+function schaffe(s) {
+  const gesamt = s.mischung ? 8 : UEBUNGEN[s.uebung].aufgaben;
+  ergebnisErfassen({ themaId: s.themaId, uebungId: s.uebung || null, stufe: s.stufe, stationId: s.id, richtig: gesamt, gesamt });
+}
 
 test('Stationen: eindeutige ids, vorhandene Übungen und Stufen', () => {
   const ids = new Set();
@@ -56,5 +66,137 @@ test('Runde: 6 von 8, bei 4 Aufgaben alle 4', () => {
 test('Rundenlängen: nur 8 oder 4 Aufgaben', () => {
   for (const [id, u] of Object.entries(UEBUNGEN)) {
     assert.ok([8, 4].includes(u.aufgaben), `${id} hat ${u.aufgaben} Aufgaben; dafür ist keine Grenze entschieden`);
+  }
+});
+
+// Entscheidungen vom 19.11.2026 (ENTSCHEIDUNGEN.md, „Der Weg als Klostergarten“ und „Stationen nach Inhalt“)
+
+test('Stationen: jede Übung hat in ihrer Etappe genau eine nötige Station', () => {
+  for (const t of gebaut) {
+    for (const uid of uebungenImThema(t)) {
+      const noetige = noetigeStationen(t).filter((s) => s.uebung === uid);
+      assert.equal(noetige.length, 1, `${t.id}: „${uid}“ hat ${noetige.length} nötige Stationen`);
+    }
+  }
+});
+
+test('Stationen: jede freiwillige Station gehört zu einer nötigen derselben Übung, keine Stufe doppelt', () => {
+  for (const t of gebaut) {
+    const gesehen = new Set();
+    for (const s of t.stationen.filter((x) => !x.mischung)) {
+      const schluessel = `${s.uebung}/${s.stufe}`;
+      assert.ok(!gesehen.has(schluessel), `${t.id}: ${schluessel} kommt zweimal vor`);
+      gesehen.add(schluessel);
+      if (s.freiwillig) assert.ok(noetigeStationen(t).some((n) => n.uebung === s.uebung), `${s.id}: keine nötige Station zur Übung`);
+    }
+  }
+});
+
+test('Stationen: jede Stufe einer Übung kommt im Leitfaden vor', () => {
+  for (const t of gebaut) {
+    for (const uid of uebungenImThema(t)) {
+      for (const stufe of Object.keys(UEBUNGEN[uid].stufen)) {
+        assert.ok(
+          t.stationen.some((s) => s.uebung === uid && s.stufe === stufe),
+          `${t.id}: „${uid}“ in der Stufe ${stufe} hat keine Station`
+        );
+      }
+    }
+  }
+});
+
+test('Abschluss: letzte Station jeder Etappe, nötig, mischt die nötigen Stationen', () => {
+  for (const t of gebaut) {
+    const letzte = t.stationen[t.stationen.length - 1];
+    assert.ok(letzte.mischung && !letzte.freiwillig, `${t.id}: die letzte Station ist kein nötiger Abschluss`);
+    assert.equal(t.stationen.filter((s) => s.mischung).length, 1, `${t.id}: mehr als ein Abschluss`);
+    const erwartet = noetigeStationen(t)
+      .filter((s) => !s.mischung)
+      .map((s) => `${s.uebung}/${s.stufe}`);
+    assert.deepEqual(mischungsPaare(t).map((p) => `${p.uebung}/${p.stufe}`), erwartet);
+  }
+});
+
+// Vorläufig angenommen am 19.11.2026: die Liste in LERNWEG.md, „Stationen der Etappen 1 und 2“.
+// Ändert Daniel sie, diese Tabelle im selben Schritt anpassen.
+test('Stationen der Etappen 1 und 2 wie in LERNWEG.md', () => {
+  const ist = (t) =>
+    Object.fromEntries(
+      uebungenImThema(t).map((uid) => [
+        uid,
+        {
+          noetig: noetigeStationen(t).find((s) => s.uebung === uid).stufe,
+          freiwillig: t.stationen.filter((s) => s.freiwillig && s.uebung === uid).map((s) => s.stufe),
+        },
+      ])
+    );
+  assert.deepEqual(ist(THEMEN[0]), {
+    'linie-zwischenraum': { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+    'hoeher-tiefer': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'schritt-sprung': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'hoeren-sehen': { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+    chorsatz: { noetig: 'leicht', freiwillig: [] },
+  });
+  assert.deepEqual(ist(THEMEN[1]), {
+    grundschlag: { noetig: 'leicht', freiwillig: ['schwer'] },
+    notenwerte: { noetig: 'leicht', freiwillig: ['schwer'] },
+    'welcher-schlag': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'takt-ergaenzen': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'rhythmus-erkennen': { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+    'rhythmus-klopfen': { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+  });
+});
+
+test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
+  zuruecksetzen();
+  const noetige = noetigeStationen();
+  assert.equal(naechsteStation().id, noetige[0].id);
+  assert.ok(stationOffen(noetige[0].id));
+  assert.ok(!stationOffen(noetige[1].id), 'die zweite nötige Station darf noch nicht offen sein');
+
+  const fw = freiwilligeZu(noetige[0]);
+  assert.ok(fw.length > 0, 'die erste Station sollte freiwillige haben, sonst prüft dieser Test nichts');
+  for (const f of fw) assert.ok(!stationOffen(f.id), `${f.id} ist offen, bevor die nötige Station geschafft ist`);
+
+  schaffe(noetige[0]);
+  assert.equal(naechsteStation().id, noetige[1].id, 'nach der ersten nötigen Station kommt die zweite nötige');
+  for (const f of fw) assert.ok(stationOffen(f.id), `${f.id} ist nach der nötigen Station nicht offen`);
+
+  // Freiwillige Stationen ändern nichts am Weg
+  for (const f of fw) schaffe(f);
+  assert.equal(naechsteStation().id, noetige[1].id);
+  zuruecksetzen();
+});
+
+test('Etappe geschafft und Fortschritt: nur nötige Stationen zählen', () => {
+  zuruecksetzen();
+  const [t1, t2] = gebaut;
+  assert.ok(!etappeErreicht(t2.id));
+  for (const s of noetigeStationen(t1)) schaffe(s);
+  assert.ok(etappeGeschafft(t1.id), 'Etappe 1 muss ohne freiwillige Stationen geschafft sein');
+  assert.ok(etappeErreicht(t2.id), 'Etappe 2 muss danach erreicht sein');
+  assert.equal(naechsteStation().id, noetigeStationen(t2)[0].id);
+  const f = fortschrittGesamt();
+  assert.equal(f.gesamt, noetigeStationen().length);
+  assert.equal(f.geschafft, noetigeStationen(t1).length);
+  zuruecksetzen();
+});
+
+test('Spätblüher: erscheinen erst, wenn ihre Etappe erreicht ist', () => {
+  zuruecksetzen();
+  const [t1, t2] = gebaut;
+  const kern = noetigeStationen(t1)[0];
+  const probe = { id: 'probe-spaetbluehende', titel: 'Probe', uebung: kern.uebung, stufe: kern.stufe, freiwillig: true, abThema: t2.id };
+  t1.stationen.push(probe);
+  try {
+    schaffe(kern);
+    assert.ok(!stationSichtbar(probe.id), 'vor Etappe 2 darf der Spätblüher nicht erscheinen');
+    assert.ok(!stationOffen(probe.id));
+    for (const s of noetigeStationen(t1)) schaffe(s);
+    assert.ok(stationSichtbar(probe.id), 'mit Etappe 2 muss der Spätblüher erscheinen');
+    assert.ok(stationOffen(probe.id));
+  } finally {
+    t1.stationen.pop();
+    zuruecksetzen();
   }
 });

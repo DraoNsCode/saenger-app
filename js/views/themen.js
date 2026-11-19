@@ -36,7 +36,7 @@ export function zeigeThemen(wurzel) {
     h(
       'section',
       { class: 'seite' },
-      h('header', { class: 'seiten-kopf' }, h('div', {}, h('h1', {}, 'Themen'), h('p', { class: 'unterzeile' }, 'Gezielt üben, in drei Schwierigkeiten.'))),
+      h('header', { class: 'seiten-kopf' }, h('div', {}, h('h1', {}, 'Themen'), h('p', { class: 'unterzeile' }, 'Gezielt üben, die meisten Übungen auch schwerer.'))),
       liste
     )
   );
@@ -78,12 +78,14 @@ export function zeigeThema(wurzel, id) {
       h(
         'div',
         { class: 'stufen' },
-        ...STUFEN.map((s) => {
+        // Nicht jede Übung hat alle drei Stufen (ENTSCHEIDUNGEN.md, 19.11.2026)
+        ...STUFEN.filter((s) => u.stufen[s]).map((s, _, alle) => {
           const r = stats[s] ? stats[s].runden : 0;
           return h(
             'a',
             { class: 'stufe-knopf', href: `#/frei/${uid}/${s}` },
-            h('strong', {}, STUFEN_NAME[s]),
+            // Hat eine Übung nur eine Stufe, heißt der Knopf einfach „Üben“
+            h('strong', {}, alle.length === 1 ? 'Üben' : STUFEN_NAME[s]),
             h('span', { class: 'stufe-text' }, u.stufen[s]),
             h('span', { class: 'stufe-zahl' }, r ? (r === 1 ? '1 Runde' : `${r} Runden`) : '')
           );

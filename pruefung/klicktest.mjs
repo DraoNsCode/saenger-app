@@ -171,6 +171,53 @@ async function pruefeGeraet(browser, basis, geraet) {
     await spieleRunde(`station-${erste.id}`, geraet.ganzeRunden);
   });
 
+  // Nötige und freiwillige Stationen (ENTSCHEIDUNGEN.md, 19.11.2026): Fortschritt bis vor den Abschluss
+  // der ersten Etappe setzen, dann das Blatt mit den freiwilligen Stationen, eine freiwillige Station und den Abschluss.
+  const [etappe1, etappe2] = THEMEN.filter((t) => t.stationen);
+  const noetig1 = etappe1.stationen.filter((s) => !s.freiwillig);
+  const abschluss1 = noetig1[noetig1.length - 1];
+  const erstesFreiwillig = etappe1.stationen.find((s) => s.freiwillig);
+  await schritt('leitfaden', async () => {
+    await seite.evaluate((ids) => {
+      const z = JSON.parse(localStorage.getItem('choristen-app/v1'));
+      z.stationen = {};
+      ids.forEach((id) => (z.stationen[id] = { geschafft: true, beste: 8, gesamt: 8, versuche: 1 }));
+      localStorage.setItem('choristen-app/v1', JSON.stringify(z));
+    }, noetig1.slice(0, -1).map((s) => s.id));
+    await seite.reload({ waitUntil: 'networkidle' });
+    await geheZu('#/weg');
+    await bild('leitfaden-weg');
+    await seite.getByRole('button', { name: new RegExp(`^${noetig1[0].titel}, geschafft`) }).click();
+    await seite.waitForSelector('.freiwillig-liste');
+    await bild('leitfaden-blatt-freiwillig');
+    await seite.keyboard.press('Escape');
+    await seite.waitForTimeout(200);
+  });
+  await schritt(`station-${erstesFreiwillig.id}`, async () => {
+    await geheZu(`#/station/${erstesFreiwillig.id}`);
+    await spieleRunde(`station-${erstesFreiwillig.id}`, geraet.ganzeRunden);
+  });
+  await schritt(`station-${abschluss1.id}`, async () => {
+    await geheZu(`#/station/${abschluss1.id}`);
+    await spieleRunde(`station-${abschluss1.id}`, geraet.ganzeRunden);
+  });
+  await schritt('leitfaden-blatt-offen', async () => {
+    // Blatt einer offenen nötigen Station, die noch nicht geschafft ist: Hinweis auf die freiwilligen Stationen
+    await seite.evaluate((ids) => {
+      const z = JSON.parse(localStorage.getItem('choristen-app/v1'));
+      ids.forEach((id) => (z.stationen[id] = { geschafft: true, beste: 8, gesamt: 8, versuche: 1 }));
+      localStorage.setItem('choristen-app/v1', JSON.stringify(z));
+    }, noetig1.map((s) => s.id));
+    await seite.reload({ waitUntil: 'networkidle' });
+    const s = etappe2.stationen[0];
+    await geheZu('#/weg');
+    await seite.getByRole('button', { name: new RegExp(`^${s.titel},`) }).first().click();
+    await seite.waitForSelector('.blatt-inhalt');
+    await bild('leitfaden-blatt-offen');
+    await seite.keyboard.press('Escape');
+    await seite.waitForTimeout(200);
+  });
+
   for (const [id, u] of Object.entries(UEBUNGEN)) {
     for (const stufe of Object.keys(u.stufen)) {
       await schritt(`frei-${id}-${stufe}`, async () => {

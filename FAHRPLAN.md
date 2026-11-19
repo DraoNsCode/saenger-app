@@ -8,7 +8,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
-| A. Stationen: nötig, freiwillig, Spätblüher | entschieden, nicht umgesetzt; offen, was mit leichteren Stufen unter der nötigen passiert (ENTSCHEIDUNGEN.md) | – |
+| A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
 | B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden; Bild und Optik offen | A |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
@@ -20,7 +20,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 
 ## Vorgeschlagene Reihenfolge
 
-1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt.
+1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
 2. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet.
 3. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
 4. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.

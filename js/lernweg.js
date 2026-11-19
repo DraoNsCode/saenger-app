@@ -1,7 +1,13 @@
 // Der Lernweg. Grundidee und Reihenfolge der Etappen sind vorläufig bestätigt (ENTSCHEIDUNGEN.md, 19.11.2026).
 // Jedes Thema ist eine Etappe im Leitfaden. Dieselben Themen kann man gezielt üben.
-// Stand des Codes: Eine Station ist eine Übungsart in einer Schwierigkeit; die letzte Station einer Etappe mischt.
-// Entschieden, aber noch nicht umgesetzt: nötige und freiwillige Stationen mit Spätblühern (ENTSCHEIDUNGEN.md).
+//
+// Stationen (ENTSCHEIDUNGEN.md, „Der Weg als Klostergarten“ und „Stationen nach Inhalt“, 19.11.2026):
+// - Jede Übung hat eine nötige Station mit dem Kern ihrer Etappe. Das Ziel erreicht man über die nötigen Stationen.
+// - freiwillig: true – geht über den Kern hinaus, ist zum Freischalten nicht nötig.
+// - abThema: '<id>' – Spätblüher: braucht Wissen aus einer späteren Etappe und erscheint erst, wenn diese erreicht ist.
+// - mischung: true – Abschluss der Etappe, nötig, mischt Aufgaben aus den nötigen Stationen.
+// Welche Station nötig und welche freiwillig ist, steht als vorläufig angenommener Vorschlag in LERNWEG.md.
+// Leicht, Mittel und Schwer sind nur grobe Orientierungswerte; nicht jede Übung hat alle drei.
 
 export const THEMEN = [
   {
@@ -10,9 +16,15 @@ export const THEMEN = [
     kurz: 'Linien und Zwischenräume, höher und tiefer, Schritt und Sprung, die vier Stimmen im Chorsatz.',
     stationen: [
       { id: 'nb-linie', titel: 'Linie oder Zwischenraum', uebung: 'linie-zwischenraum', stufe: 'leicht' },
+      { id: 'nb-linie-aussen', titel: 'Linie oder Zwischenraum', uebung: 'linie-zwischenraum', stufe: 'mittel', freiwillig: true },
+      { id: 'nb-linie-hilfslinien', titel: 'Linie oder Zwischenraum', uebung: 'linie-zwischenraum', stufe: 'schwer', freiwillig: true },
       { id: 'nb-hoeher', titel: 'Höher oder tiefer', uebung: 'hoeher-tiefer', stufe: 'leicht' },
+      { id: 'nb-hoeher-hilfslinien', titel: 'Höher oder tiefer', uebung: 'hoeher-tiefer', stufe: 'schwer', freiwillig: true },
       { id: 'nb-schritt', titel: 'Schritt oder Sprung', uebung: 'schritt-sprung', stufe: 'leicht' },
+      { id: 'nb-schritt-hilfslinien', titel: 'Schritt oder Sprung', uebung: 'schritt-sprung', stufe: 'schwer', freiwillig: true },
       { id: 'nb-hoeren', titel: 'Hören und sehen', uebung: 'hoeren-sehen', stufe: 'leicht' },
+      { id: 'nb-hoeren-drei', titel: 'Hören und sehen', uebung: 'hoeren-sehen', stufe: 'mittel', freiwillig: true },
+      { id: 'nb-hoeren-vier', titel: 'Hören und sehen', uebung: 'hoeren-sehen', stufe: 'schwer', freiwillig: true },
       { id: 'nb-chorsatz', titel: 'Die Stimmen im Chorsatz', uebung: 'chorsatz', stufe: 'leicht' },
       { id: 'nb-abschluss', titel: 'Abschluss: Das Notenbild', mischung: true, stufe: 'gemischt' },
     ],
@@ -23,12 +35,19 @@ export const THEMEN = [
     kurz: 'Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt.',
     stationen: [
       { id: 'st-schlag', titel: 'Im Schlag tippen', uebung: 'grundschlag', stufe: 'leicht' },
+      { id: 'st-schlag-ohne-klick', titel: 'Im Schlag tippen', uebung: 'grundschlag', stufe: 'schwer', freiwillig: true },
       { id: 'st-werte', titel: 'Notenwerte', uebung: 'notenwerte', stufe: 'leicht' },
-      { id: 'st-pausen', titel: 'Pausen', uebung: 'notenwerte', stufe: 'mittel' },
+      { id: 'st-werte-namen', titel: 'Notenwerte', uebung: 'notenwerte', stufe: 'schwer', freiwillig: true },
       { id: 'st-welcher', titel: 'Auf welchem Schlag?', uebung: 'welcher-schlag', stufe: 'leicht' },
+      { id: 'st-welcher-zwei-takte', titel: 'Auf welchem Schlag?', uebung: 'welcher-schlag', stufe: 'schwer', freiwillig: true },
       { id: 'st-ergaenzen', titel: 'Takt ergänzen', uebung: 'takt-ergaenzen', stufe: 'leicht' },
+      { id: 'st-ergaenzen-finden', titel: 'Takt ergänzen', uebung: 'takt-ergaenzen', stufe: 'schwer', freiwillig: true },
       { id: 'st-erkennen', titel: 'Rhythmus erkennen', uebung: 'rhythmus-erkennen', stufe: 'leicht' },
+      { id: 'st-erkennen-pausen', titel: 'Rhythmus erkennen', uebung: 'rhythmus-erkennen', stufe: 'mittel', freiwillig: true },
+      { id: 'st-erkennen-zwei-takte', titel: 'Rhythmus erkennen', uebung: 'rhythmus-erkennen', stufe: 'schwer', freiwillig: true },
       { id: 'st-klopfen', titel: 'Rhythmus klopfen', uebung: 'rhythmus-klopfen', stufe: 'leicht' },
+      { id: 'st-klopfen-zwei-takte', titel: 'Rhythmus klopfen', uebung: 'rhythmus-klopfen', stufe: 'mittel', freiwillig: true },
+      { id: 'st-klopfen-ohne-klick', titel: 'Rhythmus klopfen', uebung: 'rhythmus-klopfen', stufe: 'schwer', freiwillig: true },
       { id: 'st-abschluss', titel: 'Abschluss: Schlag und Takt', mischung: true, stufe: 'gemischt' },
     ],
   },
@@ -110,6 +129,29 @@ export function alleStationen() {
 
 export function station(id) {
   return alleStationen().find((s) => s.id === id);
+}
+
+// Nötige Stationen (mit Abschluss), in der Reihenfolge des Leitfadens
+export function noetigeStationen(t) {
+  const liste = t ? alleStationen().filter((s) => s.themaId === t.id) : alleStationen();
+  return liste.filter((s) => !s.freiwillig);
+}
+
+// Die nötige Station derselben Übung in derselben Etappe
+export function noetigeStationVon(s) {
+  return alleStationen().find((n) => !n.freiwillig && !n.mischung && n.themaId === s.themaId && n.uebung === s.uebung) || null;
+}
+
+// Freiwillige Stationen zu einer nötigen Station (gleiche Übung, gleiche Etappe)
+export function freiwilligeZu(s) {
+  return alleStationen().filter((f) => f.freiwillig && f.themaId === s.themaId && f.uebung === s.uebung);
+}
+
+// Aufgaben für eine gemischte Runde: die nötigen Stationen der Etappe (ENTSCHEIDUNGEN.md, 19.11.2026)
+export function mischungsPaare(t) {
+  return noetigeStationen(t)
+    .filter((s) => !s.mischung)
+    .map((s) => ({ uebung: s.uebung, stufe: s.stufe }));
 }
 
 // Übungsarten eines Themas (ohne Mischung), in der Reihenfolge der Stationen

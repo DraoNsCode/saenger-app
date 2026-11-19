@@ -3,9 +3,9 @@ import { h, icon, text, blatt, bestaetigen } from './ui.js';
 import { zeichne } from './noten.js';
 import { audio, stopAlles } from './klang.js';
 import { UEBUNGEN } from './uebungen/index.js';
-import { zustand, aendere, ergebnisErfassen, naechsteStation } from './speicher.js';
+import { zustand, aendere, ergebnisErfassen, naechsteStation, stationSichtbar } from './speicher.js';
 import { neueAbzeichen } from './abzeichen.js';
-import { noetigeRichtige, STUFEN_NAME, thema } from './lernweg.js';
+import { noetigeRichtige, STUFEN_NAME, thema, station, freiwilligeZu } from './lernweg.js';
 import { medaille } from './medaille.js';
 
 const LOB = ['Richtig.', 'Genau.', 'Stimmt.', 'Gut gemacht.'];
@@ -110,8 +110,9 @@ function auswahl(body, a, fertig) {
   };
 }
 
-// Plan der Aufgaben
-function plane(uebungIds, stufe) {
+// Plan der Aufgaben. Eine gemischte Runde nimmt ihre Aufgaben aus den nötigen Stationen der Etappe
+// (paare: [{ uebung, stufe }], siehe mischungsPaare in lernweg.js), höchstens eine davon zum Tippen.
+function plane(uebungIds, stufe, paare) {
   if (stufe !== 'gemischt') {
     const u = UEBUNGEN[uebungIds[0]];
     return Array.from({ length: u.aufgaben }, () => ({ u, stufe }));
@@ -119,19 +120,20 @@ function plane(uebungIds, stufe) {
   const plan = [];
   let tippAufgaben = 0;
   while (plan.length < 8) {
-    const u = UEBUNGEN[waehleAus(uebungIds)];
+    const p = waehleAus(paare);
+    const u = UEBUNGEN[p.uebung];
     if (u.tippen && tippAufgaben >= 1) continue;
     if (u.tippen) tippAufgaben++;
-    plan.push({ u, stufe: Math.random() < 0.6 ? 'leicht' : 'mittel' });
+    plan.push({ u, stufe: p.stufe });
   }
   return plan;
 }
 
 export function starteRunde(wurzel, opt) {
-  const { titel, themaId, stationId = null, uebungen, stufe, zurueck, weiter } = opt;
+  const { titel, themaId, stationId = null, uebungen, paare = null, stufe, zurueck, weiter } = opt;
   const k = { stimme: zustand().stimme || 'S' };
   audio();
-  const plan = plane(uebungen, stufe);
+  const plan = plane(uebungen, stufe, paare);
   const anzahl = plan.length;
   let i = 0;
   let richtig = 0;
@@ -225,13 +227,19 @@ export function starteRunde(wurzel, opt) {
     const neu = neueAbzeichen();
     const naechste = naechsteStation();
     const noetig = noetigeRichtige(anzahl);
+    const st = stationId ? station(stationId) : null;
+    const freiwillig = !!(st && st.freiwillig);
+    const neueFreiwillige = st && !freiwillig ? freiwilligeZu(st).filter((f) => stationSichtbar(f.id)) : [];
     let satz;
-    if (stationNeu) satz = naechste ? 'Die Station ist geschafft. Die nächste ist jetzt offen.' : 'Die Station ist geschafft.';
-    else if (geschafft) satz = richtig === anzahl ? 'Alles richtig.' : 'Die Runde ist geschafft.';
+    if (stationNeu && freiwillig) satz = 'Die freiwillige Station ist geschafft.';
+    else if (stationNeu) {
+      satz = naechste ? 'Die Station ist geschafft. Die nächste ist jetzt offen.' : 'Die Station ist geschafft.';
+      if (neueFreiwillige.length) satz += ' Wenn du magst, kannst du diese Übung jetzt auch schwerer üben: Tippe dazu auf dem Weg auf die Station.';
+    } else if (geschafft) satz = richtig === anzahl ? 'Alles richtig.' : 'Die Runde ist geschafft.';
     else satz = `Ab ${noetig} richtigen ist die Runde geschafft. Versuch es gleich noch einmal.`;
 
     const knoepfe = [];
-    if (stationId && stationNeu && naechste && weiter) {
+    if (stationId && stationNeu && !freiwillig && naechste && weiter) {
       knoepfe.push(h('button', { class: 'knopf haupt', type: 'button', onclick: () => weiter(naechste) }, 'Nächste Station'));
       knoepfe.push(h('button', { class: 'knopf zweit', type: 'button', onclick: () => starteRunde(wurzel, opt) }, 'Nochmal'));
     } else {

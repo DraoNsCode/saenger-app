@@ -520,6 +520,48 @@ a {
 .blatt-hinweis {
   color: var(--tinte-2);
 }
+.freiwillig {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--linie);
+}
+.freiwillig h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.freiwillig .blatt-hinweis {
+  margin: 2px 0 10px;
+}
+.freiwillig-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.freiwillig-eintrag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--linie);
+  text-decoration: none;
+}
+.freiwillig-eintrag:hover {
+  border-color: var(--tinte-3);
+}
+.freiwillig-eintrag .stufe-text {
+  font-size: 0.95rem;
+  color: var(--tinte);
+}
+.freiwillig-eintrag .stufe-zahl {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
 .blatt-frage {
   font-size: 1.1rem;
   margin: 4px 0;
@@ -1016,7 +1058,8 @@ a {
 }
 .stufen {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 8px;
 }
 .stufe-knopf {

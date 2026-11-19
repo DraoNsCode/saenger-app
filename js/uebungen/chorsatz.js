@@ -17,27 +17,12 @@ const A = {
 };
 
 // Wendungen: Akkorde und Dauern in Vierteln (Takt = 4)
+// Nur eine Stufe (ENTSCHEIDUNGEN.md, 19.11.2026): Die Regel wird nicht schwerer, andere Stufen änderten nur das Bild.
 const WENDUNGEN = {
   leicht: [
     [[['I_a', 1], ['IV_a', 1], ['V_a', 1], ['I_a', 1]]],
     [[['I_b', 1], ['V_b', 1], ['vi_b', 1], ['IV_b', 1]]],
     [[['I_c', 1], ['IV_c', 1], ['I_c', 1], ['V_c', 1]]],
-  ],
-  mittel: [
-    [[['I_a', 1], ['IV_a', 1], ['I_a', 2]]],
-    [[['I_c', 1], ['V_c', 1], ['I_c', 2]]],
-    [[['I_a', 1], ['IV_a', 1], ['V_a', 1], ['I_a', 1]]],
-    [[['I_b', 1], ['V_b', 1], ['vi_b', 1], ['IV_b', 1]]],
-  ],
-  schwer: [
-    [
-      [['I_b', 1], ['V_b', 1], ['vi_b', 1], ['IV_b', 1]],
-      [['I_c', 1], ['V_c', 1], ['I_c', 2]],
-    ],
-    [
-      [['I_c', 1], ['IV_c', 1], ['I_c', 1], ['V_c', 1]],
-      [['I_c', 1], ['IV_c', 1], ['V_c', 1], ['I_c', 1]],
-    ],
   ],
 };
 
@@ -68,9 +53,7 @@ export default {
   themaId: 'notenbild',
   aufgaben: 8,
   stufen: {
-    leicht: 'Ein Takt',
-    mittel: 'Ein Takt mit längeren Noten',
-    schwer: 'Zwei Takte',
+    leicht: 'Eine farbige Note der richtigen Stimme zuordnen',
   },
   erklaerung: [
     'Im Chorbuch stehen die vier Stimmen meist auf **zwei Systemen**, die eine Klammer verbindet.',
@@ -91,7 +74,7 @@ export default {
       bild: {
         abc: satzAbc(takte),
         breite: 200,
-        scale: takte.length === 2 ? 1.3 : 1.5,
+        scale: 1.5,
         markiere: (el) => {
           const noten = el.querySelectorAll(`.abcjs-note.abcjs-v${stimme}`);
           if (noten[index]) noten[index].classList.add('markiert');

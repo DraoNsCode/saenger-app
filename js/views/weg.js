@@ -1,8 +1,9 @@
 // Der Leitfaden als geschwungene Notenzeile. Stationen sind Notenköpfe.
 // ABGELÖST: Diese Darstellung wird durch den Klostergarten ersetzt (ENTSCHEIDUNGEN.md, WEG.md). Nicht weiterentwickeln.
+// Bis dahin zeigt die Notenzeile nur die nötigen Stationen; die freiwilligen stehen im Blatt ihrer nötigen Station.
 import { h, icon, blatt } from '../ui.js';
-import { THEMEN, noetigeRichtige, verfuegbar } from '../lernweg.js';
-import { stationGeschafft, naechsteStation, fortschrittGesamt, zustand } from '../speicher.js';
+import { THEMEN, noetigeRichtige, verfuegbar, noetigeStationen, freiwilligeZu } from '../lernweg.js';
+import { stationGeschafft, naechsteStation, fortschrittGesamt, zustand, stationSichtbar, stationOffen } from '../speicher.js';
 import { UEBUNGEN } from '../uebungen/index.js';
 import { zeigeErklaerung } from '../runde.js';
 
@@ -42,11 +43,12 @@ function notenzeile(svg, hoehe, blass) {
 }
 
 function abschnitt(t, ti, naechste) {
-  const n = t.stationen.length;
+  const stationen = noetigeStationen(t);
+  const n = stationen.length;
   const hoehe = n * ABSTAND;
   const svg = el('svg', { viewBox: `0 0 ${B} ${hoehe}`, class: 'weg-svg', role: 'list' });
   notenzeile(svg, hoehe, false);
-  t.stationen.forEach((s, k) => {
+  stationen.forEach((s, k) => {
     const y = ABSTAND / 2 + k * ABSTAND;
     const x = xBei(y);
     const geschafft = stationGeschafft(s.id);
@@ -121,8 +123,45 @@ function stationBlatt(s, t, ti, zustandName) {
     if (u) reihe.append(h('button', { class: 'knopf zweit', type: 'button', onclick: () => zeigeErklaerung(u) }, 'Kurz erklärt'));
     reihe.append(h('a', { class: 'knopf haupt', href: `#/station/${s.id}`, onclick: () => zu() }, st && st.geschafft ? 'Nochmal üben' : 'Los geht’s'));
     teile.push(reihe);
+    const freiwillige = s.mischung ? [] : freiwilligeZu(s).filter((f) => stationSichtbar(f.id));
+    if (freiwillige.length) teile.push(freiwilligAbschnitt(freiwillige, u, () => zu()));
   }
   zu = blatt(h('div', { class: 'blatt-inhalt' }, ...teile));
+}
+
+// Freiwillige Stationen einer Übung: offen, sobald ihre nötige Station geschafft ist
+function freiwilligAbschnitt(freiwillige, u, schliessen) {
+  const offen = freiwillige.some((f) => stationOffen(f.id));
+  if (!offen) {
+    return h(
+      'div',
+      { class: 'freiwillig' },
+      h('h3', {}, 'Freiwillige Stationen'),
+      h('p', { class: 'blatt-hinweis' }, 'Wenn du diese Station geschafft hast, kannst du die Übung hier auch schwerer üben.')
+    );
+  }
+  return h(
+    'div',
+    { class: 'freiwillig' },
+    h('h3', {}, 'Freiwillige Stationen'),
+    h('p', { class: 'blatt-hinweis' }, 'Dieselbe Übung, etwas schwerer. Um auf dem Weg weiterzukommen, brauchst du sie nicht.'),
+    h(
+      'ul',
+      { class: 'freiwillig-liste' },
+      ...freiwillige.map((f) =>
+        h(
+          'li',
+          {},
+          h(
+            'a',
+            { class: 'freiwillig-eintrag', href: `#/station/${f.id}`, onclick: schliessen },
+            h('span', { class: 'stufe-text' }, u.stufen[f.stufe]),
+            h('span', { class: 'stufe-zahl' }, stationGeschafft(f.id) ? 'geschafft' : '')
+          )
+        )
+      )
+    )
+  );
 }
 
 export function zeigeWeg(wurzel) {
@@ -137,7 +176,7 @@ export function zeigeWeg(wurzel) {
   const weg = h('div', { class: 'weg' });
   THEMEN.forEach((t, ti) => {
     const gebaut = verfuegbar(t);
-    const fertig = gebaut && t.stationen.every((s) => stationGeschafft(s.id));
+    const fertig = gebaut && noetigeStationen(t).every((s) => stationGeschafft(s.id));
     weg.append(
       h(
         'div',
@@ -155,7 +194,7 @@ export function zeigeWeg(wurzel) {
       'div',
       { class: 'etappe-karte ziel' },
       h('h2', { class: 'etappe-titel' }, 'Am Ziel'),
-      h('p', { class: 'etappe-kurz' }, 'Nach dem Leitfaden geht das Üben weiter: In den Themen wird jede Übung schwerer, so weit du willst.')
+      h('p', { class: 'etappe-kurz' }, 'Nach dem Leitfaden geht das Üben weiter: In den Themen kannst du jede Übung gezielt üben, die meisten auch schwerer.')
     )
   );
 

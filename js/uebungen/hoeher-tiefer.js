@@ -2,8 +2,10 @@ import { STIMMEN, diaAusPos, abcTon, midi, zufall, waehle } from '../musik.js';
 import { kopf } from '../noten.js';
 import { spieleFolge } from '../klang.js';
 
-const BEREICH = { leicht: [0, 8], mittel: [-1, 9], schwer: [-4, 12] };
-const ABSTAND = { leicht: [3, 6], mittel: [1, 3], schwer: [1, 2] };
+// Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): „leicht“ ist die nötige Station mit großen und kleinen
+// Abständen im System (früher zwei Stufen), „schwer“ die freiwillige mit Hilfslinien.
+const BEREICH = { leicht: [0, 8], schwer: [-4, 12] };
+const ABSTAND = { leicht: [1, 6], schwer: [1, 2] };
 
 export default {
   id: 'hoeher-tiefer',
@@ -11,8 +13,7 @@ export default {
   themaId: 'notenbild',
   aufgaben: 8,
   stufen: {
-    leicht: 'Große Abstände im Notensystem',
-    mittel: 'Kleine Abstände',
+    leicht: 'Große und kleine Abstände im Notensystem',
     schwer: 'Kleine Abstände mit Hilfslinien',
   },
   erklaerung: [
@@ -27,7 +28,7 @@ export default {
   },
   neu(stufe, k) {
     const [min, max] = BEREICH[stufe];
-    const gleich = Math.random() < (stufe === 'leicht' ? 0.1 : 0.15);
+    const gleich = Math.random() < (stufe === 'leicht' ? 0.12 : 0.15);
     let a, b;
     do {
       a = zufall(min, max);

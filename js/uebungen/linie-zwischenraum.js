@@ -11,7 +11,7 @@ export default {
   aufgaben: 8,
   stufen: {
     leicht: 'Noten im Notensystem',
-    mittel: 'Auch direkt unter und über dem System',
+    mittel: 'Auch direkt unter und über dem Notensystem',
     schwer: 'Mit Hilfslinien',
   },
   erklaerung: [

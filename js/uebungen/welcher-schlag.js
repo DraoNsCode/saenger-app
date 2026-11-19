@@ -26,8 +26,7 @@ export default {
   themaId: 'schlag-takt',
   aufgaben: 8,
   stufen: {
-    leicht: 'Viertel und Halbe im 4/4-Takt',
-    mittel: 'Mit Pausen, auch im 3/4-Takt',
+    leicht: 'Im 4/4- und 3/4-Takt, auch mit Pausen',
     schwer: 'Zwei Takte, Noten auch versetzt',
   },
   erklaerung: [
@@ -43,11 +42,12 @@ export default {
     };
   },
   neu(stufe, k) {
-    const takt = stufe === 'leicht' ? 4 : waehle([4, 3]);
+    // Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): Pausen und der 3/4-Takt gehören schon zur nötigen Station.
+    const takt = waehle([4, 3]);
     const anzahl = stufe === 'schwer' ? 2 : 1;
     const takte = Array.from({ length: anzahl }, () =>
       zufallsTakt(takt, {
-        pausen: stufe === 'leicht' ? 0 : Math.random() < 0.6 ? 1 : 0,
+        pausen: Math.random() < 0.6 ? 1 : 0,
         halbeVersetzt: stufe === 'schwer',
       })
     );

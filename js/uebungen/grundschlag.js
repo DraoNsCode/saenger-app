@@ -4,8 +4,11 @@ import { spieleFolge, klicks } from '../klang.js';
 import { zufallsTakt, abcMelodie, melodiePositionen, diasAusPositionen, einsaetze } from './hilfen.js';
 import { tippAufgabe, trefferText } from './tippen.js';
 
-const TEMPO = { leicht: 76, mittel: 88, schwer: 100 };
-const TOLERANZ = { leicht: 0.15, mittel: 0.12, schwer: 0.1 };
+// Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): „leicht“ ist die nötige Station. Sie hat lange Noten,
+// denn der Kern ist, dass der Schlag weiterläuft, auch wenn eine Note länger klingt. Nur Viertel gibt es nicht mehr.
+// „schwer“ ist die freiwillige Station ohne Klick.
+const TEMPO = { leicht: 76, schwer: 100 };
+const TOLERANZ = { leicht: 0.15, schwer: 0.1 };
 
 export default {
   id: 'grundschlag',
@@ -14,8 +17,7 @@ export default {
   aufgaben: 4,
   tippen: true,
   stufen: {
-    leicht: 'Viertel, langsam, mit Klick',
-    mittel: 'Auch lange Noten, leiser Klick',
+    leicht: 'Viertel und Halbe, langsam, mit leisem Klick',
     schwer: 'Schneller, ohne Klick, auch im 3/4-Takt',
   },
   erklaerung: [
@@ -26,10 +28,11 @@ export default {
   neu(stufe, k) {
     const takt = stufe === 'schwer' ? waehle([4, 3]) : 4;
     const tempo = TEMPO[stufe];
-    const takte =
-      stufe === 'leicht'
-        ? [0, 1].map(() => Array.from({ length: 4 }, () => ({ d: 1, pause: false })))
-        : [0, 1].map(() => zufallsTakt(takt, { ganze: stufe === 'schwer' && takt === 4, pausen: stufe === 'schwer' && Math.random() < 0.5 ? 1 : 0 }));
+    let takte;
+    do {
+      takte = [0, 1].map(() => zufallsTakt(takt, { ganze: stufe === 'schwer' && takt === 4, pausen: stufe === 'schwer' && Math.random() < 0.5 ? 1 : 0 }));
+      // Mindestens eine Note, die länger als einen Schlag klingt: Daran zeigt sich, dass der Schlag weiterläuft.
+    } while (!takte.flat().some((n) => n.d > 1));
     const noten = einsaetze(takte, takt);
     const tonAnzahl = noten.filter((n) => !n.pause).length;
     const dias = diasAusPositionen(k.stimme, melodiePositionen(tonAnzahl, { min: 1, max: 7 }));
@@ -53,7 +56,7 @@ export default {
               const folge = noten.map((n) => ({ midi: n.pause ? null : midi(dias[i++]), schlaege: n.d }));
               const { zeiten, ende } = spieleFolge(folge, { tempo, start });
               const sps = 60 / tempo;
-              if (stufe !== 'schwer') klicks(start, tempo, schlaege, takt, stufe === 'mittel');
+              if (stufe !== 'schwer') klicks(start, tempo, schlaege, takt, true);
               const mitlesen = [
                 ...zeiten.map((zeit, index) => ({ zeit, index })),
                 // Die Schlag-Punkte leuchten nur, solange auch ein Klick hilft

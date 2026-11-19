@@ -2,7 +2,9 @@ import { STIMMEN, diaAusPos, abcTon, midi, zufall, waehle } from '../musik.js';
 import { kopf } from '../noten.js';
 import { spieleFolge } from '../klang.js';
 
-const BEREICH = { leicht: [0, 8], mittel: [-1, 9], schwer: [-4, 12] };
+// Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): „leicht“ ist die nötige Station mit Schritten,
+// kleinen und großen Sprüngen und gleichen Tönen im System (früher zwei Stufen), „schwer“ die freiwillige mit Hilfslinien.
+const BEREICH = { leicht: [0, 8], schwer: [-4, 12] };
 
 export default {
   id: 'schritt-sprung',
@@ -10,8 +12,7 @@ export default {
   themaId: 'notenbild',
   aufgaben: 8,
   stufen: {
-    leicht: 'Schritte und große Sprünge',
-    mittel: 'Auch kleine Sprünge und gleiche Töne',
+    leicht: 'Schritte, kleine und große Sprünge, gleiche Töne',
     schwer: 'Mit Hilfslinien',
   },
   erklaerung: [
@@ -28,15 +29,13 @@ export default {
   },
   neu(stufe, k) {
     const [min, max] = BEREICH[stufe];
-    let art;
-    if (stufe === 'leicht') art = waehle(['schritt', 'sprung']);
-    else art = Math.random() < 0.14 ? 'gleich' : waehle(['schritt', 'sprung']);
+    const art = Math.random() < 0.14 ? 'gleich' : waehle(['schritt', 'sprung']);
     let a, b, abstand;
     do {
       a = zufall(min, max);
       if (art === 'schritt') abstand = 1;
       else if (art === 'gleich') abstand = 0;
-      else abstand = stufe === 'leicht' ? zufall(3, 5) : stufe === 'mittel' ? zufall(2, 4) : zufall(2, 3);
+      else abstand = stufe === 'leicht' ? zufall(2, 5) : zufall(2, 3);
       b = a + waehle([-1, 1]) * abstand;
     } while (b < min || b > max);
     const da = diaAusPos(k.stimme, a);
@@ -49,8 +48,8 @@ export default {
     const optionen = [
       { text: 'Schritt', wert: 'schritt' },
       { text: 'Sprung', wert: 'sprung' },
+      { text: 'Gleich', wert: 'gleich' },
     ];
-    if (stufe !== 'leicht') optionen.push({ text: 'Gleich', wert: 'gleich' });
     return {
       frage: 'Ist das ein Schritt oder ein Sprung?',
       bild: { abc: kopf({ schluessel: STIMMEN[k.stimme].schluessel }) + `x ${abcTon(da)}2 ${abcTon(db)}2 x |]`, breite: 170, scale: 1.8 },

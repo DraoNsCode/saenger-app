@@ -21,6 +21,9 @@ const WARUM = {
 };
 const TEMPO = 80;
 
+// Stufen nach Inhalt (ENTSCHEIDUNGEN.md, 19.11.2026): „leicht“ ist die nötige Station mit Noten und Pausen
+// (früher zwei Stufen), „schwer“ die freiwillige mit den Namen.
+
 function zeichen(art, d, dia) {
   return (art === 'pause' ? 'z' : abcTon(dia)) + laenge(d);
 }
@@ -31,9 +34,8 @@ export default {
   themaId: 'schlag-takt',
   aufgaben: 8,
   stufen: {
-    leicht: 'Ganze, Halbe und Viertel',
-    mittel: 'Vor allem Pausen',
-    schwer: 'Namen und Dauer, Noten und Pausen',
+    leicht: 'Noten und Pausen: Wie viele Schläge?',
+    schwer: 'Die Namen der Noten und Pausen, und zu einer Dauer das passende Zeichen finden',
   },
   erklaerung: [
     'Die Form einer Note zeigt, wie lange sie klingt. Meist ist **ein Schlag eine Viertelnote**.',
@@ -50,7 +52,7 @@ export default {
   },
   neu(stufe, k) {
     const schluessel = STIMMEN[k.stimme].schluessel;
-    const art = stufe === 'leicht' ? 'note' : stufe === 'mittel' ? (Math.random() < 0.7 ? 'pause' : 'note') : waehle(['note', 'pause']);
+    const art = waehle(['note', 'pause']);
     const form = stufe === 'schwer' ? waehle(['dauer', 'name', 'name', 'umgekehrt']) : 'dauer';
     const d = waehle([1, 2, 4]);
     const dia = diaAusPos(k.stimme, zufall(2, 6));

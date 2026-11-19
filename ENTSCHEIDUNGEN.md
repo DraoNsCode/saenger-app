@@ -64,9 +64,18 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Nötige und freiwillige Stationen: Das Ziel erreicht man, wenn alle nötigen Stationen geschafft sind. Schwerere Stufen sind freiwillig. Sie entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten. (Die andere Möglichkeit, für das Ziel alle Stufen zu verlangen, ist damit verworfen.)
 - Nötig ist bei jeder Übung die Stufe, die den Kern ihrer Etappe abdeckt. Das ist nicht immer die leichteste Stufe. Übungen, die immer einfach sind, bekommen nur eine Station.
 - Spätblüher: Eine freiwillige Stufe, die Wissen aus einer späteren Etappe braucht, erscheint in ihrem Gartenbereich erst, wenn man diese Etappe erreicht hat.
-- Noch offen: Was mit leichteren Stufen unterhalb der nötigen Stufe passiert. Daniel hält es für logisch, sie als Vorstufe ebenfalls nötig zu machen, will das aber erst später entscheiden.
+- ~~Noch offen: Was mit leichteren Stufen unterhalb der nötigen Stufe passiert.~~ (Abgelöst am selben Tag: Leicht, Mittel und Schwer sind nur grobe Orientierungswerte, die Frage stellt sich so nicht mehr. Siehe „Stationen nach Inhalt“.)
 - Nicht alle Übungen funktionieren in verschiedenen Schwierigkeitsstufen, manche sind immer einfach.
 - Als Gedanken behalten: Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken aus dem Garten und Urkunden. Themen und Abzeichen im Beet sichtbar machen, aber nur, wenn es passt. Weiterüben nach dem Ziel, zum Beispiel über Gartenjahre, überzeugt noch nicht ganz.
+
+## Stationen nach Inhalt (19.11.2026)
+
+- Leicht, Mittel und Schwer sind nur grobe Orientierungswerte für die Entwicklung. Die Stationen einer Übung werden vom Inhalt her gedacht, nicht von festen Stufen.
+- Claudes Vorschlag dazu passt erst einmal: Die nötige Station einer Übung enthält den Kern dessen, was die Übung zu ihrer Etappe beiträgt. Was darüber hinausgeht, wird zu freiwilligen Stationen, so viele, wie inhaltlich sinnvoll sind. Was bisher als eigene Stufe unter dem Kern lag, geht in der nötigen Station auf.
+- Die Stationen der Etappen 1 und 2, wie sie in [LERNWEG.md](LERNWEG.md) unter „Stationen der Etappen 1 und 2“ stehen, passen erst einmal. Daniel testet sie später in der App.
+- Wie schwer die nötigen Stationen bei Übungen zum Hören und Tippen sind, schätzt Claude selbst ein. Daniel korrigiert, falls nötig.
+- Die Abschluss-Station am Ende jeder Etappe bleibt eine nötige Station. Sie mischt Aufgaben aus den nötigen Stationen der Etappe.
+- „Die Stimmen im Chorsatz“ hat nur eine Stufe, auch im Reiter „Themen“.
 
 ## Arbeitsweise und Speichern (19.11.2026)
 

@@ -1,6 +1,6 @@
 // Einstieg und Navigation (Hash-Adressen, damit GitHub Pages ohne Server-Regeln reicht)
 import { zustand, stationOffen } from './speicher.js';
-import { station, thema, uebungenImThema } from './lernweg.js';
+import { station, thema, mischungsPaare } from './lernweg.js';
 import { UEBUNGEN } from './uebungen/index.js';
 import { setzeLautstaerke, stopAlles } from './klang.js';
 import { icon } from './ui.js';
@@ -84,7 +84,8 @@ function zeige() {
         titel: s.titel,
         themaId: s.themaId,
         stationId: s.id,
-        uebungen: s.mischung ? uebungenImThema(thema(s.themaId)) : [s.uebung],
+        uebungen: s.mischung ? [] : [s.uebung],
+        paare: s.mischung ? mischungsPaare(thema(s.themaId)) : null,
         stufe: s.stufe,
         zurueck: () => (location.hash = '#/weg'),
         weiter: (n) => (location.hash = `#/station/${n.id}`),
@@ -93,7 +94,7 @@ function zeige() {
     }
     case 'frei': {
       const u = UEBUNGEN[a];
-      if (!u || !['leicht', 'mittel', 'schwer'].includes(b)) {
+      if (!u || !u.stufen[b]) {
         location.replace('#/themen');
         return;
       }
@@ -117,7 +118,8 @@ function zeige() {
       aufraeumen = starteRunde(inhalt, {
         titel: `Gemischt: ${t.titel}`,
         themaId: t.id,
-        uebungen: uebungenImThema(t),
+        uebungen: [],
+        paare: mischungsPaare(t),
         stufe: 'gemischt',
         zurueck: () => (location.hash = `#/thema/${t.id}`),
       });

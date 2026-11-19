@@ -15,24 +15,27 @@ Der Stand steht nur hier. CLAUDE.md verweist darauf.
 Umgesetzt (19.11.2026):
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
-- Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten in je drei Schwierigkeiten
+- Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
+- Nötige und freiwillige Stationen (Baustein A): je Übung eine nötige Station, dazu freiwillige; ein Abschluss je Etappe, der die nötigen Stationen mischt. Der Mechanismus für Spätblüher ist eingebaut, bei den vorhandenen Übungen gibt es keinen. Die Aufteilung steht in LERNWEG.md und ist vorläufig angenommen; Daniel testet sie in der App.
+- Stufen nach Inhalt: Leicht, Mittel und Schwer sind nur grobe Orientierungswerte, nicht jede Übung hat alle drei. „Die Stimmen im Chorsatz“ hat nur eine Stufe.
 - Fortschritt im Browser des Geräts
 - Prüfung: Tests und Klick-Test in `pruefung/` (siehe unten)
 
 Abgelöst, nicht weiterentwickeln:
 
-- Der Leitfaden als Notenzeile in `js/views/weg.js`
+- Der Leitfaden als Notenzeile in `js/views/weg.js`. Bis zum Klostergarten zeigt sie nur die nötigen Stationen, die freiwilligen stehen im Blatt ihrer nötigen Station.
 
 Vorläufig:
 
 - Die Gestaltung in `css/app.css`. Die Optik wird erst nach der Geschichte des Weges gesucht.
+- Die Aufteilung der Stationen (LERNWEG.md, „Stationen der Etappen 1 und 2“), bis Daniel sie in der App getestet hat.
+- Wann sich freiwillige Stationen öffnen (sobald die nötige Station derselben Übung geschafft ist): Vorschlag von Claude, so umgesetzt.
 
 Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
-- Stationen werden in nötige und freiwillige aufgeteilt, dazu Spätblüher.
 
-Nächster Schritt laut Gespräch vom 19.11.2026: für die vorhandenen Übungen festhalten, welche Stufen sinnvoll sind, welche Station nötig ist und welche freiwillig, und das Daniel zur Prüfung vorlegen.
+Nächster Schritt: Daniel testet die Stationen in der App. Danach laut Fahrplan Baustein B (der Weg als Klostergarten: Bild und Optik).
 
 ## Technik
 
@@ -61,7 +64,7 @@ Nächster Schritt laut Gespräch vom 19.11.2026: für die vorhandenen Übungen f
 
 ### Eine neue Übungsart
 
-Eine Datei in `js/uebungen/` anlegen und in `js/uebungen/index.js` eintragen. Eine Übung hat `id`, `titel`, `themaId`, `aufgaben`, `stufen`, `erklaerung` und eine Funktion `neu(stufe, { stimme })`, die eine Aufgabe zurückgibt: entweder eine Auswahl (`frage`, `bild`, `optionen`, `loesung`, `warum`) oder eine eigene Ansicht über `eigene(el, fertig)`. Danach die Station in `js/lernweg.js` eintragen. Die Tests prüfen jede eingetragene Übungsart automatisch mit.
+Eine Datei in `js/uebungen/` anlegen und in `js/uebungen/index.js` eintragen. Eine Übung hat `id`, `titel`, `themaId`, `aufgaben`, `stufen` (eine oder mehrere von `leicht`, `mittel`, `schwer`, je nach Inhalt), `erklaerung` und eine Funktion `neu(stufe, { stimme })`, die eine Aufgabe zurückgibt: entweder eine Auswahl (`frage`, `bild`, `optionen`, `loesung`, `warum`) oder eine eigene Ansicht über `eigene(el, fertig)`. Danach die Stationen in `js/lernweg.js` eintragen: eine nötige und für jede weitere Stufe eine freiwillige (`freiwillig: true`, bei Spätblühern zusätzlich `abThema`). Die Tests prüfen jede eingetragene Übungsart automatisch mit.
 
 ## Lokal ansehen
 
@@ -82,7 +85,7 @@ npm run klicktest:schnell   # kurzer Klick-Test, unter einer Minute
 npm run klicktest           # voller Klick-Test, etwa vier Minuten
 ```
 
-- **`npm test`** erzeugt für jede Übung, Stufe und Stimme viele Zufallsaufgaben und prüft, ob die richtige Lösung unter den Antworten steht, ob keine Antwort doppelt ist und ob jede Stimme ihren Schlüssel bekommt. Außerdem prüft er die Stationen im Lernweg und die Grenze von 6 aus 8.
+- **`npm test`** erzeugt für jede Übung, Stufe und Stimme viele Zufallsaufgaben und prüft, ob die richtige Lösung unter den Antworten steht, ob keine Antwort doppelt ist und ob jede Stimme ihren Schlüssel bekommt. Außerdem prüft er die Stationen im Lernweg (nötig, freiwillig, Abschluss, Spätblüher, Freischalten) und die Grenze von 6 aus 8.
 - **`npm run klicktest`** öffnet die App in Chrome, Chromium oder Edge ohne Fenster, in Handy-Größe mit Sopran und in PC-Größe mit Tenor. Er besucht alle Ansichten, spielt Runden durch und legt Screenshots und `bericht.txt` in `pruefung/ausgabe/` ab. Probleme sind Fehler in der Konsole, fehlende Dateien, hängende Abläufe und Seiten, die breiter sind als der Bildschirm. Dauer etwa vier Minuten. `npm run klicktest:schnell` prüft nur die Handy-Größe und zeigt je Übung und Stufe nur die erste Aufgabe. Ein anderer Browser lässt sich mit der Umgebungsvariable `CHROME_PATH` angeben.
 - Nicht geprüft werden Klang, musikalischer Inhalt und wie sich das Üben anfühlt.
 

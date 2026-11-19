@@ -22,12 +22,15 @@ for (const [id, u] of Object.entries(UEBUNGEN)) {
     assert.ok(u.titel, 'titel fehlt');
     assert.ok(themenIds.has(u.themaId), `themaId „${u.themaId}“ gibt es nicht in lernweg.js`);
     assert.ok(Number.isInteger(u.aufgaben) && u.aufgaben > 0, 'aufgaben muss eine positive ganze Zahl sein');
-    assert.deepEqual(Object.keys(u.stufen).sort(), [...STUFEN].sort(), 'stufen muss leicht, mittel und schwer beschreiben');
+    // Leicht, Mittel und Schwer sind nur grobe Orientierungswerte; nicht jede Übung hat alle drei (ENTSCHEIDUNGEN.md, 19.11.2026).
+    const stufen = Object.keys(u.stufen);
+    assert.ok(stufen.length > 0, 'stufen fehlt');
+    for (const s of stufen) assert.ok(STUFEN.includes(s), `Stufe „${s}“ ist nicht leicht, mittel oder schwer`);
     assert.ok(Array.isArray(u.erklaerung) && u.erklaerung.length > 0, 'erklaerung fehlt');
     assert.equal(typeof u.neu, 'function', 'neu() fehlt');
   });
 
-  for (const stufe of STUFEN) {
+  for (const stufe of Object.keys(u.stufen)) {
     test(`${id}: Aufgaben in der Stufe ${stufe}`, () => {
       for (const stimme of STIMMEN) {
         for (let n = 0; n < DURCHLAEUFE; n++) {
@@ -60,3 +63,8 @@ for (const [id, u] of Object.entries(UEBUNGEN)) {
     });
   }
 }
+
+// Entscheidung vom 19.11.2026 (ENTSCHEIDUNGEN.md): „Die Stimmen im Chorsatz“ hat nur eine Stufe, auch im Reiter „Themen“.
+test('chorsatz: nur eine Stufe', () => {
+  assert.deepEqual(Object.keys(UEBUNGEN.chorsatz.stufen), ['leicht']);
+});
