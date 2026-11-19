@@ -9,15 +9,15 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
-| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden; Bild und Optik offen | A |
+| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden; Bild und Optik offen | A, J |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
 | E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten) | – |
-| F. Abzeichen | vorläufig, eventuell später neu | B |
+| F. Abzeichen | vorläufig, eventuell später neu; Bronze, Silber und Gold hängen an Leicht, Mittel und Schwer, siehe J | B, J |
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
-| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Bedarf von Daniel festgehalten (ENTSCHEIDUNGEN.md, 19.11.2026); Konzept offen; vor B | A |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Klärung eingetragen (ENTSCHEIDUNGEN.md, 19.11.2026); drei Richtungen als Vorschlag in GEZIELT-UEBEN.md, Wahl offen; vor B | A |
 
 ## Vorgeschlagene Reihenfolge
 

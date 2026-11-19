@@ -61,7 +61,9 @@ function heute() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-// Ergebnis einer Runde eintragen
+// Ergebnis einer Runde eintragen.
+// Runden ohne stationId (Reiter „Themen“) zählen hier nicht für Stationen. Entschieden ist inzwischen, dass Üben
+// außerhalb des Weges für den Garten zählt (ENTSCHEIDUNGEN.md, 19.11.2026); wie, ist noch offen (GEZIELT-UEBEN.md).
 export function ergebnisErfassen({ themaId, uebungId, stufe, stationId, richtig, gesamt }) {
   const geschafft = richtig >= noetigeRichtige(gesamt);
   let stationNeu = false;

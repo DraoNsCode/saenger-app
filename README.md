@@ -5,6 +5,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 - [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md): was Daniel festgelegt hat, mit Datum. Diese Datei gilt.
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
 - [WEG.md](WEG.md): Vorschlag für den Weg als Klostergarten
+- [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md): Vorschlag für das gezielte Üben und die Verbindung zum Garten (Baustein J)
 - [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für Bausteine und Reihenfolge der Entwicklung
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 
@@ -27,7 +28,7 @@ Abgelöst, nicht weiterentwickeln:
 
 In Frage gestellt (nicht weiterentwickeln, bis das neue System steht):
 
-- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“).
+- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“). Drei Richtungen dafür stehen als Vorschlag in GEZIELT-UEBEN.md, keine ist gewählt.
 
 Vorläufig:
 
@@ -38,8 +39,10 @@ Vorläufig:
 Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
+- Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist. Heute sind im Reiter „Themen“ alle fertigen Themen sofort frei.
+- Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 
-Nächster Schritt: Baustein J (gezielt üben nach dem Weg, Verbindung zum Fortschritt im Garten) als Konzept in einer eigenen Sitzung, danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
+Nächster Schritt: Baustein J abschließen. Daniel wählt eine Richtung oder eine Mischung aus GEZIELT-UEBEN.md und beantwortet die offenen Fragen dort. Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

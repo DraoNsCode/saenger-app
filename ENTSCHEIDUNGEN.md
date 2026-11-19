@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
 
 ## Ziel und Rahmen
 
@@ -83,7 +83,22 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Wer einfach dem Weg folgt, für den passt die Auswahl der Übungen. Wer danach bestimmte Themen noch einmal üben will, braucht ein besseres System als den jetzigen Reiter „Themen“.
 - Die Auswahl nach Leicht, Mittel und Schwer gefällt Daniel nicht.
 - Außerdem braucht es ein System, das bisher nicht bearbeitete Übungen mit dem sichtbaren Fortschritt im Garten verknüpft und diese Verbindung zeigt.
-- Das wird vor Baustein B (Bild und Optik des Gartens) in einer eigenen Sitzung angegangen. Wie das System aussieht, ist offen.
+- Das wird vor Baustein B (Bild und Optik des Gartens) in einer eigenen Sitzung angegangen. Wie das System aussieht, ist offen. (Klärung in derselben Sitzung siehe unten. Drei Richtungen als Vorschlag in [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), keine davon gewählt.)
+
+Klärung am 19.11.2026 (Baustein J):
+
+- „Nach dem Weg“ meint beides: nach einer Etappe, während man noch unterwegs ist, und nach der Kapelle.
+- Ein Thema kann man erst gezielt üben, wenn man es im Weg freigeschaltet hat. Im Code sind im Reiter „Themen“ noch alle fertigen Themen sofort frei. Ob ein Thema mit dem Erreichen seines Bereichs freigeschaltet ist oder erst mit seinen nötigen Stationen, ist nicht entschieden.
+- Üben außerhalb des Weges zählt für den Garten. Im Code zählen Runden im Reiter „Themen“ noch nicht für die Stationen.
+- Daniel sieht keinen Unterschied zwischen „gezielt üben“ und „eine freiwillige Station machen“.
+- Wer im Weg den nächsten Bereich erreicht, hat im alten Thema nur die nötigen Stationen geschafft, nicht alles. Auch an der Kapelle können in den Bereichen noch Stellen offen sein oder sich mit freiwilligen Übungen weiter ausbauen lassen.
+- Daniel geht davon aus, dass die Gartenübersicht in der fertigen App nicht alle Stationen zeigt. Das wäre zu unübersichtlich und würde das Bild zerstören. Das Konzept soll nicht vom heutigen Code ausgehen.
+- Vorstellbar, nicht entschieden:
+  - Die App wählt selbst aus, was man übt.
+  - Im Menü ein Fortschrittsbalken je Thema statt einzelner Übungen.
+  - Wer in den nächsten Bereich darf, lässt im alten Bereich Räume offen, die man mit noch nicht bearbeiteten Übungen fertigstellt.
+  - Offenes wird im Garten sichtbar, Üben lässt den Garten wachsen, oder beides.
+  - Für „bisher nicht bearbeitet“ und für den Umgang mit Schwierigkeit hält Daniel alle Möglichkeiten aus Claudes Fragen für vorstellbar. Die Liste steht in GEZIELT-UEBEN.md.
 
 ## Arbeitsweise und Speichern (19.11.2026)
 

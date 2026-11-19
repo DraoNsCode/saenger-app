@@ -78,7 +78,7 @@ So ist es derzeit umgesetzt. Die Grenze von 6 aus 8 hat Daniel bestätigt.
 - Eine Runde gilt als geschafft ab 6 von 8 richtigen Aufgaben. Bei Runden mit 4 Aufgaben müssen alle 4 richtig sein (ENTSCHEIDUNGEN.md, 19.11.2026).
 - Eine Station ist geschafft, wenn eine Runde dort geschafft ist. Ist es eine nötige Station, öffnet sich die nächste nötige Station und die freiwilligen derselben Übung. Geschaffte Stationen bleiben offen.
 - Eine Etappe ist geschafft, wenn ihre nötigen Stationen geschafft sind. Für das Abzeichen „Etappe geschafft“ zählen nur die nötigen Stationen.
-- Im Reiter „Themen“ sind alle fertigen Themen frei zugänglich, unabhängig vom Leitfaden.
+- Im Reiter „Themen“ sind alle fertigen Themen frei zugänglich, unabhängig vom Leitfaden. (So umgesetzt, aber überholt: Laut ENTSCHEIDUNGEN.md vom 19.11.2026 übt man ein Thema erst, wenn es im Weg freigeschaltet ist, und Üben außerhalb des Weges zählt für den Garten.)
 - Vor der ersten Runde einer Übung kommt eine kurze Erklärung. Sie lässt sich jederzeit über das Fragezeichen öffnen.
 
 ## Abzeichen
