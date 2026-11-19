@@ -77,10 +77,6 @@ Der Weg ist eine geschwungene Notenzeile mit fünf Linien. Die Stationen sind No
 
 Zwischen den Etappen steht eine Karte mit Nummer und Titel. Etappen in Vorbereitung sind gestrichelt und zeigen ihren Inhalt.
 
-## Fragen an Daniel
+## Rückmeldung
 
-1. Passt die Idee „eine Etappe, ein Thema“, und stimmt die Reihenfolge der elf Etappen?
-2. Sollen die Notennamen wirklich vor den Ziffern kommen (Etappe 3 vor 5)?
-3. Passen die Abzeichen und ihre Zahlen?
-4. Gefällt dir das Bild mit der Notenzeile?
-5. Die App spricht die Sänger mit „du“ an. Passt das für euren Chor?
+Am 19.11.2026 hat Daniel die Grundidee, die Reihenfolge, die Abzeichen, die Grenze für eine geschaffte Runde, das Bild und die Anrede vorläufig bestätigt. Die Einzelheiten stehen in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md).

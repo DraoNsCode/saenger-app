@@ -40,3 +40,12 @@ Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen 
 - Umfang der ersten Version: das Gerüst und spielbare Übungen für die ersten beiden Etappen.
 - Für das Bild des Leitfadens hat Daniel keine Vorgabe gemacht.
 - Die App liegt in einem eigenen GitHub-Repository und läuft über GitHub Pages.
+
+## Rückmeldung zum Lernweg-Vorschlag (19.11.2026, vorläufig)
+
+- Die Idee „eine Etappe, ein Thema“ und die Reihenfolge der elf Etappen passen erst einmal. Wenn alle Inhalte stehen, wird über die Reihenfolge noch einmal nachgedacht.
+- Die Notennamen kommen erst einmal vor den Ziffern.
+- Die Abzeichen bleiben erst einmal so. Später kann das Thema Abzeichen ganz neu angegangen werden.
+- Eine Runde gilt ab 6 von 8 richtigen Aufgaben als geschafft.
+- Das Bild des Leitfadens als Notenzeile mit Notenköpfen als Stationen passt.
+- Die App spricht die Sängerinnen und Sänger mit „du“ an.
