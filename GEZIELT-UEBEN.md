@@ -108,7 +108,12 @@ Gemeinsam ist allen drei Richtungen, was Daniel am 19.11.2026 geklärt hat (ENTS
 
 ## Fragen, die in jeder Richtung offen sind
 
-1. **Wann ist ein Thema freigeschaltet?** Sobald man seinen Bereich im Weg erreicht, oder erst, wenn seine nötigen Stationen geschafft sind?
+Daniels Antworten vom 19.11.2026 stehen in ENTSCHEIDUNGEN.md. Offen sind noch Frage 1 und die Wahl der Richtung.
+
+1. **Wann ist ein Thema freigeschaltet?** Sobald man seinen Bereich im Weg erreicht, oder erst, wenn seine nötigen Stationen geschafft sind? Der Unterschied betrifft das Thema, in dem man gerade unterwegs ist:
+   - *Mit Erreichen des Bereichs:* Das aktuelle Thema steht schon im Reiter „Themen“, und die automatische Auswahl kann daraus vorschlagen, während man im Weg dessen nötige Stationen noch nicht alle hat. Mehr Freiheit, aber Weg und Reiter zeigen für das aktuelle Thema dasselbe, und man kann sich im Ausbau verlieren, bevor die Etappe fertig ist.
+   - *Mit den nötigen Stationen:* Das aktuelle Thema gibt es nur im Weg. Im Reiter und in der automatischen Auswahl erscheinen nur Themen, die schon hinter einem liegen. Klare Trennung: Der Weg bringt Neues, der Reiter wiederholt und baut aus. Wer in einer Etappe hängt, übt sie über den Weg.
+   - Die freiwilligen Stationen der aktuellen Etappe öffnen sich im Weg in beiden Fällen wie heute, sobald ihre nötige Station geschafft ist, außer Daniel will das ändern.
 2. **Wie viele offene Stellen je Bereich** (Richtungen 1 und 3)? Eine je Übung mit freiwilligen Stationen, oder eine je Inhalt quer über die Übungen? Beispiele aus den Etappen 1 und 2: Drei Übungen haben eine freiwillige Station „mit Hilfslinien“, das könnte eine Stelle sein. In Etappe 2 gibt es „ohne Klick“ bei zwei und „zwei Takte“ bei drei Übungen.
 3. **Wer wählt?** Nur die App, oder kann der Sänger zusätzlich eine bestimmte Stelle oder Übung wählen?
 4. **Wie zählen die nötigen Stationen im Balken?** Nach der Zahl der Stationen lägen sie in Etappe 1 bei 50 % (6 von 12) und in Etappe 2 bei knapp der Hälfte (7 von 15). Oder eine feste Marke, unabhängig von der Zahl.

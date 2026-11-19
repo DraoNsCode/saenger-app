@@ -42,7 +42,7 @@ Entschieden, aber noch nicht umgesetzt:
 - Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist. Heute sind im Reiter „Themen“ alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 
-Nächster Schritt: Baustein J abschließen. Daniel wählt eine Richtung oder eine Mischung aus GEZIELT-UEBEN.md und beantwortet die offenen Fragen dort. Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
+Nächster Schritt: Baustein J abschließen. Offen sind noch die Richtung (oder eine Mischung) aus GEZIELT-UEBEN.md und die Frage, wann ein Thema als freigeschaltet gilt. Die übrigen Fragen hat Daniel beantwortet (ENTSCHEIDUNGEN.md). Danach Baustein B (Bild und Optik des Gartens). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

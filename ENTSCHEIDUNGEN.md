@@ -100,6 +100,16 @@ Klärung am 19.11.2026 (Baustein J):
   - Offenes wird im Garten sichtbar, Üben lässt den Garten wachsen, oder beides.
   - Für „bisher nicht bearbeitet“ und für den Umgang mit Schwierigkeit hält Daniel alle Möglichkeiten aus Claudes Fragen für vorstellbar. Die Liste steht in GEZIELT-UEBEN.md.
 
+Antworten auf die offenen Fragen in GEZIELT-UEBEN.md (19.11.2026, Baustein J):
+
+- Wie viele offene Stellen ein Gartenbereich hat und ob eine Stelle für eine Übung oder für einen Inhalt quer über mehrere Übungen steht, wird je Bereich entschieden, nicht nach einer festen Regel.
+- Auswählen sollen beide können: die App und der Sänger selbst.
+- Im Fortschritt eines Themas zählt vorerst jede Station gleich. Die nötigen Stationen machen also den Anteil aus, der ihrer Zahl entspricht (Etappe 1: 6 von 12).
+- Daniel geht weiter von zwei Zugängen aus: dem Garten (Weg) und dem Reiter „Themen“.
+- Vorstellbar, nicht entschieden: Der Reiter „Themen“ listet alle Themen, dort wählt man selbst. Eine Unterseite im Weg zeigt nur den Fortschritt und wählt die passenden offenen Übungen automatisch.
+- Bronze, Silber und Gold, die heute an Leicht, Mittel und Schwer hängen, werden erst in Baustein F neu gefasst.
+- Noch offen: wann ein Thema als freigeschaltet gilt (Daniel hat nach dem Unterschied gefragt) und welche Richtung aus GEZIELT-UEBEN.md weiterverfolgt wird.
+
 ## Arbeitsweise und Speichern (19.11.2026)
 
 - Welches Werkzeug für eine Aufgabe genutzt wird (Chat, Claude Code im Web, Desktop-App), überlässt Daniel Claude, je nachdem, was besser ist.
