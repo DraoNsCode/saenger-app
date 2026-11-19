@@ -71,6 +71,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 ## Arbeitsweise und Speichern (19.11.2026)
 
 - Welches Werkzeug für eine Aufgabe genutzt wird (Chat, Claude Code im Web, Desktop-App), überlässt Daniel Claude, je nachdem, was besser ist.
+- Der Klick-Test soll seltener laufen. Wann der schnelle und wann der volle läuft, steht in CLAUDE.md unter „Prüfen“.
 - Claude prüft vor neuen Arten von Aufgaben selbst, ob es passende Werkzeuge gibt (Bibliotheken, Skills, Plugins), und legt sie als Vorschlag vor. Dafür gibt es nur eine Regel in CLAUDE.md, keinen eigenen Skill und keine regelmäßige Prüfung.
 - Welche Strukturen sinnvoll sind (Plan, Prüf-Blickwinkel, Simulationen), überlässt Daniel Claude. Claude hat einen groben Fahrplan als Vorschlag ([FAHRPLAN.md](FAHRPLAN.md)) und einen Prüf-Blickwinkel für Texte (CLAUDE.md) gewählt.
 - Speichern: Konten, wenn sie kostenlos umsetzbar sind. Wenn nicht, ein Hinweis, die App auf dem Home-Bildschirm abzulegen (Safari löscht den Fortschritt sonst nach sieben Tagen ohne Besuch). Claude hat am 19.11.2026 geprüft, ob Konten kostenlos gehen. Das Ergebnis steht in FAHRPLAN.md und ist von Daniel noch nicht bestätigt.

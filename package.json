@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --test pruefung/*.test.mjs",
     "klicktest": "node pruefung/klicktest.mjs",
+    "klicktest:schnell": "node pruefung/klicktest.mjs --schnell",
     "pruefen": "node --test pruefung/*.test.mjs && node pruefung/klicktest.mjs"
   },
   "devDependencies": {

@@ -12,7 +12,10 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 ## Prüfen
 
 - Nach jeder Änderung am Code: `npm test` (ohne Installation, unter einer Sekunde).
-- Nach Änderungen an Ansichten, Abläufen oder Gestaltung: einmal `npm install`, dann `npm run klicktest`. Die Screenshots in `pruefung/ausgabe/` ansehen, bevor eine Änderung als fertig gilt.
+- Der Klick-Test läuft nur selten (einmal vorher `npm install`):
+  - `npm run klicktest:schnell` (unter einer Minute) nur, wenn sich Ansichten oder Abläufe sichtbar ändern. Bei Texten, Zahlen und Übungsinhalten reicht `npm test`.
+  - `npm run klicktest` (voll, etwa 4 Minuten) nur vor dem Abschluss eines Bausteins oder nach größeren Umbauten.
+  - Die Screenshots in `pruefung/ausgabe/` ansehen, bevor die Änderung als fertig gilt.
 - Daniel Belege zeigen statt nur „fertig“ zu melden: Testausgabe, Bericht, Screenshots der geänderten Stellen.
 - Claude kann nichts hören. Klang, musikalischen Inhalt und wie sich das Üben anfühlt, prüft Daniel. Bei Änderungen daran sagen, was er ausprobieren soll.
 - Die Tests halten auch Entscheidungen fest (6 aus 8, Schlüssel je Stimme). Ändert sich eine Entscheidung, den Test im selben Schritt anpassen.

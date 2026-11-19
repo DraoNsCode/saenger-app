@@ -1,7 +1,8 @@
 // Klick-Test: startet die App in einem echten Browser (ohne Fenster), klickt sie durch,
 // macht Screenshots in Handy- und PC-Größe und sammelt Fehler aus der Konsole.
 //
-// Start: npm install (einmal), dann npm run klicktest
+// Start: npm install (einmal), dann npm run klicktest (voll, etwa 4 Minuten)
+// oder npm run klicktest:schnell (nur Handy, je Übung und Stufe nur die erste Aufgabe, unter einer Minute)
 // Ergebnis: pruefung/ausgabe/ (Screenshots und bericht.txt, nicht im Repository)
 // Braucht Chrome, Chromium oder Edge. Anderer Pfad: Umgebungsvariable CHROME_PATH setzen.
 //
@@ -19,11 +20,12 @@ import { THEMEN, alleStationen } from '../js/lernweg.js';
 const WURZEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const AUSGABE = path.join(WURZEL, 'pruefung', 'ausgabe');
 
-const GERAETE = [
-  // Auf dem Handy werden die Runden ganz durchgespielt, am PC nur die erste Aufgabe gezeigt.
-  { name: 'handy', viewport: { width: 390, height: 844 }, stimme: 'Sopran', ganzeRunden: true },
-  { name: 'pc', viewport: { width: 1280, height: 800 }, stimme: 'Tenor', ganzeRunden: false },
-];
+const SCHNELL = process.argv.includes('--schnell');
+const HANDY = { name: 'handy', viewport: { width: 390, height: 844 }, stimme: 'Sopran', ganzeRunden: true };
+const PC = { name: 'pc', viewport: { width: 1280, height: 800 }, stimme: 'Tenor', ganzeRunden: false };
+// Voll: auf dem Handy werden die Runden ganz durchgespielt, am PC nur die erste Aufgabe gezeigt.
+// Schnell: nur das Handy und nur die erste Aufgabe, keine ganzen und keine gemischten Runden.
+const GERAETE = SCHNELL ? [{ ...HANDY, ganzeRunden: false }] : [HANDY, PC];
 const ANSICHTEN = ['weg', 'themen', ...THEMEN.filter((t) => t.stationen).map((t) => `thema/${t.id}`), 'abzeichen', 'ueben', 'einstellungen'];
 
 // ---------- kleiner Server für die App ----------
@@ -215,8 +217,8 @@ try {
 
 const dauer = Math.round((Date.now() - beginn) / 1000);
 const zeilen = [
-  `Klick-Test vom ${new Date().toLocaleString('de-DE')}, Dauer ${dauer} s`,
-  `Screenshots: ${bilder} in pruefung/ausgabe/ (handy: ${GERAETE[0].stimme}, pc: ${GERAETE[1].stimme})`,
+  `Klick-Test (${SCHNELL ? 'schnell' : 'voll'}) vom ${new Date().toLocaleString('de-DE')}, Dauer ${dauer} s`,
+  `Screenshots: ${bilder} in pruefung/ausgabe/ (${GERAETE.map((g) => `${g.name}: ${g.stimme}`).join(', ')})`,
   '',
   probleme.length ? `Probleme (${probleme.length}):` : 'Probleme: keine',
   ...probleme.map((p) => `- ${p}`),

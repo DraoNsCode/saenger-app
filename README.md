@@ -76,13 +76,14 @@ Dann `http://localhost:8000` öffnen. Wegen der JavaScript-Module funktioniert d
 Braucht Node.js (ab Version 20).
 
 ```sh
-npm test            # Übungen, Lernweg und Speichern prüfen, ohne Browser, ohne Installation
-npm install         # einmal, für den Klick-Test
-npm run klicktest   # App im Browser durchklicken, Screenshots und Fehler
+npm test                    # Übungen, Lernweg und Speichern prüfen, ohne Browser, ohne Installation
+npm install                 # einmal, für den Klick-Test
+npm run klicktest:schnell   # kurzer Klick-Test, unter einer Minute
+npm run klicktest           # voller Klick-Test, etwa vier Minuten
 ```
 
 - **`npm test`** erzeugt für jede Übung, Stufe und Stimme viele Zufallsaufgaben und prüft, ob die richtige Lösung unter den Antworten steht, ob keine Antwort doppelt ist und ob jede Stimme ihren Schlüssel bekommt. Außerdem prüft er die Stationen im Lernweg und die Grenze von 6 aus 8.
-- **`npm run klicktest`** öffnet die App in Chrome, Chromium oder Edge ohne Fenster, in Handy-Größe mit Sopran und in PC-Größe mit Tenor. Er besucht alle Ansichten, spielt Runden durch und legt Screenshots und `bericht.txt` in `pruefung/ausgabe/` ab. Probleme sind Fehler in der Konsole, fehlende Dateien, hängende Abläufe und Seiten, die breiter sind als der Bildschirm. Dauer etwa vier Minuten. Ein anderer Browser lässt sich mit der Umgebungsvariable `CHROME_PATH` angeben.
+- **`npm run klicktest`** öffnet die App in Chrome, Chromium oder Edge ohne Fenster, in Handy-Größe mit Sopran und in PC-Größe mit Tenor. Er besucht alle Ansichten, spielt Runden durch und legt Screenshots und `bericht.txt` in `pruefung/ausgabe/` ab. Probleme sind Fehler in der Konsole, fehlende Dateien, hängende Abläufe und Seiten, die breiter sind als der Bildschirm. Dauer etwa vier Minuten. `npm run klicktest:schnell` prüft nur die Handy-Größe und zeigt je Übung und Stufe nur die erste Aufgabe. Ein anderer Browser lässt sich mit der Umgebungsvariable `CHROME_PATH` angeben.
 - Nicht geprüft werden Klang, musikalischer Inhalt und wie sich das Üben anfühlt.
 
 ## Veröffentlichen
