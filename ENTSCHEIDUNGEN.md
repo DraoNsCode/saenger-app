@@ -47,5 +47,17 @@ Hier steht nur, was Daniel selbst festgelegt hat. Vorschläge von Claude stehen 
 - Die Notennamen kommen erst einmal vor den Ziffern.
 - Die Abzeichen bleiben erst einmal so. Später kann das Thema Abzeichen ganz neu angegangen werden.
 - Eine Runde gilt ab 6 von 8 richtigen Aufgaben als geschafft.
-- Das Bild des Leitfadens als Notenzeile mit Notenköpfen als Stationen passt.
+- Das Bild des Leitfadens als Notenzeile mit Notenköpfen als Stationen passt. (Am selben Tag abgelöst, siehe „Der Weg als Klostergarten“.)
 - Die App spricht die Sängerinnen und Sänger mit „du“ an.
+
+## Der Weg als Klostergarten (19.11.2026, in Arbeit)
+
+- Die Logik des Weges bleibt: Fortschrittsanzeige und Leitfaden durch die Themen. Darstellung und Optik sollen sich ändern, ein Weg aus Notenzeilen ist zu langweilig.
+- Zuerst wird die Geschichte oder das Bild gesucht, danach die passende Optik, eventuell für die ganze App.
+- Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten.
+- Die Etappen sollen eine logische Reihenfolge und ein richtiges Ziel haben. Das Ziel ist die Kapelle.
+- Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md).
+- Der Garten zieht sich in die Länge: Man beginnt unten und bewegt sich beim Scrollen nach oben. Vorstellbar ist die Ansicht von oben oder schräg von oben.
+- Offen: Entweder erreicht man das Ziel erst nach allen Übungen in allen Schwierigkeitsstufen. Oder man erreicht es nach allen Übungen auf einer einfacheren Stufe, und die schweren Übungen entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten.
+- Nicht alle Übungen funktionieren in verschiedenen Schwierigkeitsstufen, manche sind immer einfach.
+- Als Gedanken behalten: Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken aus dem Garten und Urkunden. Themen und Abzeichen im Beet sichtbar machen, aber nur, wenn es passt. Weiterüben nach dem Ziel, zum Beispiel über Gartenjahre, überzeugt noch nicht ganz.
