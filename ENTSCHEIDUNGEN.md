@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [GARTEN-BILD.md](GARTEN-BILD.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
 
 ## Ziel und Rahmen
 
@@ -130,3 +130,16 @@ Von Daniel Claude überlassen (19.11.2026, Baustein J). So hat Claude gewählt, 
 - Claude prüft vor neuen Arten von Aufgaben selbst, ob es passende Werkzeuge gibt (Bibliotheken, Skills, Plugins), und legt sie als Vorschlag vor. Dafür gibt es nur eine Regel in CLAUDE.md, keinen eigenen Skill und keine regelmäßige Prüfung.
 - Welche Strukturen sinnvoll sind (Plan, Prüf-Blickwinkel, Simulationen), überlässt Daniel Claude. Claude hat einen groben Fahrplan als Vorschlag ([FAHRPLAN.md](FAHRPLAN.md)) und einen Prüf-Blickwinkel für Texte (CLAUDE.md) gewählt.
 - Speichern: Konten, wenn sie kostenlos umsetzbar sind. Wenn nicht, ein Hinweis, die App auf dem Home-Bildschirm abzulegen (Safari löscht den Fortschritt sonst nach sieben Tagen ohne Besuch). Claude hat am 19.11.2026 geprüft, ob Konten kostenlos gehen. Das Ergebnis steht in FAHRPLAN.md und ist von Daniel noch nicht bestätigt.
+
+## Bild und Optik des Gartens (24.11.2026, Baustein B)
+
+- Baustein B geht in Schritten vor. Schritt 1 stellt zusammen, was der Garten zeigen und können muss. Schritt 2 recherchiert, wie sich der Garten am besten herstellen lässt. Schritt 3 ist eine Probe an einem Bereich. Am 24.11.2026 waren nur Schritt 1 und 2 dran, ohne Grafik und Code. Das Ergebnis steht als Vorschlag in [GARTEN-BILD.md](GARTEN-BILD.md).
+- Daniels Bewertungspunkte für die Wege zur Grafik:
+  - Kosten 0, Lizenz
+  - ob sich Zustände in Bausteinen austauschen lassen
+  - ob alle elf Bereiche und die Kapelle einen einheitlichen Stil bekommen, auch wenn Bereiche später dazukommen
+  - ob sich Bereiche tauschen lassen, denn die Reihenfolge der Etappen ist noch nicht endgültig
+  - Darstellung auf Handy, Tablet und PC
+  - Aufwand für Claude und Pflege durch Daniel über Jahre
+  - erreichbare Qualität
+- Ohne Daniels Zustimmung wird nichts installiert und nichts eingebaut (für Baustein B ausgesprochen).

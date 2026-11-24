@@ -9,7 +9,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
-| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden; Bild und Optik offen | A, J |
+| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Schritt 1 und 2 (was der Garten können muss, Wege zur Grafik) als Vorschlag in GARTEN-BILD.md (24.11.2026). Offen: der Weg für die Probe, die Probe an einem Bereich (Schritt 3), danach Bild und Optik | A, J |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
 | E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten) | – |
@@ -23,7 +23,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 
 1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
 2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss. (Konzept erledigt am 19.11.2026.) Die Teile von J ohne Gartenbild könnten vor oder mit B umgesetzt werden, offene Stellen und Pflege-Zeichen im Garten gehören zu B (GEZIELT-UEBEN.md).
-3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet.
+3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet. (Schritt 1 und 2 erledigt am 24.11.2026, siehe GARTEN-BILD.md. Als Nächstes die Probe an einem Bereich.)
 4. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
 5. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
 6. **C, D, F, G, H** danach in der Reihenfolge, die gerade passt. C am besten in Paketen je Etappe. Über die Reihenfolge der Etappen will Daniel nachdenken, wenn alle Inhalte stehen.

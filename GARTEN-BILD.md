@@ -1,0 +1,337 @@
+# Bild und Optik des Gartens – Vorschlag zur Prüfung
+
+Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Grafik und Code gibt es noch nicht, installiert oder eingebaut ist nichts. Preise und Bedingungen der Dienste haben den Stand November 2026. Vor einer Nutzung sollten sie noch einmal geprüft werden.
+
+**Kurz:**
+
+- Schritt 1 sammelt, was der Garten zeigen und können muss, getrennt nach entschieden, Vorschlag und offen. Für die Herstellung folgt daraus vor allem (Vorschlag): Der Garten wird am besten aus vielen kleinen Bildteilen gebaut, grob 150 bis 250, die die App je nach Fortschritt zusammensetzt.
+- Schritt 2 bewertet die Wege zur Grafik nach Daniels sieben Punkten. Drei Wege werden empfohlen: **1. ein eigenes SVG-Bausteinsystem**, **2. Pixel-Kacheln aus einer freien Sammlung**, **3. KI-Grundbilder mit Vektor-Ebenen darüber**. Nach Claudes Einschätzung passt Weg 1 am besten zu den sieben Punkten. Seine Schwachstelle ist die erreichbare Qualität.
+- Vorschlag für Schritt 3: eine Probe mit Weg 1 am ersten Bereich, auf Wunsch mit einem kleinen Vergleich aus Weg 3 oder Weg 2. Die offenen Fragen an Daniel stehen weiter unten.
+
+## Schritt 1: Was der Garten zeigen und können muss
+
+**Entschieden** heißt: steht in ENTSCHEIDUNGEN.md, mit dem Datum in Klammern. **Vorschlag** heißt: von Claude, aus WEG.md, aus GEZIELT-UEBEN.md oder hier neu. **Offen** heißt: noch nicht geklärt.
+
+### Aufbau und Weg
+
+- Entschieden (19.11.): Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. Die Etappen haben eine logische Reihenfolge, das Ziel ist die Kapelle. Jeder Bereich passt zum Thema seiner Etappe.
+- Entschieden (19.11.): Der Garten zieht sich in die Länge. Man beginnt unten und bewegt sich beim Scrollen nach oben.
+- Entschieden (19.11.): Es gibt elf Etappen. Über ihre Reihenfolge denkt Daniel noch einmal nach, wenn alle Inhalte stehen. Deshalb sollen sich Bereiche tauschen lassen (24.11.).
+- Entschieden (19.11.): Erst die Geschichte, dann die passende Optik, eventuell für die ganze App.
+- Vorschlag (WEG.md): welcher Bereich zu welcher Etappe gehört, vom Gemüsegarten am Tor bis zum Springbrunnen. Ein Bach begleitet den Weg.
+- Offen: Ansicht von oben oder schräg von oben. Beides ist vorstellbar (19.11.).
+- Offen: wie die Etappen 3 bis 11 aussehen, solange es sie nur als Titel gibt. Heute steht dort „In Vorbereitung“.
+
+### Zustände eines Bereichs
+
+- Entschieden (19.11.): Die nötigen Stationen schalten den nächsten Bereich frei. Die freiwilligen entwickeln den Bereich zusätzlich weiter.
+- Entschieden (19.11., Richtung 3): Was geschafft ist, bleibt geschafft. Der Fortschritt eines Themas steigt nur. Jede Station zählt vorerst gleich. Üben außerhalb des Weges zählt für den Garten.
+- Vorschlag (WEG.md): die Ausbaustufen „angelegt“, „blühend“ und „in voller Pracht“.
+- Vorschlag (neu): Mindestens diese Zustände unterscheiden: noch nicht erreicht · in Arbeit (die nötigen Stationen laufen) · angelegt · weiter ausgebaut · fertig ausgebaut.
+- Offen: wie ein noch nicht erreichter Bereich aussieht, zum Beispiel verborgen, im Nebel, als Umriss oder hinter einer Mauer.
+- Offen: ob der Ausbau in wenigen festen Stufen wächst oder in vielen kleinen Schritten.
+
+### Stationen
+
+- Entschieden (19.11.): Die Stationen liegen am Weg. Die Abschluss-Station am Ende jeder Etappe ist nötig.
+- Entschieden (19.11.): Daniel geht davon aus, dass die Gartenübersicht nicht alle Stationen zeigt. Das wäre zu unübersichtlich und würde das Bild zerstören.
+- Offen: wie beides zusammenpasst. Möglichkeiten (Vorschlag):
+  - (a) Am Weg stehen nur die nötigen Stationen. Die freiwilligen stecken in den offenen Stellen.
+  - (b) Am Weg steht nur die nächste Station. Geschaffte Stationen sind kleine Zeichen.
+  - (c) Die Stationen stehen auf einer eigenen Seite des Bereichs.
+- Offen (WEG.md): was an einer Station im Garten passiert.
+- Offen: ob der Abschluss im Bild besonders aussieht, etwa als Tor zum nächsten Bereich (Vorschlag).
+
+### Offene Stellen
+
+- Entschieden (19.11.): Wer den nächsten Bereich erreicht, hat im alten Thema nur die nötigen Stationen geschafft. Auch an der Kapelle können in den Bereichen noch Stellen offen sein.
+- Entschieden (19.11.): Wie viele offene Stellen ein Bereich hat und ob eine Stelle für eine Übung oder für einen Inhalt quer über mehrere Übungen steht, wird je Bereich entschieden.
+- Vorschlag (GEZIELT-UEBEN.md): etwa ein leeres Beet, ein Sockel ohne Figur oder eine Laube ohne Bewuchs. Eine Stelle wird fertig, wenn ihre freiwilligen Stationen geschafft sind.
+- Offen: das Aussehen. Nach den Etappen 1 und 2 wären es etwa 3 bis 6 Stellen je Bereich.
+
+### Pflege-Zeichen
+
+- Entschieden (19.11.): Die App stößt Wiederholungen an, für Übungen, die lange nicht geübt wurden oder oft Fehler hatten. Kleine Zeichen im Garten zeigen das. Verloren geht nichts.
+- Vorschlag (GEZIELT-UEBEN.md): eine Gießkanne oder ein wartender Vogel. Wer dort übt, lässt das Zeichen verschwinden.
+- Offen: das Aussehen, ab wann ein Zeichen erscheint und in welcher Reihenfolge die App auswählt.
+
+### Spätblüher
+
+- Entschieden (19.11.): Eine freiwillige Stufe, die Wissen aus einer späteren Etappe braucht, erscheint in ihrem Bereich erst, wenn diese Etappe erreicht ist.
+- Stand: Bei den vorhandenen Übungen gibt es keinen (README.md).
+- Vorschlag (GEZIELT-UEBEN.md): Ein Spätblüher wird zu einer neuen offenen Stelle.
+- Offen: wie man bemerkt, dass in einem Bereich weiter unten etwas Neues erschienen ist.
+
+### Position des Sängers
+
+- Entschieden (19.11.): Der Weg bleibt Fortschrittsanzeige und Leitfaden durch die Themen.
+- Stand im Code: Beim Öffnen scrollt die App zur nächsten Station, sobald die erste geschafft ist. Unten steht ein Knopf „Weiter: …“.
+- Offen: wie die eigene Position erscheint, etwa als Figur, Laterne oder Markierung am Weg, und ob etwas mitgeht.
+
+### Kapelle
+
+- Entschieden (19.11.): Die Kapelle ist das Ziel. Man erreicht sie, wenn alle nötigen Stationen geschafft sind.
+- Entschieden (18.11.): Den Leitfaden kann man durchspielen, danach übt man weiter.
+- Vorschlag (WEG.md): Die Tür öffnet sich, ein vierstimmiger Choral erklingt.
+- Gedanke, nicht entschieden (19.11.): Weiterüben nach dem Ziel über Gartenjahre überzeugt Daniel noch nicht ganz.
+- Offen: wie die Kapelle vorher und nachher aussieht und was danach im Bild passiert.
+
+### Bedienung
+
+- Entschieden (19.11.): Es gibt zwei Zugänge, den Garten (Weg) und den Reiter „Themen“. Auswählen können die App und der Sänger selbst. Die App sagt „du“.
+- Vorschlag (GEZIELT-UEBEN.md): ein Knopf wie „Heute üben“, ein Balken je Thema und eine Unterseite im Weg mit Fortschritt und automatischer Auswahl.
+- Offen: Ist der Garten selbst das Menü (Bereich antippen, Balken und Knopf sehen), gibt es eine Unterseite, oder beides?
+- Offen: Was lässt sich antippen: der Bereich, die Station, die offene Stelle, das Pflege-Zeichen?
+- Offen: Gilt „Heute üben“ für alle Themen oder je Thema?
+- Vorschlag (neu): große Tippflächen; Zustände nicht nur über Farbe zeigen; Bewegung anhalten, wenn am Gerät „Bewegung reduzieren“ eingestellt ist; am PC alles auch mit der Tastatur bedienbar.
+
+### Geräte und Rahmen
+
+- Entschieden (11.11.): Handy, Tablet und PC. Kosten 0. Daniel betreut die App möglichst über einige Jahre.
+- Entschieden (19.11.): eigenes Repository, die App läuft über GitHub Pages.
+- Entschieden (24.11.): Daniels Bewertungspunkte für die Wege zur Grafik, siehe Schritt 2.
+- Stand der Technik (README.md): statische Web-App ohne Build-Schritt, Schriften liegen im Repository, es gehen keine Daten an fremde Server.
+
+### Gedanken, die das Bild berühren (nicht entschieden)
+
+- Abzeichen in einem Schrank oder einer Gartenscheune mit Fundstücken und Urkunden (19.11., gehört zu Baustein F).
+- Themen und Abzeichen im Beet sichtbar machen, nur wenn es passt (19.11.).
+- Vögel als musikalisches Element, wenn ein Bereich fertig ist (WEG.md).
+- Etwas Gemeinsames für alle kommt erst in einer späteren Version (18.11.).
+
+### Was daraus für die Herstellung folgt (Vorschlag)
+
+1. **Kacheln:** jeder Bereich als Kachel gleicher Breite, bei der Weg, Bach und Mauer unten und oben immer an derselben Stelle ein- und austreten. Dann passen die Bereiche in jeder Reihenfolge aneinander, und neue lassen sich anfügen.
+2. **Ebenen:** statt fertiger Bilder jede Kachel aus Ebenen zusammensetzen: Grund, Weg mit Stationen, Ausbau in Schritten, offene Stellen, Pflege-Zeichen, Position und Beschriftung.
+3. **Plätze:** in jeder Kachel feste Plätze für offene Stellen, Pflege-Zeichen und spätere Spätblüher.
+4. **Gemeinsame Teile:** Pflanzen, Beete, Steine, Wasser, Mauern und Zeichen einmal zeichnen und in allen Bereichen wiederverwenden. Das hielte den Stil einheitlich.
+5. **Stilregeln:** Farben, Linien, Licht und Blickwinkel in einer kurzen Datei festhalten, damit spätere Bereiche dazupassen.
+6. **Menge (Schätzung):** 12 Kacheln mit je einem Grund, 3 bis 4 Ausbau-Ebenen und 3 bis 6 offenen Stellen mit je 2 bis 3 Zuständen, dazu die gemeinsamen Zeichen. Zusammen etwa 150 bis 250 Bildteile. An dieser Menge misst sich jeder Weg in Schritt 2.
+
+## Schritt 2: Wege zur Grafik
+
+### Bewertungspunkte (Daniel, 24.11.2026)
+
+Kosten 0 und Lizenz · Zustände in Bausteinen austauschbar · einheitlicher Stil für elf Bereiche und Kapelle, auch wenn Bereiche später dazukommen · Bereiche tauschbar · Darstellung auf Handy, Tablet und PC · Aufwand für Claude und Pflege durch Daniel über Jahre · erreichbare Qualität.
+
+### Überblick
+
+Zeichen: ++ sehr gut · + gut · o mittel · – schwach. Die Noten sind Claudes Einschätzung nach der Recherche, nicht gemessen. Die Probe soll sie prüfen. Die Buchstaben verweisen auf die Einzelheiten weiter unten.
+
+| Weg | Kosten, Lizenz | Zustände als Bausteine | einheitlicher Stil, auch später | Bereiche tauschen | Handy, Tablet, PC | Aufwand Claude | Pflege Daniel | Qualität |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| A: SVG, selbst gezeichnet | ++ | ++ | + | ++ | ++ | o | + | o bis + |
+| D1: wie A, Stil vorher mit KI-Bildern gefunden | ++ | ++ | + | ++ | ++ | o | + | + |
+| D2: SVG mit freien Vektor-Teilen | ++ | ++ | o bis + | ++ | ++ | + | + | + |
+| D4: Pixel-Kacheln aus einer Sammlung | ++ | ++ | + | ++ | + | + | + | o bis + |
+| C1: ganze KI-Bilder aus Diensten | o | – | – | – | o | o | – | ++ |
+| C2: KI-Bilder lokal | + | o | o bis + | o | o | – | o | + bis ++ |
+| D3: KI-Grundbild mit SVG-Ebenen | o | + | o | + | o | o | o | + bis ++ |
+| D5: 3D-Modelle, mit Blender gerendert | ++ | + | ++ | + | o | – | – | + bis ++ |
+
+Freie Sammlungen allein (B) stehen nicht in der Tabelle. Ihnen fehlt Klostertypisches, deshalb stecken sie in D2 und D4.
+
+### Empfohlene Wege
+
+#### Weg 1: eigenes SVG-Bausteinsystem (A, mit D1 und D2 als Varianten)
+
+**Was:** Claude zeichnet den Garten als SVG aus einfachen Formen. Es gibt gemeinsame Bauteile, Kacheln mit festen Anschlüssen, Ebenen für die Zustände und schriftliche Stilregeln. Bewegung entsteht mit CSS, ohne Bibliothek.
+
+Vorteile:
+
+- Kosten 0 und keine fremden Lizenzen.
+- Zustände, offene Stellen, Pflege-Zeichen und Position sind einzelne Gruppen im SVG. Die App blendet sie je nach Fortschritt ein und aus.
+- Bereiche lassen sich tauschen und anfügen, ohne die anderen neu zu zeichnen.
+- Vektorgrafik ist in jeder Größe scharf. Die Dateien bleiben klein, ein Bild reicht für alle Geräte.
+- Passt zur bisherigen Technik: kein Build-Schritt, keine Bibliothek, alles im Repository.
+- Liegen die Bauteile als eigene SVG-Dateien vor, kann Daniel sie mit Inkscape öffnen und ändern.
+- Die Optik lässt sich auf die übrige App übertragen, etwa auf Symbole, Abzeichen und Hintergründe.
+
+Nachteile:
+
+- Die Qualität hängt an Claudes Zeichnen. Ein flacher, grafischer Stil ist gut erreichbar. Natürliche Formen wie Bäume, Rosen und Wasser sind die Schwachstelle, ebenso Gebäude schräg von oben.
+- Der Anfang ist aufwendig. Bauteile, Stilregeln und die erste Kachel brauchen mehrere Abstimmungsrunden über Screenshots.
+- Feine Oberflächen wie Papier oder Pinselstrich gehen mit SVG-Filtern. Auf älteren Handys kosten sie aber Leistung.
+
+Varianten:
+
+- **Stil vorher finden (D1):** Mit wenigen KI-Bildern aus einem kostenlosen Dienst suchen Daniel und Claude eine Richtung. Die Bilder dienen nur als Vorlage und kommen nicht in die App.
+- **Freie Vektor-Teile (D2):** Pflanzen, Tiere und Gegenstände kommen aus Fluent Emoji (MIT) oder einem Kenney-Paket (CC0), in den Farben angepasst. Das geht schneller, kann aber einen Stilbruch geben. Fehlendes wie Mühle oder Kreuzgang zeichnet Claude im selben Stil nach.
+- **Handzeichnung:** Mit Rough.js (MIT) wirken dieselben Formen wie skizziert.
+
+#### Weg 2: Pixel-Kacheln aus einer freien Sammlung (D4)
+
+**Was:** Der Garten entsteht aus fertigen Kacheln. Infrage kommen Kenney „Tiny Town“ (16 × 16 Pixel) und „Tiny Farm“, beide CC0, oder LPC (32 Pixel, Dreiviertel-Sicht von oben, CC BY-SA 3.0). Die Bereiche werden im kostenlosen Editor Tiled gelegt und als JSON gespeichert. Zustände entstehen, indem einzelne Kacheln ausgetauscht werden. Fehlendes zeichnet Claude im selben Pixelstil nach.
+
+Vorteile:
+
+- Fertige Teile in einheitlichem Stil, viele passend für Garten und Hof.
+- Bei Kacheln sind Zustände und Tausch das Grundprinzip.
+- Daniel könnte Bereiche in Tiled selbst legen oder umbauen, ohne zu zeichnen.
+- Sehr kleine Dateien. Pixelgrafik bleibt scharf, wenn sie in ganzen Schritten vergrößert wird.
+
+Nachteile:
+
+- Der Look erinnert an ältere Computerspiele und prägt die ganze App. Ob er zu Sängern ohne Spielerfahrung passt, ist fraglich.
+- Klostertypisches wie Kapelle, Kreuzgang, Mühle oder Weinbergterrassen fehlt zum Teil. Nachgezeichnete Pixelteile fallen leicht aus dem Stil.
+- Zwischen den ganzen Vergrößerungsstufen bleiben auf manchen Bildschirmen Ränder.
+- LPC verlangt Namensnennung je Teil, und Ableitungen laufen unter derselben Lizenz. Kenney (CC0) kennt diese Pflichten nicht, die passenden Pakete sind aber kleiner.
+
+#### Weg 3: KI-Grundbild je Bereich, Zustände als Vektor-Ebenen (D3)
+
+**Was:** Je Bereich gibt es ein gemaltes Grundbild, eventuell in zwei bis drei Ausbaustufen, aus einem KI-Dienst oder lokal erzeugt. Weg, Anschlüsse, offene Stellen, Pflege-Zeichen und Position liegen als SVG darüber. So bleiben Zustände und Anschlüsse steuerbar, und das Bild wirkt wie gemalt.
+
+Vorteile:
+
+- Die stärkste Bildwirkung: malerisch und stimmungsvoll.
+- Schnell zu einem schönen ersten Bild.
+- Die SVG-Ebenen haben für Zustände und Anschlüsse dieselben Vorteile wie Weg 1.
+
+Nachteile:
+
+- Der Stil schwankt zwischen den Bildern und über die Jahre, weil sich Dienste und Modelle ändern. Spätere Bereiche passend zu erzeugen, ist unsicher.
+- Zwischen Gemälde und Vektor-Ebenen kann ein Stilbruch entstehen.
+- Claude kann in dieser Umgebung KI-Bilder nur über den Canva-Connector erzeugen, kostenlos bis zu 20 KI-Nutzungen im Monat. Sonst erzeugt Daniel die Bilder selbst in einem Dienst, nach Claudes Beschreibung.
+- Rasterbilder brauchen für Handy, Tablet und PC mehrere Größen und mehr Daten als SVG.
+- Die Bedingungen sind je Dienst verschieden. Je Bild sollte festgehalten werden, woher es stammt: Dienst, Datum, Beschreibung.
+- Lokal erzeugt wäre es kostenlos und wiederholbar, braucht aber eine starke Grafikkarte und Einrichtung auf Daniels PC (siehe C).
+
+#### Nicht empfohlen
+
+- **Ganze KI-Bilder ohne Ebenen (C1):** Zustände, Anschlüsse und Tausch lassen sich kaum steuern.
+- **Recraft im kostenlosen Plan:** Die Bilder gehören Recraft, sind öffentlich und nur für private Zwecke erlaubt.
+- **Canva als Hauptweg:** SVG-Download und PNG mit transparentem Hintergrund gibt es nur in den Bezahlplänen.
+- **Rive für Animationen:** Exporte aus dem kostenlosen Plan zeigen einen Rive-Startbildschirm.
+- **3D-Modelle mit Blender (D5):** einheitlich und hochwertig, aber eine aufwendige Herstellungskette. Ändern ginge nur mit Blender.
+- **Zdog als Grundlage:** reizvoll für „schräg von oben“, wird aber seit Jahren kaum noch gepflegt.
+
+### Vorschlag für die Probe (Schritt 3)
+
+- **Bereich:** der erste. Etappe 1 ist spielbar, mit 6 nötigen und 6 freiwilligen Stationen. Laut WEG.md-Vorschlag liegt dort der Start am Tor, und Beete und Pflanzen sind die häufigsten Teile im ganzen Garten.
+- **Weg:** Weg 1 vollständig. Auf Wunsch kommt ein Zustand desselben Bereichs zum Vergleich dazu: aus Weg 3 (Daniel erzeugt zwei bis drei Grundbilder nach Claudes Beschreibung, Claude legt dieselben Ebenen darüber) oder aus Weg 2 (Kenney-Kacheln).
+- **Form:** eine eigene Probeseite im Repository, etwa `probe/garten.html`. Die App verlinkt sie nicht, die App selbst bleibt unverändert. Schalter auf der Seite wechseln die Zustände.
+- **Inhalt:**
+  - die Kachel mit Anschlüssen unten (Tor) und oben, darüber eine einfache Platzhalter-Kachel, die sich mit ihr tauschen lässt
+  - die Zustände von „noch nicht erreicht“ bis „fertig ausgebaut“
+  - zwei bis drei offene Stellen, ein Pflege-Zeichen, ein Spätblüher nur zur Probe und die Position des Sängers
+  - die Stationen in einer der Möglichkeiten (a) bis (c) aus Schritt 1
+  - eine kleine Bewegung, die bei „Bewegung reduzieren“ stillsteht
+  - erste Stilregeln (Farben, Linien, Blickwinkel) als kurze Datei
+- **Belege:** Screenshots in Handy-, Tablet- und PC-Größe aus dem vorhandenen Klick-Test, dazu Dateigröße, Zahl der Bildteile und eine Einschätzung des Aufwands für die übrigen Bereiche.
+- **Beurteilung:** Daniel beurteilt Wirkung und Stil. Claude berichtet zu den übrigen Bewertungspunkten.
+- **Installation:** keine neue. Für die Screenshots läuft der Klick-Test wie in CLAUDE.md beschrieben (einmal `npm install`). Ein Vergleich mit Weg 2 bräuchte ein Kenney-Paket im Repository. Tiled bräuchte es erst, wenn Daniel Bereiche selbst legen will.
+
+### Fragen an Daniel
+
+1. Welche Wege sollen in die Probe: nur Weg 1, Weg 1 mit einem Vergleich aus Weg 3 oder Weg 2, oder ein anderer?
+2. Welche Ansicht soll die Probe haben: von oben, schräg von oben, oder zeigt Claude beides an einem kleinen Ausschnitt?
+3. Welche Möglichkeit für die Stationen soll die Probe zeigen, (a), (b) oder (c)? Oder wählt Claude?
+4. Würdest du Grafiken später selbst in einem Programm wie Inkscape ändern, oder nur in Sitzungen mit Claude?
+5. Nur falls lokale KI infrage kommt: Hat dein PC eine Grafikkarte mit viel Grafikspeicher (mindestens 6 GB, für neuere Modelle eher 12 GB oder mehr)?
+
+### Einzelheiten der Recherche
+
+#### A: Selbst gezeichnete Grafik aus einfachen Formen (SVG)
+
+- Claude schreibt SVG direkt als Text. Formen, Farben und Gruppen sind lesbar und lassen sich gezielt ändern. Claude prüft das Ergebnis über Screenshots.
+- Zustände: Jede Ebene ist eine benannte Gruppe. Die App schaltet sie über CSS-Klassen.
+- Einheitlicher Stil: Gemeinsame Bauteile werden als SVG-Symbole wiederverwendet, dazu kommen schriftliche Stilregeln. Neue Bereiche entstehen aus denselben Teilen.
+- Blickwinkel: Die reine Draufsicht ist am einfachsten, weil nichts etwas anderes verdeckt. Schräg von oben wirkt lebendiger, braucht aber mehr Zeichnung und eine feste Reihenfolge, was vorn liegt. Ein häufiger Mittelweg: Boden von oben, Gegenstände leicht von vorn.
+- Leistung (Einschätzung): Einige tausend SVG-Elemente schaffen heutige Handys gut. Weichzeichner und Strukturfilter auf vielen Elementen bremsen. Bewegungen über Verschieben und Durchsichtigkeit laufen flüssig.
+- Pflege: Die Bauteile liegen am besten als einzelne SVG-Dateien im Repository und werden nicht nur im Code erzeugt. Dann lassen sie sich in Inkscape öffnen.
+
+#### B: Freie Grafiksammlungen
+
+| Sammlung | Lizenz | Was passt | Hinweis |
+| --- | --- | --- | --- |
+| Kenney | CC0, auch kommerziell, ohne Namensnennung | „Tiny Farm“ (2026), „Tiny Town“ (16 × 16 Pixel), „Isometric Miniature Farm“; im Gesamtpaket auch 3D-Modelle | freundlich-spielerischer Stil, Klostertypisches fehlt zum Teil |
+| LPC (Liberated Pixel Cup) | CC BY-SA 3.0 oder GPL 3.0 | große Sammlung im 32-Pixel-Stil, Dreiviertel-Sicht von oben | Namensnennung je Teil, Ableitungen unter derselben Lizenz |
+| Fluent Emoji (Microsoft) | MIT, ohne Namensnennung | viele Pflanzen, Tiere und Gegenstände als SVG, auch in flacher Fassung | meist Vorderansicht, keine Mühle, kein Kreuzgang |
+| Noto Emoji (Google) | Bilder Apache 2.0 | ähnlich wie Fluent | eigener, runder Stil |
+| OpenMoji | CC BY-SA 4.0 | ähnlich, mit einheitlichen Umrisslinien | Namensnennung, Ableitungen unter derselben Lizenz |
+| OpenGameArt, itch.io, SVG-Sammlungen | gemischt | einzelne Teile | Stil und Lizenz je Teil prüfen |
+
+#### C: KI-Bilder
+
+| Dienst | kostenlos | Rechte am Bild | Hinweis |
+| --- | --- | --- | --- |
+| Google Gemini | ja, mit Grenzen | In den Gemini-API-Bedingungen (Fassung 2024) beansprucht Google kein Eigentum an erzeugten Inhalten. Für die App die aktuellen Bedingungen prüfen. | Sichtbares Wasserzeichen seit August 2026 abschaltbar, nicht in allen Ländern. Die unsichtbare Kennzeichnung bleibt. |
+| ChatGPT | ja, 2025 waren es 2 bis 3 Bilder am Tag | Laut OpenAI-Nutzungsbedingungen gehört das Ergebnis dem Nutzer. | kein sichtbares Wasserzeichen |
+| Adobe Firefly | begrenzte tägliche Erzeugungen | Ergebnisse von Funktionen ohne Beta-Kennzeichnung sind auch kommerziell nutzbar. | |
+| Canva (verbundener Connector) | bis zu 20 KI-Nutzungen im Monat, geteilt mit allen KI-Werkzeugen | Content License im Canva Trust Center | im Free-Plan kein SVG-Download, kein transparenter Hintergrund |
+| Bing Image Creator | ja | Bedingungen vom März 2026: Nutzung muss rechtmäßig sein, Rechte Dritter bleiben vorbehalten. | Die Bedingungen haben sich mehrfach geändert. |
+| Recraft (erzeugt auch SVG) | 50 Credits am Tag | Im Free-Plan gehören die Bilder Recraft, sind öffentlich, nur private Nutzung. | ungeeignet |
+| FLUX.2 [klein] 4B, lokal | ja, auf eigener Grafikkarte | Apache 2.0 | laut Hersteller etwa 13 GB Grafikspeicher, Klasse RTX 3090 oder 4070 |
+| Krita mit Plugin „AI Diffusion“, lokal | ja | Plugin GPL 3.0, Modelle mit eigener Lizenz | Malprogramm mit KI zum Ausbessern einzelner Stellen; empfohlen ab 6 GB Grafikspeicher |
+
+Einzeln sind KI-Bilder stark. Für 150 bis 250 Teile in einheitlichem Stil, mit festen Anschlüssen und über Jahre nachlieferbar, sind sie schwach. Bildbearbeitung mit einem Referenzbild hilft, ersetzt aber keine festen Bausteine.
+
+#### D: Mischformen
+
+- **D1** (Stil mit KI-Bildern finden, dann SVG zeichnen) und **D2** (SVG mit freien Vektor-Teilen): Varianten von Weg 1.
+- **D3** (KI-Grundbild mit SVG-Ebenen): Weg 3.
+- **D4** (Pixel-Kacheln aus einer Sammlung, eigene Ergänzungen, Tiled): Weg 2.
+- **D5** (3D-Modelle, etwa von Kenney unter CC0, in Blender aus fester Kamera gerendert): einheitliches Licht und starke Wirkung, aber eine aufwendige Herstellungskette und Rasterbilder. Ändern ginge nur mit Blender.
+- **Rasterbilder nachträglich in SVG umwandeln** (VTracer, MIT): Das ergibt meist viele kleine Pfade, die schwer zu pflegen sind. Nur für einzelne Teile sinnvoll.
+
+#### E: Bibliotheken für Darstellung und Animation
+
+| Bibliothek | Lizenz, Größe | Wofür | Einschätzung |
+| --- | --- | --- | --- |
+| keine (SVG und CSS im Browser) | – | Ebenen ein- und ausblenden, Übergänge, kleine Bewegungen | reicht für Weg 1 und Weg 3, keine Abhängigkeit |
+| Rough.js | MIT, unter 9 kB | Handzeichnungs-Look aus einfachen Formen, für SVG und Canvas | Variante für Weg 1. Der Zufall braucht einen festen Startwert, sonst sieht das Bild bei jedem Laden anders aus. |
+| Zdog | MIT | Pseudo-3D aus einfachen Formen, auch als SVG | reizvoll für „schräg von oben“, letzte Änderung vor etwa drei Jahren |
+| Motion | MIT | Abläufe, Federn, Bewegung entlang von Pfaden | erst nötig, wenn CSS nicht reicht, etwa für die Kapellentür |
+| GSAP | kostenlos seit April 2025, eigene Lizenz von Webflow, kein Open Source | wie Motion, mit mehr Zusätzen | Webflow kann die Lizenz ändern. Motion reicht. |
+| PixiJS | MIT, etwa 450 KB | viele bewegte Rasterbilder über WebGL | nur bei viel Bewegung in Weg 2 oder 3, sonst zu schwer |
+| Rive | Editor kostenlos, Exporte im kostenlosen Plan mit Rive-Startbildschirm | interaktive Animationen | passt nicht zu Kosten 0 |
+
+#### F: Werkzeuge dieser Sitzung (24.11.2026)
+
+- **Connector Canva (verbunden):** erzeugt KI-Bilder, kann Hintergründe entfernen und flache Bilder in Ebenen zerlegen. Ob die beiden letzten im kostenlosen Plan gehen, ist nicht geprüft. Grenzen des Free-Plans siehe C. Brauchbar für Stilvorlagen (D1), nicht für Bausteine.
+- **Artefakt-Typen „Design“ und „Design System“:** eine Zeichenfläche, um Entwürfe in mehreren Größen nebeneinander zu zeigen, und eine Ablage für Stilregeln mit Beispielen. Beides ist möglich, aber nicht nötig, denn die Ablage bleibt das Repository.
+- **Skill „frontend-design“:** hilft bei Gestaltungsrichtung und Schrift, eher für die Optik der ganzen App.
+- **Plugins im Katalog, nicht installiert:** „Design“ von Anthropic (unter anderem Prüfung auf Barrierefreiheit und Design-Kritik) und „image-generation“ (Anleitung für Bildbeschreibungen an KI-Dienste). Nur bei Bedarf.
+- **Connector-Verzeichnis:** Figma, nicht verbunden. Lohnt nur, wenn Daniel in Figma arbeiten will.
+- **Vorschau im Chat:** Claude kann SVG-Zwischenstände direkt im Chat zeigen.
+- **Daniels Rechner:** Die Sitzung hat Werkzeuge für den Zugriff auf Daniels Rechner. Mit Freigabe könnte Claude dort Inkscape bedienen, falls es installiert ist, oder die Probe im eingebauten Browser zeigen.
+- **Klick-Test im Repository:** liefert Screenshots in mehreren Größen.
+
+#### G: Weitere Werkzeuge
+
+- **Inkscape:** kostenlos und Open Source (GPL), SVG ist das eigene Dateiformat. Damit kann Daniel SVG-Teile selbst ändern.
+- **Penpot:** kostenlos und Open Source (MPL-2.0), läuft im Browser und arbeitet mit SVG. Eine Alternative zu Figma.
+- **Tiled:** kostenloser, offener Editor, der Karten aus Kacheln zusammensetzt und als JSON speichert (für Weg 2).
+- **VTracer:** Open Source (MIT), wandelt Rasterbilder in SVG um (siehe D).
+- **Krita mit „AI Diffusion“** und **FLUX.2 [klein] 4B:** lokale KI ohne laufende Kosten, siehe C.
+- **Blender:** für D5.
+
+### Quellen
+
+Abgerufen am 24.11.2026. Die Grenzen des Canva-Free-Plans für SVG und transparenten Hintergrund stammen aus der Canva-Hilfe, abgefragt über den Canva-Connector.
+
+- Canva, KI-Nutzung je Plan: https://www.canva.com/en_au/help/ai-access-variantb/
+- Recraft, Rechte im Free-Plan: https://recraft.ai/docs/trust-and-security/ownership
+- Adobe Firefly, Pläne: https://www.adobe.com/products/firefly/plans.html · kommerzielle Nutzung: https://helpx.adobe.com/firefly/faq.html
+- Bing Image Creator, Bedingungen: https://www.bing.com/new/termsofuseimagecreator
+- Gemini, Wasserzeichen abschaltbar: https://www.techrepublic.com/article/news-google-gemini-visible-watermarks-optional/
+- Gemini API, Bedingungen (Fassung Mai 2024): https://ai.google.dev/gemini-api/terms-archive/terms_05_02_24
+- ChatGPT, Grenze im kostenlosen Plan (2025): https://www.techradar.com/computing/artificial-intelligence/our-gpus-are-melting-openai-puts-limits-on-image-creation-and-delays-rollout-to-free-accounts
+- OpenAI, Nutzungsbedingungen: https://openai.com/policies/row-terms-of-use/
+- FLUX.2 [klein]: https://bfl.ai/blog/flux2-klein-towards-interactive-visual-intelligence
+- Krita AI Diffusion: https://github.com/Acly/krita-ai-diffusion
+- Kenney, Lizenz: https://kenney.nl/support · Tiny Town: https://kenney.nl/assets/tiny-town · Tiny Farm: https://opengameart.org/content/tiny-farm
+- LPC: https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+- Fluent Emoji: https://github.com/microsoft/fluentui-emoji
+- Noto Emoji: https://github.com/googlefonts/noto-emoji
+- OpenMoji: https://openmoji.org/faq
+- Rough.js: https://www.npmjs.com/package/roughjs
+- Zdog: https://zzz.dog
+- Motion: https://motion.dev
+- GSAP, Lizenz: https://gsap.com/community/standard-license/
+- PixiJS: https://pixijs.com
+- Rive, Export im Free-Plan: https://rive.app/docs/editor/exporting
+- Inkscape: https://inkscape.org
+- Penpot: https://github.com/penpot/penpot
+- Tiled: https://www.mapeditor.org
+- VTracer: https://github.com/visioncortex/vtracer

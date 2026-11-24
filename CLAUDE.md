@@ -5,7 +5,7 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 ## Welche Datei gilt
 
 - **ENTSCHEIDUNGEN.md** ist maßgeblich. Nur dort steht, was Daniel festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere.
-- **LERNWEG.md**, **WEG.md**, **GEZIELT-UEBEN.md** und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
+- **LERNWEG.md**, **WEG.md**, **GEZIELT-UEBEN.md**, **GARTEN-BILD.md** und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
 - **Der Code** zeigt den umgesetzten Stand. Er kann hinter den Entscheidungen zurückliegen. Was abgelöst ist, steht in README.md unter „Stand“ und als Kommentar in der betroffenen Datei.
 - **Der Stand** (umgesetzt, abgelöst, vorläufig, nächster Schritt) steht nur in README.md unter „Stand“. Zu Beginn einer Sitzung dort nachlesen.
 

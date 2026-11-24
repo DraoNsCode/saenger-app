@@ -23,6 +23,8 @@ Der Weg beginnt unten am Tor und führt nach oben zur Kapelle. Ein Bach begleite
 
 ## Offene Punkte
 
+Am 24.11.2026 zusammengestellt und nach entschieden, Vorschlag und offen getrennt: [GARTEN-BILD.md](GARTEN-BILD.md), Schritt 1. Dort stehen auch die Wege zur Grafik.
+
 - Erledigt: Welche Station nötig ist und welche freiwillig, steht in [LERNWEG.md](LERNWEG.md) unter „Stationen der Etappen 1 und 2“. Etappe 1 hat 6 nötige und 6 freiwillige Stationen, Etappe 2 hat 7 nötige und 8 freiwillige.
 - Was an einer Station im Garten passiert.
 - Wie man sieht, wie weit ein Bereich ausgebaut ist. Vorschlag: angelegt (nötige Stationen geschafft), blühend, in voller Pracht (alle freiwilligen geschafft). Dazu gehören die Richtungen für Baustein J in [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md). Daniel geht davon aus, dass der Garten nicht alle Stationen einzeln zeigt (ENTSCHEIDUNGEN.md, 19.11.2026).
