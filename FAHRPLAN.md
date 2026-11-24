@@ -9,7 +9,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
-| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Schritt 1 und 2 (was der Garten können muss, Wege zur Grafik) als Vorschlag in GARTEN-BILD.md (24.11.2026), Recherche am selben Tag erweitert. Für die Probe gewählt: Weg 1 und Weg 3, zuerst verschiedene Ansichten (24.11.2026). Offen: die Probe am ersten Bereich (Schritt 3), danach Bild und Optik | A, J |
+| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Schritt 1 und 2 (was der Garten können muss, Wege zur Grafik) als Vorschlag in GARTEN-BILD.md (24.11.2026), Recherche am selben Tag erweitert. Für die Probe gewählt: Weg 1 und Weg 3, zuerst verschiedene Ansichten (24.11.2026). Werkzeuge für die Probe geprüft (24.11.2026). Offen: die Probe am ersten Bereich (Schritt 3), danach Bild und Optik | A, J |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
 | E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten) | – |
