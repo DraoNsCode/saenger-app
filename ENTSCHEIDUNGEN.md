@@ -144,3 +144,16 @@ Von Daniel Claude überlassen (19.11.2026, Baustein J). So hat Claude gewählt, 
   - erreichbare Qualität
 - Ohne Daniels Zustimmung wird nichts installiert und nichts eingebaut (für Baustein B ausgesprochen).
 - Die Recherche zu Schritt 2 umfasst auch Skills, Plugins und MCP-Server, die noch nicht aktiviert sind, etwa aus GitHub-Repositories. Die Fragen, offenen Punkte und der Plan für die Probe bleiben dabei erhalten. Die Ergebnisse stehen in GARTEN-BILD.md, Abschnitt H (24.11.2026).
+
+Antworten auf die Fragen in GARTEN-BILD.md (24.11.2026, Baustein B):
+
+- Die Probe nutzt Weg 1 und Weg 3 aus GARTEN-BILD.md: das eigene SVG-Bausteinsystem und KI-Grundbilder mit Vektor-Ebenen darüber. Weg 2 (Pixel-Kacheln) kommt in der Probe nicht vor.
+- Ansicht: Die Probe probiert zuerst verschiedene Ansichten aus. Gewählt wird danach.
+- Daniels PC hat eine Grafikkarte mit viel Grafikspeicher. Welche Karte genau, ist noch nicht genannt. Lokale KI wäre damit möglich. Eingerichtet wird sie nur mit Daniels Zustimmung.
+- Ein Hugging-Face-Connector kommt für den Vergleich mit Weg 3 infrage.
+
+Von Daniel Claude überlassen (24.11.2026, Baustein B). So hat Claude gewählt, Daniel korrigiert, falls nötig:
+
+- Stationen in der Probe: Möglichkeit (a) aus GARTEN-BILD.md. Am Weg stehen nur die nötigen Stationen, die freiwilligen stecken in den offenen Stellen. Begründung: So passen die beiden Entscheidungen vom 19.11. zusammen, dass die Stationen am Weg liegen und dass die Übersicht nicht alle Stationen zeigt. Die offenen Stellen gibt es ohnehin, und der Vorschlag aus GEZIELT-UEBEN.md, dass eine Stelle mit ihren freiwilligen Stationen fertig wird, passt dazu. Für die App ist damit noch nichts entschieden. Das soll die Probe zeigen.
+- Grafiken ändern: in Sitzungen mit Claude. Die Bildteile bleiben trotzdem einfache Dateien in offenen Formaten (SVG, bei Weg 3 auch PNG oder WebP) mit verständlichen Namen, die sich in freien Programmen wie Inkscape öffnen lassen. Bei KI-Bildern wird festgehalten, wie jedes entstanden ist. Begründung: Daniel muss kein Grafikprogramm lernen, kann aber jederzeit selbst eingreifen.
+- Stilregeln: als eigener Skill im Repository (etwa `.claude/skills/garten-grafik/`), nicht als einfache Datei. Begründung: Spätere Sitzungen finden den Skill im Repository von selbst und laden ihn, sobald es um Gartengrafik geht. Neben den Regeln kann er Beispiele und die Anleitung zur Sichtprüfung enthalten. So passen auch Bereiche, die nach Jahren dazukommen. Der Inhalt bleibt Vorschlag und ist im Skill so gekennzeichnet, bis Daniel ihn bestätigt. Sobald es den Skill gibt, verweist CLAUDE.md darauf.

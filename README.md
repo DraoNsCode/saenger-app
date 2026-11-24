@@ -46,9 +46,9 @@ Entschieden, aber noch nicht umgesetzt:
 
 Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
 
-Baustein B (Bild und Optik des Gartens) läuft. Schritt 1 (was der Garten können muss) und Schritt 2 (Wege zur Grafik) stehen als Vorschlag in GARTEN-BILD.md (24.11.2026). Schritt 2 wurde am selben Tag um Skills, Plugins und MCP-Server über die aktivierten hinaus erweitert (Abschnitt H). Es gibt noch keine Grafik und keinen Code dazu.
+Baustein B (Bild und Optik des Gartens) läuft. Schritt 1 (was der Garten können muss) und Schritt 2 (Wege zur Grafik) stehen als Vorschlag in GARTEN-BILD.md (24.11.2026). Schritt 2 wurde am selben Tag um Skills, Plugins und MCP-Server über die aktivierten hinaus erweitert (Abschnitt H). Ebenfalls am 24.11.2026 hat Daniel die Fragen dazu beantwortet: Die Probe nutzt Weg 1 und Weg 3 und probiert zuerst verschiedene Ansichten aus. Drei Punkte hat er Claude überlassen (ENTSCHEIDUNGEN.md). Es gibt noch keine Grafik und keinen Code dazu.
 
-Nächster Schritt: Daniel wählt den Weg oder die Wege für die Probe und beantwortet die Fragen in GARTEN-BILD.md. Danach folgt Schritt 3, die Probe an einem Bereich. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
+Nächster Schritt: Schritt 3, die Probe am ersten Bereich nach dem Plan in GARTEN-BILD.md. Zuerst zeigt ein kleiner Ausschnitt drei Ansichten, danach folgt der ganze Bereich in der gewählten Ansicht. Für Weg 3 trägt Daniel vorher den Hugging-Face-Connector ein, sonst erzeugt er die Bilder selbst. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

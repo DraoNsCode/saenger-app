@@ -1,12 +1,12 @@
 # Bild und Optik des Gartens – Vorschlag zur Prüfung
 
-Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Grafik und Code gibt es noch nicht, installiert oder eingebaut ist nichts. Preise und Bedingungen der Dienste haben den Stand November 2026. Vor einer Nutzung sollten sie noch einmal geprüft werden.
+Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom selben Tag. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Grafik und Code gibt es noch nicht, installiert oder eingebaut ist nichts. Preise und Bedingungen der Dienste haben den Stand November 2026. Vor einer Nutzung sollten sie noch einmal geprüft werden.
 
 **Kurz:**
 
 - Schritt 1 sammelt, was der Garten zeigen und können muss, getrennt nach entschieden, Vorschlag und offen. Für die Herstellung folgt daraus vor allem (Vorschlag): Der Garten wird am besten aus vielen kleinen Bildteilen gebaut, grob 150 bis 250, die die App je nach Fortschritt zusammensetzt.
 - Schritt 2 bewertet die Wege zur Grafik nach Daniels sieben Punkten. Drei Wege werden empfohlen: **1. ein eigenes SVG-Bausteinsystem**, **2. Pixel-Kacheln aus einer freien Sammlung**, **3. KI-Grundbilder mit Vektor-Ebenen darüber**. Nach Claudes Einschätzung passt Weg 1 am besten zu den sieben Punkten. Seine Schwachstelle ist die erreichbare Qualität.
-- Vorschlag für Schritt 3: eine Probe mit Weg 1 am ersten Bereich, auf Wunsch mit einem kleinen Vergleich aus Weg 3 oder Weg 2. Die offenen Fragen an Daniel stehen weiter unten.
+- Vorschlag für Schritt 3: eine Probe am ersten Bereich. Daniel hat dazu am selben Tag die Fragen beantwortet: Die Probe nutzt Weg 1 und Weg 3 und probiert zuerst verschiedene Ansichten aus. Drei Fragen hat er Claude überlassen (ENTSCHEIDUNGEN.md). Der Plan für die Probe ist daran angepasst: zuerst ein kleiner Ausschnitt in drei Ansichten, dann der ganze erste Bereich in der gewählten Ansicht.
 - Am selben Tag erweitert (zweite Runde, Abschnitt H): Skills, Plugins und MCP-Server über die aktivierten hinaus, unter anderem aus GitHub und Verzeichnissen. Einen fertigen Baukasten für einen solchen Garten gibt es nicht. Einige Funde mildern aber Schwächen der drei Wege, am deutlichsten bei Weg 3: Über einen eigenen Hugging-Face-Connector könnte Claude KI-Bilder kostenlos selbst erzeugen. Die Reihenfolge der Empfehlung bleibt. Geänderte Stellen sind mit „(H)“ markiert.
 
 ## Schritt 1: Was der Garten zeigen und können muss
@@ -20,7 +20,7 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge 
 - Entschieden (19.11.): Es gibt elf Etappen. Über ihre Reihenfolge denkt Daniel noch einmal nach, wenn alle Inhalte stehen. Deshalb sollen sich Bereiche tauschen lassen (24.11.).
 - Entschieden (19.11.): Erst die Geschichte, dann die passende Optik, eventuell für die ganze App.
 - Vorschlag (WEG.md): welcher Bereich zu welcher Etappe gehört, vom Gemüsegarten am Tor bis zum Springbrunnen. Ein Bach begleitet den Weg.
-- Offen: Ansicht von oben oder schräg von oben. Beides ist vorstellbar (19.11.).
+- Offen: Ansicht von oben oder schräg von oben. Beides ist vorstellbar (19.11.). Daniel möchte zuerst verschiedene Ansichten ausprobieren (24.11.).
 - Offen: wie die Etappen 3 bis 11 aussehen, solange es sie nur als Titel gibt. Heute steht dort „In Vorbereitung“.
 
 ### Zustände eines Bereichs
@@ -40,6 +40,7 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge 
   - (a) Am Weg stehen nur die nötigen Stationen. Die freiwilligen stecken in den offenen Stellen.
   - (b) Am Weg steht nur die nächste Station. Geschaffte Stationen sind kleine Zeichen.
   - (c) Die Stationen stehen auf einer eigenen Seite des Bereichs.
+- Für die Probe hat Claude (a) gewählt, weil Daniel es Claude überlassen hat (24.11., Begründung in ENTSCHEIDUNGEN.md). Für die App bleibt offen, ob (a) trägt.
 - Offen (WEG.md): was an einer Station im Garten passiert.
 - Offen: ob der Abschluss im Bild besonders aussieht, etwa als Tor zum nächsten Bereich (Vorschlag).
 
@@ -106,7 +107,7 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge 
 2. **Ebenen:** statt fertiger Bilder jede Kachel aus Ebenen zusammensetzen: Grund, Weg mit Stationen, Ausbau in Schritten, offene Stellen, Pflege-Zeichen, Position und Beschriftung.
 3. **Plätze:** in jeder Kachel feste Plätze für offene Stellen, Pflege-Zeichen und spätere Spätblüher.
 4. **Gemeinsame Teile:** Pflanzen, Beete, Steine, Wasser, Mauern und Zeichen einmal zeichnen und in allen Bereichen wiederverwenden. Das hielte den Stil einheitlich.
-5. **Stilregeln:** Farben, Linien, Licht und Blickwinkel in einer kurzen Datei festhalten, damit spätere Bereiche dazupassen.
+5. **Stilregeln:** Farben, Linien, Licht und Blickwinkel schriftlich festhalten, damit spätere Bereiche dazupassen. Als Form hat Claude einen eigenen Skill im Repository gewählt (24.11., von Daniel Claude überlassen).
 6. **Menge (Schätzung):** 12 Kacheln mit je einem Grund, 3 bis 4 Ausbau-Ebenen und 3 bis 6 offenen Stellen mit je 2 bis 3 Zuständen, dazu die gemeinsamen Zeichen. Zusammen etwa 150 bis 250 Bildteile. An dieser Menge misst sich jeder Weg in Schritt 2.
 
 ## Schritt 2: Wege zur Grafik
@@ -211,30 +212,71 @@ Nachteile:
 
 ### Vorschlag für die Probe (Schritt 3)
 
+Angepasst an Daniels Antworten vom 24.11.2026 (ENTSCHEIDUNGEN.md): Die Probe nutzt Weg 1 und Weg 3 und probiert zuerst verschiedene Ansichten aus. Sie zeigt die Stationen nach (a), und die Stilregeln kommen in einen eigenen Skill. Alles Weitere in diesem Abschnitt ist Vorschlag.
+
 - **Bereich:** der erste. Etappe 1 ist spielbar, mit 6 nötigen und 6 freiwilligen Stationen. Laut WEG.md-Vorschlag liegt dort der Start am Tor, und Beete und Pflanzen sind die häufigsten Teile im ganzen Garten.
-- **Weg:** Weg 1 vollständig. Auf Wunsch kommt ein Zustand desselben Bereichs zum Vergleich dazu: aus Weg 3 (Daniel erzeugt zwei bis drei Grundbilder nach Claudes Beschreibung, Claude legt dieselben Ebenen darüber) oder aus Weg 2 (Kenney-Kacheln). (H): Die Grundbilder für Weg 3 könnte Claude auch selbst erzeugen, wenn Daniel einen Hugging-Face-Connector einträgt.
-- **Form:** eine eigene Probeseite im Repository, etwa `probe/garten.html`. Die App verlinkt sie nicht, die App selbst bleibt unverändert. Schalter auf der Seite wechseln die Zustände.
-- **Inhalt:**
+- **Form:** eigene Probeseiten im Ordner `probe/`. Die App verlinkt sie nicht, die App selbst bleibt unverändert. Schalter auf den Seiten wechseln Ansichten und Zustände.
+- **Ablauf:** zwei Teile. Nach Teil 1 wählt Daniel die Ansicht, erst dann folgt Teil 2.
+
+**Teil 1: Ansichten vergleichen** (etwa `probe/ansichten.html`)
+
+- Ein kleiner Ausschnitt des ersten Bereichs: das Tor, ein Stück Weg mit einer Station, ein Beet als offene Stelle (leer und bepflanzt), ein Stück Bach und Mauer, die Position des Sängers.
+- Diesen Ausschnitt gibt es in drei Ansichten, jeweils aus Weg 1 und aus Weg 3, also bis zu sechs kleine Bilder auf einer Seite:
+  - **von oben:** wie ein Gartenplan. Bäume und Gebäude sieht man als Kronen und Dächer. Am einfachsten zu zeichnen und aneinanderzusetzen, wirkt aber flacher.
+  - **schräg von oben:** den Boden von oben, Bäume, Figuren und Gebäude leicht von vorn, wie in vielen Handyspielen. Wirkt lebendiger. Hohe Dinge wie Bäume oder die Kapelle ragen in die nächste Kachel hinein, dafür braucht es eine Regel.
+  - **isometrisch:** schräg von oben und um 45 Grad gedreht, alles in derselben Neigung. Wirkt wie ein Modell. Der Weg läuft im Zickzack, und die Anschlüsse zwischen den Kacheln sind aufwendiger.
+- Mit Weg 1 kann Claude sofort beginnen. Für Weg 3 braucht es vorher den Hugging-Face-Connector oder Bilder, die Daniel selbst erzeugt (siehe Einrichtung).
+
+**Teil 2: der ganze erste Bereich in der gewählten Ansicht** (etwa `probe/garten.html`)
+
+- **Inhalt, für beide Wege:**
   - die Kachel mit Anschlüssen unten (Tor) und oben, darüber eine einfache Platzhalter-Kachel, die sich mit ihr tauschen lässt
   - die Zustände von „noch nicht erreicht“ bis „fertig ausgebaut“
-  - zwei bis drei offene Stellen, ein Pflege-Zeichen, ein Spätblüher nur zur Probe und die Position des Sängers
-  - die Stationen in einer der Möglichkeiten (a) bis (c) aus Schritt 1
+  - die Stationen nach (a): die 6 nötigen am Weg, die 6 freiwilligen als Beispiel in drei offenen Stellen mit je zwei Stationen (wie viele Stellen ein Bereich hat, wird je Bereich entschieden)
+  - ein Pflege-Zeichen, ein Spätblüher nur zur Probe und die Position des Sängers
   - eine kleine Bewegung, die bei „Bewegung reduzieren“ stillsteht
-  - erste Stilregeln (Farben, Linien, Blickwinkel) als kurze Datei
-- **Belege:** Screenshots in Handy-, Tablet- und PC-Größe aus dem vorhandenen Klick-Test, dazu Dateigröße, Zahl der Bildteile und eine Einschätzung des Aufwands für die übrigen Bereiche.
+- **Bei Weg 3** kommen Grund und Ausbaustufen aus KI-Bildern. Alles Übrige liegt als dieselben SVG-Ebenen darüber wie bei Weg 1. Die Ausbaustufen entstehen durch Bearbeiten des Grundbilds. Das ist die heikelste Stelle von Weg 3: Bleibt das Bild zwischen den Stufen gleich, und passt es zu den SVG-Ebenen?
+- **Stilregeln als Skill:** Claude legt den Skill an, etwa `.claude/skills/garten-grafik/SKILL.md`. Er enthält Farben, Linien, Licht, Ansicht, die Namen der Ebenen und die Anschlüsse der Kacheln, dazu die Sichtprüfung (zeichnen, rendern, ansehen, verbessern). Für Weg 3 hält er je Bild fest, wie es entstanden ist: Modell, Beschreibung, Einstellungen, Datum. Der Skill ist als Vorschlag gekennzeichnet, bis Daniel ihn bestätigt. CLAUDE.md bekommt einen Verweis darauf.
+- **Belege:** Screenshots in Handy-, Tablet- und PC-Größe aus dem vorhandenen Klick-Test. Dazu für beide Wege getrennt: Dateigröße, Zahl der Bildteile und eine Einschätzung des Aufwands für die übrigen Bereiche.
 - **Beurteilung:** Daniel beurteilt Wirkung und Stil. Claude berichtet zu den übrigen Bewertungspunkten.
-- **Installation:** keine neue. Für die Screenshots läuft der Klick-Test wie in CLAUDE.md beschrieben (einmal `npm install`). Ein Vergleich mit Weg 2 bräuchte ein Kenney-Paket im Repository. Tiled bräuchte es erst, wenn Daniel Bereiche selbst legen will.
-- **Werkzeuge aus der erweiterten Recherche (H), jedes nur mit Daniels Zustimmung:** Für Weg 1 ist keines nötig. Claude zeichnet, rendert mit dem Browser des Klick-Tests, sieht sich das Bild an und verbessert es. Möglich wären: die Stilregeln als eigener Skill im Repository; für einen Vergleich mit Weg 3 ein Hugging-Face-Connector; für einen Vergleich mit Weg 2 ein Pixel-Werkzeug wie claude-pxl.
+
+**Einrichtung für Weg 3**
+
+- **Hugging-Face-Connector,** einzurichten von Daniel, am besten vor Teil 1:
+  1. ein kostenloses Konto bei Hugging Face anlegen: huggingface.co/join
+  2. in den Claude-Einstellungen bei den Connectoren einen eigenen Connector hinzufügen („Add custom connector“), Adresse `https://huggingface.co/mcp?login`, dann bei Hugging Face anmelden
+  3. auf huggingface.co/settings/mcp das Bildwerkzeug Qwen-Image eintragen (`mcp-tools/qwen-image`)
+  4. in Claude nachsehen, ob der Connector eingeschaltet ist
+- **Lizenzen:** Qwen-Image steht laut Modellkarte unter Apache 2.0, ebenso das Bearbeitungsmodell Qwen-Image-Edit. Ob es für Qwen-Image-Edit ein fertiges Werkzeug auf Hugging Face gibt, zeigt erst die Einrichtung. Die Anleitung von Hugging Face nennt außerdem FLUX.1 Krea [dev] und FLUX.1 Kontext [dev] (zum Bearbeiten). Beide laufen unter einer Lizenz für nicht kommerzielle Nutzung, die man vor einer Nutzung genau prüfen müsste. Einfacher ist es, bei Apache 2.0 zu bleiben. Findet sich kein passendes Bearbeitungswerkzeug, entstehen die Ausbaustufen bei Weg 3 als SVG-Ebenen, oder Daniel entscheidet über FLUX.1 Kontext [dev].
+- **Grenzen:** Das kostenlose Konto hat ein tägliches GPU-Kontingent (siehe H3). Für Teil 1 reichen wenige Bilder, Teil 2 kann sich über mehrere Tage ziehen. Ein eigener Connector geht laut Claude-Hilfe in allen Tarifen, im kostenlosen nur einer.
+- **Offen bis zum ersten Versuch:** wie die Bilder als Datei ins Repository kommen. Aus der Cloud-Umgebung, in der Claude mit dem Repository arbeitet, ist huggingface.co gesperrt (Test am 24.11.2026). Kommen die Bilder nur im Chat an, gibt es zwei Umwege: Daniel lädt sie herunter und hängt sie an, oder eine Sitzung, die mit Daniels PC verbunden ist, speichert sie dort.
+- **Ohne Connector:** Daniel erzeugt die Bilder nach Claudes Beschreibung in einem kostenlosen Dienst (siehe C).
+- **Lokal, erst später:** Überzeugt Weg 3, wäre lokale KI auf Daniels PC der Weg, der über Jahre wiederholbar bleibt. Wichtig: Ein anderes Modell gibt einen anderen Stil. Das Modell aus der Probe sollte deshalb auch lokal laufen können. Qwen-Image geht in ComfyUI, ob auf Daniels Karte, hängt vom Grafikspeicher ab. Soll es später ein kleineres Modell sein, etwa FLUX.2 [klein] 4B (Apache 2.0, laut Hersteller etwa 13 GB Grafikspeicher), müsste schon die Probe damit arbeiten. Für die Installation braucht es die genaue Grafikkarte und Daniels Zustimmung. Für die Probe ist lokale KI nicht nötig.
+
+**Installation und Werkzeug**
+
+- Für Weg 1 nichts Neues. Für die Screenshots läuft der Klick-Test wie in CLAUDE.md beschrieben (einmal `npm install`). Für Weg 3 nur der Connector, den Daniel selbst einträgt.
+- Eine Sitzung mit dem Repository reicht, etwa Claude Code im Web. Claude zeichnet, rendert mit dem Browser des Klick-Tests, sieht sich das Bild an und verbessert es. Für Weg 3 braucht die Sitzung den Connector.
+- Weg 2 und die Werkzeuge dafür (Kenney-Paket, Tiled, Pixel-Werkzeuge wie claude-pxl) sind für die Probe nicht nötig.
 
 ### Fragen an Daniel
 
+Beantwortet am 24.11.2026. Die Antworten und Claudes Wahl mit Begründung stehen in ENTSCHEIDUNGEN.md.
+
 1. Welche Wege sollen in die Probe: nur Weg 1, Weg 1 mit einem Vergleich aus Weg 3 oder Weg 2, oder ein anderer?
+   **Antwort:** Weg 1 und Weg 3.
 2. Welche Ansicht soll die Probe haben: von oben, schräg von oben, oder zeigt Claude beides an einem kleinen Ausschnitt?
+   **Antwort:** zuerst verschiedene Ansichten ausprobieren.
 3. Welche Möglichkeit für die Stationen soll die Probe zeigen, (a), (b) oder (c)? Oder wählt Claude?
+   **Antwort:** Claude überlassen. Claude hat (a) gewählt.
 4. Würdest du Grafiken später selbst in einem Programm wie Inkscape ändern, oder nur in Sitzungen mit Claude?
+   **Antwort:** Claude überlassen. Claude hat gewählt: ändern in Sitzungen mit Claude, die Dateien lassen sich aber in freien Programmen wie Inkscape öffnen.
 5. Nur falls lokale KI infrage kommt: Hat dein PC eine Grafikkarte mit viel Grafikspeicher (mindestens 6 GB, für neuere Modelle eher 12 GB oder mehr)?
+   **Antwort:** ja. Welche Karte genau, ist noch nicht genannt.
 6. (H) Soll Claude die Stilregeln in der Probe gleich als eigenen Skill im Repository anlegen, damit spätere Sitzungen ihnen folgen? Oder reicht eine einfache Datei?
+   **Antwort:** Claude überlassen. Claude hat den eigenen Skill gewählt.
 7. (H) Kommt für einen Vergleich mit Weg 3 ein Hugging-Face-Connector infrage? Dafür bräuchte es ein kostenloses Konto bei Hugging Face und einen selbst eingetragenen Connector in den Claude-Einstellungen.
+   **Antwort:** kommt infrage. Die Schritte stehen unter „Einrichtung für Weg 3“.
 
 ### Einzelheiten der Recherche
 
@@ -361,7 +403,7 @@ Ein MCP-Server gibt Claude Werkzeuge für ein Programm oder einen Dienst. Ein Co
 
 | Fund | Was es tut | Kosten, Lizenz | Nutzen für den Garten |
 | --- | --- | --- | --- |
-| Hugging Face (Connector) | Claude nutzt Bildmodelle auf Hugging Face, etwa FLUX.1-schnell | kostenloses Konto mit täglichem GPU-Kontingent (laut Hugging Face 5 Minuten, in älteren Angaben 3,5); FLUX.1-schnell unter Apache 2.0 | Claude könnte Grundbilder für Weg 3 und Stilvorlagen für D1 selbst erzeugen. Laut Hugging Face geht Bilderzeugung nur mit einem selbst eingetragenen Connector (Adresse huggingface.co/mcp?login), nicht über den Eintrag im Connector-Verzeichnis. In der Praxis reicht das Kontingent oft nur für wenige Bilder am Tag. |
+| Hugging Face (Connector) | Claude nutzt Bildmodelle auf Hugging Face. Die Anleitung von Hugging Face nennt Qwen-Image, FLUX.1 Krea [dev] und FLUX.1 Kontext [dev]. | kostenloses Konto mit täglichem GPU-Kontingent (laut Hugging Face 5 Minuten, in älteren Angaben 3,5); Qwen-Image unter Apache 2.0, die beiden FLUX.1-[dev]-Modelle unter einer Lizenz für nicht kommerzielle Nutzung | Claude könnte Grundbilder für Weg 3 und Stilvorlagen für D1 selbst erzeugen. Laut Hugging Face geht Bilderzeugung nur mit einem selbst eingetragenen Connector (Adresse huggingface.co/mcp?login), nicht über den Eintrag im Connector-Verzeichnis. In der Praxis reicht das Kontingent oft nur für wenige Bilder am Tag. Einrichtung siehe „Vorschlag für die Probe“. |
 | ComfyUI-MCP-Server (offiziell comfy-mcp, dazu Server aus der Community) | Claude steuert ein lokales ComfyUI | kostenlos, Grafikkarte nötig; Modelle mit eigener Lizenz, etwa FLUX.2 [klein] 4B unter Apache 2.0 | Weg 3 lokal und wiederholbar |
 | gemini-svg-creator und ähnliche Skills | Gemini erzeugt SVG oder Bilder | API-Schlüssel nötig; ob Bildmodelle im kostenlosen API-Kontingent liegen, ist widersprüchlich (laut Google-Forum im Januar 2026 nicht) | bei Kosten 0 unsicher |
 | illo-skill | Illustrationen mit wiederkehrender Figur über den Dienst OpenRouter | OpenRouter in der Regel kostenpflichtig | nicht kostenlos |
@@ -435,3 +477,9 @@ Zweite Runde (Abschnitt H):
 - illo-skill: https://github.com/tmchow/illo-skill
 - Blender MCP: https://github.com/ahujasid/blender-mcp · Poly Haven, Lizenz: https://polyhaven.com/license
 - impeccable: https://github.com/pbakaus/impeccable · Motion-Skill: https://cdn.jsdelivr.net/npm/motion@14.13.0/README.md
+
+Nach Daniels Antworten (24.11.2026, Einrichtung für Weg 3):
+
+- Claude-Hilfe, eigene Connectoren: https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp
+- Qwen-Image, Modellkarte: https://huggingface.co/Qwen/Qwen-Image · Qwen-Image-Edit-2509, Modellkarte: https://huggingface.co/Qwen/Qwen-Image-Edit-2509
+- Qwen-Image in ComfyUI: https://github.com/QwenLM/Qwen-Image
