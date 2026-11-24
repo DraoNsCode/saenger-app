@@ -7,6 +7,7 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2. Diese Seite enthält Vorschläge 
 - Schritt 1 sammelt, was der Garten zeigen und können muss, getrennt nach entschieden, Vorschlag und offen. Für die Herstellung folgt daraus vor allem (Vorschlag): Der Garten wird am besten aus vielen kleinen Bildteilen gebaut, grob 150 bis 250, die die App je nach Fortschritt zusammensetzt.
 - Schritt 2 bewertet die Wege zur Grafik nach Daniels sieben Punkten. Drei Wege werden empfohlen: **1. ein eigenes SVG-Bausteinsystem**, **2. Pixel-Kacheln aus einer freien Sammlung**, **3. KI-Grundbilder mit Vektor-Ebenen darüber**. Nach Claudes Einschätzung passt Weg 1 am besten zu den sieben Punkten. Seine Schwachstelle ist die erreichbare Qualität.
 - Vorschlag für Schritt 3: eine Probe mit Weg 1 am ersten Bereich, auf Wunsch mit einem kleinen Vergleich aus Weg 3 oder Weg 2. Die offenen Fragen an Daniel stehen weiter unten.
+- Am selben Tag erweitert (zweite Runde, Abschnitt H): Skills, Plugins und MCP-Server über die aktivierten hinaus, unter anderem aus GitHub und Verzeichnissen. Einen fertigen Baukasten für einen solchen Garten gibt es nicht. Einige Funde mildern aber Schwächen der drei Wege, am deutlichsten bei Weg 3: Über einen eigenen Hugging-Face-Connector könnte Claude KI-Bilder kostenlos selbst erzeugen. Die Reihenfolge der Empfehlung bleibt. Geänderte Stellen sind mit „(H)“ markiert.
 
 ## Schritt 1: Was der Garten zeigen und können muss
 
@@ -124,12 +125,14 @@ Zeichen: ++ sehr gut · + gut · o mittel · – schwach. Die Noten sind Claudes
 | D1: wie A, Stil vorher mit KI-Bildern gefunden | ++ | ++ | + | ++ | ++ | o | + | + |
 | D2: SVG mit freien Vektor-Teilen | ++ | ++ | o bis + | ++ | ++ | + | + | + |
 | D4: Pixel-Kacheln aus einer Sammlung | ++ | ++ | + | ++ | + | + | + | o bis + |
-| C1: ganze KI-Bilder aus Diensten | o | – | – | – | o | o | – | ++ |
-| C2: KI-Bilder lokal | + | o | o bis + | o | o | – | o | + bis ++ |
-| D3: KI-Grundbild mit SVG-Ebenen | o | + | o | + | o | o | o | + bis ++ |
-| D5: 3D-Modelle, mit Blender gerendert | ++ | + | ++ | + | o | – | – | + bis ++ |
+| C1: ganze KI-Bilder aus Diensten | + (H) | – | – | – | o | o | – | ++ |
+| C2: KI-Bilder lokal | + | o | o bis + | o | o | o (H) | o | + bis ++ |
+| D3: KI-Grundbild mit SVG-Ebenen | + (H) | + | o | + | o | o | o | + bis ++ |
+| D5: 3D-Modelle, mit Blender gerendert | ++ | + | ++ | + | o | o (H) | – | + bis ++ |
 
 Freie Sammlungen allein (B) stehen nicht in der Tabelle. Ihnen fehlt Klostertypisches, deshalb stecken sie in D2 und D4.
+
+(H) heißt: nach der erweiterten Recherche geändert. Vorher stand bei C1 und D3 unter Kosten und Lizenz „o“, bei C2 und D5 unter Aufwand Claude „–“. Gründe stehen in H5.
 
 ### Empfohlene Wege
 
@@ -191,7 +194,7 @@ Nachteile:
 
 - Der Stil schwankt zwischen den Bildern und über die Jahre, weil sich Dienste und Modelle ändern. Spätere Bereiche passend zu erzeugen, ist unsicher.
 - Zwischen Gemälde und Vektor-Ebenen kann ein Stilbruch entstehen.
-- Claude kann in dieser Umgebung KI-Bilder nur über den Canva-Connector erzeugen, kostenlos bis zu 20 KI-Nutzungen im Monat. Sonst erzeugt Daniel die Bilder selbst in einem Dienst, nach Claudes Beschreibung.
+- Ohne weitere Einrichtung kann Claude in dieser Umgebung KI-Bilder nur über den Canva-Connector erzeugen, kostenlos bis zu 20 KI-Nutzungen im Monat. Sonst erzeugt Daniel die Bilder selbst in einem Dienst, nach Claudes Beschreibung. (H): Mit einem selbst eingetragenen Hugging-Face-Connector könnte Claude die Bilder kostenlos im Tageskontingent erzeugen, mit einem Modell unter Apache 2.0 (siehe H3).
 - Rasterbilder brauchen für Handy, Tablet und PC mehrere Größen und mehr Daten als SVG.
 - Die Bedingungen sind je Dienst verschieden. Je Bild sollte festgehalten werden, woher es stammt: Dienst, Datum, Beschreibung.
 - Lokal erzeugt wäre es kostenlos und wiederholbar, braucht aber eine starke Grafikkarte und Einrichtung auf Daniels PC (siehe C).
@@ -204,11 +207,12 @@ Nachteile:
 - **Rive für Animationen:** Exporte aus dem kostenlosen Plan zeigen einen Rive-Startbildschirm.
 - **3D-Modelle mit Blender (D5):** einheitlich und hochwertig, aber eine aufwendige Herstellungskette. Ändern ginge nur mit Blender.
 - **Zdog als Grundlage:** reizvoll für „schräg von oben“, wird aber seit Jahren kaum noch gepflegt.
+- **Bezahldienste für Spielgrafik und SVG (H):** etwa SpriteCook, SpriteForge, Retro Diffusion, PixelLab, SVGMaker, CleanVector oder Icons8 mit SVG. In der nötigen Menge kosten sie Geld.
 
 ### Vorschlag für die Probe (Schritt 3)
 
 - **Bereich:** der erste. Etappe 1 ist spielbar, mit 6 nötigen und 6 freiwilligen Stationen. Laut WEG.md-Vorschlag liegt dort der Start am Tor, und Beete und Pflanzen sind die häufigsten Teile im ganzen Garten.
-- **Weg:** Weg 1 vollständig. Auf Wunsch kommt ein Zustand desselben Bereichs zum Vergleich dazu: aus Weg 3 (Daniel erzeugt zwei bis drei Grundbilder nach Claudes Beschreibung, Claude legt dieselben Ebenen darüber) oder aus Weg 2 (Kenney-Kacheln).
+- **Weg:** Weg 1 vollständig. Auf Wunsch kommt ein Zustand desselben Bereichs zum Vergleich dazu: aus Weg 3 (Daniel erzeugt zwei bis drei Grundbilder nach Claudes Beschreibung, Claude legt dieselben Ebenen darüber) oder aus Weg 2 (Kenney-Kacheln). (H): Die Grundbilder für Weg 3 könnte Claude auch selbst erzeugen, wenn Daniel einen Hugging-Face-Connector einträgt.
 - **Form:** eine eigene Probeseite im Repository, etwa `probe/garten.html`. Die App verlinkt sie nicht, die App selbst bleibt unverändert. Schalter auf der Seite wechseln die Zustände.
 - **Inhalt:**
   - die Kachel mit Anschlüssen unten (Tor) und oben, darüber eine einfache Platzhalter-Kachel, die sich mit ihr tauschen lässt
@@ -220,6 +224,7 @@ Nachteile:
 - **Belege:** Screenshots in Handy-, Tablet- und PC-Größe aus dem vorhandenen Klick-Test, dazu Dateigröße, Zahl der Bildteile und eine Einschätzung des Aufwands für die übrigen Bereiche.
 - **Beurteilung:** Daniel beurteilt Wirkung und Stil. Claude berichtet zu den übrigen Bewertungspunkten.
 - **Installation:** keine neue. Für die Screenshots läuft der Klick-Test wie in CLAUDE.md beschrieben (einmal `npm install`). Ein Vergleich mit Weg 2 bräuchte ein Kenney-Paket im Repository. Tiled bräuchte es erst, wenn Daniel Bereiche selbst legen will.
+- **Werkzeuge aus der erweiterten Recherche (H), jedes nur mit Daniels Zustimmung:** Für Weg 1 ist keines nötig. Claude zeichnet, rendert mit dem Browser des Klick-Tests, sieht sich das Bild an und verbessert es. Möglich wären: die Stilregeln als eigener Skill im Repository; für einen Vergleich mit Weg 3 ein Hugging-Face-Connector; für einen Vergleich mit Weg 2 ein Pixel-Werkzeug wie claude-pxl.
 
 ### Fragen an Daniel
 
@@ -228,6 +233,8 @@ Nachteile:
 3. Welche Möglichkeit für die Stationen soll die Probe zeigen, (a), (b) oder (c)? Oder wählt Claude?
 4. Würdest du Grafiken später selbst in einem Programm wie Inkscape ändern, oder nur in Sitzungen mit Claude?
 5. Nur falls lokale KI infrage kommt: Hat dein PC eine Grafikkarte mit viel Grafikspeicher (mindestens 6 GB, für neuere Modelle eher 12 GB oder mehr)?
+6. (H) Soll Claude die Stilregeln in der Probe gleich als eigenen Skill im Repository anlegen, damit spätere Sitzungen ihnen folgen? Oder reicht eine einfache Datei?
+7. (H) Kommt für einen Vergleich mit Weg 3 ein Hugging-Face-Connector infrage? Dafür bräuchte es ein kostenloses Konto bei Hugging Face und einen selbst eingetragenen Connector in den Claude-Einstellungen.
 
 ### Einzelheiten der Recherche
 
@@ -286,7 +293,9 @@ Einzeln sind KI-Bilder stark. Für 150 bis 250 Teile in einheitlichem Stil, mit 
 | PixiJS | MIT, etwa 450 KB | viele bewegte Rasterbilder über WebGL | nur bei viel Bewegung in Weg 2 oder 3, sonst zu schwer |
 | Rive | Editor kostenlos, Exporte im kostenlosen Plan mit Rive-Startbildschirm | interaktive Animationen | passt nicht zu Kosten 0 |
 
-#### F: Werkzeuge dieser Sitzung (24.11.2026)
+#### F: Werkzeuge dieser Sitzung (24.11.2026, erste Runde)
+
+Hier steht nur, was in der Sitzung aktiviert oder im Katalog sofort sichtbar war. Die breitere Suche folgt in H.
 
 - **Connector Canva (verbunden):** erzeugt KI-Bilder, kann Hintergründe entfernen und flache Bilder in Ebenen zerlegen. Ob die beiden letzten im kostenlosen Plan gehen, ist nicht geprüft. Grenzen des Free-Plans siehe C. Brauchbar für Stilvorlagen (D1), nicht für Bausteine.
 - **Artefakt-Typen „Design“ und „Design System“:** eine Zeichenfläche, um Entwürfe in mehreren Größen nebeneinander zu zeigen, und eine Ablage für Stilregeln mit Beispielen. Beides ist möglich, aber nicht nötig, denn die Ablage bleibt das Repository.
@@ -305,6 +314,76 @@ Einzeln sind KI-Bilder stark. Für 150 bis 250 Teile in einheitlichem Stil, mit 
 - **VTracer:** Open Source (MIT), wandelt Rasterbilder in SVG um (siehe D).
 - **Krita mit „AI Diffusion“** und **FLUX.2 [klein] 4B:** lokale KI ohne laufende Kosten, siehe C.
 - **Blender:** für D5.
+
+#### H: Erweiterte Recherche: Skills, Plugins und MCP-Server (24.11.2026, zweite Runde)
+
+Auf Daniels Wunsch ging die Suche über die aktivierten Werkzeuge hinaus. Durchsucht wurden:
+- das offizielle Skill-Repository von Anthropic und das Verzeichnis skills.sh
+- „awesome“-Listen auf GitHub
+- Verzeichnisse für Skills und MCP-Server, unter anderem Smithery, Glama, mcpservers.org, LobeHub, claudemarketplaces.com und Tessl
+- der Plugin-Katalog und das Connector-Verzeichnis von Claude
+- einzelne GitHub-Repositories
+
+Ein MCP-Server gibt Claude Werkzeuge für ein Programm oder einen Dienst. Ein Connector ist ein MCP-Server, den man in Claude einträgt. Installiert ist nichts. Viele Projekte sind jung und klein. Lizenz und Pflegezustand sollten vor einer Nutzung erneut geprüft werden.
+
+**Ergebnis:** Einen fertigen Skill oder Server für einen baukastenartigen, einheitlichen Garten gibt es nicht. Die Funde helfen bei einzelnen Schritten:
+- beim Zeichnen mit Sichtkontrolle (Weg 1)
+- beim Nachzeichnen fehlender Pixel-Kacheln (Weg 2)
+- beim kostenlosen Erzeugen von KI-Bildern (Weg 3)
+
+##### H1: SVG und Vektorgrafik
+
+| Fund | Was es tut | Kosten, Lizenz | Nutzen für den Garten |
+| --- | --- | --- | --- |
+| algorithmic-art (Anthropic) | erzeugt Bilder mit p5.js, Zufall mit festem Startwert | kostenlos, Apache 2.0 | Idee für natürliche Abwandlungen bei gleichem Stil, etwa bei Pflanzen und Steinen. Erzeugt p5.js, kein SVG. |
+| canvas-design (Anthropic) | Bilder als PNG oder PDF nach einer selbst formulierten Gestaltungsidee | kostenlos, Apache 2.0 | eher für Plakate, höchstens zur Stilfindung |
+| svg-drawing, svg-art, svg-illustration, svg-art-designer (Community) | SVG zeichnen, als PNG rendern, ansehen, verbessern | kostenlos, Lizenz je Skill prüfen | Diese Arbeitsweise ist für Weg 1 zentral. Claude kann sie hier schon ohne Skill nutzen. |
+| positron-abstract-svg (Posit) | Hausstil-Skill mit Regeln, Mustern und Beispieldateien für einheitliche SVG-Illustrationen | Vorbild | Vorlage für einen eigenen Garten-Stil-Skill (Vorschlag) |
+| nakkas, mcp-svg-render (MCP-Server) | SVG rendern und als Vorschau zurückgeben; nakkas zusätzlich mit Design-Hinweisen und Animation | kostenlos, MIT | bequemer, aber nicht nötig |
+| Inkscape-MCP-Server (mehrere, z. B. inksmcp, inkscape-mcp-server) | Claude bedient Inkscape, teils live im selben Fenster wie Daniel | kostenlos, meist MIT; Inkscape nötig | gemeinsames Arbeiten an denselben SVG-Dateien |
+| Penpot MCP (offiziell) | Claude liest und ändert Penpot-Dateien | Penpot kostenlos und Open Source | Daniel könnte Bauteile in Penpot pflegen, Claude ebenso |
+| OmniSVG | offenes KI-Modell, macht aus Text oder Bild ein SVG | Modell Apache 2.0, Trainingsdaten nur nicht kommerziell (CC BY-NC-SA 4.0) | für einzelne Teile denkbar; braucht eine Grafikkarte oder die Demo auf Hugging Face |
+| Iconify-MCP-Server | sucht in über 200 000 freien Icons mit Lizenzangaben | kostenlos | eher für Symbole der App als für den Garten |
+| SVGMaker, CleanVector, Icons8, SVG Lab | SVG-Erzeugung oder SVG-Sammlung als Dienst | API-Schlüssel oder Bezahlplan; bei Icons8 SVG nur im Bezahlplan; bei SVG Lab Kosten nicht angegeben | nicht kostenlos in der nötigen Menge |
+
+##### H2: Pixel-Art
+
+| Fund | Was es tut | Kosten, Lizenz | Nutzen für den Garten |
+| --- | --- | --- | --- |
+| claude-pxl | Pixel-Art als Code; die Vorschau baut sich bei jeder Änderung neu auf; Umfärben in einer Zeile | kostenlos, Lizenz vor Nutzung prüfen | Claude könnte in Weg 2 fehlende Kacheln passend nachzeichnen |
+| pixel-art-studio, codixel (Skills) | Pixel-Art per Code, pixel-art-studio mit Qualitätsprüfung | kostenlos, MIT | wie claude-pxl |
+| simplepixelart-mcp | Bilder in Pixel-Art umwandeln, Paletten anwenden, ohne Unschärfe vergrößern; läuft lokal | kostenlos, ohne API-Schlüssel | Paletten vereinheitlichen |
+| Pixelwright | Pixel-Editor im Browser mit MCP-Server, Claude zeichnet live mit | Editor ohne Konto nutzbar; für die KI-Verbindung ist ein Konto nötig, die Kosten sind nicht geklärt | Daniel und Claude im selben Editor |
+| pixel-art-sprites und ähnliche (Wissens-Skills) | Regeln zu Paletten, Kacheln und Animation | kostenlos, z. B. Apache 2.0 | Grundlage für Stilregeln in Weg 2 |
+| SpriteCook (Plugin im Katalog), SpriteForge, Retro Diffusion, PixelLab | KI-Pixel-Art als Dienst | SpriteCook kostenlos 40 Credits im Monat, etwa 5 bis 10 Bilder, sonst bezahlt; Retro Diffusion ab etwa 0,01 US-Dollar je Bild; SpriteForge mit Credits; PixelLab mit API-Schlüssel | nicht kostenlos in der nötigen Menge |
+
+##### H3: KI-Bilder über MCP
+
+| Fund | Was es tut | Kosten, Lizenz | Nutzen für den Garten |
+| --- | --- | --- | --- |
+| Hugging Face (Connector) | Claude nutzt Bildmodelle auf Hugging Face, etwa FLUX.1-schnell | kostenloses Konto mit täglichem GPU-Kontingent (laut Hugging Face 5 Minuten, in älteren Angaben 3,5); FLUX.1-schnell unter Apache 2.0 | Claude könnte Grundbilder für Weg 3 und Stilvorlagen für D1 selbst erzeugen. Laut Hugging Face geht Bilderzeugung nur mit einem selbst eingetragenen Connector (Adresse huggingface.co/mcp?login), nicht über den Eintrag im Connector-Verzeichnis. In der Praxis reicht das Kontingent oft nur für wenige Bilder am Tag. |
+| ComfyUI-MCP-Server (offiziell comfy-mcp, dazu Server aus der Community) | Claude steuert ein lokales ComfyUI | kostenlos, Grafikkarte nötig; Modelle mit eigener Lizenz, etwa FLUX.2 [klein] 4B unter Apache 2.0 | Weg 3 lokal und wiederholbar |
+| gemini-svg-creator und ähnliche Skills | Gemini erzeugt SVG oder Bilder | API-Schlüssel nötig; ob Bildmodelle im kostenlosen API-Kontingent liegen, ist widersprüchlich (laut Google-Forum im Januar 2026 nicht) | bei Kosten 0 unsicher |
+| illo-skill | Illustrationen mit wiederkehrender Figur über den Dienst OpenRouter | OpenRouter in der Regel kostenpflichtig | nicht kostenlos |
+
+##### H4: 3D, Gestaltung, Animation
+
+| Fund | Was es tut | Kosten, Lizenz | Nutzen für den Garten |
+| --- | --- | --- | --- |
+| Blender MCP | Claude baut und rendert Szenen in Blender, holt Modelle und Texturen von Poly Haven | kostenlos, MIT; Blender kostenlos; Poly Haven gemeinfrei (CC0) | senkt Claudes Aufwand für D5 deutlich; Ändern bleibt an Blender gebunden |
+| Plugin „Design“ von Anthropic (Katalog) | prüft Barrierefreiheit, gibt Design-Kritik | kostenlos | Prüfung der Probe, etwa Kontraste und Tippflächen |
+| impeccable | Gestaltungs-Wortschatz und Prüfbefehle für Oberflächen | kostenlos, Apache 2.0 | für die Optik der übrigen App |
+| Motion-Skill (vom Motion-Team) | Anleitung für Animationen mit Motion | kostenlos, MIT | erst nötig, wenn CSS nicht reicht |
+| audit-suite, Tweenkit (Katalog) | Prüfungen, darunter Web-Animation und Barrierefreiheit; animierte Seiten | kostenlos | eher später |
+
+##### H5: Was sich dadurch ändert (Vorschlag)
+
+- **Weg 1:** Mehrere Skills und MCP-Server bieten dieselbe Arbeitsweise: zeichnen, rendern, ansehen, verbessern. Claude kann das hier schon mit dem Browser des Klick-Tests, ohne Installation. Neu als Vorschlag: die Stilregeln als eigenen Skill im Repository anlegen, nach dem Vorbild von positron-abstract-svg mit Regeln, Mustern und Beispieldateien. Dann folgen spätere Sitzungen denselben Regeln, auch nach Jahren. Will Daniel SVG-Teile selbst bearbeiten, wäre ein Inkscape- oder Penpot-MCP-Server ein gemeinsames Werkzeug für ihn und Claude.
+- **Weg 2:** Mit Pixel-Werkzeugen wie claude-pxl, pixel-art-studio oder codixel zeichnet Claude fehlende Kacheln als Code mit fester Palette. Das mildert den Nachteil, dass nachgezeichnete Teile aus dem Stil fallen.
+- **Weg 3:** Über einen selbst eingetragenen Hugging-Face-Connector könnte Claude Grundbilder kostenlos selbst erzeugen, mit einem Modell unter Apache 2.0. Daniel müsste die Bilder dann nicht selbst erzeugen. Deshalb steht bei C1 und D3 unter Kosten und Lizenz jetzt „+“. Zwei Nachteile bleiben: Der Stil schwankt, und die Pflege über Jahre ist unsicher.
+- **C2 und D5:** Mit einem ComfyUI-MCP-Server oder Blender MCP kann Claude lokale Programme selbst steuern. Deshalb steht unter Aufwand Claude jetzt „o“. Einrichtung und Pflege bleiben an Daniels PC und an diese Programme gebunden.
+- **Bezahldienste** bleiben außen vor, weil sie in der nötigen Menge Geld kosten.
+- **Empfehlung:** Die Reihenfolge bleibt, Weg 1 zuerst. Die Funde machen vor allem einen Vergleich mit Weg 3 leichter.
 
 ### Quellen
 
@@ -335,3 +414,24 @@ Abgerufen am 24.11.2026. Die Grenzen des Canva-Free-Plans für SVG und transpare
 - Penpot: https://github.com/penpot/penpot
 - Tiled: https://www.mapeditor.org
 - VTracer: https://github.com/visioncortex/vtracer
+
+Zweite Runde (Abschnitt H):
+
+- Skills von Anthropic, Lizenz: https://github.com/anthropics/skills · skills.sh: https://skills.sh
+- Awesome-Listen: https://github.com/travisvn/awesome-claude-skills · https://github.com/heilcheng/awesome-agent-skills
+- svg-drawing: https://skills.sh/site/smithery.ai/_svg-drawing · positron-abstract-svg: https://tessl.io/registry/skills/github/posit-dev/positron/positron-abstract-svg/review
+- nakkas: https://libraries.io/npm/nakkas · mcp-svg-render: https://socket.dev/npm/package/mcp-svg-render
+- inksmcp: https://pypi.org/project/inksmcp/ · inkscape-mcp-server: https://glama.ai/mcp/servers/jjjsood/inkscape-mcp-server
+- Penpot MCP: https://help.penpot.app/mcp/
+- OmniSVG: https://huggingface.co/OmniSVG/OmniSVG
+- Iconify-MCP-Server: https://glama.ai/mcp/servers/zwa5xph2jg · Icons8 MCP: https://icons8.com/mcp/svg · SVG Lab: https://skillsplayground.com/connectors/app-svglab-svglab/
+- claude-pxl: https://github.com/crsolver/claude-pxl/wiki · pixel-art-studio: https://www.typingmind.com/skills/anastasiyaw-pixel-art-studio · codixel: https://www.skillsdirectory.com/skills/mankidev-codixel
+- simplepixelart-mcp: https://mcpservers.org/servers/comficker/pixel-art-mcp · Pixelwright: https://www.producthunt.com/products/pixelwright
+- pixel-art (Wissens-Skill): https://claudeskills.info/skills/omer-metin/skills-for-antigravity/pixel-art/
+- SpriteCook, Preise: https://www.spritecook.ai/pricing · SpriteForge: https://mcpservers.org/servers/www-spriteforge-tech-game-kit · Retro Diffusion: https://mcpservers.org/servers/retro-diffusion/retro-diffusion-mcp · PixelLab: https://npmjs.com/package/pixellab-mcp
+- Hugging Face mit Claude: https://huggingface.co/blog/claude-and-mcp · GPU-Kontingente: https://huggingface.co/docs/hub/spaces-zerogpu.md · Spaces als MCP-Werkzeuge: https://huggingface.co/docs/hub/en/spaces-mcp-servers
+- ComfyUI MCP: https://github.com/Comfy-Org/comfy-mcp
+- Gemini-API, Bildmodelle im kostenlosen Kontingent: https://discuss.ai.google.dev/t/i-keep-getting-429-on-image-generation-requests/116437
+- illo-skill: https://github.com/tmchow/illo-skill
+- Blender MCP: https://github.com/ahujasid/blender-mcp · Poly Haven, Lizenz: https://polyhaven.com/license
+- impeccable: https://github.com/pbakaus/impeccable · Motion-Skill: https://cdn.jsdelivr.net/npm/motion@14.13.0/README.md

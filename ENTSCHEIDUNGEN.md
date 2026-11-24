@@ -143,3 +143,4 @@ Von Daniel Claude überlassen (19.11.2026, Baustein J). So hat Claude gewählt, 
   - Aufwand für Claude und Pflege durch Daniel über Jahre
   - erreichbare Qualität
 - Ohne Daniels Zustimmung wird nichts installiert und nichts eingebaut (für Baustein B ausgesprochen).
+- Die Recherche zu Schritt 2 umfasst auch Skills, Plugins und MCP-Server, die noch nicht aktiviert sind, etwa aus GitHub-Repositories. Die Fragen, offenen Punkte und der Plan für die Probe bleiben dabei erhalten. Die Ergebnisse stehen in GARTEN-BILD.md, Abschnitt H (24.11.2026).

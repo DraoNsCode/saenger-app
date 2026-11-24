@@ -46,7 +46,7 @@ Entschieden, aber noch nicht umgesetzt:
 
 Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
 
-Baustein B (Bild und Optik des Gartens) läuft. Schritt 1 (was der Garten können muss) und Schritt 2 (Wege zur Grafik) stehen als Vorschlag in GARTEN-BILD.md (24.11.2026). Es gibt noch keine Grafik und keinen Code dazu.
+Baustein B (Bild und Optik des Gartens) läuft. Schritt 1 (was der Garten können muss) und Schritt 2 (Wege zur Grafik) stehen als Vorschlag in GARTEN-BILD.md (24.11.2026). Schritt 2 wurde am selben Tag um Skills, Plugins und MCP-Server über die aktivierten hinaus erweitert (Abschnitt H). Es gibt noch keine Grafik und keinen Code dazu.
 
 Nächster Schritt: Daniel wählt den Weg oder die Wege für die Probe und beantwortet die Fragen in GARTEN-BILD.md. Danach folgt Schritt 3, die Probe an einem Bereich. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
