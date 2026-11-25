@@ -232,3 +232,4 @@ Ebene 2, Aussehen (am 25.11.2026 zurückgestellt, siehe unten):
 Stil:
 
 - **Zurück vor Ebene 2 (25.11.2026):** Daniel: „Ich bin hierher gekommen, weil ich den alten Stil nicht gut genug fand. Jetzt fährst du weiter damit fort, dich mit kleinsten Entscheidungen auseinanderzusetzen, aber hast noch gar nicht verschiedene Stile vorgestellt.“ Zuerst kommt eine Stilrunde, mit KI-Proben. Die Ergebnisse von Ebene 2 gelten nur für den gezeichneten Stil und sind zurückgestellt. Ebene 0 und 1 bleiben. Die Beete aus Ebene 3 „können auch je nach Gartenetappe alle verwendet werden“.
+- **Stilrunde 1 (25.11.2026):** Daniel: „gefällt: A, B, D · vielleicht: F · nein: C, E“. A ist Aquarell und Tusche, B gemaltes Bilderbuch, C Miniatur aus Knete und Filz, D altes Kräuterbuch, E Kirchenfenster, F der bisher gezeichnete Stil. Gewählt ist noch keiner.
