@@ -1,6 +1,6 @@
 # Garten neu: Startseite für Baustein B
 
-Stand 25.11.2026. Vorschlag von Claude. Daniel hat diese Übergabe für eine neue Sitzung vorbereiten lassen. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den Ebenen und Regeln hat Daniel am 25.11.2026 zugestimmt (Satz 28). Ebene 0 ist geklärt, Ebene 1 ist beantwortet, Ebene 2 ist zurückgestellt (Skizzen in `geruest/`, Ergebnisse in ENTSCHEIDUNGEN.md): Daniel wollte zuerst deutlich verschiedene Stile sehen. Vorschlag für die Reihenfolge ab hier: Stil wählen, prüfen, ob er sich bauen lässt, dann die Teile als Baukasten statt Entweder-oder, danach Ebene 4 bis 8.
+Stand 25.11.2026. Vorschlag von Claude. Daniel hat diese Übergabe für eine neue Sitzung vorbereiten lassen. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den Ebenen und Regeln hat Daniel am 25.11.2026 zugestimmt (Satz 28). Ebene 0 ist geklärt, Ebene 1 ist beantwortet, Ebene 2 ist zurückgestellt (Skizzen in `geruest/`, Ergebnisse in ENTSCHEIDUNGEN.md): Daniel wollte zuerst deutlich verschiedene Stile sehen. Vorschlag für die Reihenfolge ab hier: Stil wählen, prüfen, ob er sich bauen lässt, dann die Teile als Baukasten statt Entweder-oder, danach Ebene 4 bis 8. Das Gerüst aus Ebene 1 gilt in seinen Prinzipien, ausgeführt wird es je Stil passend (ENTSCHEIDUNGEN.md, „Fest und frei“).
 
 ## Worum es geht
 
