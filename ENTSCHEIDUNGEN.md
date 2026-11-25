@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [GARTEN-BILD.md](GARTEN-BILD.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [GARTEN-NEU.md](GARTEN-NEU.md), [GARTEN-BILD.md](GARTEN-BILD.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
 
 ## Ziel und Rahmen
 
@@ -57,7 +57,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 
 - Die Logik des Weges bleibt: Fortschrittsanzeige und Leitfaden durch die Themen. Darstellung und Optik sollen sich ändern, ein Weg aus Notenzeilen ist zu langweilig.
 - Zuerst wird die Geschichte oder das Bild gesucht, danach die passende Optik, eventuell für die ganze App.
-- Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten.
+- Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. (Daniel kann sich am 25.11.2026 nicht erinnern, festgelegt zu haben, dass die Stationen am Weg liegen. Der Satz wurde am 19.11. von Claude formuliert. Dieser Teil gilt seitdem als offen.)
 - Die Etappen sollen eine logische Reihenfolge und ein richtiges Ziel haben. Das Ziel ist die Kapelle.
 - Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md).
 - Der Garten zieht sich in die Länge: Man beginnt unten und bewegt sich beim Scrollen nach oben. Vorstellbar ist die Ansicht von oben oder schräg von oben.
@@ -157,3 +157,43 @@ Von Daniel Claude überlassen (24.11.2026, Baustein B). So hat Claude gewählt, 
 - Stationen in der Probe: Möglichkeit (a) aus GARTEN-BILD.md. Am Weg stehen nur die nötigen Stationen, die freiwilligen stecken in den offenen Stellen. Begründung: So passen die beiden Entscheidungen vom 19.11. zusammen, dass die Stationen am Weg liegen und dass die Übersicht nicht alle Stationen zeigt. Die offenen Stellen gibt es ohnehin, und der Vorschlag aus GEZIELT-UEBEN.md, dass eine Stelle mit ihren freiwilligen Stationen fertig wird, passt dazu. Für die App ist damit noch nichts entschieden. Das soll die Probe zeigen.
 - Grafiken ändern: in Sitzungen mit Claude. Die Bildteile bleiben trotzdem einfache Dateien in offenen Formaten (SVG, bei Weg 3 auch PNG oder WebP) mit verständlichen Namen, die sich in freien Programmen wie Inkscape öffnen lassen. Bei KI-Bildern wird festgehalten, wie jedes entstanden ist. Begründung: Daniel muss kein Grafikprogramm lernen, kann aber jederzeit selbst eingreifen.
 - Stilregeln: als eigener Skill im Repository (etwa `.claude/skills/garten-grafik/`), nicht als einfache Datei. Begründung: Spätere Sitzungen finden den Skill im Repository von selbst und laden ihn, sobald es um Gartengrafik geht. Neben den Regeln kann er Beispiele und die Anleitung zur Sichtprüfung enthalten. So passen auch Bereiche, die nach Jahren dazukommen. Der Inhalt bleibt Vorschlag und ist im Skill so gekennzeichnet, bis Daniel ihn bestätigt. Sobald es den Skill gibt, verweist CLAUDE.md darauf.
+
+Nach Teil 1 der Probe (24.11.2026, Baustein B):
+
+- Ansicht: Daniel wählt „schräg von oben“. Gefragt war nach der Ansicht für Teil 2 der Probe. Die anderen Fragen zu Teil 1 (Stil, eigene Position, Grafikkarte) sind noch nicht beantwortet (GARTEN-BILD.md).
+
+Nach Teil 2 der Probe (24.11.2026, Baustein B):
+
+- Daniel findet die Optik aus Teil 2 in Ordnung, sieht aber auch einige Nachteile. Welche, ist noch nicht genannt.
+- Bevor es in die Details geht, möchte Daniel verschiedene Varianten sehen: viele Bilder eines Gartenabschnitts in verschiedenen Stilen, mit verschiedenen Elementen und Effekten. Claude soll sich dafür auch an Beispielen orientieren und recherchieren.
+- Damit ist der Stil des Gartens noch nicht gewählt (abgelöst am 25.11.2026: vorerst Original, üppig, siehe unten). Die Varianten stehen in GARTEN-BILD.md („Stilvarianten“).
+
+Nach den Stilvarianten (24.11.2026, Baustein B):
+
+- Gefällt: 1 Aquarell und Tusche.
+- Vielleicht: 5 Kirchenfenster, 6 Nachtgarten mit Laternen, 8 Kräuterbuch, 10 Miniatur in 3D, 16 Frühling, 17 Herbst, 18 Winter, 19 Abendlicht, 20 Regen.
+- Eher nicht: 2 Buchmalerei, 3 Linolschnitt, 4 Papierschnitt, 7 Gemalt im Morgenlicht, 9 Stickerei, 11 Marineblau und Gold, 12 Kacheln, 13 Fresko, 14 Mosaik, 15 Scherenschnitt.
+- Die ursprüngliche Optik (Teil 2 der Probe) war wahrscheinlich die beste. Dazu könnte man noch ähnliche Varianten überlegen.
+- Wie es weitergeht, überlässt Daniel Claude. Claude hat gewählt: Die ursprüngliche Optik bleibt die Grundlage, nahe Verwandte davon entstehen am echten ersten Bereich mit allen Zuständen. Begründung: So lassen sie sich unter den Bedingungen der App vergleichen, und jede Wahl lässt sich gleich weiterbauen.
+
+Nach den Verwandten des Originals (25.11.2026, Baustein B):
+
+- Vorerst geht es mit dem Original und der üppigen Bepflanzung weiter. Eventuell möchte Daniel später irgendwann auf Aquarell umschalten.
+- Licht und Jahreszeiten können eventuell später als Patch dazukommen.
+- Aufgefallen: Unbearbeitete Elemente unterscheiden sich nur wenig von bearbeiteten, zum Beispiel Baum und Baum mit Äpfeln.
+- Brainstorming, von Daniel ausdrücklich nicht entschieden: größere Flächen dafür reservieren, zum Beispiel ein Viereck mit Obstbäumen, oder bei denselben Elementen für einen größeren Unterschied sorgen.
+- Zu den Fassungen mit größerem Unterschied (GARTEN-BILD.md): Daniel überlässt Claude, eine zu nehmen, und meint, vielleicht sei es besser, das erst später festzulegen. Claude hat „Zusammen“ genommen, als vorläufige Arbeitsgrundlage. Begründung: Sie enthält die Ansätze der anderen Fassungen, deshalb lässt sich später am leichtesten etwas weglassen. Endgültig festgelegt ist damit nichts.
+
+Nach dem Vergleich mit dem Entwurf in Worten (25.11.2026, Baustein B):
+
+- Rein optisch findet Daniel den gezeichneten Entwurf in Worten (`probe/worte.html`) viel besser als die Probe, auch wenn Claude ihn in ähnlichem Stil umgesetzt hat.
+- Ein größerer Unterschied zwischen unbearbeitet und bearbeitet muss nicht aus einem anderen Ansatz kommen, er kann auch aus einer besseren Umsetzung kommen.
+- Dass die Stationen am Weg liegen, ist offen (siehe „Der Weg als Klostergarten“).
+- Überlegung, nicht entschieden: in einer neuen Sitzung von vorne anfangen und nicht gleich ein ganzes Bild erstellen, sondern Schritt für Schritt. Claude gibt Varianten, Daniel wählt aus, dann geht es eine Ebene höher.
+- Daniel hat die Übergabe für diese neue Sitzung vorbereiten lassen (25.11.2026). Der Prozess in [GARTEN-NEU.md](GARTEN-NEU.md) ist Claudes Vorschlag dafür.
+
+## Garten neu (ab 25.11.2026, Baustein B)
+
+Hier stehen nur die Ergebnisse der einzelnen Ebenen aus [GARTEN-NEU.md](GARTEN-NEU.md), in Daniels Worten. Frühere Einträge zum Garten gelten weiter, bis Daniel etwas anderes sagt.
+
+- Ebene 0: noch offen.

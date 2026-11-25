@@ -1,6 +1,8 @@
 # Bild und Optik des Gartens – Vorschlag zur Prüfung
 
-Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom selben Tag. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Grafik und Code gibt es noch nicht, installiert oder eingebaut ist nichts. Preise und Bedingungen der Dienste haben den Stand November 2026. Vor einer Nutzung sollten sie noch einmal geprüft werden.
+> **Archiv (25.11.2026).** Für das Design des Gartens ist ein Neuanfang vorbereitet, siehe [GARTEN-NEU.md](GARTEN-NEU.md). Diese Seite nur lesen, wenn Daniel danach fragt. Die Recherche zu Wegen und Werkzeugen (Schritt 2) bleibt brauchbar.
+
+Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom selben Tag. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Seit Teil 1 der Probe (24.11.2026) gibt es eine erste Grafik im Ordner `probe/`. In die App eingebaut oder installiert ist nichts. Preise und Bedingungen der Dienste haben den Stand November 2026. Vor einer Nutzung sollten sie noch einmal geprüft werden.
 
 **Kurz:**
 
@@ -8,6 +10,12 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom
 - Schritt 2 bewertet die Wege zur Grafik nach Daniels sieben Punkten. Drei Wege werden empfohlen: **1. ein eigenes SVG-Bausteinsystem**, **2. Pixel-Kacheln aus einer freien Sammlung**, **3. KI-Grundbilder mit Vektor-Ebenen darüber**. Nach Claudes Einschätzung passt Weg 1 am besten zu den sieben Punkten. Seine Schwachstelle ist die erreichbare Qualität.
 - Vorschlag für Schritt 3: eine Probe am ersten Bereich. Daniel hat dazu am selben Tag die Fragen beantwortet: Die Probe nutzt Weg 1 und Weg 3 und probiert zuerst verschiedene Ansichten aus. Drei Fragen hat er Claude überlassen (ENTSCHEIDUNGEN.md). Der Plan für die Probe ist daran angepasst: zuerst ein kleiner Ausschnitt in drei Ansichten, dann der ganze erste Bereich in der gewählten Ansicht.
 - Am selben Tag erweitert (zweite Runde, Abschnitt H): Skills, Plugins und MCP-Server über die aktivierten hinaus, unter anderem aus GitHub und Verzeichnissen. Einen fertigen Baukasten für einen solchen Garten gibt es nicht. Einige Funde mildern aber Schwächen der drei Wege, am deutlichsten bei Weg 3: Über einen eigenen Hugging-Face-Connector könnte Claude KI-Bilder kostenlos selbst erzeugen. Die Reihenfolge der Empfehlung bleibt. Geänderte Stellen sind mit „(H)“ markiert.
+- Teil 1 der Probe liegt vor (24.11.2026): ein Ausschnitt in drei Ansichten, gezeichnet nach Weg 1. Weg 3 fehlt noch. Daniel hat daraufhin „schräg von oben“ gewählt (Abschnitt „Teil 1 der Probe“).
+- Teil 2 der Probe liegt vor (24.11.2026): der ganze erste Bereich, schräg von oben nach Weg 1, mit allen Zuständen (Abschnitt „Teil 2 der Probe“). Die Stilregeln stehen im Skill `.claude/skills/garten-grafik/`. Weg 3 fehlt weiterhin.
+- Stilvarianten liegen vor (24.11.2026), weil Daniel vor den Details mehr Auswahl möchte: 15 Stile, 5 Stimmungen und ein Bogen mit Elementen (Abschnitt „Stilvarianten“). Daniel gefällt Bild 1, das Original war für Daniel wahrscheinlich das beste.
+- Verwandte des Originals liegen vor (24.11.2026): vier Malweisen, üppigere Bepflanzung, Licht und Jahreszeiten am echten ersten Bereich (Abschnitt „Verwandte des Originals“). Daniel macht vorerst mit dem Original und üppiger Bepflanzung weiter.
+- Vier Fassungen mit größerem Unterschied zwischen unbearbeitet und bearbeitet liegen vor (25.11.2026), als Brainstorming (Abschnitt „Unterschied zwischen unbearbeitet und bearbeitet“). Vorläufig wird mit „Zusammen“ weitergearbeitet, festgelegt wird es später.
+- Ein zweiter Entwurf in Worten ist mit der Probe verglichen (25.11.2026): GARTEN-VERGLEICH.md.
 
 ## Schritt 1: Was der Garten zeigen und können muss
 
@@ -15,7 +23,7 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom
 
 ### Aufbau und Weg
 
-- Entschieden (19.11.): Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. Die Etappen haben eine logische Reihenfolge, das Ziel ist die Kapelle. Jeder Bereich passt zum Thema seiner Etappe.
+- Entschieden (19.11.): Jede Etappe ist ein Gartenbereich. (Dass die Stationen am Weg liegen, ist seit dem 25.11. offen, siehe ENTSCHEIDUNGEN.md.) Die Etappen haben eine logische Reihenfolge, das Ziel ist die Kapelle. Jeder Bereich passt zum Thema seiner Etappe.
 - Entschieden (19.11.): Der Garten zieht sich in die Länge. Man beginnt unten und bewegt sich beim Scrollen nach oben.
 - Entschieden (19.11.): Es gibt elf Etappen. Über ihre Reihenfolge denkt Daniel noch einmal nach, wenn alle Inhalte stehen. Deshalb sollen sich Bereiche tauschen lassen (24.11.).
 - Entschieden (19.11.): Erst die Geschichte, dann die passende Optik, eventuell für die ganze App.
@@ -34,7 +42,8 @@ Stand 24.11.2026, Baustein B, Schritt 1 und 2, ergänzt um Daniels Antworten vom
 
 ### Stationen
 
-- Entschieden (19.11.): Die Stationen liegen am Weg. Die Abschluss-Station am Ende jeder Etappe ist nötig.
+- Offen (25.11., vorher als entschieden geführt): Die Stationen liegen am Weg.
+- Entschieden (19.11.): Die Abschluss-Station am Ende jeder Etappe ist nötig.
 - Entschieden (19.11.): Daniel geht davon aus, dass die Gartenübersicht nicht alle Stationen zeigt. Das wäre zu unübersichtlich und würde das Bild zerstören.
 - Offen: wie beides zusammenpasst. Möglichkeiten (Vorschlag):
   - (a) Am Weg stehen nur die nötigen Stationen. Die freiwilligen stecken in den offenen Stellen.
@@ -260,6 +269,263 @@ Angepasst an Daniels Antworten vom 24.11.2026 (ENTSCHEIDUNGEN.md): Die Probe nut
 - Eine Cloud-Sitzung von Claude Code mit dem Repository reicht (claude.ai/code oder der Code-Bereich der Claude-App). Geprüft am 24.11.2026 in einer solchen Sitzung: Der Browser des Klick-Tests rendert SVG und speichert Screenshots, die Claude ansehen kann. Claude zeichnet, rendert, sieht sich das Bild an und verbessert es.
 - Connectoren aus claude.ai sind in Claude Code automatisch dabei, wenn man mit dem claude.ai-Konto angemeldet ist. In der Sitzung zeigt `/mcp`, ob der Hugging-Face-Connector da ist. Skills aus `.claude/skills/` im Repository lädt auch eine Cloud-Sitzung.
 - Weg 2 und die Werkzeuge dafür (Kenney-Paket, Tiled, Pixel-Werkzeuge wie claude-pxl) sind für die Probe nicht nötig.
+
+### Teil 1 der Probe: drei Ansichten (24.11.2026)
+
+Vorschlag von Claude zur Beurteilung durch Daniel. Daniel hat am selben Tag „schräg von oben“ gewählt (ENTSCHEIDUNGEN.md).
+
+**Was es gibt:** `probe/ansichten.html` (lokal `http://localhost:8000/probe/ansichten.html`, von der App nicht verlinkt). Am PC stehen die drei Bilder nebeneinander, auf Handy und Tablet wechselt ein Schalter sie an derselben Stelle. Weitere Schalter zeigen das Beet leer oder bepflanzt und die Station offen oder geschafft. Die Bilder liegen als SVG in `probe/bilder/`. Ihre Ebenen haben deutsche Namen und sollten in Inkscape als Ebenen erscheinen (dort nicht ausprobiert).
+
+**Wie sie entstanden sind:** mit `probe/werkzeug/zeichne.py` (Python, ohne Zusatzpakete, feste Startwerte, jeder Lauf ergibt dieselben Dateien). Das ist nur ein Hilfsmittel für die Probe. Wie die Bauteile ab Teil 2 abgelegt werden, ist damit nicht festgelegt. Ein Lauf überschreibt Änderungen von Hand in `probe/bilder/`.
+
+| | von oben | schräg von oben | isometrisch |
+| --- | --- | --- | --- |
+| Dateigröße (gepackt) | 76 KB (13 KB) | 88 KB (15 KB) | 104 KB (20 KB) |
+| SVG-Elemente | 816 | 908 | 1010 |
+| Breite des Beets bei 400 Einheiten Bildbreite | 124 | 126 | Kantenlänge 88 |
+| Verdeckung durch das Torhaus | keine | im ersten Entwurf Figur und Beet, danach verschoben | im ersten Entwurf das Beet, danach verkleinert und verschoben, berührt es noch |
+
+Was beim Zeichnen aufgefallen ist:
+
+- **Von oben:** am wenigsten Aufwand, nichts verdeckt etwas. Gebäude bestehen nur aus Dächern. Bei Mühle, Kreuzgang und Kapelle fehlte damit das Erkennbare, und auch die Tür der Kapelle, die sich laut WEG.md öffnen soll, wäre nicht zu sehen.
+- **Schräg von oben:** Tor, Pflanzen und Figur sind sofort zu erkennen, der Weg führt weiter von unten nach oben. Weg und Bach sind Kurven wie von oben, nur gestaucht. Die Anschlüsse der Kacheln blieben deshalb ähnlich einfach wie in der Draufsicht (Einschätzung, Teil 2 prüft es).
+- **Isometrisch:** die stärkste Tiefe, aber Weg und Bach brauchen im Zickzack viel Breite, der Bach verlässt auf Handybreite das Bild. Wand und Dach müssen je Gebäude für zwei Seiten gezeichnet werden, und die Anschlüsse liegen schräg.
+- Pflanzen, Bäume, Figur und Laterne sind in „schräg“ und „isometrisch“ dieselben Bauteile. Nur „von oben“ braucht eigene.
+- Die Schwachstelle von Weg 1 (natürliche Formen) war in diesem Stil nach Claudes Eindruck kein Hindernis. Ob der Stil gefällt, beurteilt Daniel.
+
+**Claudes Vorschlag: schräg von oben.** Sie verbindet die einfachen Anschlüsse der Draufsicht mit erkennbaren Gebäuden. Die Regel dafür (Vorschlag): Was weiter unten steht, liegt vorn. Hinter Gebäuden und Bäumen bleibt ein Streifen in deren Höhe frei von Stationen und offenen Stellen.
+
+**Weg 3:** In dieser Sitzung (Desktop-App) war der Hugging-Face-Connector nicht vorhanden, deshalb gibt es noch keine Vergleichsbilder. Hier die Bildbeschreibungen für Z-Image-Turbo und Qwen-Image, auf Englisch, noch nicht ausprobiert. Format hochkant 2:3. Station, Figur und die Bepflanzung kämen als SVG-Ebenen darüber, deshalb sind sie nicht genannt.
+
+- *Gemeinsamer Anfang:* `Hand-painted gouache illustration of a medieval monastery kitchen garden, warm morning light from the upper left, soft shadows to the lower right, muted sage green grass, pale sand gravel path, grey-beige limestone wall, terracotta roof tiles, calm and friendly, no people, no text,`
+- *Von oben:* `strict top-down bird's-eye view like a garden map, a low stone wall along the bottom with a small tiled gatehouse roof in the middle, one winding gravel path from the gate to the top edge, a brook flowing along the right side, an empty wooden raised bed with five furrows on the left, two round tree crowns`
+- *Schräg von oben:* `three-quarter view from above, ground seen from above and upright objects seen from the front, a stone wall along the bottom with a small gatehouse with an open arch in the middle, one winding gravel path from the gate to the top edge, a brook flowing along the right side, an empty wooden raised bed with five furrows on the left, two fruit trees`
+- *Isometrisch:* `isometric view, stone walls meeting in a V-shaped corner at the bottom, a small gatehouse in the left wall, one gravel path zigzagging to the top edge, a brook on the right side, an empty wooden raised bed with five furrows on the left, two fruit trees`
+
+**Geprüft:** Handy (360 und 390 Pixel breit), Tablet (820) und PC (1280) mit Chrome ohne Fenster. Keine Fehler in der Konsole, nichts breiter als der Bildschirm, alle Zustände schalten, bei „Bewegung reduzieren“ steht die Bewegung still, Schalter 44 Pixel hoch. Nicht geprüft: echte Handys, Safari, Firefox und Inkscape.
+
+**Zur Umgebung auf Daniels Rechner:** Node.js ist dort nicht installiert. `npm test` lief ersatzweise mit der Node-Laufzeit aus VS Code, der Klick-Test lief nicht. Die App ist unverändert, deshalb war er nach CLAUDE.md auch nicht nötig. Die Grafikkarte dieses Rechners ist eine GeForce GTX 1050 mit 2 GB. Das passt nicht zu „viel Grafikspeicher“ (ENTSCHEIDUNGEN.md). Vielleicht ist ein anderer PC gemeint.
+
+**Fragen an Daniel zu Teil 1:**
+
+1. Welche Ansicht soll Teil 2 nutzen?
+   **Antwort:** schräg von oben.
+2. Passt der Stil von Weg 1 so weit, dass Teil 2 damit weitergehen kann, oder sollen vorher die Vergleichsbilder aus Weg 3 entstehen?
+   (Noch nicht beantwortet. Teil 2 ist mit Weg 1 gebaut, der Vergleich bleibt möglich.)
+3. Wie soll die eigene Position aussehen: Figur wie in der Probe, Laterne oder Markierung?
+4. Auf welchem PC steckt die Grafikkarte mit viel Grafikspeicher?
+
+### Teil 2 der Probe: der erste Bereich (24.11.2026)
+
+Vorschlag von Claude zur Beurteilung durch Daniel. Gebaut nach Weg 1 in der gewählten Ansicht „schräg von oben“.
+
+**Was es gibt:** `probe/garten.html` (lokal `http://localhost:8000/probe/garten.html`, von der App nicht verlinkt, gespeichert wird nichts). Der Garten besteht aus Anfang, Bereich 1 und einer Platzhalter-Kachel. Stationen und Titel kommen aus `js/lernweg.js`. Was sich antippen lässt, öffnet das Blatt der App, dort lässt sich eine Station zur Probe als geschafft zeigen. So kann man den Bereich von Anfang bis Ende durchspielen. Schalter wechseln die Zustände.
+
+**Was die Probe zu den Punkten aus Schritt 1 zeigt** (alles Vorschlag):
+
+| Punkt | in der Probe |
+| --- | --- |
+| Zustände eines Bereichs | fünf: noch nicht erreicht (im Nebel), in Arbeit, angelegt, weiter ausgebaut, fertig ausgebaut. Dazwischen wächst er in kleinen Schritten, je Station ein Stück. |
+| Stationen | nach (a): 6 nötige am Weg. An einer geschafften Station blühen Blumen. |
+| Abschluss | Das Gartentor am oberen Ende öffnet sich, darüber blüht ein Rosenbogen. |
+| Offene Stellen | drei mit je zwei freiwilligen Stationen: Gemüsebeet, Bohnenstangen, Vogeltränke. Erst abgesteckt, dann leer mit Spaten, halb, fertig. |
+| Wann sich eine Stelle öffnet | sobald die erste nötige Station zu einer ihrer freiwilligen geschafft ist, wie heute im Code |
+| Pflege-Zeichen | eine Gießkanne neben einer geschafften Station |
+| Spätblüher | ein Rosenbusch, der mit Knospen und Funkeln neu erscheint |
+| Eigene Position | die Figur aus Teil 1, sie steht vor der nächsten Station |
+| Antippen | Station, offene Stelle, Pflege-Zeichen und Spätblüher, jeweils als eigener Knopf, mindestens 44 Pixel groß und mit der Tastatur erreichbar |
+| Kacheln tauschen | geht, Weg und Bach passen in beiden Reihenfolgen |
+
+Die drei Stellen sind nur ein Beispiel, denn wie viele ein Bereich hat, wird je Bereich entschieden: „Linie oder Zwischenraum“ (außen, Hilfslinien), „mit Hilfslinien“ (höher oder tiefer, Schritt oder Sprung), „Hören und sehen“ (drei Töne, vier Töne).
+
+**Messwerte**
+
+| | Größe | gepackt |
+| --- | --- | --- |
+| gemeinsame Bauteile (42 Stück) | 82 KB | 9 KB |
+| Anfang | 42 KB | 6 KB |
+| Bereich 1 | 126 KB | 18 KB |
+| Platzhalter | 79 KB | 13 KB |
+
+- Zusammen 330 KB, gepackt 48 KB. Rechnet man mit 15 bis 20 KB je weiterem Bereich, käme der ganze Garten gepackt auf grob 200 bis 250 KB (Schätzung).
+- Bildrate in Handygröße beim Scrollen, Chrome ohne Fenster: 73 Bilder pro Sekunde, mit vierfach gebremstem Prozessor 52, mit sechsfach gebremstem 33. Das ist ein Anhaltspunkt, kein Test auf einem echten älteren Handy.
+- Alle Bilder zusammen haben etwa 3500 SVG-Elemente. Zwölf Bereiche gleichzeitig wären zu viele. In der App müssten Kacheln erst beim Näherkommen eingesetzt werden.
+
+**Aufwand für die übrigen Bereiche (Einschätzung):** Mauer, Tor, Weg, Bach, Stationen, Zeichen, Bäume und Blumen sind da. Neu wären je Bereich etwa 5 bis 10 eigene Teile. Leicht: Kräutergarten, Bienengarten, Rosenbögen. Mittel: Weinberg, Labyrinth, Trittsteine, Springbrunnen. Aufwendig: Mühle (mit drehendem Rad), Kreuzgang, Sonnen- und Schattenhof, Kapelle.
+
+**Was aufgefallen ist:**
+
+- Das Torhaus am Anfang verdeckt die unteren 110 Einheiten des Bereichs. Als Regel bleibt dieser Streifen frei.
+- Der Nebel zeigt, dass es weitergeht, ohne etwas zu verraten. Das Schild mit dem Titel der Etappe bleibt lesbar.
+- Bauteile liegen einmal im Musterbogen, die Kacheln verweisen darauf. Dafür zeigt Inkscape eine einzelne Kachel ohne diese Teile.
+- Offen bleibt, wie man von weiter oben bemerkt, dass unten ein Spätblüher oder ein Pflege-Zeichen erschienen ist. Die Probe zeigt dazu nichts.
+
+**Geprüft:** automatischer Durchlauf mit 36 Punkten in 360, 390, 820 und 1280 Pixel Breite: den Bereich durchspielen, Stellen öffnen und füllen, Pflege, Spätblüher, Tauschen, alle Zustände, Tippflächen, Nähte, Reihenfolge der Tabulatortaste, Verweise. Alle in Ordnung, keine Fehler in der Konsole. Bei „Bewegung reduzieren“ steht die Bewegung still. Nicht geprüft: echte Handys, Safari, Firefox, Inkscape, Vorlesefunktion.
+
+**Weg 3:** Der Hugging-Face-Connector war auch für Teil 2 nicht vorhanden. Der Vergleich steht weiter aus.
+
+**Texte:** Die neuen Texte in den Blättern sind nur für die Probe. Kommen sie in die App, müssen sie vorher aus Sicht eines Sängers ohne Notenkenntnis gelesen werden (CLAUDE.md).
+
+**Fragen an Daniel zu Teil 2:**
+
+1. Trägt der Stil, soll der Garten so in die App?
+2. Passt der Nebel für noch nicht erreichte Bereiche?
+3. Passen die offenen Stellen (abgesteckt, leer, halb, fertig), und ist die Zuordnung der freiwilligen Stationen sinnvoll?
+4. Passen Figur und Gießkanne als Zeichen für Position und Pflege?
+5. Soll Weg 3 noch verglichen werden?
+
+### Stilvarianten (24.11.2026)
+
+Vorschlag von Claude zur Beurteilung durch Daniel. Daniel wollte nach Teil 2 viele verschiedene Bilder sehen, bevor es in die Details geht (ENTSCHEIDUNGEN.md). Der Stil war damit wieder offen.
+
+**Was es gibt:** `probe/varianten.html` (lokal `http://localhost:8000/probe/varianten.html`, von der App nicht verlinkt). Jedes Bild zeigt einen kleinen Gartenabschnitt mit ähnlichem Grundplan: Weg mit drei Stationen (geschafft, als Nächstes, noch zu), offene Stelle, Wasser, eigene Position. Antippen zeigt es groß und in Bewegung. Je Bild lässt sich „gefällt“, „vielleicht“ oder „eher nicht“ markieren, gemerkt nur im Browser. Die Bilder sind Richtungen, keine fertigen Entwürfe.
+
+**15 Stile:** 1 Aquarell und Tusche · 2 Buchmalerei · 3 Linolschnitt · 4 Papierschnitt · 5 Kirchenfenster · 6 Nachtgarten mit Laternen · 7 Gemalt im Morgenlicht · 8 Kräuterbuch · 9 Stickerei · 10 Miniatur in 3D · 11 Marineblau und Gold · 12 Blau-weiße Kacheln · 13 Fresko · 14 Mosaik · 15 Scherenschnitt. Elemente, Effekt und Haken stehen in der Galerie bei jedem Bild.
+
+**5 Stimmungen** auf dem bisherigen Stil: 16 Frühling, 17 Herbst, 18 Winter, 19 Abendlicht, 20 Regen. Sie entstehen fast nur durch Austauschen der Farben.
+
+**Elemente** (30 kleine Bilder): 8 Stationen, 6 Zeichen für die Position, 6 Möglichkeiten für „noch nicht erreicht“, 6 offene Stellen, 4 Pflege-Zeichen.
+
+**Wie sich die Stile bauen ließen (Einschätzung, nicht gemessen):**
+
+| Bauweise | Stile | Folge |
+| --- | --- | --- |
+| reines SVG wie in Teil 2 | 2, 3, 5, 6, 8, 11, 15 | Zustände und Tausch wie bisher, kleine Dateien. Bei 2 sehr viele kleine Teile |
+| SVG mit Filtern oder Schatten, Teile vorab als Bild rechnen | 1, 4, 7, 12, 13 | Zustände als Bildteile (WebP), mehr Daten, Änderungen über das Zeichenskript |
+| ganz vorab gerechnet (Canvas, WebGL) | 9, 10, 14 | je Zustand ein Bild oder Bildteil, kleine Zeichen sind schwierig |
+
+**Was aufgefallen ist:**
+
+- Bei mehreren Stilen erklärt die Technik selbst den Fortschritt: Farbe läuft ein (1), Laternen gehen an (6), Glas leuchtet auf (5), es wird gestickt (9), bemalt (12), freigelegt (13) oder gelegt (14). Das braucht keinen Nebel.
+- Das Frankfurter Paradiesgärtlein zeigt genau die Sicht „schräg von oben“. Buchmalerei passt deshalb ohne Kunstgriff.
+- Ruhiger und weniger nach Spiel wirken vor allem Stile mit sichtbarer Handarbeit oder wenigen Farben.
+
+**Claudes Vorschlag für die engere Wahl:** 2 Buchmalerei (stärkster Bezug zum Kloster, reines SVG), 1 Aquarell (ruhig, Farbe als Fortschritt) und 6 Nachtgarten (stärkstes Bild für den Weg, aber dunkel). Mischungen sind möglich, etwa Buchmalerei mit einlaufender Farbe.
+
+**Vorbilder:** stehen mit Links in der Galerie. Alle Bilder sind neu gezeichnet, nichts ist übernommen. Zum Stil der Vorbilder wurden Texte gelesen, angesehen wurden das Paradiesgärtlein und verkleinert die Seiten zu Millefleurs und Villa der Livia.
+
+**Wie sie entstanden sind:** mit `probe/werkzeug/varianten_*.py` (Python, ohne Zusatzpakete). Die Vorschaubilder in `probe/varianten/bilder/` sind daraus in Chrome gerendert. Der Ordner `probe/varianten/` hat etwa 5 MB. Nach der Wahl lassen sich die übrigen Varianten löschen.
+
+**Geprüft:** Galerie in 390, 820 und 1400 Pixel Breite, keine Fehler in der Konsole, Markieren, Zurücknehmen, Löschen und Großansicht funktionieren. Die Bilder selbst wurden in Chrome angesehen. Nicht geprüft: echte Handys, Safari, Firefox, Bildrate der bewegten Fassungen.
+
+**Fragen an Daniel zu den Varianten:**
+
+1. Welche Richtungen sollen weiter ausgearbeitet werden (Nummern), welche fallen weg?
+   **Antwort:** steht in ENTSCHEIDUNGEN.md („Nach den Stilvarianten“).
+2. Welche Nachteile siehst du an der Optik aus Teil 2?
+3. Welche Elemente gefallen dir (Station, Position, noch nicht erreicht, offene Stelle, Pflege)?
+4. Sollen gemalte Stile zusätzlich als KI-Bilder entstehen? Das ginge mit dem Hugging-Face-Connector oder über Canva (bis zu 20 KI-Nutzungen im Monat).
+
+### Verwandte des Originals (24.11.2026)
+
+Vorschlag von Claude zur Beurteilung durch Daniel. Daniel hat die Auswahl der Stilvarianten mitgeteilt, das Original für wahrscheinlich das beste gehalten und das weitere Vorgehen Claude überlassen (ENTSCHEIDUNGEN.md).
+
+**Was es gibt:** `probe/garten.html` kann jetzt Stil, Bepflanzung, Licht und Jahreszeit umschalten, am echten ersten Bereich und mit allen Zuständen. Der Fortschritt und die Stelle im Garten bleiben beim Wechsel erhalten.
+
+| Schalter | Möglichkeiten | greift auf |
+| --- | --- | --- |
+| Stil | Original · Aquarell · Feder · Buntstift · Weich | 1 Aquarell und Tusche, 8 Kräuterbuch (Feder), 10 Miniatur in 3D (Weich) |
+| Bepflanzung | bisher · üppiger (Saum am Weg, Wiesenblumen, Gräser, Farne, Buchskugeln, Efeu an der Mauer) | gegen die leere Wiese |
+| Licht und Wetter | Tag · Abend · Nacht · Regen | 6 Nachtgarten, 19, 20 |
+| Jahreszeit | Sommer · Frühling · Herbst · Winter, nur im Original | 16 bis 18 |
+
+Bei Nacht leuchten die geschafften Stationen und die nächste, der gegangene Weg wird also hell. 5 Kirchenfenster ist nicht aufgegriffen. Es passt eher zur Kapelle, etwa als Fenster, das mit jedem Bereich heller wird (Idee).
+
+**Wie die Stile entstehen:** `probe/werkzeug/stilbilder.mjs` rechnet aus den vier SVG-Dateien des Originals einen ganzen Stil. Boden und Bauteile werden Bilder (WebP, je Stil 72), Ebenen, Zustände und Anschlüsse bleiben gleich. Ein Lauf für alle vier Stile dauert unter einer Minute und braucht nur Chrome und Node (hier die Node-Laufzeit aus VS Code). Gezeichnet und geändert wird weiter nur das Original.
+
+| Stil | Daten für die Probe (3 Kacheln) | davon Boden | Bilder pro Sekunde in Ruhe / beim Scrollen |
+| --- | --- | --- | --- |
+| Original (SVG, gepackt) | 54 KB | – | 37 / 35 |
+| Aquarell | 800 KB | 136 KB | 75 / 73 |
+| Weich | 526 KB | 108 KB | 75 / 73 |
+| Feder | 930 KB | 128 KB | nicht gemessen |
+| Buntstift | 857 KB | 170 KB | nicht gemessen |
+
+Bildrate: Handygröße, üppig bepflanzt, vierfach gebremster Prozessor, Chrome ohne Fenster. 75 ist die Obergrenze des Bildschirms. Nacht (Aquarell) 75 / 75, Regen (Original) 34 / 30. Die Bauteile fallen nur einmal an, ein weiterer Bereich brächte je Stil grob 60 bis 150 KB (Schätzung).
+
+**Was aufgefallen ist:**
+
+- Die gerechneten Stile laufen doppelt so flüssig wie das SVG, brauchen dafür mehr Daten.
+- Die üppige Bepflanzung hilft jedem Stil, im Original kostet sie Leistung. Für die App spricht das für gerechnete Bilder, auch wenn der Stil das Original bleibt.
+- Jahreszeiten gehen im Original durch Farbtausch. Für gerechnete Stile müsste je Jahreszeit ein eigener Satz gerechnet werden.
+- Damit ist Weg 1 auch malerisch möglich, ohne KI-Bilder (Weg 3).
+
+**Claudes Vorschlag:** **Aquarell mit üppiger Bepflanzung.** Es verbindet das Original mit dem einzigen Bild, das Daniel klar gefällt, wirkt ruhiger und weniger wie ein Handyspiel, bleibt gut lesbar und läuft flüssig. Zweite Wahl ist „Weich“. Licht und Wetter passen zu beiden.
+
+**Geprüft:** der Durchlauf mit 36 Punkten in allen fünf Stilen bei 390 Pixel, in Aquarell zusätzlich bei 360, 820 und 1280. Dazu 47 Punkte zu Stilwechsel, Licht und Jahreszeit bei 360, 390, 820 und 1280. Alles in Ordnung, keine Fehler in der Konsole. Nicht geprüft: echte Handys, Safari, Firefox, langsame Verbindungen.
+
+**Fragen an Daniel:**
+
+1. Aquarell, Weich, Original oder ein anderer Stil?
+   **Antwort (25.11.2026):** vorerst Original, eventuell später Aquarell.
+2. Üppige Bepflanzung oder die bisherige?
+   **Antwort (25.11.2026):** vorerst üppig.
+3. Sollen Licht, Wetter oder Jahreszeiten in die App, und woran hängen sie: Uhrzeit, Kalender, Fortschritt oder ein Schalter?
+   **Antwort (25.11.2026):** Licht oder Jahreszeiten eventuell später als Patch. Woran sie hängen, ist offen.
+4. Können die aussortierten Varianten (2, 3, 4, 7, 9, 11 bis 15) gelöscht werden?
+   Noch offen.
+
+### Unterschied zwischen unbearbeitet und bearbeitet (25.11.2026)
+
+Brainstorming, nichts davon ist entschieden. Anlass ist Daniels Beobachtung, dass sich unbearbeitete Elemente nur wenig von bearbeiteten unterscheiden (ENTSCHEIDUNGEN.md). Von Daniel kommen die Ideen „größere Flächen“ und „größerer Unterschied bei denselben Elementen“, von Claude kommt „Boden“.
+
+**Woran es lag:** Die üppige Bepflanzung war von Anfang an da. Ein frischer Bereich sah deshalb fast so fertig aus wie ein fertiger.
+
+| Fassung in `probe/garten.html` | Idee | was sich ändert |
+| --- | --- | --- |
+| Bisher | – | Schnur, Erde, Pflanzen; Bäume bekommen kleine Äpfel |
+| Kräftiger | Daniel | gleiche Dinge an gleichen Stellen: kahler Baum, blühender Baum, volle Ernte; verwildertes Beet, bestelltes Beet mit Sonnenblumen und Kürbissen; überwucherte Station, Station im Blumenring |
+| Flächen | Daniel | drei große Flächen für die freiwilligen Stationen: Gemüsefeld, Obstgarten (Viereck mit sechs Bäumen), Kreuzgarten mit Vogeltränke. Vorher sind es verwilderte Flächen mit verfallenem Zaun. Der Bereich ist dafür etwas länger (1255 statt 1100 Einheiten). |
+| Boden | Claude | Das Land selbst lebt auf: erst trocken mit Disteln und zugewachsenem Weg, nach jeder nötigen Station wird ein Stück grün und üppig bepflanzt. Die Figur steht an der Grenze. |
+| Zusammen | beide | Boden für die nötigen Stationen, Flächen für die freiwilligen, kräftigere Dinge dazu |
+
+**Gemessen:** Anteil des Bildes, der sich deutlich ändert (Farbabstand über 10, ganzer Bereich, üppig). Das misst, wie viel sich ändert, nicht, wie es wirkt.
+
+| Fassung | gerade erreicht → nötige Stationen geschafft | nötige → alles geschafft | gerade erreicht → alles geschafft |
+| --- | --- | --- | --- |
+| Bisher | 11 % | 5 % | 13 % |
+| Kräftiger | 19 % | 8 % | 24 % |
+| Flächen | 17 % | 11 % | 21 % |
+| Boden | 73 % | 5 % | 73 % |
+| Zusammen | 80 % | 12 % | 80 % |
+
+**Claudes Vorschlag:** **Zusammen.** Der Boden zeigt auf einen Blick, wie weit man ist, die Flächen zeigen, was freiwillig noch offen ist. Beides bleibt auch dann lesbar, wenn nur die nötigen Stationen geschafft sind: grünes Land, aber leere Felder. Die Fassungen lassen sich auch einzeln wählen oder anders mischen.
+
+**Was dagegen sprechen kann:**
+
+- Das trockene Land könnte auf manche traurig wirken. Es ließe sich milder zeichnen, etwa als fahle Wiese statt Brache.
+- Jeder weitere Bereich braucht einen trockenen und einen grünen Zustand, also mehr Zeichenarbeit. Boden, Wegstücke und Dürres sind aber schon als Bauteile und Funktionen da.
+- Die Zuordnung der freiwilligen Stationen zu den Flächen ist wie bisher nur für die Probe angenommen. Offen ist auch, ob jeder Bereich drei Flächen bekommt.
+
+**Aquarell später:** Das Skript rechnet auch die Fassung „Zusammen“ in Aquarell (`probe/werkzeug/stilbilder.mjs`, umschaltbar in der Probe). Daten für die Probe: etwa 1,2 MB, vom Original 95 KB (gepackt).
+
+**Leistung im Original:** Üppig bepflanzt hat eine Kachel viele tausend Formen. Stehen sie alle in der Seite, schafft Chrome bei vierfach gebremstem Prozessor 28 Bilder pro Sekunde. Die Probe setzt das Original deshalb jetzt im Browser zu einem fertigen Bild zusammen (`probe/standbild.js`), Bewegtes bleibt eine kleine Ebene darüber. Damit sind es 75 (Obergrenze) ohne zusätzliche Daten. Ändert sich der Fortschritt, steht das Bild gebremst 0,2 bis 0,4 Sekunden still. Einmal gab es beim Messen eine Pause von fast 10 Sekunden, in acht weiteren Läufen nicht wieder. Woran es lag, ist nicht geklärt.
+
+**Geprüft:** je Fassung 43 bis 48 Punkte Durchlauf bei 360, 390, 820 und 1280 Pixel, dazu 67 Punkte zum Umschalten in denselben Breiten. Alles in Ordnung, keine Fehler in der Konsole. Das zusammengesetzte Bild stimmt mit dem SVG überein (Abweichungen nur an Kanten). Nicht geprüft: echte Handys, Safari, Firefox, Vorlesefunktion.
+
+**Fragen an Daniel:**
+
+1. Welche Fassung, oder welche Mischung?
+   **Antwort (25.11.2026):** Claude überlassen, vielleicht besser später festlegen. Claude nimmt vorläufig „Zusammen“.
+2. Ist das trockene Land gut so, oder lieber milder?
+   Noch offen.
+3. Passen Gemüsefeld, Obstgarten und Kreuzgarten zum ersten Bereich?
+   Noch offen.
+
+**Damit die Wahl offen bleibt (Vorschlag):**
+
+- Alle fünf Fassungen bleiben in der Probe. Sie laufen mit demselben Code, nur die Bilddatei und die Namen der Flächen sind verschieden (`WANDEL` in `probe/garten.js`).
+- Was eine Fassung kann, steht im Bild: Hat es Zonen, lebt der Boden auf, hat es `data-mass`, ist die Tippfläche größer. Code, der das Bild nicht voraussetzt, muss bei einem Wechsel nicht geändert werden.
+- Später tauschen kostet je fertig gezeichnetem Bereich eine neue Bilddatei. Je mehr Bereiche fertig sind, desto teurer wird der Wechsel. Guter Zeitpunkt für die Festlegung ist deshalb, wenn der zweite Bereich als Probe vorliegt und bevor der dritte beginnt.
+
+**Was der Einbau in die App berührt (Vorschlag, nicht begonnen):**
+
+- Fast alles steckt in `js/views/weg.js`. Diese Ansicht ist im Code als abgelöst gekennzeichnet. Stationen, Blätter und Fortschritt (`js/lernweg.js`, `js/speicher.js`) bleiben, wie sie sind.
+- Der Garten beginnt unten, die heutige Notenzeile oben. Das Öffnen der App müsste deshalb zur eigenen Position scrollen, auch ganz am Anfang.
+- Etappe 2 ist in der App schon spielbar, hat aber noch kein Bild. Nach Etappe 1 bräche der Garten ab. Die Etappen 3 bis 11 sind „in Vorbereitung“ und könnten im Nebel liegen.
+- Offen sind vorher die Zuordnung der freiwilligen Stationen zu den Flächen, die neuen Texte für die Sänger (zu lesen aus Sicht eines Sängers ohne Notenkenntnis) und ein Versuch auf echten Handys.
+
+**Claudes Vorschlag zur Reihenfolge:** zuerst den zweiten Bereich (Mühle am Bach) als Probe zeichnen, danach beide zusammen einbauen. So bricht der Garten in der App nicht ab, und es zeigt sich vor der Festlegung, ob „Zusammen“ auch bei einem ganz anderen Bereich trägt und wie viel Arbeit es macht.
 
 ### Fragen an Daniel
 

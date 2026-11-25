@@ -1,0 +1,244 @@
+/* Probe zu Baustein B, Teil 1. Farben und Schriften kommen aus css/app.css. */
+
+.probe {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 18px 56px;
+}
+
+.probe-kopf {
+  padding-top: 24px;
+  max-width: 44rem;
+}
+.probe-ueber {
+  margin: 0 0 4px;
+  color: var(--tinte-2);
+  font-size: 0.95rem;
+}
+
+/* Schalter: bleiben beim Scrollen sichtbar */
+.schalter {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 16px -18px 12px;
+  padding: 10px 18px;
+  background: var(--papier);
+  border-bottom: 1px solid var(--linie);
+}
+.wahl {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.wahl legend {
+  float: left;
+  width: 4.6rem;
+  padding: 0;
+  color: var(--tinte-2);
+  font-size: 0.95rem;
+}
+.wahl label {
+  position: relative;
+  cursor: pointer;
+}
+.wahl input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.wahl span {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1.5px solid var(--linie);
+  border-left-width: 0;
+  background: var(--blatt);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.wahl label:first-of-type span {
+  border-left-width: 1.5px;
+  border-radius: 10px 0 0 10px;
+}
+.wahl label:last-of-type span {
+  border-radius: 0 10px 10px 0;
+}
+.wahl input:checked + span {
+  background: var(--tinte);
+  border-color: var(--tinte);
+  color: #fff;
+  font-weight: 700;
+}
+.wahl input:focus-visible + span {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bilder */
+.ansicht .bild {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: var(--rad);
+  background: #a9bf79;
+  box-shadow: var(--schatten);
+}
+.ansicht svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ansicht .bild-fehler {
+  padding: 24px;
+  margin: 0;
+}
+.ansicht h2 {
+  margin: 14px 0 4px;
+  font-family: var(--titel);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.ansicht ul,
+.probe-fuss ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+.ansicht li,
+.probe-fuss li {
+  margin: 6px 0;
+}
+.mass {
+  margin: 10px 0 0;
+  color: var(--tinte-2);
+  font-size: 0.95rem;
+}
+.probe-fuss {
+  max-width: 44rem;
+  margin-top: 32px;
+}
+.probe-fuss h2 {
+  margin: 24px 0 6px;
+  font-size: 1.1rem;
+}
+
+/* Handy und Tablet: eine Ansicht in der Breite der App, der Schalter wechselt an derselben Stelle */
+.ansicht {
+  display: none;
+}
+[data-ansicht='oben'] .ansicht[data-ansicht='oben'],
+[data-ansicht='schraeg'] .ansicht[data-ansicht='schraeg'],
+[data-ansicht='isometrisch'] .ansicht[data-ansicht='isometrisch'] {
+  display: block;
+}
+@media (max-width: 599px) {
+  .ansicht .bild {
+    margin: 0 -18px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .schalter {
+    gap: 8px;
+    margin-bottom: 0;
+  }
+  .wahl {
+    flex: 1 1 auto;
+  }
+  .wahl.nur-schmal {
+    flex-basis: 100%;
+  }
+  .wahl legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .wahl label {
+    flex: 1 1 auto;
+  }
+  .wahl span {
+    justify-content: center;
+    padding: 0 9px;
+  }
+}
+
+@media (min-width: 600px) {
+  .wahl legend {
+    width: auto;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 600px) and (max-width: 999px) {
+  .vergleich {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* PC: alle drei nebeneinander */
+@media (min-width: 1000px) {
+  .nur-schmal {
+    display: none;
+  }
+  .vergleich {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .vergleich .ansicht {
+    display: block;
+  }
+  .ansicht .text {
+    font-size: 1rem;
+  }
+}
+
+/* Zustände: jede Ebene ist eine Gruppe im SVG, die Klassen beginnen mit g- */
+[data-beet='leer'] .g-beet-leer,
+[data-station='geschafft'] .g-station-geschafft {
+  display: inline;
+}
+[data-beet='leer'] .g-beet-bepflanzt,
+[data-station='geschafft'] .g-station-naechste,
+[data-station='geschafft'] .g-schild {
+  display: none;
+}
+
+/* Bewegung */
+.g-halo {
+  animation: leuchten 2.6s ease-in-out infinite;
+}
+.g-fliesst {
+  animation: fliessen 7s linear infinite;
+}
+.g-fliesst:nth-of-type(2n) {
+  animation-duration: 9s;
+}
+@keyframes leuchten {
+  50% {
+    opacity: 0.35;
+  }
+}
+@keyframes fliessen {
+  to {
+    stroke-dashoffset: -168;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .g-halo,
+  .g-fliesst {
+    animation: none;
+  }
+}

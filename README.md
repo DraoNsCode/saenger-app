@@ -6,7 +6,10 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
 - [WEG.md](WEG.md): Vorschlag für den Weg als Klostergarten
 - [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md): Vorschlag für das gezielte Üben und die Verbindung zum Garten (Baustein J)
-- [GARTEN-BILD.md](GARTEN-BILD.md): Vorschlag für Bild und Optik des Gartens: was der Garten können muss, Wege zur Grafik, Probe (Baustein B)
+- [GARTEN-NEU.md](GARTEN-NEU.md): Startseite für das neue Design des Gartens, Schritt für Schritt (Baustein B)
+- Archiv: [GARTEN-BILD.md](GARTEN-BILD.md): Vorschlag für Bild und Optik des Gartens: was der Garten können muss, Wege zur Grafik, Probe (Baustein B)
+- Archiv: [GARTEN-WORTE.md](GARTEN-WORTE.md): Entwurf des Gartens in Worten aus einer anderen Sitzung, ungeprüftes Brainstorming (Baustein B)
+- Archiv: [GARTEN-VERGLEICH.md](GARTEN-VERGLEICH.md): Vorschlag, beide Entwürfe im Vergleich (Baustein B)
 - [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für Bausteine und Reihenfolge der Entwicklung
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 
@@ -46,9 +49,11 @@ Entschieden, aber noch nicht umgesetzt:
 
 Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
 
-Baustein B (Bild und Optik des Gartens) läuft. Schritt 1 (was der Garten können muss) und Schritt 2 (Wege zur Grafik) stehen als Vorschlag in GARTEN-BILD.md (24.11.2026). Schritt 2 wurde am selben Tag um Skills, Plugins und MCP-Server über die aktivierten hinaus erweitert (Abschnitt H). Ebenfalls am 24.11.2026 hat Daniel die Fragen dazu beantwortet: Die Probe nutzt Weg 1 und Weg 3 und probiert zuerst verschiedene Ansichten aus. Drei Punkte hat er Claude überlassen (ENTSCHEIDUNGEN.md). Den Hugging-Face-Connector für Weg 3 hat Daniel am selben Tag eingerichtet, er funktioniert. Danach hat Claude die Werkzeuge für Schritt 3 in einer Cloud-Sitzung geprüft: Screenshots mit dem Browser des Klick-Tests gehen, und Bilder aus dem Connector kommen als Datei an (Einzelheiten in GARTEN-BILD.md, „Einrichtung für Weg 3“). Es gibt noch keine Grafik und keinen Code für den Garten.
+Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.2026) hat Anforderungen, Wege zur Grafik, einen ganzen ersten Bereich, viele Varianten und einen zweiten Entwurf in Worten gebracht. Er ist Archiv (GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md, `probe/`). Was Daniel dabei gesagt hat, steht in ENTSCHEIDUNGEN.md. Die App selbst ist unverändert, in ihr gibt es noch keinen Garten.
 
-Nächster Schritt: Schritt 3, die Probe am ersten Bereich nach dem Plan in GARTEN-BILD.md. Zuerst zeigt ein kleiner Ausschnitt drei Ansichten, danach folgt der ganze Bereich in der gewählten Ansicht. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
+Daniel überlegt, das Design Schritt für Schritt von vorne zu beginnen, und hat die Übergabe dafür vorbereiten lassen (25.11.2026): [GARTEN-NEU.md](GARTEN-NEU.md).
+
+Nächster Schritt: in einer neuen Sitzung Ebene 0 aus GARTEN-NEU.md, also klären, was zum Garten wirklich feststeht. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 
@@ -74,6 +79,8 @@ Nächster Schritt: Schritt 3, die Probe am ersten Bereich nach dem Plan in GARTE
 | `js/klang.js`, `js/noten.js`, `js/musik.js` | Klang, Notenbild, Tonhöhen |
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
+| `probe/` | Archiv und Werkzeuge zu Baustein B: Ansichten im Vergleich, erster Gartenbereich, Stilvarianten, Bilder und Zeichenwerkzeug, nicht Teil der App |
+| `.claude/skills/garten-grafik/` | Arbeitsweise für die Gartengrafik, später die gewählten Stilregeln |
 
 ### Eine neue Übungsart
 

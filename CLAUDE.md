@@ -5,7 +5,7 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 ## Welche Datei gilt
 
 - **ENTSCHEIDUNGEN.md** ist maßgeblich. Nur dort steht, was Daniel festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere.
-- **LERNWEG.md**, **WEG.md**, **GEZIELT-UEBEN.md**, **GARTEN-BILD.md** und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
+- **LERNWEG.md**, **WEG.md**, **GEZIELT-UEBEN.md**, **GARTEN-NEU.md**, **GARTEN-BILD.md** (Archiv) und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
 - **Der Code** zeigt den umgesetzten Stand. Er kann hinter den Entscheidungen zurückliegen. Was abgelöst ist, steht in README.md unter „Stand“ und als Kommentar in der betroffenen Datei.
 - **Der Stand** (umgesetzt, abgelöst, vorläufig, nächster Schritt) steht nur in README.md unter „Stand“. Zu Beginn einer Sitzung dort nachlesen.
 
@@ -26,6 +26,11 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 - Welches Werkzeug passt (Chat, Claude Code im Web, Desktop-App mit Vorschau), überlässt Daniel Claude. Ist für eine Aufgabe ein anderes Werkzeug deutlich besser, das zu Beginn kurz sagen.
 - Vor einer neuen Art von Aufgabe (z. B. Mikrofon, Grafik, Konten) kurz prüfen, ob eine erprobte Bibliothek, ein Skill oder ein Plugin sie besser oder einfacher löst. Treffer als Vorschlag mit Vor- und Nachteilen vorlegen. Nichts ohne Daniels Zustimmung einbauen.
 - FAHRPLAN.md zeigt, wo ein Auftrag im Ganzen steht. Ist ein Baustein fertig oder ändert sich etwas, die Tabelle dort anpassen.
+
+## Gartengrafik
+
+- Für das Design des Gartens ist seit dem 25.11.2026 ein Neuanfang vorbereitet, Schritt für Schritt. Vor jeder Arbeit daran **GARTEN-NEU.md** lesen: Ebenen, Regeln je Runde und was nicht gelesen werden soll. Der Skill `garten-grafik` verweist darauf und nimmt später die gewählten Stilregeln auf.
+- GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md und die Seiten in `probe/` sind Archiv.
 
 ## Regeln für Dokumente
 

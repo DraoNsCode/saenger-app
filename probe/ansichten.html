@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Probe: drei Ansichten des Gartens</title>
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="ansichten.css">
+  <script type="module" src="ansichten.js"></script>
+</head>
+<!-- Probe zu Baustein B, Schritt 3, Teil 1 (GARTEN-BILD.md). Nur zum Vergleichen, die App verlinkt diese Seite nicht. -->
+<body class="probe" data-ansicht="schraeg" data-beet="bepflanzt" data-station="naechste">
+  <header class="probe-kopf">
+    <p class="probe-ueber">Probe zu Baustein B, Teil 1</p>
+    <h1>Drei Ansichten des Gartens</h1>
+    <p class="unterzeile">Derselbe Ausschnitt am Tor, dreimal gezeichnet: gleiche Farben, gleiches Licht, gleiche Dinge. Nur der Blickwinkel ist anders. Alles ist Vorschlag.</p>
+  </header>
+
+  <form class="schalter" aria-label="Was die Bilder zeigen">
+    <fieldset class="wahl nur-schmal">
+      <legend>Ansicht</legend>
+      <label><input type="radio" name="ansicht" value="oben"><span>Von oben</span></label>
+      <label><input type="radio" name="ansicht" value="schraeg" checked><span>Schräg</span></label>
+      <label><input type="radio" name="ansicht" value="isometrisch"><span>Isometrisch</span></label>
+    </fieldset>
+    <fieldset class="wahl">
+      <legend>Beet</legend>
+      <label><input type="radio" name="beet" value="leer"><span>Leer</span></label>
+      <label><input type="radio" name="beet" value="bepflanzt" checked><span>Bepflanzt</span></label>
+    </fieldset>
+    <fieldset class="wahl">
+      <legend>Station</legend>
+      <label><input type="radio" name="station" value="naechste" checked><span>Offen</span></label>
+      <label><input type="radio" name="station" value="geschafft"><span>Geschafft</span></label>
+    </fieldset>
+  </form>
+
+  <main class="vergleich">
+    <article class="ansicht" data-ansicht="oben">
+      <div class="bild" data-bild="bilder/ansicht-oben.svg"></div>
+      <div class="text">
+        <h2>Von oben</h2>
+        <ul>
+          <li>Nichts verdeckt etwas anderes: Weg, Beet und Station sind immer ganz zu sehen.</li>
+          <li>Am einfachsten zu zeichnen und aneinanderzusetzen.</li>
+          <li>Tor und Bäume sieht man nur als Dach und Krone. Bei Kapelle, Mühle oder Kreuzgang bliebe auch nur das Dach.</li>
+        </ul>
+        <p class="mass"></p>
+      </div>
+    </article>
+
+    <article class="ansicht" data-ansicht="schraeg">
+      <div class="bild" data-bild="bilder/ansicht-schraeg.svg"></div>
+      <div class="text">
+        <h2>Schräg von oben</h2>
+        <ul>
+          <li>Tor, Mauer, Pflanzen und Figur erkennt man sofort, und der Weg führt trotzdem von unten nach oben.</li>
+          <li>Hohe Dinge verdecken, was hinter ihnen liegt. Hinter Gebäuden braucht es Abstand: Im ersten Entwurf stand das Torhaus vor Figur und Beet.</li>
+          <li>Mehr Zeichenarbeit als von oben, weil Mauern und Gebäude eine Vorderseite bekommen.</li>
+        </ul>
+        <p class="mass"></p>
+      </div>
+    </article>
+
+    <article class="ansicht" data-ansicht="isometrisch">
+      <div class="bild" data-bild="bilder/ansicht-isometrisch.svg"></div>
+      <div class="text">
+        <h2>Isometrisch</h2>
+        <ul>
+          <li>Wirkt wie ein Modell, Gebäude haben hier am meisten Tiefe.</li>
+          <li>Weg und Bach laufen im Zickzack und brauchen viel Breite. Auf dem Handy bleibt daneben weniger Platz: Das Beet ist kleiner als in den anderen Bildern.</li>
+          <li>Am meisten Aufwand: Gebäude haben zwei Seiten, und Weg, Bach und Mauer müssen schräg aneinanderpassen.</li>
+        </ul>
+        <p class="mass"></p>
+      </div>
+    </article>
+  </main>
+
+  <section class="probe-fuss">
+    <h2>Was in allen Bildern gleich ist</h2>
+    <ul>
+      <li><strong>Station offen (als Nächstes dran):</strong> goldener Ring und Namensschild, schräg und isometrisch dazu eine Laterne. <strong>Geschafft:</strong> eine Blüte im Stein. Der Unterschied liegt also nicht nur in der Farbe.</li>
+      <li><strong>Offene Stelle:</strong> ein leeres Beet mit fünf Furchen und einem Spaten. Fertig ist es bepflanzt.</li>
+      <li><strong>Deine Position:</strong> eine Figur mit Strohhut und Liedermappe. Laterne oder Markierung wären ebenso möglich.</li>
+      <li><strong>Bewegung:</strong> Der Bach fließt, der Ring leuchtet. Bei „Bewegung reduzieren“ am Gerät steht beides still.</li>
+    </ul>
+    <h2>Weg 3 fehlt noch</h2>
+    <p>Alle Bilder hier sind Weg 1 (selbst gezeichnetes SVG). Für die Vergleichsbilder aus Weg 3 fehlte in dieser Sitzung der Hugging-Face-Connector. Die Bildbeschreibungen stehen bereit (GARTEN-BILD.md, „Teil 1 der Probe“).</p>
+  </section>
+</body>
+</html>
