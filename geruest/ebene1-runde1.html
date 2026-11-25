@@ -1,0 +1,245 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Ebene 1, Runde 1</title>
+<style>
+/* Aufbau: oben die eine Frage und zwei Umschalter, darunter fünf gleich große Handyrahmen in einer Reihe.
+   Alle Rahmen scrollen gemeinsam. Am Handy füllt ein Rahmen die Breite, seitlich wischen wechselt die Variante.
+   Bewusst nur ein graues Aussehen: Auf dieser Ebene wird kein Stil gewählt. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --flaeche: #f1f2f3;
+  --linie: #6b7075;
+  --hell: #c3c7cb;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--seite); color: var(--text);
+  font: 16px/1.45 var(--schrift);
+  padding-block: 16px 24px;
+}
+.rand {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 68ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-bottom: 12px; }
+.gruppe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gruppe > span { font-size: 14px; }
+button {
+  font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px;
+  background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer;
+}
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible, .rahmen:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.legende { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 14px; padding: 0; list-style: none; font-size: 14px; }
+.legende li { display: flex; align-items: center; gap: 6px; }
+.reihe {
+  display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px;
+  scroll-snap-type: x proximity; scroll-padding-left: 16px;
+}
+.variante { flex: 0 0 408px; scroll-snap-align: start; display: flex; flex-direction: column; }
+.variante h2 { font-size: 18px; margin: 0; }
+.variante p { margin: 2px 0 8px; font-size: 14px; min-height: 4.4em; }
+.rahmen {
+  height: min(780px, 82svh); overflow-y: auto; overscroll-behavior: contain;
+  background: var(--blatt); border: 1px solid var(--linie); border-radius: 10px; scrollbar-width: thin;
+}
+.rahmen svg { display: block; width: 390px; height: auto; }
+svg text { font-family: var(--schrift); fill: var(--text); }
+@media (max-width: 480px) {
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .variante { flex-basis: 100%; }
+  .variante h2, .variante p { padding-inline: 16px; }
+  .rahmen svg { width: 100%; }
+  .rahmen { border-inline: 0; border-radius: 0; height: 84svh; }
+}
+</style>
+
+<div class="rand">
+  <h1>Ebene 1, Runde 1: graues Gerüst</h1>
+  <p class="frage">Was sieht man von den Übungen, wenn man durch den Garten scrollt?</p>
+  <p class="hinweis">Nur darin unterscheiden sich A bis E. Größe, gerader Weg, Bewuchs, Schilder und der Platz der Punkte sind Platzhalter. Die Stationen der Bereiche 1 und 2 sind echt, ab Bereich 3 ist die Zahl angenommen.</p>
+  <div class="leiste">
+    <div class="gruppe" id="staende" role="group" aria-label="Stand eines Sängers"><span>Stand:</span></div>
+    <div class="gruppe" id="sprung" role="group" aria-label="Zu Variante springen"><span>Variante:</span></div>
+  </div>
+  <ul class="legende" id="legende"></ul>
+</div>
+<div class="reihe rand" id="reihe"></div>
+
+<script>
+(() => {
+  const BREITE = 390, HOCH = 440, KAPELLE = 250, START = 70;
+  const NAMEN = ['Das Notenbild', 'Schlag und Takt', 'Notennamen', 'Achtel und Auftakt', 'Tonleiter und Ziffern',
+    'Zeichen im Notenbild', 'Intervalle', 'Punktierung und Haltebogen', 'Zusammenklang', 'Vorzeichen und Tonarten', 'Feinheiten im Rhythmus'];
+  // n = nötig, f = freiwillig, in der Reihenfolge aus js/lernweg.js; ab Bereich 3 angenommen
+  const CODES = ['nffnfnfnffnn', 'nfnfnfnfnffnffn'];
+  const ANGENOMMEN = 'nfnfnfnfnffn';
+  const VARIANTEN = [
+    { k: 'A', name: 'Alle Stationen', text: 'Jede Station ist ein Punkt, auch die freiwilligen. Nichts ist versteckt.' },
+    { k: 'B', name: 'Nur die nötigen Stationen', text: 'Deine Überlegung. Freiwilliges sieht man nur am Bewuchs, zu finden ist es nach Antippen des Bereichs.' },
+    { k: 'C', name: 'Nur der nächste Schritt', text: 'Ein einziger Punkt zeigt, wo es weitergeht, am Ziel ein Vorschlag. Alles andere findet man nach Antippen des Bereichs.' },
+    { k: 'D', name: 'Ein Zähler je Bereich', text: 'Keine Punkte, aber ein Schild mit Zahlen. Die Übungen findet man nach Antippen des Bereichs.' },
+    { k: 'E', name: 'Nur der Garten', text: 'Keine Punkte, keine Zahlen. Fortschritt sieht man nur am Bewuchs, Übungen nach Antippen des Bereichs.' },
+  ];
+  const STAENDE = [['anfang', 'Ganz am Anfang'], ['unterwegs', 'Unterwegs'], ['kapelle', 'An der Kapelle']];
+  let stand = 'unterwegs';
+
+  function daten() {
+    return NAMEN.map((name, i) => {
+      const code = CODES[i] || ANGENOMMEN;
+      let n = 0, f = 0, letzte = 'zu';
+      const nFertig = stand === 'kapelle' ? 99 : stand === 'unterwegs' ? [99, 3][i] || 0 : 0;
+      const fFertig = stand === 'kapelle' ? [6, 5, 4, 3, 2, 2, 1, 0, 1, 0, 0][i] : stand === 'unterwegs' ? [2, 1][i] || 0 : 0;
+      const dran = stand === 'anfang' ? i === 0 : stand === 'unterwegs' ? i === 1 : false;
+      const st = [...code].map((c) => {
+        if (c === 'n') {
+          n += 1;
+          letzte = n <= nFertig ? 'fertig' : dran && n === nFertig + 1 ? 'weiter' : 'zu';
+          return { c, z: letzte };
+        }
+        f += 1;
+        return { c, z: letzte !== 'fertig' ? 'zu' : f <= fFertig ? 'fertig' : 'offen' };
+      });
+      return { name, st, erreicht: st.some((s) => s.z !== 'zu'), dran };
+    });
+  }
+
+  function punkt(x, y, s, r = 20) {
+    const zu = s.z === 'zu', fertig = s.z === 'fertig';
+    const stil = `fill="${fertig ? '#33373b' : '#fbfbfb'}" stroke="${zu ? '#8d9297' : '#33373b'}" stroke-width="2.5"${zu ? ' stroke-dasharray="4 5"' : ''}`;
+    const form = s.c === 'n'
+      ? `<circle cx="${x}" cy="${y}" r="${r}" ${stil}/>`
+      : `<rect x="${x - 14}" y="${y - 14}" width="28" height="28" transform="rotate(45 ${x} ${y})" ${stil}/>`;
+    const ring = s.z === 'weiter' ? `<circle cx="${x}" cy="${y}" r="${r + 7}" fill="none" stroke="#33373b" stroke-width="4"/>` : '';
+    const haken = fertig ? `<path d="M${x - 8} ${y} l6 6 l11 -12" fill="none" stroke="#fbfbfb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>` : '';
+    return ring + form + haken;
+  }
+
+  function schild(x, y, b, titel, hat, von) {
+    const breit = (b - 2 * (von - 1)) / von;
+    let t = `<text x="${x}" y="${y}" font-size="16">${titel}: ${hat} von ${von}</text>`;
+    for (let i = 0; i < von; i++) {
+      t += `<rect x="${(x + i * (breit + 2)).toFixed(1)}" y="${y + 9}" width="${breit.toFixed(1)}" height="14" fill="${i < hat ? '#33373b' : '#fbfbfb'}" stroke="#33373b" stroke-width="1.5"/>`;
+    }
+    return t;
+  }
+
+  function bereich(v, d, i, oben) {
+    let s = `<rect x="8" y="${oben + 6}" width="374" height="${HOCH - 12}" rx="8" fill="#f1f2f3" fill-opacity="${d.erreicht ? 1 : 0.4}" stroke="${d.erreicht ? '#33373b' : '#8d9297'}" stroke-width="${d.dran ? 4 : 1.5}"${d.erreicht ? '' : ' stroke-dasharray="7 6"'}/>`;
+    s += `<rect x="178" y="${oben}" width="34" height="${HOCH}" fill="#d5d8db"/>`;
+    s += `<rect x="20" y="${oben + 18}" width="350" height="28" rx="4" fill="#fbfbfb"/>`;
+    s += `<text x="30" y="${oben + 38}" font-size="16" font-weight="600">${i + 1}  ${d.name}</text>`;
+    // Bewuchs: in allen Varianten gleich, je mehr geschafft, desto mehr Kreise
+    const fertig = d.st.filter((x) => x.z === 'fertig').length;
+    const stufe = Math.round((fertig / d.st.length) * 6);
+    [[46, 26], [98, 20], [146, 24], [244, 22], [294, 26], [344, 20]].slice(0, stufe).forEach(([x, r]) => {
+      s += `<circle cx="${x}" cy="${oben + 100}" r="${r}" fill="#aeb3b8"/>`;
+    });
+    if (v === 'A') {
+      const xs = [52, 112, 278, 338];
+      d.st.forEach((p, n) => { s += punkt(xs[n % 4], oben + 388 - Math.floor(n / 4) * 64 - (n % 2) * 8, p); });
+    }
+    if (v === 'B') {
+      const nur = d.st.filter((p) => p.c === 'n');
+      nur.forEach((p, n) => { s += punkt(n % 2 ? 306 : 84, oben + 384 - n * (216 / (nur.length - 1)), p); });
+    }
+    if (v === 'C') {
+      const p = d.st.find((x) => x.z === 'weiter');
+      if (p) s += punkt(306, oben + 270, p, 24) + `<text x="306" y="${oben + 326}" font-size="16" font-weight="600" text-anchor="middle">Weiter</text>`;
+      if (stand === 'kapelle' && d.vorschlag) s += punkt(306, oben + 270, { c: 'f', z: 'offen' }) + `<text x="306" y="${oben + 318}" font-size="16" text-anchor="middle">Vorschlag</text>`;
+    }
+    if (v === 'D') {
+      s += `<rect x="40" y="${oben + 180}" width="310" height="150" rx="6" fill="#fbfbfb" stroke="#33373b" stroke-width="1.5"/>`;
+      if (d.erreicht) {
+        const zahl = (c, z) => d.st.filter((x) => x.c === c && (!z || x.z === z)).length;
+        s += schild(60, oben + 220, 270, 'Nötig', zahl('n', 'fertig'), zahl('n'));
+        s += schild(60, oben + 286, 270, 'Freiwillig', zahl('f', 'fertig'), zahl('f'));
+      } else {
+        s += `<text x="195" y="${oben + 260}" font-size="16" text-anchor="middle">Noch nicht erreicht</text>`;
+      }
+    }
+    if (d.dran) s += hier(oben + 408);
+    return s;
+  }
+
+  function hier(y) {
+    return `<rect x="141" y="${y - 15}" width="108" height="28" rx="14" fill="#33373b"/><text x="195" y="${y + 4}" font-size="14" font-weight="600" text-anchor="middle" style="fill:#fbfbfb">Hier bist du</text>`;
+  }
+
+  const GESAMT = KAPELLE + NAMEN.length * HOCH + START;
+  const obenVon = (i) => KAPELLE + (NAMEN.length - 1 - i) * HOCH;
+
+  function bild(v) {
+    const d = daten();
+    const erster = d.findIndex((b) => b.st.some((s) => s.z === 'offen'));
+    if (erster >= 0) d[erster].vorschlag = true;
+    let s = `<path d="M110 130 L195 50 L280 130 Z M125 130 h140 v90 h-140 z" fill="${stand === 'kapelle' ? '#aeb3b8' : '#f1f2f3'}" stroke="#33373b" stroke-width="1.5"${stand === 'kapelle' ? '' : ' stroke-dasharray="7 6"'}/>`;
+    s += `<text x="195" y="185" font-size="18" font-weight="600" text-anchor="middle">Kapelle</text>`;
+    s += `<rect x="178" y="220" width="34" height="${KAPELLE - 220}" fill="#d5d8db"/>`;
+    if (stand === 'kapelle') s += hier(236);
+    d.forEach((b, i) => { s += bereich(v, b, i, obenVon(i)); });
+    s += `<rect x="178" y="${GESAMT - START}" width="34" height="${START - 34}" fill="#d5d8db"/><text x="195" y="${GESAMT - 12}" font-size="16" text-anchor="middle">Hier beginnt der Weg</text>`;
+    return `<svg viewBox="0 0 ${BREITE} ${GESAMT}" role="img" aria-label="Graue Skizze ${v}: ganzer Garten von der Kapelle oben bis zum Anfang unten">${s}</svg>`;
+  }
+
+  const reihe = document.getElementById('reihe');
+  VARIANTEN.forEach((v) => {
+    reihe.insertAdjacentHTML('beforeend', `<section class="variante" id="v-${v.k}"><h2>${v.k}: ${v.name}</h2><p>${v.text}</p><div class="rahmen" tabindex="0" role="region" aria-label="Skizze ${v.k}, zum Scrollen" data-v="${v.k}"></div></section>`);
+  });
+  const rahmen = [...document.querySelectorAll('.rahmen')];
+
+  let fuehrt = null, frei;
+  rahmen.forEach((r) => r.addEventListener('scroll', () => {
+    if (fuehrt && fuehrt !== r) return;
+    fuehrt = r;
+    rahmen.forEach((a) => { if (a !== r) a.scrollTop = r.scrollTop; });
+    clearTimeout(frei);
+    frei = setTimeout(() => { fuehrt = null; }, 120);
+  }, { passive: true }));
+
+  function zeichne() {
+    rahmen.forEach((r) => { r.innerHTML = bild(r.dataset.v); });
+    document.querySelectorAll('#staende button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.s === stand)));
+    const r = rahmen[0], mass = r.firstElementChild.clientWidth / BREITE || 1;
+    const y = stand === 'kapelle' ? 0 : (obenVon(stand === 'anfang' ? 0 : 1) + HOCH) * mass - r.clientHeight * 0.72;
+    fuehrt = null;
+    rahmen.forEach((a) => { a.scrollTop = y; });
+  }
+
+  const staende = document.getElementById('staende');
+  STAENDE.forEach(([s, name]) => {
+    const b = document.createElement('button');
+    b.id = 'stand-' + s; b.dataset.s = s; b.textContent = name;
+    b.onclick = () => { stand = s; zeichne(); };
+    staende.append(b);
+  });
+  const sprung = document.getElementById('sprung');
+  VARIANTEN.forEach((v) => {
+    const b = document.createElement('button');
+    b.id = 'sprung-' + v.k; b.textContent = v.k; b.title = v.name;
+    b.onclick = () => {
+      const ziel = document.getElementById('v-' + v.k);
+      reihe.scrollTo({ left: ziel.offsetLeft - reihe.offsetLeft - (innerWidth > 480 ? 16 : 0), behavior: 'smooth' });
+    };
+    sprung.append(b);
+  });
+
+  const LEGENDE = [
+    [{ c: 'n', z: 'fertig' }, 'nötig, geschafft'], [{ c: 'n', z: 'weiter' }, 'nötig, hier geht es weiter'], [{ c: 'n', z: 'zu' }, 'nötig, noch nicht dran'],
+    [{ c: 'f', z: 'offen' }, 'freiwillig, offen'], [null, 'Bewuchs (Platzhalter)'],
+  ];
+  document.getElementById('legende').innerHTML = LEGENDE.map(([p, t]) =>
+    `<li><svg width="30" height="30" viewBox="0 0 60 60" aria-hidden="true">${p ? punkt(30, 30, p) : '<circle cx="30" cy="30" r="24" fill="#aeb3b8"/>'}</svg>${t}</li>`).join('');
+
+  zeichne();
+})();
+</script>

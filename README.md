@@ -51,9 +51,9 @@ Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder 
 
 Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.2026) hat Anforderungen, Wege zur Grafik, einen ganzen ersten Bereich, viele Varianten und einen zweiten Entwurf in Worten gebracht. Er ist Archiv (GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md, `probe/`). Was Daniel dabei gesagt hat, steht in ENTSCHEIDUNGEN.md. Die App selbst ist unverändert, in ihr gibt es noch keinen Garten.
 
-Daniel überlegt, das Design Schritt für Schritt von vorne zu beginnen, und hat die Übergabe dafür vorbereiten lassen (25.11.2026): [GARTEN-NEU.md](GARTEN-NEU.md).
+Das Design beginnt Schritt für Schritt von vorne, nach den Ebenen und Regeln in [GARTEN-NEU.md](GARTEN-NEU.md) (von Daniel am 25.11.2026 bestätigt). Ebene 0 ist geklärt (25.11.2026), die Ergebnisse stehen in ENTSCHEIDUNGEN.md unter „Garten neu“.
 
-Nächster Schritt: in einer neuen Sitzung Ebene 0 aus GARTEN-NEU.md, also klären, was zum Garten wirklich feststeht. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
+Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) ist beantwortet, zusammengeführt in `geruest/ebene2-gesamt.html`: Die Schatten sind gewählt, Farben, Kanten und Detailgrad sind Annahmen. Nächster Schritt: Ebene 3 (Einzelteile), zuerst welche Teile der Garten haben soll. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

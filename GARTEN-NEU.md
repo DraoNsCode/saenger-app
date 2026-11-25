@@ -1,10 +1,10 @@
 # Garten neu: Startseite für Baustein B
 
-Stand 25.11.2026. Vorschlag von Claude. Daniel hat diese Übergabe für eine neue Sitzung vorbereiten lassen. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht.
+Stand 25.11.2026. Vorschlag von Claude. Daniel hat diese Übergabe für eine neue Sitzung vorbereiten lassen. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den Ebenen und Regeln hat Daniel am 25.11.2026 zugestimmt (Satz 28). Ebene 0 ist geklärt, Ebene 1 ist beantwortet, Ebene 2 ebenso, Ebene 3 läuft (Skizzen in `geruest/`, Ergebnisse in ENTSCHEIDUNGEN.md).
 
 ## Worum es geht
 
-Das Design des Gartens soll von vorne beginnen, Schritt für Schritt. Claude zeigt Varianten, Daniel wählt, dann geht es eine Ebene höher. Die Idee stammt von Daniel, die Ebenen und Regeln unten sind Claudes Vorschlag (Satz 28). Beim ersten Anlauf steckten in jedem Bild viele Entscheidungen auf einmal. Daniel konnte nur auf das Ganze reagieren, und manches von Claude galt still als gesetzt.
+Das Design des Gartens soll von vorne beginnen, Schritt für Schritt. Claude zeigt Varianten, Daniel wählt, dann geht es eine Ebene höher. Die Idee stammt von Daniel, die Ebenen und Regeln unten stammen von Claude, Daniel hat sie bestätigt (Satz 28). Beim ersten Anlauf steckten in jedem Bild viele Entscheidungen auf einmal. Daniel konnte nur auf das Ganze reagieren, und manches von Claude galt still als gesetzt.
 
 **Lesen:** CLAUDE.md, ENTSCHEIDUNGEN.md, diese Seite. Für die Inhalte der Etappen `js/lernweg.js` und LERNWEG.md.
 
@@ -38,6 +38,8 @@ Geschätzt sind das 12 bis 17 kurze Runden.
 8. **Kurz bleiben.** Ist ein Teil gut, wird nicht weiter daran gefeilt. Vor Ebene 6 kein App-Code und keine weiteren Dokumente.
 
 ## Ebene 0: Was steht wirklich fest?
+
+**Geklärt am 25.11.2026.** Daniels Antworten stehen in ENTSCHEIDUNGEN.md unter „Garten neu“ und gehen den Sätzen hier vor.
 
 Die Sätze stehen so in ENTSCHEIDUNGEN.md, gekürzt. Die Formulierungen stammen meist von Claude. Daniel nennt nur die Nummern, die nicht stimmen oder offen sind.
 
@@ -102,6 +104,6 @@ Nicht übernehmen, ohne zu fragen: Figur mit Strohhut, Laterne, goldener Ring un
 
 `probe/worte.html`: der gezeichnete Entwurf in Worten. Optisch gefällt er Daniel viel besser als die Probe. Ob das an Farben, weichen Kanten, mehr Ruhe oder den Terrassen liegt, ist nicht geklärt. Ebene 2 trennt das. Als Aufbau ist er nicht gewählt.
 
-## Erste Nachricht für die neue Sitzung
+## Erste Nachricht für die neue Sitzung (verwendet, Ebene 0 ist geklärt)
 
 > Wir arbeiten an der Sänger-App (Repo DraoNsCode/saenger-app, Branch baustein-b/probe-ansichten). Das Design von Baustein B beginnt von vorne. Lies CLAUDE.md, ENTSCHEIDUNGEN.md und GARTEN-NEU.md, die Archivdateien nicht. Arbeite nach dem Prozess in GARTEN-NEU.md. Beginne mit Ebene 0: Zeig mir die Sätze, ich sage, was nicht stimmt oder offen ist. Zeichne noch nichts.

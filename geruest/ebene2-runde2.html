@@ -1,0 +1,190 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Ebene 2, Runde 2</title>
+<style>
+/* Aufbau: oben die eine Frage, darunter viermal dasselbe Motiv in Handybreite und am Ende das Vergleichsbild.
+   Am Handy füllt ein Bild die Breite, seitlich wischen wechselt die Variante. Die Seite selbst bleibt grau. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --linie: #6b7075;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 68ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-bottom: 14px; }
+.gruppe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gruppe > span { font-size: 14px; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; }
+.variante { flex: 0 0 390px; scroll-snap-align: start; }
+.variante h2 { font-size: 18px; margin: 0; }
+.variante p { margin: 2px 0 8px; font-size: 14px; min-height: 3em; }
+.bild { display: block; width: 100%; height: auto; border-radius: 10px; }
+.ohne .bild, .ohne .ausschnitt { filter: grayscale(1); }
+.ausschnitt { width: 350px; max-width: 100%; height: 365px; overflow: hidden; border-radius: 10px; }
+.ausschnitt img { display: block; width: 390px; max-width: none; margin-top: -200px; }
+@media (max-width: 480px) {
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .variante { flex-basis: 100%; }
+  .variante h2, .variante p { padding-inline: 16px; }
+  .bild, .ausschnitt { border-radius: 0; }
+}
+</style>
+
+<div class="rand">
+  <h1>Ebene 2, Runde 2: Aussehen</h1>
+  <p class="frage">Welche Kanten?</p>
+  <p class="hinweis">Nur die Kanten unterscheiden sich. Die Farben sind noch nicht entschieden, du kannst sie hier für alle Bilder umschalten. Beete, Baum, Teich, Mauer und Weg sind ein kleines Übungsmotiv, Schatten und Detailgrad sind noch nicht gewählt. Die Stationen bleiben neutral.</p>
+  <div class="leiste">
+    <div class="gruppe" id="sprung" role="group" aria-label="Zu Variante springen"><span>Variante:</span></div>
+    <div class="gruppe" id="farben" role="group" aria-label="Farben"><span>Farben:</span></div>
+    <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
+  </div>
+</div>
+<div class="reihe rand" id="reihe"></div>
+
+<script>
+(() => {
+  const FARBEN = [
+    { k: 'A', name: 'Gedämpft und erdig', text: 'Graugrün, Beige und Braun, wenig kräftige Töne. Am nächsten am Vergleichsbild.',
+      f: { wiese: '#b3bf8e', wiese2: '#a8b582', boden: '#97a571', weg: '#eadfbf', wegrand: '#c2ab78', erde: '#75563f', erde2: '#5c422f', erde3: '#8c6c52', laub: '#748c57', laub2: '#95ab74', stamm: '#84613f', blatt: '#5f7d46', blatt2: '#8fae66', bl1: '#9583bf', bl2: '#e6c658', bl3: '#c4736d', stein: '#dccaa2', stein2: '#a38d66', wasser: '#93adb8', wasser2: '#d6e3e7' } },
+    { k: 'B', name: 'Frisch und kräftig', text: 'Helles Frühlingsgrün und leuchtende Blüten.',
+      f: { wiese: '#9ad163', wiese2: '#8bc553', boden: '#74ad42', weg: '#f8ebc0', wegrand: '#d9b968', erde: '#7a4a2b', erde2: '#5c351b', erde3: '#97643f', laub: '#3a9646', laub2: '#66bb58', stamm: '#8b5a32', blatt: '#2f8a38', blatt2: '#78cf4f', bl1: '#8251d6', bl2: '#ffd02e', bl3: '#f04f48', stein: '#e0dccf', stein2: '#a19c8f', wasser: '#4fb3e3', wasser2: '#c3eafb' } },
+    { k: 'C', name: 'Warm und sonnig', text: 'Olivgrün, Ocker und Terrakotta, wie an einem Spätsommertag.',
+      f: { wiese: '#c9bb66', wiese2: '#bdae57', boden: '#a59442', weg: '#f7e6bd', wegrand: '#cf9f5c', erde: '#7b4229', erde2: '#5c2f1b', erde3: '#9a5b3d', laub: '#84852f', laub2: '#b0a745', stamm: '#78492b', blatt: '#667429', blatt2: '#a09f3d', bl1: '#a3527a', bl2: '#f4b632', bl3: '#d9572f', stein: '#e6c397', stein2: '#ad7f52', wasser: '#86aca4', wasser2: '#dcebe2' } },
+    { k: 'D', name: 'Zart und hell', text: 'Helle Pastelltöne mit wenig Unterschied zwischen Hell und Dunkel.',
+      f: { wiese: '#cfe3ca', wiese2: '#c1d9bd', boden: '#aac8ab', weg: '#fdf7ec', wegrand: '#dcc7ae', erde: '#a68b7c', erde2: '#8e7466', erde3: '#bfa698', laub: '#94c2a5', laub2: '#b8dbc2', stamm: '#ac9080', blatt: '#83b792', blatt2: '#b2dbb6', bl1: '#b7a4e2', bl2: '#f7e08e', bl3: '#f0a9b1', stein: '#eae5ea', stein2: '#bdb7c4', wasser: '#b0d6e8', wasser2: '#ecf8fc' } },
+    { k: 'E', name: 'Wenige Farben', text: 'Fast nur Grün und Beige, dazu ein einziger Akzent in Gold für die Blüten.',
+      f: { wiese: '#c3cfb8', wiese2: '#b7c4ab', boden: '#a0b093', weg: '#f3efe3', wegrand: '#c9c0a6', erde: '#55624d', erde2: '#424d3b', erde3: '#6f7e66', laub: '#56775f', laub2: '#7a987f', stamm: '#535f4b', blatt: '#7fa287', blatt2: '#a3c0a6', bl1: '#dda122', bl2: '#dda122', bl3: '#dda122', stein: '#dddbd0', stein2: '#a3a899', wasser: '#a2baba', wasser2: '#e0ebe8' } },
+  ];
+
+  const VARIANTEN = [
+    { k: 'A', name: 'Ohne Rand', text: 'Flächen stoßen direkt aneinander, wie in Runde 1.' },
+    { k: 'B', name: 'Rand im selben Ton', text: 'Jede Fläche hat einen feinen, etwas dunkleren Rand. So ist es im Vergleichsbild.' },
+    { k: 'C', name: 'Dunkle Linie', text: 'Alles ist mit derselben dunklen Linie umrandet, wie mit einem Stift gezeichnet.' },
+    { k: 'D', name: 'Weich', text: 'Die Kanten verlaufen leicht, nichts ist hart abgegrenzt.' },
+  ];
+  let farbe = 'A';
+
+  const mische = (hex, ziel, anteil) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(hex.slice(i, i + 2), 16) * (1 - anteil) + parseInt(ziel.slice(i, i + 2), 16) * anteil).toString(16).padStart(2, '0')).join('');
+  const TUSCHE = '#3a322c';
+
+  // Ein Ding besteht aus Flächen [Form, Farbe]. Der Rand liegt hinter allen Flächen, damit innen keine Linien entstehen.
+  function ding(flaechen, art, breite = 1) {
+    const voll = flaechen.map(([form, f]) => `<${form} fill="${f}"/>`).join('');
+    if (art === 'A') return voll;
+    if (art === 'D') return `<g filter="url(#weich)">${voll}</g>`;
+    const rand = flaechen.map(([form, f]) => {
+      const c = art === 'C' ? TUSCHE : mische(f, '#2a2018', 0.38);
+      return `<${form} fill="${c}" stroke="${c}" stroke-width="${(art === 'C' ? 4 : 2.8) * breite}" stroke-linejoin="round"/>`;
+    }).join('');
+    return rand + voll;
+  }
+  const kreis = (x, y, r) => `circle cx="${x}" cy="${y}" r="${r}"`;
+  const oval = (x, y, rx, ry, mehr = '') => `ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" ${mehr}`;
+  const pfad = (d) => `path d="${d}"`;
+
+  function mauer(x, b, f, art) {
+    let s = ding([[`rect x="${x}" y="16" width="${b}" height="36"`, f.stein2]], art);
+    const steine = [];
+    for (let z = 0; z < 2; z++) {
+      let px = x - (z ? 16 : 0), n = 0;
+      while (px < x + b) {
+        const w = [34, 28, 40][(n + z) % 3], l = Math.max(px, x), r = Math.min(px + w - 3, x + b);
+        if (r - l > 4) steine.push([`rect x="${l}" y="${18 + z * 17}" width="${r - l}" height="14" rx="5"`, f.stein]);
+        px += w; n += 1;
+      }
+    }
+    return s + steine.map((st) => ding([st], art, 0.5)).join('');
+  }
+  function pflanze(x, y, blume, f, art) {
+    const blatt = (dx, dy, w) => oval(x + dx, y + dy, 3.2, 9, `transform="rotate(${w} ${x + dx} ${y + dy})"`);
+    let s = ding([[blatt(-7, -5, -28), f.blatt], [blatt(7, -5, 28), f.blatt], [blatt(-3, -9, -10), f.blatt2], [blatt(4, -9, 12), f.blatt2]], art, 0.6);
+    if (blume) s += ding([[-5, -16], [5, -16], [0, -20]].map(([dx, dy]) => [kreis(x + dx, y + dy, 4), f[blume]]), art, 0.6);
+    return s;
+  }
+  function beet(x, y, rx, ry, f, art) {
+    const d = (dy) => `M${x - rx} ${y + dy} C${x - rx} ${y - ry + dy} ${x - rx * 0.5} ${y - ry * 1.1 + dy} ${x} ${y - ry + dy} S${x + rx} ${y - ry * 0.7 + dy} ${x + rx} ${y + dy} S${x + rx * 0.5} ${y + ry * 1.05 + dy} ${x} ${y + ry + dy} S${x - rx} ${y + ry * 0.8 + dy} ${x - rx} ${y + dy} Z`;
+    return ding([[pfad(d(7)), f.erde2], [pfad(d(0)), f.erde]], art);
+  }
+  function station(x, y, z) {
+    if (z === 'fertig') return `<circle cx="${x}" cy="${y}" r="18" fill="#33373b" stroke="#fbfbfb" stroke-width="2"/><path d="M${x - 8} ${y} l6 6 l11 -12" fill="none" stroke="#fbfbfb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+    if (z === 'weiter') return `<circle cx="${x}" cy="${y}" r="24" fill="#fbfbfb"/><circle cx="${x}" cy="${y}" r="24" fill="none" stroke="#33373b" stroke-width="4"/><circle cx="${x}" cy="${y}" r="16" fill="#fbfbfb" stroke="#33373b" stroke-width="2.5"/>`;
+    return `<circle cx="${x}" cy="${y}" r="18" fill="#fbfbfb" stroke="#6b7075" stroke-width="2.5" stroke-dasharray="4 5"/>`;
+  }
+
+  function motiv(f, art) {
+    let s = `<defs><filter id="weich" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.5"/></filter><filter id="weicher" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter></defs>`;
+    s += `<rect width="390" height="430" fill="${f.wiese}"/>`;
+    s += `<g${art === 'D' ? ' filter="url(#weicher)"' : ''}>${[[70, 330, 110, 46], [330, 250, 90, 40], [150, 110, 90, 28]].map(([x, y, a, b]) => `<${oval(x, y, a, b)} fill="${f.wiese2}"/>`).join('')}</g>`;
+    s += mauer(-4, 236, f, art) + mauer(318, 80, f, art);
+    const weg = 'M118 440 C118 350 252 345 252 245 C252 160 275 130 275 -10';
+    const strich = (farbe, b) => `<path d="${weg}" fill="none" stroke="${farbe}" stroke-width="${b}"/>`;
+    const wegBild = strich(f.wegrand, 50) + strich(f.weg, 40);
+    s += art === 'D' ? `<g filter="url(#weich)">${wegBild}</g>` : (art === 'B' ? strich(mische(f.wegrand, '#2a2018', 0.38), 53) : art === 'C' ? strich(TUSCHE, 54) : '') + wegBild;
+    // Teich
+    s += ding([[oval(88, 112, 66, 27), f.stein2], [oval(88, 110, 62, 24), f.stein]], art) + ding([[oval(88, 111, 54, 19), f.wasser]], art, 0.6);
+    s += `<path d="M58 108 h22 M92 116 h26 M76 121 h12" stroke="${f.wasser2}" stroke-width="3" stroke-linecap="round"/>`;
+    // bepflanztes Beet
+    s += beet(104, 236, 84, 54, f, art);
+    [[60, 212, 'bl1'], [92, 206, 'bl1'], [124, 208, 'bl1'], [152, 218, 'bl1'], [44, 240, 'bl2'], [76, 238, 'bl2'], [108, 238, 'bl2'], [140, 240, 'bl2'], [168, 244, 'bl2'], [66, 268, 'bl3'], [98, 270, 'bl3'], [130, 268, 'bl3']].forEach(([x, y, b]) => { s += pflanze(x, y, b, f, art); });
+    // leeres Beet
+    s += beet(312, 358, 60, 34, f, art);
+    s += `<path d="M276 350 h26 M316 344 h30 M288 366 h34 M330 362 h22 M306 378 h18" stroke="${f.erde3}" stroke-width="3" stroke-linecap="round"/>`;
+    // Baum
+    s += ding([[oval(345, 250, 40, 13), f.boden]], art === 'D' ? 'D' : 'A') + ding([[pfad('M337 250 L340 200 H352 L355 250 Z'), f.stamm]], art);
+    s += ding([[kreis(318, 178, 28), f.laub], [kreis(372, 180, 28), f.laub], [kreis(345, 154, 36), f.laub], [kreis(346, 190, 30), f.laub]], art);
+    s += ding([[kreis(336, 144, 20), f.laub2], [kreis(312, 170, 14), f.laub2], [kreis(364, 168, 14), f.laub2]], art === 'D' ? 'D' : 'A');
+    // Büsche
+    s += ding([[oval(40, 392, 48, 12), f.boden]], art === 'D' ? 'D' : 'A');
+    s += ding([[kreis(18, 374, 22), f.blatt], [kreis(46, 368, 24), f.blatt], [kreis(68, 378, 18), f.blatt]], art);
+    s += ding([[kreis(40, 360, 11), f.blatt2], [kreis(14, 366, 9), f.blatt2], [kreis(66, 372, 8), f.blatt2]], art === 'D' ? 'D' : 'A');
+    // Wiesenblumen
+    [[190, 92, 'bl2'], [206, 100, 'bl3'], [196, 300, 'bl2'], [352, 300, 'bl1'], [366, 306, 'bl2'], [196, 410, 'bl3']].forEach(([x, y, b]) => { s += `<path d="M${x} ${y + 4} v7" stroke="${f.blatt}" stroke-width="2"/>` + ding([[kreis(x, y, 4.5), f[b]]], art, 0.6); });
+    s += station(139, 365, 'fertig') + station(246, 268, 'weiter') + station(268, 130, 'zu');
+    return `<svg class="bild" viewBox="0 0 390 430" role="img" aria-label="Kleines Gartenmotiv mit Weg, zwei Beeten, Baum, Teich und Mauer">${s}</svg>`;
+  }
+
+  const reihe = document.getElementById('reihe');
+  VARIANTEN.forEach((v) => { reihe.insertAdjacentHTML('beforeend', `<section class="variante" id="v-${v.k}"><h2>${v.k}: ${v.name}</h2><p>${v.text}</p><div class="platz"></div></section>`); });
+  reihe.insertAdjacentHTML('beforeend', '<section class="variante" id="v-V"><h2>Zum Vergleich</h2><p>Ausschnitt aus dem gezeichneten Entwurf in Worten. Er ist als Aufbau nicht gewählt.</p><div class="ausschnitt"><img src="vergleich-worte.jpg" alt="Ausschnitt aus dem Entwurf in Worten: Wiese, Bach, Beete, gepflasterter Weg, Mauer"></div></section>');
+
+  [...VARIANTEN.map((v) => [v.k, v.name]), ['V', 'Vergleichsbild']].forEach(([k, name]) => {
+    const b = document.createElement('button');
+    b.id = 'sprung-' + k; b.textContent = k === 'V' ? 'Vergleich' : k; b.title = name;
+    b.onclick = () => {
+      const ziel = document.getElementById('v-' + k);
+      reihe.scrollTo({ left: ziel.offsetLeft - reihe.offsetLeft - (innerWidth > 480 ? 16 : 0), behavior: 'smooth' });
+    };
+    document.getElementById('sprung').append(b);
+  });
+  function zeichne() {
+    VARIANTEN.forEach((v) => { document.querySelector(`#v-${v.k} .platz`).innerHTML = motiv(FARBEN.find((x) => x.k === farbe).f, v.k); });
+    document.querySelectorAll('#farben button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.f === farbe)));
+  }
+  const KURZ = { A: 'gedämpft', B: 'frisch', C: 'warm', D: 'zart', E: 'wenige' };
+  FARBEN.forEach((v) => {
+    const b = document.createElement('button');
+    b.id = 'farbe-' + v.k; b.dataset.f = v.k; b.textContent = KURZ[v.k]; b.title = v.name;
+    b.onclick = () => { farbe = v.k; zeichne(); };
+    document.getElementById('farben').append(b);
+  });
+  zeichne();
+  const ohne = document.getElementById('ohne-farbe');
+  ohne.onclick = () => {
+    const an = reihe.classList.toggle('ohne');
+    ohne.setAttribute('aria-pressed', String(an));
+  };
+
+})();
+</script>

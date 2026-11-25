@@ -1,0 +1,326 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Aussehen</title>
+<style>
+/* Aufbau: ein Handyrahmen mit drei Bereichen in echter Größe, daneben das Vergleichsbild und die Liste der Wahlen.
+   Farben, Kanten und Details lassen sich umschalten. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --linie: #6b7075;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 68ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-bottom: 14px; }
+.gruppe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gruppe > span { font-size: 14px; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; }
+.variante { flex: 0 0 390px; scroll-snap-align: start; }
+.variante h2 { font-size: 18px; margin: 0; }
+.variante p { margin: 2px 0 8px; font-size: 14px; min-height: 3em; }
+.bild { display: block; width: 100%; height: auto; border-radius: 10px; }
+.ohne .bild, .ohne .ausschnitt { filter: grayscale(1); }
+.ausschnitt { width: 350px; max-width: 100%; height: 365px; overflow: hidden; border-radius: 10px; }
+.ausschnitt img { display: block; width: 390px; max-width: none; margin-top: -200px; }
+.zwei { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+.buehne { position: relative; flex: 0 0 408px; max-width: 100%; display: flex; flex-direction: column; overflow: hidden; height: min(780px, 88svh); background: var(--blatt); border: 1px solid var(--linie); border-radius: 10px; }
+.rahmen { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.rahmen svg { display: block; width: 390px; height: auto; }
+.ohne .rahmen svg { filter: grayscale(1); }
+svg text { font-family: var(--schrift); fill: var(--text); }
+.fest { position: absolute; left: 0; right: 0; bottom: 64px; padding: 10px 14px 12px; display: flex; gap: 8px; }
+.fest button { min-height: 52px; min-width: 64px; font-weight: 600; flex: 1; background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+.fest .plan { flex: 0 0 auto; background: var(--blatt); color: var(--text); border-color: var(--linie); }
+.tabs { flex: 0 0 64px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--linie); background: var(--blatt); font-size: 14px; }
+.tabs span { display: grid; place-items: center; color: var(--linie); }
+.tabs span:first-child { color: var(--text); font-weight: 700; box-shadow: inset 0 3px 0 var(--dunkel); }
+.wahlen { flex: 1 1 320px; min-width: 0; max-width: 520px; }
+.wahlen h2 { font-size: 18px; margin: 0 0 6px; }
+.wahlen p { margin: 0 0 8px; }
+.wahlen dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 0 0 18px; }
+.wahlen dt { color: var(--linie); }
+.wahlen dd { margin: 0; }
+@media (max-width: 480px) {
+  .zwei { padding-inline: 0; }
+  .buehne { flex-basis: 100%; border-inline: 0; border-radius: 0; }
+  .rahmen svg { width: 100%; }
+  .wahlen { padding-inline: 16px; }
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .variante { flex-basis: 100%; }
+  .variante h2, .variante p { padding-inline: 16px; }
+  .bild, .ausschnitt { border-radius: 0; }
+}
+</style>
+
+<div class="rand">
+  <h1>Ebene 2: Aussehen, alles zusammen</h1>
+  <p class="frage">Passt das so?</p>
+  <p class="hinweis">Das graue Gerüst aus Ebene 1 in dem Aussehen aus Ebene 2, in echter Größe zum Scrollen. Was noch nicht entschieden ist, kannst du umschalten. Beete, Bäume, Teich und Büsche sind Platzhalter für Ebene 3 und stehen in jedem Bereich gleich, ohne Fortschritt.</p>
+  <div class="leiste">
+    <div class="gruppe" id="farben" role="group" aria-label="Farben"><span>Farben:</span></div>
+    <div class="gruppe" id="kanten" role="group" aria-label="Kanten"><span>Kanten:</span></div>
+    <div class="gruppe" id="details" role="group" aria-label="Details"><span>Details:</span></div>
+    <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
+  </div>
+</div>
+<div class="zwei rand">
+  <div class="buehne" id="reihe">
+    <div class="rahmen" id="rahmen" tabindex="0" role="region" aria-label="Garten zum Scrollen"></div>
+    <div class="fest"><button>Weiter: Takt ergänzen</button><button class="plan">Plan</button></div>
+    <div class="tabs" aria-hidden="true"><span>Weg</span><span>Themen</span><span>Abzeichen</span><span>Üben</span></div>
+  </div>
+  <div class="wahlen">
+    <h2>Ebene 2 bisher</h2>
+    <dl>
+      <dt>Farben</dt><dd>„Alles vorstellbar, kann es jetzt noch nicht entscheiden.“ <b>Annahme:</b> gedämpft</dd>
+      <dt>Kanten</dt><dd>„noch nicht entscheiden, aber am ehesten B“. <b>Annahme:</b> Rand im selben Ton</dd>
+      <dt>Schatten</dt><dd>Fleck am Boden. <b>Gewählt</b></dd>
+      <dt>Details</dt><dd>„Schwer einzuschätzen, aber eher B.“ <b>Annahme:</b> mittel</dd>
+    </dl>
+    <h2>Zum Vergleich</h2>
+    <p>Ausschnitt aus dem gezeichneten Entwurf in Worten. Er ist als Aufbau nicht gewählt.</p>
+    <div class="ausschnitt"><img src="vergleich-worte.jpg" alt="Ausschnitt aus dem Entwurf in Worten: Wiese, Bach, Beete, gepflasterter Weg, Mauer"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const FARBEN = [
+    { k: 'A', name: 'Gedämpft und erdig', text: 'Graugrün, Beige und Braun, wenig kräftige Töne. Am nächsten am Vergleichsbild.',
+      f: { wiese: '#b3bf8e', wiese2: '#a8b582', boden: '#97a571', weg: '#eadfbf', wegrand: '#c2ab78', erde: '#75563f', erde2: '#5c422f', erde3: '#8c6c52', laub: '#748c57', laub2: '#95ab74', stamm: '#84613f', blatt: '#5f7d46', blatt2: '#8fae66', bl1: '#9583bf', bl2: '#e6c658', bl3: '#c4736d', stein: '#dccaa2', stein2: '#a38d66', wasser: '#93adb8', wasser2: '#d6e3e7' } },
+    { k: 'B', name: 'Frisch und kräftig', text: 'Helles Frühlingsgrün und leuchtende Blüten.',
+      f: { wiese: '#9ad163', wiese2: '#8bc553', boden: '#74ad42', weg: '#f8ebc0', wegrand: '#d9b968', erde: '#7a4a2b', erde2: '#5c351b', erde3: '#97643f', laub: '#3a9646', laub2: '#66bb58', stamm: '#8b5a32', blatt: '#2f8a38', blatt2: '#78cf4f', bl1: '#8251d6', bl2: '#ffd02e', bl3: '#f04f48', stein: '#e0dccf', stein2: '#a19c8f', wasser: '#4fb3e3', wasser2: '#c3eafb' } },
+    { k: 'C', name: 'Warm und sonnig', text: 'Olivgrün, Ocker und Terrakotta, wie an einem Spätsommertag.',
+      f: { wiese: '#c9bb66', wiese2: '#bdae57', boden: '#a59442', weg: '#f7e6bd', wegrand: '#cf9f5c', erde: '#7b4229', erde2: '#5c2f1b', erde3: '#9a5b3d', laub: '#84852f', laub2: '#b0a745', stamm: '#78492b', blatt: '#667429', blatt2: '#a09f3d', bl1: '#a3527a', bl2: '#f4b632', bl3: '#d9572f', stein: '#e6c397', stein2: '#ad7f52', wasser: '#86aca4', wasser2: '#dcebe2' } },
+    { k: 'D', name: 'Zart und hell', text: 'Helle Pastelltöne mit wenig Unterschied zwischen Hell und Dunkel.',
+      f: { wiese: '#cfe3ca', wiese2: '#c1d9bd', boden: '#aac8ab', weg: '#fdf7ec', wegrand: '#dcc7ae', erde: '#a68b7c', erde2: '#8e7466', erde3: '#bfa698', laub: '#94c2a5', laub2: '#b8dbc2', stamm: '#ac9080', blatt: '#83b792', blatt2: '#b2dbb6', bl1: '#b7a4e2', bl2: '#f7e08e', bl3: '#f0a9b1', stein: '#eae5ea', stein2: '#bdb7c4', wasser: '#b0d6e8', wasser2: '#ecf8fc' } },
+    { k: 'E', name: 'Wenige Farben', text: 'Fast nur Grün und Beige, dazu ein einziger Akzent in Gold für die Blüten.',
+      f: { wiese: '#c3cfb8', wiese2: '#b7c4ab', boden: '#a0b093', weg: '#f3efe3', wegrand: '#c9c0a6', erde: '#55624d', erde2: '#424d3b', erde3: '#6f7e66', laub: '#56775f', laub2: '#7a987f', stamm: '#535f4b', blatt: '#7fa287', blatt2: '#a3c0a6', bl1: '#dda122', bl2: '#dda122', bl3: '#dda122', stein: '#dddbd0', stein2: '#a3a899', wasser: '#a2baba', wasser2: '#e0ebe8' } },
+  ];
+
+  let kante = 'B', detail = 'B';
+  const sch = 'B', HOCH = 640;
+  let farbe = 'A';
+
+  const mische = (hex, ziel, anteil) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(hex.slice(i, i + 2), 16) * (1 - anteil) + parseInt(ziel.slice(i, i + 2), 16) * anteil).toString(16).padStart(2, '0')).join('');
+  const TUSCHE = '#3a322c';
+
+  // Ein Ding besteht aus Flächen [Form, Farbe]. Der Rand liegt hinter allen Flächen, damit innen keine Linien entstehen.
+  function ding(flaechen, art, breite = 1) {
+    let voll = flaechen.map(([form, f]) => `<${form} fill="${f}"/>`).join('');
+    if (sch === 'D') voll += flaechen.map(([form]) => `<${form} fill="url(#plastik)"/>`).join('');
+    if (art === 'A') return voll;
+    if (art === 'D') return `<g filter="url(#weich)">${voll}</g>`;
+    const rand = flaechen.map(([form, f]) => {
+      const c = art === 'C' ? TUSCHE : mische(f, '#2a2018', 0.38);
+      return `<${form} fill="${c}" stroke="${c}" stroke-width="${(art === 'C' ? 4 : 2.8) * breite}" stroke-linejoin="round"/>`;
+    }).join('');
+    return rand + voll;
+  }
+  const kreis = (x, y, r) => `circle cx="${x}" cy="${y}" r="${r}"`;
+  const oval = (x, y, rx, ry, mehr = '') => `ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" ${mehr}`;
+  const pfad = (d) => `path d="${d}"`;
+  const DUNKEL = '#26281a';
+  // Schatten eines Dings, das bei (x, y) auf dem Boden steht
+  function boden(x, y, rx, ry, hoehe = 0) {
+    if (sch === 'A') return '';
+    if (sch === 'C') {
+      const sx = x - rx * 0.5 - hoehe * 0.2, sy = y + ry * 0.4 + hoehe * 0.08;
+      const stiel = hoehe ? `<path d="M${x - 7} ${y} H${x + 7} L${sx + 12} ${sy} H${sx - 6} Z"/>` : '';
+      return `<g fill="${DUNKEL}" opacity="0.26">${stiel}<ellipse cx="${sx}" cy="${sy}" rx="${rx * 1.05}" ry="${ry}"/></g>`;
+    }
+    return `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${DUNKEL}" fill-opacity="0.2"/>`;
+  }
+
+  const WEG = 'M195 640 C195 552.7 95 567.3 95 465.5 C95 334.5 295 334.5 295 189.1 C295 87.3 195 87.3 195 0';
+  const mess = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  mess.setAttribute('d', WEG);
+  const WEGPUNKTE = Array.from({ length: Math.ceil(mess.getTotalLength() / 5) }, (_, i) => mess.getPointAtLength(i * 5));
+  let saat = 11;
+  const zufall = () => { saat = (saat * 16807) % 2147483647; return saat / 2147483647; };
+  const BESETZT = [[290, 492, 84, 62], [96, 178, 80, 54], [302, 592, 66, 34], [352, 330, 56, 60], [352, 404, 44, 18], [46, 318, 56, 60], [46, 392, 44, 18], [52, 560, 58, 36], [336, 88, 48, 30]];
+  function frei(x, y) {
+    if (x < 10 || x > 380 || y < 66 || y > 630) return false;
+    if (WEGPUNKTE.some((q) => Math.hypot(q.x - x, q.y - y) < 33)) return false;
+    return !BESETZT.some(([cx, cy, a, b]) => ((x - cx) / a) ** 2 + ((y - cy) / b) ** 2 < 1);
+  }
+  function verteile(n, abstand) {
+    const orte = [];
+    for (let v = 0; v < 4000 && orte.length < n; v++) {
+      const x = 10 + zufall() * 370, y = 66 + zufall() * 564;
+      if (frei(x, y) && !orte.some((o) => Math.hypot(o[0] - x, o[1] - y) < abstand)) orte.push([x, y]);
+    }
+    return orte.sort((a, b) => a[1] - b[1]);
+  }
+  const ru = (z) => Math.round(z * 10) / 10;
+
+  function pflanze(x, y, blume, f, art, stufe) {
+    const blatt = (dx, dy, w, a = 3.2, b = 9) => oval(x + dx, y + dy, a, b, `transform="rotate(${w} ${x + dx} ${y + dy})"`);
+    if (stufe === 'A') return boden(x, y + 2, 11, 4) + ding([[oval(x, y - 5, 9, 8), f.blatt]], art, 0.6) + ding([[kreis(x, y - 13, 6.5), f[blume]]], art, 0.6);
+    const blaetter = [[blatt(-7, -5, -28), f.blatt], [blatt(7, -5, 28), f.blatt], [blatt(-3, -9, -10), f.blatt2], [blatt(4, -9, 12), f.blatt2]];
+    if (stufe === 'D') blaetter.unshift([blatt(-11, -2, -55, 2.6, 8), f.blatt], [blatt(11, -2, 55, 2.6, 8), f.blatt]);
+    let s = boden(x, y + 2, 11, 4) + ding(blaetter, art, 0.6);
+    if (stufe === 'C' || stufe === 'D') s += `<path d="M${x - 3} ${y - 4} l-1 -9 M${x + 4} ${y - 4} l2 -9" stroke="${f.blatt}" stroke-width="1.1"/>`;
+    const tupfen = stufe === 'D' ? [[-6, -15], [6, -15], [-4, -21], [4, -21], [0, -13]] : [[-5, -16], [5, -16], [0, -20]];
+    s += ding(tupfen.map(([dx, dy]) => [kreis(x + dx, y + dy, stufe === 'D' ? 3.6 : 4), f[blume]]), art, 0.6);
+    if (stufe === 'C' || stufe === 'D') s += `<circle cx="${x}" cy="${y - 17}" r="2" fill="${mische(f[blume], '#ffffff', 0.6)}"/>`;
+    return s;
+  }
+  function beet(x, y, rx, ry, f, art) {
+    const d = (dy) => `M${x - rx} ${y + dy} C${x - rx} ${y - ry + dy} ${x - rx * 0.5} ${y - ry * 1.1 + dy} ${x} ${y - ry + dy} S${x + rx} ${y - ry * 0.7 + dy} ${x + rx} ${y + dy} S${x + rx * 0.5} ${y + ry * 1.05 + dy} ${x} ${y + ry + dy} S${x - rx} ${y + ry * 0.8 + dy} ${x - rx} ${y + dy} Z`;
+    return `<g transform="translate(0 7)"><path d="${d(7)}" fill="${DUNKEL}" fill-opacity="0.2"/></g>` + ding([[pfad(d(7)), f.erde2], [pfad(d(0)), f.erde]], art);
+  }
+  function krume(x, y, rx, ry, n, f) {
+    let s = '';
+    for (let k = 0; k < n; k++) {
+      const w = zufall() * 6.283, m = Math.sqrt(zufall()) * 0.82, px = x + Math.cos(w) * rx * m, py = y + Math.sin(w) * ry * m;
+      s += k % 3 ? `<path d="M${ru(px - 6)} ${ru(py)} q6 -3 12 0" fill="none" stroke="${f.erde3}" stroke-width="1.8" stroke-linecap="round"/>` : `<circle cx="${ru(px)}" cy="${ru(py)}" r="1.7" fill="${f.erde3}"/>`;
+    }
+    return s;
+  }
+  function laub(kreise, n, f, hell, dunkel) {
+    let s = '';
+    for (let k = 0; k < n; k++) {
+      const [cx, cy, rr] = kreise[k % kreise.length], w = zufall() * 6.283, m = Math.sqrt(zufall()) * rr * 0.85;
+      const x = ru(cx + Math.cos(w) * m), y = ru(cy + Math.sin(w) * m);
+      s += `<ellipse cx="${x}" cy="${y}" rx="4.4" ry="2.6" fill="${k % 2 ? hell : dunkel}" transform="rotate(${Math.round(zufall() * 180)} ${x} ${y})"/>`;
+    }
+    return s;
+  }
+  function station(x, y, z) {
+    if (z === 'fertig') return `<circle cx="${x}" cy="${y}" r="18" fill="#33373b" stroke="#fbfbfb" stroke-width="2"/><path d="M${x - 8} ${y} l6 6 l11 -12" fill="none" stroke="#fbfbfb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+    if (z === 'weiter') return `<circle cx="${x}" cy="${y}" r="24" fill="#fbfbfb"/><circle cx="${x}" cy="${y}" r="24" fill="none" stroke="#33373b" stroke-width="4"/><circle cx="${x}" cy="${y}" r="16" fill="#fbfbfb" stroke="#33373b" stroke-width="2.5"/>`;
+    return `<circle cx="${x}" cy="${y}" r="18" fill="#fbfbfb" stroke="#6b7075" stroke-width="2.5" stroke-dasharray="4 5"/>`;
+  }
+
+  function baum(x, y, f, art, stufe) {
+    const mehr = stufe === 'C' || stufe === 'D', viel = stufe === 'D';
+    let s = boden(x, y, 36, 12) + ding([[pfad(`M${x - 7} ${y} L${x - 4} ${y - 44} H${x + 6} L${x + 8} ${y} Z`), f.stamm]], art);
+    if (mehr) s += `<path d="M${x - 2} ${y - 4} l1 -30 M${x + 4} ${y - 6} l-1 -22" stroke="${mische(f.stamm, '#2a2018', 0.35)}" stroke-width="1.5" stroke-linecap="round"/>`;
+    const krone = [[x - 24, y - 66, 24], [x + 24, y - 64, 24], [x, y - 88, 31], [x + 1, y - 56, 26]];
+    s += ding(krone.map(([a, b, q]) => [kreis(a, b, q), f.laub]), art);
+    if (stufe !== 'A') s += ding([[kreis(x - 8, y - 96, 17), f.laub2], [kreis(x - 29, y - 72, 12), f.laub2], [kreis(x + 17, y - 74, 12), f.laub2]], art === 'D' ? 'D' : 'A');
+    if (mehr) s += laub(krone, viel ? 70 : 20, f, mische(f.laub2, '#ffffff', 0.18), mische(f.laub, '#1c2410', 0.22));
+    return s;
+  }
+  function busch(x, y, f, art, stufe) {
+    const mehr = stufe === 'C' || stufe === 'D', viel = stufe === 'D';
+    const k = [[x - 24, y - 4, 20], [x + 2, y - 10, 23], [x + 24, y - 2, 17]];
+    let s = boden(x, y + 14, 46, 11) + ding(k.map(([a, b, q]) => [kreis(a, b, q), f.blatt]), art);
+    if (stufe !== 'A') s += ding([[kreis(x - 4, y - 18, 10), f.blatt2], [kreis(x - 28, y - 11, 8), f.blatt2], [kreis(x + 22, y - 8, 7), f.blatt2]], art === 'D' ? 'D' : 'A');
+    if (mehr) s += laub(k, viel ? 40 : 12, f, mische(f.blatt2, '#ffffff', 0.15), mische(f.blatt, '#1c2410', 0.25));
+    return s;
+  }
+  function wegBild(f, art, stufe) {
+    const mehr = stufe === 'C' || stufe === 'D', viel = stufe === 'D';
+    const strich = (farbe, b, attr = '') => `<path d="${WEG}" fill="none" stroke="${farbe}" stroke-width="${b}" ${attr}/>`;
+    const kern = strich(f.wegrand, 46) + (viel ? strich(mische(f.wegrand, '#2a2018', 0.4), 46, 'stroke-dasharray="1.6 11"') : '') + strich(f.weg, 37);
+    let s = art === 'D' ? `<g filter="url(#weich)">${kern}</g>` : (art === 'B' ? strich(mische(f.wegrand, '#2a2018', 0.38), 49) : art === 'C' ? strich(TUSCHE, 50) : '') + kern;
+    if (mehr) {
+      const kies = mische(f.weg, f.wegrand, 0.65);
+      for (let k = 0; k < (viel ? 110 : 34); k++) {
+        const q = WEGPUNKTE[Math.floor(zufall() * WEGPUNKTE.length)];
+        s += `<ellipse cx="${ru(q.x + (zufall() - 0.5) * 26)}" cy="${ru(q.y + (zufall() - 0.5) * 8)}" rx="${ru(1.8 + zufall() * 1.6)}" ry="1.5" fill="${kies}"/>`;
+      }
+    }
+    return s;
+  }
+  const NAMEN = { 1: 'Das Notenbild', 2: 'Schlag und Takt', 3: 'Notennamen' };
+  function bereich(i, f, art, stufe) {
+    saat = 11 + i;
+    const mehr = stufe === 'C' || stufe === 'D', viel = stufe === 'D', ruhig = stufe === 'A';
+    let s = `<rect width="390" height="${HOCH}" fill="${f.wiese}"/>`;
+    if (!ruhig) s += `<g${art === 'D' ? ' filter="url(#weicher)"' : ''}>${[[300, 420, 100, 46], [90, 300, 90, 40], [120, 110, 100, 34], [90, 600, 100, 34]].map(([x, y, a, b]) => `<${oval(x, y, a, b)} fill="${f.wiese2}"/>`).join('')}</g>`;
+    s += `<path d="M0 ${HOCH - 1} H390" stroke="${mische(f.wiese, '#2a2018', 0.25)}" stroke-width="2" stroke-dasharray="8 7"/>`;
+    if (mehr) {
+      const gras = mische(f.wiese, f.blatt, 0.55);
+      verteile(viel ? 130 : 38, viel ? 14 : 28).forEach(([x, y]) => { s += `<path d="M${ru(x)} ${ru(y)} q-2 -5 -4 -8 M${ru(x)} ${ru(y)} v-9 M${ru(x)} ${ru(y)} q2 -5 4 -8" fill="none" stroke="${gras}" stroke-width="1.6" stroke-linecap="round"/>`; });
+    }
+    s += wegBild(f, art, stufe);
+    // leeres Beet
+    s += beet(96, 178, 68, 40, f, art);
+    if (!ruhig) s += `<path d="M56 168 h28 M100 160 h32 M66 188 h36 M112 182 h24 M86 204 h20" stroke="${f.erde3}" stroke-width="3" stroke-linecap="round"/>`;
+    if (mehr) s += krume(96, 178, 62, 35, viel ? 34 : 12, f);
+    // Teich
+    s += ding([[oval(302, 592, 58, 24), f.stein2], [oval(302, 590, 54, 21), f.stein]], art) + ding([[oval(302, 591, 47, 16.5), f.wasser]], art, 0.6);
+    if (!ruhig) s += `<path d="M276 588 h20 M306 595 h24 M290 600 h12" stroke="${f.wasser2}" stroke-width="3" stroke-linecap="round"/>`;
+    s += baum(46, 392, f, art, stufe) + baum(352, 404, f, art, stufe);
+    // bepflanztes Beet
+    s += beet(290, 492, 76, 50, f, art);
+    if (mehr) s += krume(290, 492, 70, 44, viel ? 46 : 18, f);
+    const p = ruhig
+      ? [[250, 474, 'bl1'], [292, 468, 'bl1'], [332, 478, 'bl1'], [240, 504, 'bl2'], [280, 506, 'bl2'], [320, 506, 'bl2'], [272, 532, 'bl3'], [310, 532, 'bl3']]
+      : [[252, 470, 'bl1'], [284, 464, 'bl1'], [316, 468, 'bl1'], [342, 480, 'bl1'], [238, 498, 'bl2'], [268, 497, 'bl2'], [298, 497, 'bl2'], [328, 502, 'bl2'], [258, 525, 'bl3'], [290, 528, 'bl3'], [320, 526, 'bl3']];
+    p.forEach(([x, y, b]) => { s += pflanze(x, y, b, f, art, stufe); });
+    s += busch(52, 566, f, art, stufe) + busch(336, 96, f, art, stufe);
+    const blumen = ruhig ? [] : [[180, 120, 'bl2'], [196, 128, 'bl3'], [30, 250, 'bl1'], [160, 470, 'bl2'], [176, 478, 'bl3'], [140, 610, 'bl1']];
+    if (mehr) blumen.push([250, 300, 'bl2'], [230, 560, 'bl1'], [20, 470, 'bl3'], [360, 180, 'bl2'], [190, 250, 'bl1']);
+    if (viel) blumen.push([150, 90, 'bl3'], [366, 250, 'bl1'], [120, 300, 'bl2'], [24, 110, 'bl2'], [210, 420, 'bl3'], [176, 560, 'bl2'], [376, 556, 'bl1'], [130, 250, 'bl3']);
+    blumen.filter(([x, y]) => frei(x, y)).forEach(([x, y, b]) => { s += `<path d="M${x} ${y + 4} v7" stroke="${f.blatt}" stroke-width="2"/>` + ding([[kreis(x, y, 4.5), f[b]]], art, 0.6); });
+    // Stationen und Schild, neutral wie in Ebene 1
+    const anzahl = i === 2 ? 7 : 6, lang = mess.getTotalLength();
+    let von = 0, bis = lang;
+    while (mess.getPointAtLength(von).y > HOCH - 36) von += 1;
+    while (mess.getPointAtLength(bis).y < 84) bis -= 1;
+    for (let n = 0; n < anzahl; n++) {
+      const q = mess.getPointAtLength(von + (bis - von) * (n / (anzahl - 1)));
+      s += station(q.x, q.y, i === 1 || (i === 2 && n < 3) ? 'fertig' : i === 2 && n === 3 ? 'weiter' : 'zu');
+    }
+    s += `<rect x="14" y="14" width="${i === 2 ? 270 : 176}" height="34" rx="6" fill="#fbfbfb"/><text x="26" y="37" font-size="16" font-weight="600">${i}  ${NAMEN[i]}</text>`;
+    if (i === 2) s += `<rect x="166" y="17" width="108" height="28" rx="14" fill="#33373b"/><text x="220" y="36" font-size="14" font-weight="600" text-anchor="middle" style="fill:#fbfbfb">Hier bist du</text>`;
+    return s;
+  }
+  function garten() {
+    const f = FARBEN.find((x) => x.k === farbe).f;
+    const defs = `<defs><filter id="weich" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.5"/></filter><filter id="weicher" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter></defs>`;
+    return `<svg viewBox="0 0 390 ${3 * HOCH + 70}" role="img" aria-label="Drei Gartenbereiche in echter Größe">${defs}<rect width="390" height="${3 * HOCH + 70}" fill="${f.wiese}"/>${[3, 2, 1].map((i, n) => `<g transform="translate(0 ${n * HOCH})">${bereich(i, f, kante, detail)}</g>`).join('')}</svg>`;
+  }
+
+  const reihe = document.getElementById('reihe');
+  function zeichne() {
+    document.getElementById('rahmen').innerHTML = garten();
+    document.querySelectorAll('#farben button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.f === farbe)));
+    document.querySelectorAll('#kanten button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.a === kante)));
+    document.querySelectorAll('#details button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.d === detail)));
+  }
+  const KURZ = { A: 'gedämpft', B: 'frisch', C: 'warm', D: 'zart', E: 'wenige' };
+  FARBEN.forEach((v) => {
+    const b = document.createElement('button');
+    b.id = 'farbe-' + v.k; b.dataset.f = v.k; b.textContent = KURZ[v.k]; b.title = v.name;
+    b.onclick = () => { farbe = v.k; zeichne(); };
+    document.getElementById('farben').append(b);
+  });
+  [['A', 'ohne'], ['B', 'im Ton'], ['C', 'dunkel'], ['D', 'weich']].forEach(([k, name]) => {
+    const b = document.createElement('button');
+    b.id = 'kante-' + k; b.dataset.a = k; b.textContent = name;
+    b.onclick = () => { kante = k; zeichne(); };
+    document.getElementById('kanten').append(b);
+  });
+  [['A', 'ruhig'], ['B', 'mittel'], ['C', 'mehr'], ['D', 'viel']].forEach(([k, name]) => {
+    const b = document.createElement('button');
+    b.id = 'detail-' + k; b.dataset.d = k; b.textContent = name;
+    b.onclick = () => { detail = k; zeichne(); };
+    document.getElementById('details').append(b);
+  });
+  zeichne();
+  const r0 = document.getElementById('rahmen');
+  r0.scrollTop = (HOCH - 40) * (r0.firstElementChild.clientWidth / 390);
+  const ohne = document.getElementById('ohne-farbe');
+  ohne.onclick = () => {
+    const an = document.querySelector('.zwei').classList.toggle('ohne');
+    ohne.setAttribute('aria-pressed', String(an));
+  };
+
+})();
+</script>

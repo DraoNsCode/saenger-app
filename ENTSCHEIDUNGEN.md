@@ -57,9 +57,9 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 
 - Die Logik des Weges bleibt: Fortschrittsanzeige und Leitfaden durch die Themen. Darstellung und Optik sollen sich ändern, ein Weg aus Notenzeilen ist zu langweilig.
 - Zuerst wird die Geschichte oder das Bild gesucht, danach die passende Optik, eventuell für die ganze App.
-- Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. (Daniel kann sich am 25.11.2026 nicht erinnern, festgelegt zu haben, dass die Stationen am Weg liegen. Der Satz wurde am 19.11. von Claude formuliert. Dieser Teil gilt seitdem als offen.)
+- Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. (Daniel kann sich am 25.11.2026 nicht erinnern, festgelegt zu haben, dass die Stationen am Weg liegen. Der Satz wurde am 19.11. von Claude formuliert. Dieser Teil gilt seitdem als offen. Am selben Tag in Ebene 1, Runde 2 geklärt, siehe „Garten neu“.)
 - Die Etappen sollen eine logische Reihenfolge und ein richtiges Ziel haben. Das Ziel ist die Kapelle.
-- Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md).
+- Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md). (Am 25.11.2026 eingeschränkt: sofern das möglich ist, siehe „Garten neu“.)
 - Der Garten zieht sich in die Länge: Man beginnt unten und bewegt sich beim Scrollen nach oben. Vorstellbar ist die Ansicht von oben oder schräg von oben.
 - Nötige und freiwillige Stationen: Das Ziel erreicht man, wenn alle nötigen Stationen geschafft sind. Schwerere Stufen sind freiwillig. Sie entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten. (Die andere Möglichkeit, für das Ziel alle Stufen zu verlangen, ist damit verworfen.)
 - Nötig ist bei jeder Übung die Stufe, die den Kern ihrer Etappe abdeckt. Das ist nicht immer die leichteste Stufe. Übungen, die immer einfach sind, bekommen nur eine Station.
@@ -92,7 +92,7 @@ Klärung am 19.11.2026 (Baustein J):
 - Üben außerhalb des Weges zählt für den Garten. Im Code zählen Runden im Reiter „Themen“ noch nicht für die Stationen.
 - Daniel sieht keinen Unterschied zwischen „gezielt üben“ und „eine freiwillige Station machen“.
 - Wer im Weg den nächsten Bereich erreicht, hat im alten Thema nur die nötigen Stationen geschafft, nicht alles. Auch an der Kapelle können in den Bereichen noch Stellen offen sein oder sich mit freiwilligen Übungen weiter ausbauen lassen.
-- Daniel geht davon aus, dass die Gartenübersicht in der fertigen App nicht alle Stationen zeigt. Das wäre zu unübersichtlich und würde das Bild zerstören. Das Konzept soll nicht vom heutigen Code ausgehen.
+- Daniel geht davon aus, dass die Gartenübersicht in der fertigen App nicht alle Stationen zeigt. Das wäre zu unübersichtlich und würde das Bild zerstören. Das Konzept soll nicht vom heutigen Code ausgehen. (Am 25.11.2026: Ob die Übersicht alle Stationen zeigt, ist noch nicht geklärt. Am selben Tag in Ebene 1, Runde 1 geklärt, siehe „Garten neu“.)
 - Vorstellbar, nicht entschieden:
   - Die App wählt selbst aus, was man übt.
   - Im Menü ein Fortschrittsbalken je Thema statt einzelner Übungen.
@@ -178,8 +178,8 @@ Nach den Stilvarianten (24.11.2026, Baustein B):
 
 Nach den Verwandten des Originals (25.11.2026, Baustein B):
 
-- Vorerst geht es mit dem Original und der üppigen Bepflanzung weiter. Eventuell möchte Daniel später irgendwann auf Aquarell umschalten.
-- Licht und Jahreszeiten können eventuell später als Patch dazukommen.
+- Vorerst geht es mit dem Original und der üppigen Bepflanzung weiter. Eventuell möchte Daniel später irgendwann auf Aquarell umschalten. (Gilt seit dem 25.11.2026 nicht mehr, siehe „Garten neu“, Sätze 20 und 22.)
+- Licht und Jahreszeiten können eventuell später als Patch dazukommen. (Gilt seit dem 25.11.2026 nicht mehr, siehe „Garten neu“, Satz 22.)
 - Aufgefallen: Unbearbeitete Elemente unterscheiden sich nur wenig von bearbeiteten, zum Beispiel Baum und Baum mit Äpfeln.
 - Brainstorming, von Daniel ausdrücklich nicht entschieden: größere Flächen dafür reservieren, zum Beispiel ein Viereck mit Obstbäumen, oder bei denselben Elementen für einen größeren Unterschied sorgen.
 - Zu den Fassungen mit größerem Unterschied (GARTEN-BILD.md): Daniel überlässt Claude, eine zu nehmen, und meint, vielleicht sei es besser, das erst später festzulegen. Claude hat „Zusammen“ genommen, als vorläufige Arbeitsgrundlage. Begründung: Sie enthält die Ansätze der anderen Fassungen, deshalb lässt sich später am leichtesten etwas weglassen. Endgültig festgelegt ist damit nichts.
@@ -188,12 +188,43 @@ Nach dem Vergleich mit dem Entwurf in Worten (25.11.2026, Baustein B):
 
 - Rein optisch findet Daniel den gezeichneten Entwurf in Worten (`probe/worte.html`) viel besser als die Probe, auch wenn Claude ihn in ähnlichem Stil umgesetzt hat.
 - Ein größerer Unterschied zwischen unbearbeitet und bearbeitet muss nicht aus einem anderen Ansatz kommen, er kann auch aus einer besseren Umsetzung kommen.
-- Dass die Stationen am Weg liegen, ist offen (siehe „Der Weg als Klostergarten“).
-- Überlegung, nicht entschieden: in einer neuen Sitzung von vorne anfangen und nicht gleich ein ganzes Bild erstellen, sondern Schritt für Schritt. Claude gibt Varianten, Daniel wählt aus, dann geht es eine Ebene höher.
-- Daniel hat die Übergabe für diese neue Sitzung vorbereiten lassen (25.11.2026). Der Prozess in [GARTEN-NEU.md](GARTEN-NEU.md) ist Claudes Vorschlag dafür.
+- Dass die Stationen am Weg liegen, ist offen (siehe „Der Weg als Klostergarten“; am selben Tag geklärt, siehe „Garten neu“, Ebene 1, Runde 2).
+- Überlegung, nicht entschieden: in einer neuen Sitzung von vorne anfangen und nicht gleich ein ganzes Bild erstellen, sondern Schritt für Schritt. Claude gibt Varianten, Daniel wählt aus, dann geht es eine Ebene höher. (Am 25.11.2026 entschieden, siehe „Garten neu“, Satz 28.)
+- Daniel hat die Übergabe für diese neue Sitzung vorbereiten lassen (25.11.2026). Der Prozess in [GARTEN-NEU.md](GARTEN-NEU.md) ist Claudes Vorschlag dafür. (Am 25.11.2026 bestätigt, siehe „Garten neu“, Satz 28.)
 
 ## Garten neu (ab 25.11.2026, Baustein B)
 
 Hier stehen nur die Ergebnisse der einzelnen Ebenen aus [GARTEN-NEU.md](GARTEN-NEU.md), in Daniels Worten. Frühere Einträge zum Garten gelten weiter, bis Daniel etwas anderes sagt.
 
-- Ebene 0: noch offen.
+Ebene 0, was wirklich feststeht (25.11.2026). Die Nummern sind die Sätze aus GARTEN-NEU.md.
+
+- **Satz 4:** Jeder Bereich passt zum Thema seiner Etappe, sofern das möglich ist. Keine krampfhaften Parallelen, wenn dadurch die interne Story des Lernpfades leidet.
+- **Sätze 11 und 12:** Stimmen. Ob und wie man offene Stellen sieht, ist damit nicht festgelegt.
+- **Satz 13:** Ob die Übersicht alle Stationen zeigt, ist noch nicht geklärt. (Geklärt in Ebene 1, Runde 1, siehe unten.)
+- **Satz 14:** Offen. Er hängt daran, ob die Stationen überhaupt angezeigt werden (Satz 13). (Geklärt in Ebene 1, Runde 2, siehe unten.)
+- **Überlegung zu 13 und 14, nicht entschieden** (von Daniel als Überlegung eingefügter Text, gekürzt):
+  - Die Gesamtansicht zeigt nur die Bereiche, die nötigen Stationen und die Kapelle.
+  - Jede Übung verändert den Garten trotzdem sichtbar. Freiwillige Stufen, Spätblüher und Üben außerhalb des Weges lassen den Bereich weiter wachsen, erscheinen aber nicht als einzelne Punkte.
+  - Die Nahansicht eines Bereichs (nach Antippen) zeigt alle Übungen des Themas mit ihrem Stand, dazu die offenen Stellen und die Wiederholungszeichen.
+- **Sätze 19, 21 und 25:** Bleiben so. `probe/worte.html` bleibt das Vergleichsbild für Ebene 2.
+- **Satz 20:** Die bisherigen Entwürfe fand Daniel nicht gut. Deswegen sind sie archiviert, und das wird von vorne ordentlich gemacht. „Vorerst Original, üppig bepflanzt“ gilt damit nicht mehr.
+- **Satz 22:** Gilt nicht mehr, ein Überbleibsel aus der alten Bearbeitung. Alles wird von vorne ordentlich umgesetzt.
+- **Satz 28:** Ja. Das Design beginnt von vorne, nach den Ebenen und Regeln in GARTEN-NEU.md.
+- **Ohne Einwand:** 1 bis 3, 5 bis 10, 15 bis 18, 23, 24, 26, 27. Bei 2, 6, 18 und 23 gilt der Wortlaut des früheren Eintrags.
+
+Ebene 1, graues Gerüst:
+
+- **Ebene 1, Runde 1 (25.11.2026):** Daniel wählt B. Wenn man durch den Garten scrollt, sieht man von den Übungen nur die nötigen Stationen. Freiwilliges sieht man nur am Bewuchs, zu finden ist es nach Antippen des Bereichs. Damit ist Satz 13 geklärt: Die Übersicht zeigt nicht alle Stationen. Wie der Bewuchs aussieht und was man nach dem Antippen sieht, ist nicht festgelegt. Von der Überlegung zu 13 und 14 ist nur dieser Teil gewählt.
+- **Ebene 1, Runde 2 (25.11.2026):** Daniel wählt A. Die nötigen Stationen liegen auf dem Weg. Wer dem Weg folgt, kommt an allen vorbei. Damit ist Satz 14 geklärt. Wie der Weg verläuft, ist nicht festgelegt.
+- **Ebene 1, Runde 3 (25.11.2026):** Daniel zum Verlauf des Weges: „B oder E, eher B“. B ist geschwungen, E rechtwinklig. Annahme: Weiter geht es mit B. Endgültig gewählt ist keins von beiden.
+- **Ebene 1, Runde 4 (25.11.2026):** Daniel wählt C. Auf dem Handy sieht man einen Bereich und ein Stück vom nächsten (in der Skizze 640 Pixel hoch bei 390 Pixel Breite). Das genaue Maß und die Höhe auf Tablet und PC sind nicht festgelegt.
+- **Ebene 1, Runde 5 (25.11.2026):** Daniel wählt C. Ein Knopf öffnet einen Gartenplan, der den ganzen Garten auf einen Bildschirm bringt. Antippen springt zum Bereich. Wie der Plan aussieht und wie er angeordnet ist, ist nicht festgelegt.
+- **Ebene 1, Runde 6 (25.11.2026):** Daniel: „Knopf ‚Zu mir‘ soll nur erscheinen, wenn man wegscrollt. Knopf ‚Weiter‘ soll nur erscheinen, wenn man in der dazugehörigen Etappe ist.“ Annahme: Der Plan-Knopf ist immer da. Nicht festgelegt ist, ab wann man „weg“ ist und was an der Kapelle erscheint.
+- **Ebene 1, Runde 7 (25.11.2026):** Daniel: „Bin nicht sicher, ob man das alles überhaupt braucht, aber am ehesten A.“ A ist ein Blatt von unten mit einer Liste. Annahme: Im Gerüst steht vorerst A. Offen ist, ob man die Ansicht nach dem Antippen überhaupt braucht.
+
+Ebene 2, Aussehen:
+
+- **Ebene 2, Runde 1 (25.11.2026):** Daniel zu den Farben: „Alles vorstellbar, kann es jetzt noch nicht entscheiden.“ Annahme: Gearbeitet wird vorerst mit A (gedämpft und erdig). Die anderen vier bleiben möglich.
+- **Ebene 2, Runde 2 (25.11.2026):** Daniel zu den Kanten: „kann es auch hier jetzt noch nicht entscheiden, aber am ehesten B“. B ist ein feiner Rand im selben Ton. Annahme: Gearbeitet wird vorerst mit B. Die anderen bleiben möglich.
+- **Ebene 2, Runde 3 (25.11.2026):** Daniel wählt B. Unter den Dingen liegt ein einfacher dunkler Fleck am Boden, sonst gibt es keine Schatten.
+- **Ebene 2, Runde 4 (25.11.2026):** Daniel zum Detailgrad: „Schwer einzuschätzen, aber eher B.“ B ist mittel. Annahme: Gearbeitet wird vorerst mit B. Die anderen bleiben möglich.

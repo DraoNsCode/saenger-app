@@ -9,7 +9,7 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
-| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Erster Anlauf (24. und 25.11.2026) ist Archiv. Neuanfang Schritt für Schritt vorbereitet (GARTEN-NEU.md, 25.11.2026). Nächster Schritt: Ebene 0 | A, J |
+| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Erster Anlauf (24. und 25.11.2026) ist Archiv. Neuanfang Schritt für Schritt (GARTEN-NEU.md), Ebene 0 am 25.11.2026 geklärt. Ebene 1 (graues Gerüst) am 25.11.2026 beantwortet, Ebene 2 (Aussehen) beantwortet, Ebene 3 (Einzelteile) läuft | A, J |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
 | E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten) | – |
