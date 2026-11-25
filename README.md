@@ -53,7 +53,7 @@ Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.
 
 Das Design beginnt Schritt für Schritt von vorne, nach den Ebenen und Regeln in [GARTEN-NEU.md](GARTEN-NEU.md) (von Daniel am 25.11.2026 bestätigt). Ebene 0 ist geklärt (25.11.2026), die Ergebnisse stehen in ENTSCHEIDUNGEN.md unter „Garten neu“.
 
-Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) ist beantwortet, zusammengeführt in `geruest/ebene2-gesamt.html`: Die Schatten sind gewählt, Farben, Kanten und Detailgrad sind Annahmen. Nächster Schritt: Ebene 3 (Einzelteile), zuerst welche Teile der Garten haben soll. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
+Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Nächster Schritt: aus den Stilen, die Daniel gefallen, einen baubaren finden. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 

@@ -222,9 +222,13 @@ Ebene 1, graues Gerüst:
 - **Ebene 1, Runde 6 (25.11.2026):** Daniel: „Knopf ‚Zu mir‘ soll nur erscheinen, wenn man wegscrollt. Knopf ‚Weiter‘ soll nur erscheinen, wenn man in der dazugehörigen Etappe ist.“ Annahme: Der Plan-Knopf ist immer da. Nicht festgelegt ist, ab wann man „weg“ ist und was an der Kapelle erscheint.
 - **Ebene 1, Runde 7 (25.11.2026):** Daniel: „Bin nicht sicher, ob man das alles überhaupt braucht, aber am ehesten A.“ A ist ein Blatt von unten mit einer Liste. Annahme: Im Gerüst steht vorerst A. Offen ist, ob man die Ansicht nach dem Antippen überhaupt braucht.
 
-Ebene 2, Aussehen:
+Ebene 2, Aussehen (am 25.11.2026 zurückgestellt, siehe unten):
 
 - **Ebene 2, Runde 1 (25.11.2026):** Daniel zu den Farben: „Alles vorstellbar, kann es jetzt noch nicht entscheiden.“ Annahme: Gearbeitet wird vorerst mit A (gedämpft und erdig). Die anderen vier bleiben möglich.
 - **Ebene 2, Runde 2 (25.11.2026):** Daniel zu den Kanten: „kann es auch hier jetzt noch nicht entscheiden, aber am ehesten B“. B ist ein feiner Rand im selben Ton. Annahme: Gearbeitet wird vorerst mit B. Die anderen bleiben möglich.
 - **Ebene 2, Runde 3 (25.11.2026):** Daniel wählt B. Unter den Dingen liegt ein einfacher dunkler Fleck am Boden, sonst gibt es keine Schatten.
 - **Ebene 2, Runde 4 (25.11.2026):** Daniel zum Detailgrad: „Schwer einzuschätzen, aber eher B.“ B ist mittel. Annahme: Gearbeitet wird vorerst mit B. Die anderen bleiben möglich.
+
+Stil:
+
+- **Zurück vor Ebene 2 (25.11.2026):** Daniel: „Ich bin hierher gekommen, weil ich den alten Stil nicht gut genug fand. Jetzt fährst du weiter damit fort, dich mit kleinsten Entscheidungen auseinanderzusetzen, aber hast noch gar nicht verschiedene Stile vorgestellt.“ Zuerst kommt eine Stilrunde, mit KI-Proben. Die Ergebnisse von Ebene 2 gelten nur für den gezeichneten Stil und sind zurückgestellt. Ebene 0 und 1 bleiben. Die Beete aus Ebene 3 „können auch je nach Gartenetappe alle verwendet werden“.
