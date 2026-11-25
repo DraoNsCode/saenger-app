@@ -1,0 +1,143 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Stilrunde 1</title>
+<style>
+/* Aufbau: oben die Frage und eine Zeile mit der eigenen Sortierung, darunter die Stile als ganze Handybilder in einer Reihe.
+   Am Handy füllt ein Bild die Breite, seitlich wischen wechselt den Stil. Die Seite selbst bleibt grau. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --linie: #6b7075;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 70ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-bottom: 14px; }
+.gruppe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gruppe > span { font-size: 14px; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.auswahl { margin: 0 0 14px; padding: 10px 14px; background: var(--blatt); border: 1px solid #c3c7cb; border-radius: 6px; max-width: 70ch; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; }
+.stil { flex: 0 0 390px; scroll-snap-align: start; }
+.stil h2 { font-size: 18px; margin: 0; }
+.stil p { margin: 2px 0 8px; font-size: 14px; min-height: 3em; }
+.handy { position: relative; width: 100%; aspect-ratio: 390 / 693; overflow: hidden; border-radius: 10px; background: #fff; }
+.handy img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.handy svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ohne-farbe .handy img { filter: grayscale(1); }
+.reihe:not(.mit) .handy svg { display: none; }
+.urteil { display: flex; gap: 6px; margin-top: 8px; }
+.urteil button { flex: 1; }
+details { max-width: 80ch; margin-top: 16px; }
+details p { font-size: 14px; margin: 6px 0; }
+@media (max-width: 480px) {
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .stil { flex-basis: 100%; }
+  .stil h2, .stil p, .urteil { padding-inline: 16px; }
+  .handy { border-radius: 0; }
+}
+</style>
+
+<div class="rand">
+  <h1>Stilrunde 1</h1>
+  <p class="frage">Welcher Stil gefällt dir?</p>
+  <p class="hinweis">Immer dieselbe Szene, nur der Stil ist anders: Wiese, Weg, zwei Beete, Apfelbaum, Büsche, Brunnen, Bogen. A bis E sind KI-Proben, keine fertigen Grafiken. Auf Einzelheiten, Blickwinkel und Anordnung kommt es nicht an. F ist zum Vergleich der bisher gezeichnete Stil.</p>
+  <p class="auswahl" id="auswahl" role="status"></p>
+  <div class="leiste">
+    <div class="gruppe" id="sprung" role="group" aria-label="Zu Stil springen"><span>Stil:</span></div>
+    <button id="mit" aria-pressed="false">Mit Stationen ansehen</button>
+    <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
+  </div>
+</div>
+<div class="reihe rand" id="reihe"></div>
+<div class="rand">
+  <details>
+    <summary>So sind die Bilder entstanden</summary>
+    <p>A bis E: Z-Image-Turbo (Tongyi-MAI, Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo, 25.11.2026, 864 × 1536 Pixel, 8 Schritte, Seed 42. Hier auf den Bildinhalt zugeschnitten, sonst unverändert. Jede Eingabe bestand aus dem Stil und dieser Szene:</p>
+    <p lang="en">The scene fills the whole picture edge to edge, no sky, no horizon, no white border. Steep high-angle bird's-eye view looking down onto a small monastery garden, tall vertical composition. A narrow pale sandy footpath winds in a pronounced S-curve from the bottom edge to the top edge; near the top it passes through a small stone archway in a low wall. Left of the path a rectangular bed with herbs and lavender, right of the path a bed with colorful flowers, one apple tree, a few round shrubs, a small round stone fountain, green meadow everywhere. Calm, friendly, uncluttered, clear shapes, no people, no animals, no text.</p>
+    <div id="eingaben"></div>
+    <p>F: aus geruest/ebene2-gesamt.html, selbst gezeichnet.</p>
+  </details>
+</div>
+
+<script>
+(() => {
+  // bild: Datei; mass, x, y: Zuschnitt; weg: ungefähre Stellen auf dem Weg in Bildpunkten (864 x 1536) für neutrale Stationen
+  const STILE = [
+    { k: 'A', name: 'Aquarell und Tusche', text: 'Durchscheinende Farben auf Papier, feine dunkle Linien.', bild: 'aquarell.webp', mass: 1.14, x: 50, y: 50,
+      weg: [[415, 1330], [432, 1130], [388, 930], [400, 730], [432, 560]],
+      en: "Loose watercolor and ink illustration on textured paper, soft wet-in-wet washes in many greens, fine dark ink lines, visible paper grain." },
+    { k: 'B', name: 'Gemaltes Bilderbuch', text: 'Deckende Farbe mit sichtbaren Pinselstrichen, weiche einfache Formen, keine Umrisse.', bild: 'gouache.webp', mass: 1.08, x: 50, y: 100,
+      weg: [[440, 1400], [425, 1170], [370, 960], [400, 740], [442, 560]],
+      en: 'Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified painterly shapes, no outlines, cozy picture-book mood.' },
+    { k: 'C', name: 'Miniatur aus Knete und Filz', text: 'Wie ein kleines gebautes Modell, mit echten Schatten und Stoffen.', bild: 'miniatur.webp', mass: 1.24, x: 50, y: 56,
+      weg: [[430, 1270], [432, 1060], [430, 870], [420, 700], [440, 560]],
+      en: '3D rendered miniature diorama, handmade clay and felt model world, tilt-shift photography, soft studio light, rounded toy-like shapes, real soft shadows, tactile materials.' },
+    { k: 'D', name: 'Altes Kräuterbuch', text: 'Wie ein kolorierter Kupferstich: feine Schraffuren, zurückhaltende Farben, genaue Pflanzen.', bild: 'kraeuterbuch.webp', mass: 1.29, x: 50, y: 48,
+      weg: [[480, 1280], [415, 1060], [365, 880], [395, 720], [442, 600]],
+      en: 'Antique hand-colored botanical engraving from an old herbal book, fine copperplate hatching lines, muted transparent tints on aged cream parchment, precise plant details.' },
+    { k: 'E', name: 'Kirchenfenster', text: 'Leuchtende Glasflächen mit dunklen Bleilinien.', bild: 'kirchenfenster.webp', mass: 1.17, x: 50, y: 50,
+      weg: [[440, 1390], [460, 1180], [385, 980], [365, 800], [445, 640]],
+      en: 'Stained glass window design, glowing jewel-toned glass pieces separated by dark lead lines, light shining through, subtle glass texture. (Weg: pale golden footpath)' },
+    { k: 'F', name: 'Bisher gezeichnet', text: 'Zum Vergleich: der Stil aus Ebene 2, von Claude gezeichnet.', bild: 'gezeichnet.jpg', mass: 1, x: 50, y: 50, weg: [] },
+  ];
+  const URTEILE = [['ja', 'gefällt'], ['vielleicht', 'vielleicht'], ['nein', 'nein']];
+  let urteil = {};
+  try { urteil = JSON.parse(localStorage.getItem('stilrunde1') || '{}'); } catch { urteil = {}; }
+
+  // neutrale Stationen wie in Ebene 1, in derselben Vergrößerung wie das Bild
+  function stationen(s) {
+    const t = s.mass, ox = (s.x / 100) * 864, oy = (s.y / 100) * 1536;
+    const ort = ([x, y]) => [ox + (x - ox) * t, oy + (y - oy) * t];
+    const q = 44; // Radius in Bildpunkten, entspricht 20 Pixeln am Handy
+    return `<svg viewBox="0 0 864 1536" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${s.weg.map((p, i) => {
+      const [x, y] = ort(p);
+      if (i < 2) return `<circle cx="${x}" cy="${y}" r="${q}" fill="#33373b" stroke="#fbfbfb" stroke-width="5"/><path d="M${x - 18} ${y} l14 14 l24 -27" fill="none" stroke="#fbfbfb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`;
+      if (i === 2) return `<circle cx="${x}" cy="${y}" r="${q + 12}" fill="#fbfbfb" stroke="#33373b" stroke-width="9"/><circle cx="${x}" cy="${y}" r="${q - 6}" fill="#fbfbfb" stroke="#33373b" stroke-width="6"/>`;
+      return `<circle cx="${x}" cy="${y}" r="${q}" fill="#fbfbfb" stroke="#6b7075" stroke-width="6" stroke-dasharray="10 11"/>`;
+    }).join('')}</svg>`;
+  }
+
+  const reihe = document.getElementById('reihe');
+  STILE.forEach((s) => {
+    reihe.insertAdjacentHTML('beforeend', `<section class="stil" id="s-${s.k}"><h2>${s.k}: ${s.name}</h2><p>${s.text}</p><div class="handy"><img src="stil/${s.bild}" alt="Gartenszene im Stil ${s.name}" style="transform:scale(${s.mass});transform-origin:${s.x}% ${s.y}%">${stationen(s)}</div><div class="urteil" role="group" aria-label="Urteil zu ${s.k}">${URTEILE.map(([w, n]) => `<button id="u-${s.k}-${w}" data-k="${s.k}" data-w="${w}">${n}</button>`).join('')}</div></section>`);
+    const b = document.createElement('button');
+    b.id = 'sprung-' + s.k; b.textContent = s.k; b.title = s.name;
+    b.onclick = () => {
+      const ziel = document.getElementById('s-' + s.k);
+      reihe.scrollTo({ left: ziel.offsetLeft - reihe.offsetLeft - (innerWidth > 480 ? 16 : 0), behavior: 'smooth' });
+    };
+    document.getElementById('sprung').append(b);
+    if (s.en) document.getElementById('eingaben').insertAdjacentHTML('beforeend', `<p><b>${s.k}</b> <span lang="en">${s.en}</span></p>`);
+  });
+
+  function zeige() {
+    document.querySelectorAll('.urteil button').forEach((b) => b.setAttribute('aria-pressed', String(urteil[b.dataset.k] === b.dataset.w)));
+    const teile = URTEILE.map(([w, n]) => [n, STILE.filter((s) => urteil[s.k] === w).map((s) => s.k)]).filter(([, l]) => l.length).map(([n, l]) => `${n}: ${l.join(', ')}`);
+    document.getElementById('auswahl').textContent = teile.length ? `Deine Sortierung zum Abschreiben: ${teile.join(' · ')}` : 'Unter jedem Bild kannst du sortieren. Hier steht dann deine Auswahl zum Abschreiben. Du kannst auch einfach die Buchstaben nennen.';
+  }
+  document.querySelectorAll('.urteil button').forEach((b) => {
+    b.onclick = () => {
+      if (urteil[b.dataset.k] === b.dataset.w) delete urteil[b.dataset.k]; else urteil[b.dataset.k] = b.dataset.w;
+      try { localStorage.setItem('stilrunde1', JSON.stringify(urteil)); } catch { /* nur eine Merkhilfe */ }
+      zeige();
+    };
+  });
+  const schalter = (id, klasse) => {
+    const b = document.getElementById(id);
+    b.onclick = () => b.setAttribute('aria-pressed', String(reihe.classList.toggle(klasse)));
+  };
+  schalter('mit', 'mit');
+  schalter('ohne-farbe', 'ohne-farbe');
+  zeige();
+})();
+</script>
