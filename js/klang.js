@@ -6,6 +6,36 @@ let ausgang = null;
 let lautstaerke = 0.8;
 const laufend = new Set();
 
+// Handys geben Klang nur frei, wenn er in einer Berührung startet. Ein Ton aus einem Zeitgeber oder nach einem
+// Seitenwechsel bleibt sonst stumm. klangFreischalten() hängt sich deshalb an jede Berührung und Taste:
+// - der Klang läuft als Wiedergabe, auch wenn das iPhone auf lautlos steht (Audio Session, ab iOS 17),
+// - ein angehaltener Klang wird fortgesetzt,
+// - beim ersten Mal spielt ein unhörbar kurzer, stiller Ton (das schaltet den Klang unter iOS frei).
+let freigeschaltet = false;
+function freischalten() {
+  try {
+    if (navigator.audioSession && navigator.audioSession.type !== 'playback') navigator.audioSession.type = 'playback';
+  } catch (e) {
+    /* ältere Browser */
+  }
+  const c = audio();
+  if (c.state !== 'running') c.resume().catch(() => {});
+  if (!freigeschaltet) {
+    const stille = c.createBufferSource();
+    stille.buffer = c.createBuffer(1, 1, 22050);
+    stille.connect(c.destination);
+    stille.start(0);
+    freigeschaltet = true;
+  }
+}
+
+export function klangFreischalten() {
+  for (const art of ['pointerdown', 'touchend', 'click', 'keydown']) document.addEventListener(art, freischalten, { capture: true, passive: true });
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && ctx && ctx.state !== 'running') ctx.resume().catch(() => {});
+  });
+}
+
 export function audio() {
   if (!ctx) {
     const AC = window.AudioContext || window.webkitAudioContext;
@@ -18,7 +48,8 @@ export function audio() {
     ausgang.connect(komp);
     komp.connect(ctx.destination);
   }
-  if (ctx.state === 'suspended') ctx.resume();
+  // „interrupted“ gibt es unter iOS nach Anrufen oder App-Wechsel
+  if (ctx.state !== 'running' && ctx.state !== 'closed') ctx.resume().catch(() => {});
   return ctx;
 }
 

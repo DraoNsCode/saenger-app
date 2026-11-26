@@ -2,7 +2,7 @@
 import { zustand, stationOffen } from './speicher.js';
 import { station, thema, mischungsPaare } from './lernweg.js';
 import { UEBUNGEN } from './uebungen/index.js';
-import { setzeLautstaerke, stopAlles } from './klang.js';
+import { setzeLautstaerke, stopAlles, klangFreischalten } from './klang.js';
 import { icon } from './ui.js';
 import { starteRunde } from './runde.js';
 import { zeigeWeg } from './views/weg.js';
@@ -17,6 +17,7 @@ let aufraeumen = null;
 document.querySelectorAll('.reiter a').forEach((a) => a.prepend(icon(a.dataset.reiter, 26)));
 
 setzeLautstaerke(zustand().einstellungen.lautstaerke);
+klangFreischalten();
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
 function reiterMarkieren(name) {
