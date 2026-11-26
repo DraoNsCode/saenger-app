@@ -17,7 +17,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | --- | --- | --- | --- |
 | 1 | Das Notenbild | Linien und Zwischenräume, höher und tiefer, Schritt und Sprung, die vier Stimmen im Chorsatz | spielbar |
 | 2 | Schlag und Takt | Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt | spielbar |
-| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | |
+| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | Vorschlag für Stationen (26.11.2026) |
 | 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | |
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |
@@ -69,6 +69,39 @@ Begründungen in Kürze:
 **Wann sich Stationen öffnen** (Vorschlag, so umgesetzt): Die nötigen Stationen öffnen sich nacheinander. Die freiwilligen Stationen einer Übung öffnen sich, sobald ihre nötige Station geschafft ist. Ein Spätblüher öffnet sich zusätzlich erst, wenn die Etappe erreicht ist, die er voraussetzt.
 
 Im Code tragen die Stufen weiterhin die Namen Leicht, Mittel und Schwer. Sie sind nur eine grobe Einordnung, etwa für den Reiter „Themen“ und die Abzeichen. Nicht jede Übung hat alle drei. Die Aufgaben entstehen jedes Mal neu.
+
+## Stationen der Etappe 3 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026, noch nicht entschieden. Festgelegt sind nur Daniels Antworten in ENTSCHEIDUNGEN.md, „Etappe 3“: Der Buchstabe reicht, Tonraum und Klavier hat Daniel Claude überlassen.
+
+**Tonraum je Stimme** (Claudes Wahl, Daniel korrigiert, falls nötig): Die nötigen Stationen bleiben im Bereich, den die eigene Stimme in einem Laienchor meist singt, mit den Hilfslinien, die dort vorkommen. Darüber hinaus wird es freiwillig.
+
+| Stimme | Schlüssel | Bereich der nötigen Stationen | Hilfslinien darin |
+| --- | --- | --- | --- |
+| Sopran | Violinschlüssel | c′ bis g″ | eine unten |
+| Alt | Violinschlüssel | a bis d″ | zwei unten |
+| Tenor | Bassschlüssel | c bis f′ | zwei oben |
+| Bass | Bassschlüssel | F bis c′ | eine oben |
+
+**Etappe 3: Notennamen**
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Wie heißt die Note? | eine Note im Bereich der eigenen Stimme, den Buchstaben wählen | ganzes System und bis zu drei Hilfslinien · Notenwörter: drei bis fünf Noten ergeben ein Wort, das Wort wählen |
+| Finde die Note | ein Buchstabe, das passende von drei Notenbildern wählen, im Bereich der eigenen Stimme | vier Notenbilder mit Nachbartönen und Hilfslinien |
+| Weiterzählen | eine Note ist benannt, die nächste liegt einen Schritt darüber oder darunter: Wie heißt sie? Auch über h und c hinweg | kleine und große Sprünge, bis zur Quinte |
+| Taste am Klavier | ein Buchstabe, die passende weiße Taste auf einer Klaviatur antippen, sie klingt | eine Note im Notenbild, die passende Taste antippen |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Zwei Richtungen, weil beide beim Singen vorkommen: Man sieht eine Note und will wissen, wie sie heißt. Und man hört „wir fangen beim g an“ und sucht es in den Noten.
+- „Weiterzählen“ übt die Art, wie Ungeübte Noten wirklich lesen: von einer Note, die man kennt, Buchstabe für Buchstabe weiter. Es verbindet die Notennamen mit Schritt und Sprung aus Etappe 1.
+- Die Notenwörter (etwa Affe, Dach, Chef, Gehege) sind ein spielerischer Zusatz. Sie verlangen mehrere Noten nacheinander und gehören deshalb zu den freiwilligen Stationen.
+- Das Klavier (Claudes Wahl, Daniel korrigiert, falls nötig): nur die weißen Tasten, als eine eigene, eher leichte Übung. Die Klaviatur auf dem Bildschirm ersetzt ein eigenes Klavier und lässt den Ton hören. Sie zeigt außerdem, dass sich die sieben Namen wiederholen. Die schwarzen Tasten gehören zu Etappe 10 (Vorzeichen), nicht als Spätblüher in Etappe 3. Die Klaviatur wird in Etappe 5 (Ganz- und Halbton) wieder gebraucht.
+- Keine Spätblüher in Etappe 3.
+- Erklärungen, die in die Übungen gehören: die Reihe c d e f g a h und dann wieder c; Merknoten (der Violinschlüssel legt sich um das g auf der zweiten Linie, die zwei Punkte des Bassschlüssels umschließen das f auf der vierten Linie); auf der Klaviatur liegt das c links neben den zwei schwarzen Tasten.
+- Neu zu bauen ist nur die Klaviatur. Die übrigen Übungen folgen den Mustern aus Etappe 1.
 
 ## Runden
 

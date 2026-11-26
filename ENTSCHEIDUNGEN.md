@@ -252,6 +252,17 @@ Stil:
 - **Garten (26.11.2026):** Daniel zu „ein Bild je Bereich“ nach dem Ansehen: „Richtung passt vorerst.“
 - **Bildlauf Bereich 1 und 2 (26.11.2026):** Daniel zu `geruest/garten-lauf.html`: „Optik passt grundsätzlich.“ Aber: „Bereich 1 & 2 sind zu ähnlich. Sie unterscheiden sich gar nicht im Ambiente und den Farben und zu wenig in den Details. Wenn du soweit bist, alle Etappen auszuarbeiten, überlege zuerst wie jede Etappe aussehen soll.“ Wann Bereich 1 und 2 deutlicher unterschieden werden, ist nicht festgelegt.
 
+## Etappe 3: Notennamen (26.11.2026)
+
+- **Welches c:** Daniel: „Buchstabe reicht.“ Die Sänger lernen die Buchstaben c d e f g a h, ohne zu unterscheiden, in welcher Oktave eine Note liegt.
+
+Von Daniel Claude überlassen („Entscheide selbst“). So hat Claude gewählt, Daniel korrigiert, falls nötig:
+
+- **Tonraum:** Die nötigen Stationen bleiben im Bereich, den die eigene Stimme in einem Laienchor meist singt (Sopran c′ bis g″, Alt a bis d″, Tenor c bis f′ im Bassschlüssel, Bass F bis c′), mit den Hilfslinien, die dort vorkommen. Das ganze System und weitere Hilfslinien sind freiwillig. Begründung: Gebraucht wird zuerst das Lesen der eigenen Stimme.
+- **Klavier:** Nur die weißen Tasten, als eine eigene, eher leichte Übung. Die schwarzen Tasten kommen mit den Vorzeichen in Etappe 10. Begründung: Die Klaviatur auf dem Bildschirm braucht kein eigenes Klavier, lässt den Ton hören und zeigt, dass sich die sieben Namen wiederholen.
+
+Die Übungen und Stationen der Etappe 3 stehen als Vorschlag in [LERNWEG.md](LERNWEG.md).
+
 ## Plan und Aufräumen (26.11.2026, abends)
 
 Daniels Antworten auf die Bewertung des Stands:
