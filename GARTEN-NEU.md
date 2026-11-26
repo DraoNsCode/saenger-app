@@ -2,6 +2,37 @@
 
 Stand 25.11.2026. Vorschlag von Claude. Daniel hat diese Übergabe für eine neue Sitzung vorbereiten lassen. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den Ebenen und Regeln hat Daniel am 25.11.2026 zugestimmt (Satz 28). Ebene 0 ist geklärt, Ebene 1 ist beantwortet, Ebene 2 ist zurückgestellt (Skizzen in `geruest/`, Ergebnisse in ENTSCHEIDUNGEN.md): Daniel wollte zuerst deutlich verschiedene Stile sehen. Vorschlag für die Reihenfolge ab hier: Stil wählen, prüfen, ob er sich bauen lässt, dann die Teile als Baukasten statt Entweder-oder, danach Ebene 4 bis 8. Das Gerüst aus Ebene 1 gilt in seinen Prinzipien, ausgeführt wird es je Stil passend (ENTSCHEIDUNGEN.md, „Fest und frei“).
 
+## Stand 26.11.2026: Stil B und Bausteine (zuerst lesen)
+
+Ab hier gilt dieser Abschnitt. Die Ebenen-Tabelle weiter unten ist Geschichte: Ebene 0 und 1 gelten als Prinzipien, Ebene 2 und die Beete aus Ebene 3 sind zurückgestellt (ENTSCHEIDUNGEN.md, „Garten neu“).
+
+**Entschieden:** Stil B, das gemalte Bilderbuch (`geruest/stilrunde2.html`, Bild `geruest/stil2/b-geruest.webp`). Jeder Stil bekommt ein passendes Gerüst, fest bleiben nur die Prinzipien („Fest und frei“). Ist das KI-Kontingent leer, wird gewartet statt mit Notbehelfen weitergearbeitet. Daniel hat den Plan unten bestätigt („Passt so“).
+
+**Plan (Vorschlag von Claude, bestätigt): Der Code setzt zusammen, die KI liefert nur Bausteine.**
+
+1. **Bausteine-Probe** (ein Tag Kontingent). Vier Bögen im Stil B, je ein 3×3-Raster auf glattem hellgrauem Hintergrund: Kräuter und Gemüse, Blumen, Bäume und Büsche (je drei Wachstumsstufen), Bauten (Mauer mit Bogen, Trittsteine, Brunnen leer und voll, Bank). Eine Werkstatt-Seite im Browser stellt die Teile frei (Hintergrundfarbe, weiche Kante) und schickt sie an ein kleines Python-Skript nur mit Standardbibliothek, das sie als WebP in `garten/teile/` ablegt, dazu `teile.json` mit Ankerpunkt, Maßstab, Eingabe, Seed und Lizenz. Ein Zeichner setzt einen Bereich aus Daten zusammen (`garten/bereiche/<thema>.json`: Wegkurve, Beete, welches Teil bei welcher Station erscheint). Boden und Weg füllt er nahtlos aus KI-Texturen, wie in `geruest/stilprobe-geruest.html`. Ergebnis für Daniel: Bereich 2 (sieben Stationen) in drei Zuständen, in Handygröße, neben `b-geruest.webp` zum Vergleich. Unsicher: ob einzeln erzeugte Teile in Blickwinkel, Licht und Maßstab zusammenpassen. Rückfallebene: ein KI-Bild je Bereich als Bühne.
+2. **Baukasten je Etappe:** Claude schlägt je Etappe Teile vor (Satz 4: passend zum Thema, sofern möglich), Daniel sagt nur, was nicht passt. Danach zwei bis drei Tage Kontingent für die übrigen Bögen.
+3. **Kapelle und Übergänge** zwischen den Bereichen.
+4. **Einbau in die App** (Ebene 6 und folgende): Der Garten ersetzt die Notenzeile in `js/views/weg.js`. Jeder Zustand wird einmal zu einem Bild zusammengesetzt, Stationen, Namen und Knöpfe sind HTML darüber. Tests, Klicktest, dann Test auf Daniels Handy (dafür muss gepusht werden).
+5. **Stilregeln** in den Skill `garten-grafik`.
+
+**KI-Bilder:**
+- Werkzeug: Hugging-Face-Connector, Space `mcp-tools/Z-Image-Turbo`, Modell Z-Image-Turbo (Lizenz Apache 2.0), Seed 42, 8 Schritte. Eingabe und Einstellungen jedes Bildes auf der Seite festhalten, auf der es gezeigt wird.
+- Blickwinkel, der funktioniert: „High-angle three-quarter view from above at about 45 degrees, looking down …; the ground fills the whole picture edge to edge, no sky, no horizon.“ „like a map“ wird zu flach von oben, „vignettes“ und „plates“ führen zu Augenhöhe mit Himmel.
+- Bildbearbeitung über Spaces braucht das Bild als Base64 im Aufruf, für große Bilder nicht praktikabel. Lizenzen geprüft: Qwen-Image-Edit Apache 2.0, BiRefNet (Hintergrund entfernen, nimmt URLs) MIT. FLUX.1-Kontext-dev hat eine nicht freie Lizenz, nicht nutzen.
+- Kontingent: kostenloses Konto 5 Minuten am Tag, etwa acht Bilder. Es wird 24 Stunden nach der ersten Nutzung im Fenster zurückgesetzt, laut Doku nicht nach und nach. Erste Nutzung am 26.11. um 10:50 Uhr. Ein Versuch mit leerem Kontingent kostet nichts. Hugging Face PRO kostet 9 $ im Monat und bringt das Achtfache an Kontingent. Daniel überlegt, ob er es abschließt.
+- Auf Daniels PC (GTX 1050, 2 GB) ist lokale KI nicht praktikabel.
+
+**Seiten dieses Anlaufs:** `geruest/stilrunde1.html` (fünf Stile, sortiert), `geruest/stilprobe-geruest.html` (A, B, D aus Ausschnitten im Gerüst), `geruest/stilrunde2.html` (Gerüst je Stil, B mit „frisch angelegt“). Die Seiten zu Ebene 1 und 2 sind Geschichte.
+
+**Mit Daniel arbeiten:** Vorschläge nie als Entscheidung formulieren, Sätze vor dem Eintragen zeigen. Varianten deutlich verschieden, in echter Größe und im Zusammenhang zeigen. Sagt Daniel mehrmals „kann ich nicht entscheiden“, den Ansatz prüfen statt mit Annahmen weiterzumachen. Nach abgeschlossenen Runden committen (als Claude, noreply@anthropic.com), pushen nur auf Daniels Wort.
+
+**Zuerst rauszoomen:** Daniel möchte den großen Plan im Blick behalten. Vor Schritt 1 FAHRPLAN.md mit ihm durchgehen. Wartezeit auf das Kontingent lässt sich für andere Bausteine nutzen, etwa die Teile von J ohne Gartenbild, E (Konten) oder C (Inhalte der Etappen).
+
+**Erste Nachricht für die nächste Sitzung:**
+
+> Wir arbeiten an der Sänger-App (Repo DraoNsCode/saenger-app, Branch baustein-b/probe-ansichten). Lies CLAUDE.md, README.md (Stand), ENTSCHEIDUNGEN.md (Abschnitt „Garten neu“) und in GARTEN-NEU.md den Abschnitt „Stand 26.11.2026“, die Archivdateien nicht. Zuerst zoomen wir raus: Geh mit mir FAHRPLAN.md durch und schlag vor, wie es mit der ganzen App weitergeht. Danach Baustein B, Schritt 1 (Bausteine-Probe), sobald das KI-Kontingent da ist.
+
 ## Worum es geht
 
 Das Design des Gartens soll von vorne beginnen, Schritt für Schritt. Claude zeigt Varianten, Daniel wählt, dann geht es eine Ebene höher. Die Idee stammt von Daniel, die Ebenen und Regeln unten stammen von Claude, Daniel hat sie bestätigt (Satz 28). Beim ersten Anlauf steckten in jedem Bild viele Entscheidungen auf einmal. Daniel konnte nur auf das Ganze reagieren, und manches von Claude galt still als gesetzt.
@@ -104,6 +135,6 @@ Nicht übernehmen, ohne zu fragen: Figur mit Strohhut, Laterne, goldener Ring un
 
 `probe/worte.html`: der gezeichnete Entwurf in Worten. Optisch gefällt er Daniel viel besser als die Probe. Ob das an Farben, weichen Kanten, mehr Ruhe oder den Terrassen liegt, ist nicht geklärt. Ebene 2 trennt das. Als Aufbau ist er nicht gewählt.
 
-## Erste Nachricht für die neue Sitzung (verwendet, Ebene 0 ist geklärt)
+## Erste Nachricht vom 25.11.2026 (verwendet, siehe oben für die nächste)
 
 > Wir arbeiten an der Sänger-App (Repo DraoNsCode/saenger-app, Branch baustein-b/probe-ansichten). Das Design von Baustein B beginnt von vorne. Lies CLAUDE.md, ENTSCHEIDUNGEN.md und GARTEN-NEU.md, die Archivdateien nicht. Arbeite nach dem Prozess in GARTEN-NEU.md. Beginne mit Ebene 0: Zeig mir die Sätze, ich sage, was nicht stimmt oder offen ist. Zeichne noch nichts.
