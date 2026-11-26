@@ -1,0 +1,125 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Stilrunde 2</title>
+<style>
+/* Aufbau: oben die Frage, darunter je Stil ein hohes Bild mit zwei Bereichen, in Handybreite zum Scrollen.
+   Am Handy füllt ein Bild die Breite, seitlich wischen wechselt den Stil. Die Seite selbst bleibt grau. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --linie: #6b7075;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 70ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin-bottom: 14px; }
+.gruppe { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gruppe > span { font-size: 14px; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible, input:focus-visible, .rahmen:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; align-items: flex-start; }
+.stil { flex: 0 0 408px; scroll-snap-align: start; }
+.stil h2 { font-size: 18px; margin: 0; }
+.stil p { margin: 2px 0 8px; font-size: 14px; }
+.stil .warnung { background: #fff4d6; border: 1px solid #b38a1e; border-radius: 6px; padding: 6px 10px; }
+.rahmen { height: min(780px, 82svh); overflow-y: auto; overscroll-behavior: contain; border-radius: 10px; background: #fff; scrollbar-width: thin; }
+.rahmen img { display: block; width: 390px; }
+.ohne-farbe .rahmen img { filter: grayscale(1) !important; }
+.schalter { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 8px; font-size: 14px; }
+.schalter input { width: 180px; min-height: 44px; }
+details { max-width: 80ch; margin-top: 16px; }
+details p { font-size: 14px; margin: 6px 0; }
+@media (max-width: 480px) {
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .stil { flex-basis: 100%; }
+  .stil h2, .stil p, .schalter { padding-inline: 16px; }
+  .stil .warnung { margin-inline: 16px; }
+  .rahmen { border-radius: 0; height: 80svh; }
+  .rahmen img { width: 100%; }
+}
+</style>
+
+<div class="rand">
+  <h1>Stilrunde 2</h1>
+  <p class="frage">Welches Gerüst passt zu welchem Stil?</p>
+  <p class="hinweis">Je Stil ein eigenes Gerüst mit zwei Bereichen übereinander, zum Scrollen in Handybreite. Es sind KI-Proben, keine fertigen Grafiken. Fest bleibt: lang, von unten nach oben, schräg von oben, Stationen auf dem Weg. Frei war diesmal, wie Bereiche aneinandergrenzen, wie Stationen aussehen und woran man Fortschritt sieht.</p>
+  <div class="leiste">
+    <div class="gruppe" id="sprung" role="group" aria-label="Zu Stil springen"><span>Stil:</span></div>
+    <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
+  </div>
+</div>
+<div class="reihe rand" id="reihe">
+  <section class="stil" id="s-A">
+    <h2>A: Aquarell und Tusche</h2>
+    <p>Jeder Bereich ist ein gemalter Fleck auf weißem Papier, der Weg verbindet sie. Fortschritt könnte die Farbe selbst zeigen: unbearbeitet nur Tusche, mit jeder Station mehr Farbe.</p>
+    <div class="schalter"><label for="farbe-a">Fortschritt</label><input id="farbe-a" type="range" min="0" max="100" value="100"><span id="farbe-a-wert">100 %</span></div>
+    <div class="rahmen" tabindex="0" role="region" aria-label="Stil A zum Scrollen"><img id="bild-a" src="stil2/a-geruest.webp" alt="Zwei gemalte Gartenbereiche auf weißem Papier, verbunden durch einen Weg"></div>
+    <p>Der Regler nimmt die Farbe aus demselben Bild heraus, ohne neues KI-Bild. Ein eigenes KI-Bild „nur Tusche“ wurde heute ein flacher Grundriss und passte nicht.</p>
+  </section>
+  <section class="stil" id="s-B">
+    <h2>B: Gemaltes Bilderbuch</h2>
+    <p>Der Weg führt durch Hügel und Terrassen, eine Mauer mit Bogen trennt die Bereiche, flache Steine im Weg sind die Stationen.</p>
+    <div class="schalter" role="group" aria-label="Zustand B"><button id="b-voll" aria-pressed="true">bewachsen</button><button id="b-frisch" aria-pressed="false">frisch angelegt</button></div>
+    <div class="rahmen" tabindex="0" role="region" aria-label="Stil B zum Scrollen"><img id="bild-b" src="stil2/b-geruest.webp" alt="Gemalter Garten auf Hügeln mit Weg, Mauer und Bogen"></div>
+    <p>„Frisch angelegt“ ist ein eigenes KI-Bild und zeigt einen anderen Garten. Damit es derselbe Ort bleibt, bräuchte man später eine Bildbearbeitung statt eines neuen Bildes.</p>
+  </section>
+  <section class="stil" id="s-D">
+    <h2>D: Altes Kräuterbuch</h2>
+    <p class="warnung">Noch nicht gelungen: In beiden Versuchen ist der Blick zu flach, es gibt Himmel, der Weg reißt zwischen den Tafeln ab, und unten steht Scheinschrift. Erkennbar ist nur die Idee.</p>
+    <p>Idee: Jeder Bereich ist eine Tafel in einem alten Buch, mit leerem Schriftband für den Namen. Unbearbeitet wäre der Stich schwarz-weiß, bearbeitet koloriert.</p>
+    <div class="schalter" role="group" aria-label="Versuch D"><button id="d-1" aria-pressed="true">Versuch 1</button><button id="d-2" aria-pressed="false">Versuch 2</button></div>
+    <div class="rahmen" tabindex="0" role="region" aria-label="Stil D zum Scrollen"><img id="bild-d" src="stil2/d-versuch1.webp" alt="Zwei gestochene Gartentafeln mit leerem Schriftband übereinander"></div>
+  </section>
+</div>
+<div class="rand">
+  <details>
+    <summary>So sind die Bilder entstanden</summary>
+    <p>Z-Image-Turbo (Tongyi-MAI, Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo, 26.11.2026, 864 × 2016 Pixel, 8 Schritte, Seed 42, unverändert. Der Regler bei A rechnet die Farbe im Browser heraus. Eingaben:</p>
+    <p lang="en"><b>A:</b> High-angle three-quarter view from above at about 45 degrees, looking down onto the ground, no sky, no horizon. Loose watercolor and ink illustration on a tall sheet of white watercolor paper, soft washes, fine dark ink lines. Two painted garden areas lie one above the other on the sheet; around and between them the bare white paper shows, and each area fades softly into the white paper at its edges. One continuous narrow sandy footpath winds in S-curves from the bottom edge up through the lower area, across the white gap, and on through the upper area to the top edge. Lower area: herb beds with lavender and a small round fountain beside the path. Upper area: flower beds and an apple tree beside the path. Tall vertical composition, calm, uncluttered, no people, no animals, no text.</p>
+    <p lang="en"><b>B, bewachsen:</b> High-angle three-quarter view from above at about 45 degrees, looking down onto a monastery garden on gentle green hills; the ground fills the whole picture edge to edge, no sky, no horizon. Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. One continuous sandy footpath winds in wide S-curves from the bottom edge to the top edge. Halfway up, a low stone wall with a small archway crosses the picture and divides the garden into a lower and an upper terrace; the path passes through the archway. Round flat stepping stones lie in the path at even distances. Lower terrace: herb beds with lavender and a round stone fountain beside the path. Upper terrace: flower beds and an apple tree beside the path. Garden elements are spread over the whole height of the picture. Tall vertical composition, calm, uncluttered, no people, no animals, no text.</p>
+    <p lang="en"><b>B, frisch angelegt:</b> wie B, dazu: The garden has just been laid out and is not yet planted. Lower terrace: empty beds with bare brown soil and a few tiny seedlings, a dry round stone fountain without water beside the path. Upper terrace: empty beds with bare soil and one thin young sapling tied to a stake beside the path. Plain short grass, no flowers, no shrubs.</p>
+    <p lang="en"><b>D, Versuch 1:</b> Antique hand-colored copperplate engraving from an old herbal book, fine hatching, muted transparent tints on aged cream parchment. A tall parchment page showing two garden plates stacked one above the other, each plate a framed rectangular picture with a blank ribbon cartouche above it. Inside the plates a monastery garden is seen from a high three-quarter angle at about 45 degrees, looking down, no sky, no horizon. One winding footpath runs from the bottom edge of the page up through the lower plate, through the gap between the plates, and on through the upper plate to the top edge. Lower plate: herb beds with precisely drawn lavender and sage and a stone well beside the path. Upper plate: flower beds and an apple tree beside the path. Tall vertical composition, no people, no animals, no text, no lettering, empty cartouches.</p>
+    <p lang="en"><b>D, Versuch 2:</b> wie Versuch 1, aber: Each plate shows the ground of a monastery garden from high above at about 45 degrees, looking down; the ground fills each plate completely, no sky, no horizon, no wall at the back. The path crosses the parchment between the plates as a fine engraved line.</p>
+  </details>
+</div>
+
+<script>
+(() => {
+  ['A', 'B', 'D'].forEach((k) => {
+    const b = document.createElement('button');
+    b.id = 'sprung-' + k; b.textContent = k;
+    b.onclick = () => {
+      const reihe = document.getElementById('reihe'), ziel = document.getElementById('s-' + k);
+      reihe.scrollTo({ left: ziel.offsetLeft - reihe.offsetLeft - (innerWidth > 480 ? 16 : 0), behavior: 'smooth' });
+    };
+    document.getElementById('sprung').append(b);
+  });
+  // A: Farbe als Fortschritt. Bei 0 bleibt nur die Tusche, die Lavierung wird fast weiß.
+  const regler = document.getElementById('farbe-a'), bildA = document.getElementById('bild-a');
+  const setze = () => {
+    const f = regler.value / 100;
+    bildA.style.filter = `grayscale(${1 - f}) contrast(${1 + (1 - f) * 0.3}) brightness(${1 + (1 - f) * 0.12})`;
+    document.getElementById('farbe-a-wert').textContent = `${regler.value} %`;
+  };
+  regler.addEventListener('input', setze);
+  setze();
+  const umschalter = (ids, bild, dateien) => ids.forEach((id, i) => {
+    document.getElementById(id).onclick = () => {
+      bild.src = 'stil2/' + dateien[i];
+      ids.forEach((j) => document.getElementById(j).setAttribute('aria-pressed', String(j === id)));
+    };
+  });
+  umschalter(['b-voll', 'b-frisch'], document.getElementById('bild-b'), ['b-geruest.webp', 'b-frisch.webp']);
+  umschalter(['d-1', 'd-2'], document.getElementById('bild-d'), ['d-versuch1.webp', 'd-versuch2.webp']);
+  const ohne = document.getElementById('ohne-farbe');
+  ohne.onclick = () => ohne.setAttribute('aria-pressed', String(document.getElementById('reihe').classList.toggle('ohne-farbe')));
+})();
+</script>
