@@ -246,3 +246,5 @@ Stil:
 ## Reihenfolge der Bausteine (26.11.2026)
 
 - Für die Zeit, in der das KI-Kontingent für den Garten aufgebraucht ist, wählt Daniel „J, dann E“: zuerst die Teile von Baustein J, die kein Gartenbild brauchen, danach Baustein E (Konten). Der Garten (B) bleibt der Hauptstrang. C vorzuziehen hat Daniel nicht gewählt. Welche Teile von J dazugehören und wie E aussieht, bleibt Vorschlag (GEZIELT-UEBEN.md, FAHRPLAN.md).
+- **Plan bis zum Schluss (26.11.2026):** Daniel zu Claudes Plan in FAHRPLAN.md (Testversion mit Etappen 1 und 2, Testphase, Pakete je Etappe aus Inhalt und Gartenbereich, Abschluss): „Plan passt.“
+- **Garten (26.11.2026):** Daniel zu „ein Bild je Bereich“ nach dem Ansehen: „Richtung passt vorerst.“

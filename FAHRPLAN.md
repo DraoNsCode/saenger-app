@@ -1,6 +1,6 @@
 # Fahrplan (Vorschlag)
 
-Vorschlag von Claude vom 19.11.2026, Reihenfolge am 26.11.2026 nach Daniels Wahl angepasst. Das ist keine Vorgabe: Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Auch die Reihenfolge ist nur ein Vorschlag.
+Vorschlag von Claude vom 19.11.2026, am 26.11.2026 neu gefasst. Den Plan unten hat Daniel am 26.11.2026 bestätigt („Plan passt“). Das ist keine Vorgabe: Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Auch die Reihenfolge ist nur ein Vorschlag.
 
 Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleibt bewusst grob. Details entstehen erst, wenn ein Baustein drankommt.
 
@@ -9,24 +9,34 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | Baustein | Stand | Hängt ab von |
 | --- | --- | --- |
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie in der App | – |
-| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Erster Anlauf (24. und 25.11.2026) ist Archiv. Neuanfang Schritt für Schritt (GARTEN-NEU.md), Ebene 0 am 25.11.2026 geklärt. Ebene 1 (graues Gerüst) am 25.11.2026 beantwortet, Ebene 2 (Aussehen) zurückgestellt. Stil am 26.11.2026 gewählt: gemaltes Bilderbuch. am 26.11.2026 von Einzelteilen auf ein KI-Bild je Bereich umgestellt (Claudes Wahl, ENTSCHEIDUNGEN.md). Bereich 2 fertig (`geruest/buehne.html`), Anschluss zwischen Bereichen geprüft. Nächster Schritt: alle Bereiche und die Kapelle, dann Einbau (GARTEN-NEU.md, „Stand 26.11.2026“) | A, J |
+| B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Erster Anlauf (24. und 25.11.2026) ist Archiv. Neuanfang Schritt für Schritt (GARTEN-NEU.md), Ebene 0 am 25.11.2026 geklärt. Ebene 1 (graues Gerüst) am 25.11.2026 beantwortet, Ebene 2 (Aussehen) zurückgestellt. Stil am 26.11.2026 gewählt: gemaltes Bilderbuch. Am 26.11.2026 von Einzelteilen auf ein KI-Bild je Bereich umgestellt (Claudes Wahl, Daniel: „Richtung passt vorerst“). Bereich 2 fertig (`geruest/buehne.html`), Anschluss zwischen Bereichen geprüft. Nächste Schritte: Bereich 1 und zwei Bereiche als Bildlauf, dann Einbau (Plan unten). Bereiche 3 bis 11 je Etappe mit C | A, J; Bereiche 3 bis 11: C |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
-| E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten); nach J, in den Wartezeiten von B | – |
+| E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten); nach J, Schritt 5 im Plan | J |
 | F. Abzeichen | vorläufig, eventuell später neu; Bronze, Silber und Gold hängen an Leicht, Mittel und Schwer und werden hier neu gefasst (ENTSCHEIDUNGEN.md, 19.11.2026) | B, J |
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
-| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege (ENTSCHEIDUNGEN.md); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen; die Teile ohne Gartenbild kommen als Nächstes, in den Wartezeiten von B (Daniels Wahl vom 26.11.2026) | A |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege (ENTSCHEIDUNGEN.md); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen; die Teile ohne Gartenbild kommen vor E (Daniels Wahl vom 26.11.2026), Schritt 3 im Plan | A |
 
-## Vorgeschlagene Reihenfolge
+## Plan bis zum Schluss (26.11.2026, von Daniel bestätigt)
 
-1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
-2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss. (Konzept erledigt am 19.11.2026.) Die Teile von J ohne Gartenbild könnten vor oder mit B umgesetzt werden, offene Stellen und Pflege-Zeichen im Garten gehören zu B (GEZIELT-UEBEN.md). Die Teile von J ohne Gartenbild kommen in den Wartezeiten auf das KI-Kontingent, vor E (Daniels Wahl vom 26.11.2026). Der Grund: J ändert, was gespeichert wird, und E gleicht dann gleich das fertige Format ab.
-3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet. (Erster Anlauf am 24. und 25.11.2026, Archiv. Neuanfang vorbereitet, siehe GARTEN-NEU.md.)
-4. **E**, in den Wartezeiten von B, nach J, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
-5. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
-6. **C, D, F, G, H** danach in der Reihenfolge, die gerade passt. C am besten in Paketen je Etappe. Über die Reihenfolge der Etappen will Daniel nachdenken, wenn alle Inhalte stehen.
+Befund vom 26.11.2026: Ein Gartenbereich lässt sich erst malen, wenn die Stationen seiner Etappe feststehen. Ab Etappe 3 gehören Inhalt (C) und Garten (B) deshalb zusammen, als ein Paket je Etappe.
+
+| Phase | Inhalt | Ergebnis |
+| --- | --- | --- |
+| 1. Testversion | Garten mit Bereich 1 und 2 in der App (B), gezielt üben ohne Gartenbild (J), Konten (E), Daniels Test auf dem Handy | Etappen 1 und 2 vollständig, so wie sie bleiben sollen |
+| 2. Testphase | zwei oder drei Sänger üben ein bis zwei Wochen (I) | echte Rückmeldung, bevor neun Etappen entstehen |
+| 3. Etappen-Pakete | je Etappe 3 bis 11: Übungen und Stationen (C), dann ihr Gartenbereich (B), Test, Freigabe | die App wächst Etappe für Etappe; danach Reihenfolge der Etappen prüfen (Bereiche lassen sich tauschen) |
+| 4. Abschluss | Kapelle, Abzeichen neu (F), Pflege-Zeichen im Garten (J), Übe-Teil (D), Merklieder (H), Mikrofon als Zusatz (G) | Einführung im ganzen Chor (I) |
+
+Nächste Schritte in Phase 1:
+
+1. Daniel sieht den Garten an (`geruest/buehne.html`, `geruest/anschluss.html`). Erledigt am 26.11.2026: „Richtung passt vorerst.“
+2. B: Bereich 1 vollständig im Blickwinkel von Bereich 2, beide als Bildlauf wie in der App (390 Pixel, Wiesenstreifen sauber, Stationen, „Zu mir“, „Weiter“, „Plan“ als Attrappe). Eingabe-Regeln in den Skill `garten-grafik`. Daniel entscheidet über das Aussehen.
+3. J ohne Gartenbild: Freischalten nach den nötigen Stationen, Üben im Reiter „Themen“ zählt für die Stationen, Fortschritt je Thema, je Übung „zuletzt geübt“ und Fehlerquote speichern. Kleine Runde mit Daniel: wonach man im Reiter statt Leicht, Mittel und Schwer wählt. Kann parallel zu Schritt 2 laufen (andere Dateien).
+4. B in die App: Garten ersetzt die Notenzeile in `js/views/weg.js`, Ebenen auf Zonen zugeschnitten, Stationen und Knöpfe nach Ebene 1, Runde mit Daniel zu gesperrten Bereichen, Optik der App leicht angleichen, Tests und Klicktest, dann mit Daniels Ja nach `main` für den Handytest.
+5. E: Daniels zwei Antworten (Anmeldeart, ohne Konto nutzbar?), eigenes Supabase-Projekt mit Daniels Ja, Fortschritt auf dem Gerät mit Abgleich.
 
 ## Konten: Prüfung vom 19.11.2026
 
