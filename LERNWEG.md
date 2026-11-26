@@ -25,7 +25,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | 8 | Punktierung und Haltebogen | Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 9 | Zusammenklang | Dreiklang, Dur oder Moll, der Einsatzton, die eigene Stimme im Satz hören | spielbar als Vorschlag (26.11.2026), nicht entschieden; die eigene Stimme im Satz offen |
 | 10 | Vorzeichen und Tonarten | Kreuz, Be und Auflösungszeichen, die 1 finden, Moll | spielbar als Vorschlag (26.11.2026), nicht entschieden |
-| 11 | Feinheiten im Rhythmus | Synkopen, Triolen und Sechzehntel | |
+| 11 | Feinheiten im Rhythmus | Synkopen, Triolen und Sechzehntel | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 
 ## Stationen der Etappen 1 und 2
 
@@ -229,6 +229,23 @@ Begründungen in Kürze:
 - Deutsche Namen: is und es, mit den Ausnahmen es, as und b. Gefragt werden nur Töne auf schwarzen Tasten, eis, his, ces und fes kommen im Chor kaum vor.
 - Regeln zum Finden der 1: das letzte Kreuz ist die 7, das vorletzte Be ist die 1. In Moll ist der Moll-Grundton die 1 (ENTSCHEIDUNGEN.md, „Sprache des Chors“), drei Halbtöne unter der Dur-1.
 - **Offen:** die schwarzen Tasten auf der Klaviatur aus Etappe 3 (als Spätblüher von „Taste am Klavier“) und Ziffern lesen in anderen Tonarten (als Spätblüher von „Welche Ziffer?“). Beides ist vorbereitet (der Mechanismus für Spätblüher steht), aber noch nicht gebaut.
+
+## Stationen der Etappe 11 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Synkopen | ein 4/4-Takt mit Achtel – Viertel – Achtel: Auf welche Zählzeit fällt die farbige Viertel? | zwei Synkopen oder 3/4-Takt |
+| Triolen und Sechzehntel | ein 4/4-Takt, ein Schlag farbig: Wie viele Töne kommen darauf (1 bis 4)? | hören: Wie viele Töne kommen auf jeden Schlag (Achtel, Triole, Sechzehntel)? |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Gezählt wird nur mit Schlägen und „und“ (ENTSCHEIDUNGEN.md, „Sprache des Chors“). Triolen und Sechzehntel werden deshalb nicht gezählt, sondern erkannt: an der 3, an den zwei Balken, am Klang.
+- Bei Synkopen hilft das gleichmäßige Weiterzählen: Die Viertel beginnt auf dem „und“ und klingt über den Schlag.
+- Ein Klopfen von Synkopen ist nicht dabei. Es lässt sich nach dem Muster von „Achtel klopfen“ ergänzen.
+- Keine Spätblüher in Etappe 11.
 
 ## Runden
 

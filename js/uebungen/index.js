@@ -30,6 +30,7 @@ import zweiSchlaege from './zwei-schlaege.js';
 import punktHoeren from './punkt-hoeren.js';
 import { durMoll, dreiklang, einsatzton } from './zusammenklang.js';
 import { vorzeichen, tonart } from './vorzeichen.js';
+import { synkope, schlagGruppen } from './rhythmus-fein.js';
 
 export const UEBUNGEN = Object.fromEntries(
   [
@@ -69,5 +70,7 @@ export const UEBUNGEN = Object.fromEntries(
     einsatzton,
     vorzeichen,
     tonart,
+    synkope,
+    schlagGruppen,
   ].map((u) => [u.id, u])
 );

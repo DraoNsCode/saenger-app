@@ -14,12 +14,13 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 10 sind als Vorschläge spielbar, Daniel testet und entscheidet. Daniel ist unterwegs und hat gesagt, nach dem Plan weiterzumachen: Weitere Etappen entstehen ebenso als spielbare Vorschläge.
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
+- Etappe 11 (Feinheiten im Rhythmus, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Synkopen“ und „Triolen und Sechzehntel“ (`js/uebungen/rhythmus-fein.js`).
 - Etappe 10 (Vorzeichen und Tonarten, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Kreuz und Be“ und „Die 1 finden“ (`js/uebungen/vorzeichen.js`).
 - Etappe 9 (Zusammenklang, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Der Dreiklang“, „Dur oder Moll?“ und „Der Einsatzton“ (`js/uebungen/zusammenklang.js`). Die eigene Stimme im Satz hören fehlt noch.
 - Etappe 8 (Punktierung und Haltebogen, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Punkt und Haltebogen“, „Wie viele Schläge?“ (2/2 und 6/8 in zwei) und „Punktiert hören“. Takte mit Punkt und Bogen baut `punktTakt` in `js/uebungen/hilfen.js`.

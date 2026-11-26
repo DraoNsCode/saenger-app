@@ -189,7 +189,8 @@ export function silbenSpanne(beginn, dauer) {
   }).join(' ');
 }
 
-// So zählst du, durchgehend mit „und“: 1 und (Viertel) · 2 (Achtel) · und (Achtel) · 3 und 4 und (Halbe)
+// So zählst du, durchgehend mit „und“: 1–und (Viertel) · 2 (Achtel) · und (Achtel) · 3–und–4–und (Halbe).
+// Gehaltene Silben sind mit Strichen verbunden, damit „3 und“ allein immer einen Zeitpunkt meint.
 // Gebundene Noten (Haltebogen) erscheinen als ein Ton.
 export function zaehlWeise(takt) {
   let pos = 0;
@@ -205,11 +206,11 @@ export function zaehlWeise(takt) {
         d += takt[i].d;
         namen.push(WERT.note[takt[i].d]);
       }
-      teile.push(`${silbenSpanne(pos, d)} (${namen.join(' + ')} mit Haltebogen, ein Ton)`);
+      teile.push(`${silbenSpanne(pos, d).replace(/ /g, '–')} (${namen.join(' + ')} mit Haltebogen, ein Ton)`);
       pos += d;
       continue;
     }
-    teile.push(`${silbenSpanne(pos, n.d)} (${n.pause ? WERT.pause[n.d] : WERT.note[n.d]})`);
+    teile.push(`${silbenSpanne(pos, n.d).replace(/ /g, '–')} (${n.pause ? WERT.pause[n.d] : WERT.note[n.d]})`);
     pos += n.d;
   }
   return teile.join(' · ');

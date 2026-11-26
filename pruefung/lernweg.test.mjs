@@ -271,6 +271,16 @@ test('Stationen der Etappe 10 wie in LERNWEG.md', () => {
   );
 });
 
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 11“.
+test('Stationen der Etappe 11 wie in LERNWEG.md', () => {
+  const t = THEMEN[10];
+  assert.equal(t.id, 'rhythmus-fein');
+  assert.deepEqual(
+    t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
+    ['synkope/leicht', 'synkope/schwer/frei', 'schlag-gruppen/leicht', 'schlag-gruppen/schwer/frei', 'mischung/gemischt']
+  );
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

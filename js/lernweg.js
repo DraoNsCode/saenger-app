@@ -178,6 +178,14 @@ export const THEMEN = [
     id: 'rhythmus-fein',
     titel: 'Feinheiten im Rhythmus',
     kurz: 'Synkopen, Triolen und Sechzehntel.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 11“)
+    stationen: [
+      { id: 'rf-synkope', titel: 'Synkopen', uebung: 'synkope', stufe: 'leicht' },
+      { id: 'rf-synkope-mehr', titel: 'Synkopen', uebung: 'synkope', stufe: 'schwer', freiwillig: true },
+      { id: 'rf-gruppen', titel: 'Triolen und Sechzehntel', uebung: 'schlag-gruppen', stufe: 'leicht' },
+      { id: 'rf-gruppen-hoeren', titel: 'Triolen und Sechzehntel', uebung: 'schlag-gruppen', stufe: 'schwer', freiwillig: true },
+      { id: 'rf-abschluss', titel: 'Abschluss: Feinheiten im Rhythmus', mischung: true, stufe: 'gemischt' },
+    ],
   },
 ];
 

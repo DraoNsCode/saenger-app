@@ -42,8 +42,9 @@ export const vorzeichen = {
   erklaerung: [
     'Ein **Kreuz** ♯ vor einer Note macht sie einen Halbton höher. An den Namen hängst du **„is“**: f wird fis, c wird cis.',
     'Ein **Be** ♭ macht sie einen Halbton tiefer. An den Namen hängst du **„es“**: d wird des, g wird ges. Ausnahmen: e wird **es**, a wird **as** und h wird **b**.',
-    'Ein Vorzeichen vor einer Note gilt bis zum Ende des Takts. Ein **Auflösungszeichen** ♮ hebt es vorher auf.',
-    'Auf der Klaviatur sind die Töne mit Vorzeichen meist die schwarzen Tasten.',
+    'Ein Vorzeichen vor einer Note gilt für jede weitere Note auf derselben Linie oder im selben Zwischenraum, bis zum Ende des Takts.',
+    'Ein **Auflösungszeichen** ♮ hebt es schon vor dem Taktende auf. Ab da gilt wieder der Ton ohne Vorzeichen.',
+    'Eine schwarze Taste hat zwei Namen: Die Taste zwischen f und g heißt fis (von f aus gesehen) oder ges (von g aus gesehen). Welcher Name gilt, zeigt das Vorzeichen.',
   ],
   neu(stufe, k) {
     const s = STIMMEN[k.stimme].schluessel;
@@ -88,7 +89,7 @@ export const vorzeichen = {
     const index = fall === 'neuer-takt' ? 3 : 2;
     const loesung = fall === 'gilt' ? mitZeichen : grund;
     const warum = {
-      gilt: `Das Vorzeichen vorn im Takt gilt bis zum Taktende. Die farbige Note ist deshalb auch ein ${mitZeichen}.`,
+      gilt: `Das Vorzeichen vorn im Takt gilt für jede weitere Note auf derselben Linie oder im selben Zwischenraum, bis zum Taktende. Die farbige Note ist deshalb auch ein ${mitZeichen}.`,
       aufgeloest: `Das Auflösungszeichen ♮ hebt das Vorzeichen auf. Die farbige Note ist wieder ein ${grund}.`,
       'neuer-takt': `Nach dem Taktstrich gilt das Vorzeichen nicht mehr. Die farbige Note ist wieder ein ${grund}.`,
     }[fall];
@@ -124,10 +125,10 @@ export const tonart = {
     schwer: 'Dur oder Moll, bis zu vier Vorzeichen',
   },
   erklaerung: [
-    'Die Vorzeichen am Anfang jeder Zeile heißen **Tonart**. Sie gelten für das ganze Lied. Aus ihnen findest du die **1**.',
-    '**Kreuze:** Das letzte Kreuz (ganz rechts) ist die 7. Einen Halbton darüber liegt die 1. Ein Kreuz auf f, also fis: Die 1 ist g.',
-    '**Be:** Ein einzelnes Be heißt, die 1 ist f. Bei mehreren Be ist das vorletzte Be die 1.',
-    'Ohne Vorzeichen ist die 1 das c. **In Moll** ist die 1 drei Halbtöne tiefer als in Dur: ohne Vorzeichen also das a.',
+    'Die Vorzeichen am Anfang jeder Zeile zeigen die **Tonart** an. Sie gelten im ganzen Lied für jede Note mit diesem Namen, egal wie hoch oder tief. Aus ihnen findest du die **1**.',
+    '**Kreuze, in Dur:** Das letzte Kreuz (ganz rechts) ist die 7. Einen Halbton darüber liegt die 1. Ein Kreuz auf f, also fis: Die 1 ist g.',
+    '**Be, in Dur:** Ein einzelnes Be heißt, die 1 ist f. Bei mehreren Be ist das vorletzte Be (das zweite von rechts) die 1. Sein Name ergibt sich aus seiner Linie oder seinem Zwischenraum, ein Be auf der h-Linie heißt b.',
+    'Ohne Vorzeichen ist die Dur-1 das c. **In Moll** ist die 1 die 6 der Dur-Tonleiter mit denselben Vorzeichen, drei Halbtöne unter der Dur-1: ohne Vorzeichen das a, bei drei Kreuzen das fis.',
   ],
   neu(stufe, k) {
     const s = STIMMEN[k.stimme].schluessel;
@@ -146,17 +147,17 @@ export const tonart = {
     const optionen = mische([loesung, ...naheliegend, ...mische(alle.filter((x) => !naheliegend.includes(x)))].slice(0, 4)).map((x) => ({ text: x, wert: x }));
     const regel =
       t.art === 'kreuz'
-        ? `Das letzte Kreuz ist ${letztes}, die 7. Einen Halbton darüber liegt die Dur-1: ${t.dur}.`
+        ? `In Dur: Das letzte Kreuz ist ${letztes}, die 7 der Dur-Tonleiter. Einen Halbton darüber liegt die Dur-1: ${t.dur}.`
         : t.zahl === 1
-          ? 'Ein einzelnes Be: Die Dur-1 ist f.'
-          : `Das vorletzte Be ist ${folge[t.zahl - 2]}. Das ist die Dur-1.`;
+          ? 'In Dur: Ein einzelnes Be heißt, die Dur-1 ist f.'
+          : `In Dur: Das vorletzte Be ist ${folge[t.zahl - 2]}. Das ist die Dur-1.`;
     return {
       frage: `Das Lied steht in ${moll ? 'Moll' : 'Dur'}. Welcher Ton ist die 1?`,
       bild: { abc: kopfMitTonart(s, t.abc) + 'x4 |]', breite: 140, scale: 1.9 },
       optionen: [...new Map(optionen.map((o) => [o.wert, o])).values()],
       spalten: 2,
       loesung,
-      warum: moll ? `${regel} In Moll liegt die 1 drei Halbtöne tiefer: ${t.moll}.` : regel,
+      warum: moll ? `${regel} In Moll ist die 1 die 6 dieser Dur-Tonleiter, drei Halbtöne tiefer: ${t.moll}.` : regel,
       moll, // für die Prüfung
       tonart: t,
     };
