@@ -4,8 +4,8 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <title>Klostergarten, ein Bild je Bereich</title>
 <style>
-/* Aufbau: Bereich 2 als ein KI-Bild je Zustand. „Frisch“ ist das Grundbild, jedes Beet wird einzeln von der KI
-   bearbeitet und vom Code weich eingeblendet. Stationen findet der Code auf dem Weg im Bild, Steine und Zeichen setzt er. */
+/* Aufbau: Bereich 2 als Bühne (garten/buehne.js): links zum Durchspielen mit Schieberegler, daneben drei feste
+   Zustände und das Ausgangsbild der KI. Stationen, Namen und Häkchen sind HTML über dem Bild. */
 :root { --seite: #e6e7e8; --blatt: #fbfbfb; --linie: #6b7075; --dunkel: #33373b; --text: #1b1e21; --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
@@ -16,14 +16,16 @@ h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
 .leiste { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 14px; }
 button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
 button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
-button:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
 .reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; align-items: flex-start; }
 .zustand { flex: 0 0 390px; scroll-snap-align: start; }
 .zustand h2 { font-size: 18px; margin: 0; }
 .zustand p { margin: 2px 0 8px; font-size: 14px; min-height: 4.4em; }
+.regler { display: grid; gap: 4px; margin: 0 0 8px; font-size: 14px; }
+.regler input { width: 100%; min-height: 32px; }
 .bild { position: relative; width: 390px; height: 585px; overflow: hidden; border-radius: 10px; background: #9bbd4f; }
-.bild canvas { position: absolute; inset: 0; width: 390px; height: 585px; }
-.ohne-farbe canvas { filter: grayscale(1); }
+.bild canvas, .bild img { position: absolute; inset: 0; width: 390px; height: 585px; }
+.ohne-farbe canvas, .ohne-farbe img { filter: grayscale(1); }
 .schild { position: absolute; left: 10px; top: 8px; display: flex; align-items: center; gap: 8px; padding: 5px 6px 5px 12px; background: rgba(251, 251, 251, 0.94); border-radius: 18px; font-size: 15px; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
 .schild span { background: var(--dunkel); color: var(--blatt); font-size: 13px; padding: 3px 10px; border-radius: 12px; }
 .station { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; }
@@ -35,15 +37,15 @@ details p, details li { font-size: 14px; margin: 6px 0; }
 @media (max-width: 480px) {
   .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
   .zustand { flex-basis: 100%; }
-  .zustand h2, .zustand p { padding-inline: 16px; }
+  .zustand h2, .zustand p, .regler { padding-inline: 16px; }
   .bild { border-radius: 0; margin-inline: auto; }
 }
 </style>
 
 <div class="rand">
   <h1>Ein Bild je Bereich, Bereich 2</h1>
-  <p class="frage">So statt aus Einzelteilen?</p>
-  <p class="hinweis">Die KI malt den Bereich als ganzes Bild. Daraus macht sie „frisch“, mit gleichem Weg, gleicher Mauer, gleicher Bank und gleichem Brunnen. Für jede Station bearbeitet sie dann nur das Beet daneben, und der Code blendet es weich ein. Den Weg findet der Code im Bild und setzt die Stationen darauf. Erster Versuch: Bei „unterwegs“ sind zwei Beete gewachsen, rechts der Lavendel und links unten die Erdbeeren.</p>
+  <p class="frage">So wächst der Garten mit jeder Station.</p>
+  <p class="hinweis">Die KI hat den Bereich einmal ganz gemalt. Daraus hat sie das Grundbild „frisch“ gemacht und dann für jede Station nur das Beet daneben bearbeitet, in einer jungen und einer vollen Stufe. Der Code blendet die Beete ein und setzt die Stationen auf den Weg, den er im Bild findet. Die nötige Station lässt ihr Beet jung werden, die freiwilligen lassen es voll werden. Beim Abschluss blühen die Rosen an der Mauer. Links kannst du Station für Station durchgehen.</p>
   <div class="leiste">
     <button id="stationen" aria-pressed="true">Stationen</button>
     <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
@@ -53,117 +55,65 @@ details p, details li { font-size: 14px; margin: 6px 0; }
 <div class="rand">
   <details>
     <summary>So ist es entstanden</summary>
-    <p>„Voll“: Z-Image-Turbo (Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo, 26.11.2026, 1024 × 1536 Pixel, 8 Schritte, Seed 42. Eingabe: Gouache-Bilderbuch, schräg von oben, ein Weg von unten Mitte bis oben Mitte durch einen Bogen in einer Mauer, ohne Steine im Weg; Beete mit Lavendel, Erdbeeren, Mohn und Margeriten, Kohl und Ringelblumen, Brunnen, Rosen, Apfelbaum, Bank; in voller Blüte.</p>
-    <p>„Frisch“, „Jung“ und die Beete: Qwen-Image-Edit-2511 (Lizenz Apache 2.0) über den Hugging-Face-Space kulkas2pintu/QWEN_EDIT_IMAGE, 8 Schritte, Seed 42. „Frisch“ aus „Voll“ („neu angelegt, noch nicht bepflanzt …, alles andere genau gleich“). Die Beete aus „Frisch“, jeweils „nur das Beet unten rechts / unten links ändern …“.</p>
-    <p>Trittsteine: aus der Bausteine-Probe. Alles liegt in <code>garten/buehne/schlag-takt/</code>.</p>
+    <p>Ausgangsbild: Z-Image-Turbo (Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo, 26.11.2026, 1024 × 1536 Pixel, 8 Schritte, Seed 42. Eingabe: Gouache-Bilderbuch, schräg von oben, ein Weg von unten Mitte bis oben Mitte durch einen Bogen in einer Mauer, ohne Steine im Weg, Beete, Brunnen, Rosen, Apfelbaum und Bank in voller Blüte.</p>
+    <p>Grundbild und Beete: Qwen-Image-Edit-2511 (Lizenz Apache 2.0) über den Hugging-Face-Space kulkas2pintu/QWEN_EDIT_IMAGE, 8 Schritte, Seed 42. Das Grundbild entstand aus dem Ausgangsbild („neu angelegt, noch nicht bepflanzt …, alles andere genau gleich“). Jede Beet-Ebene entstand aus dem Grundbild („Es gibt drei Beete links vom Weg. Ändere nur das mittlere …“). Die Junge Stufe muss man positiv beschreiben („dichte Reihen kleiner grüner Pflanzen“), sonst ändert die KI nichts. Greift sie ins Nachbarbeet über, schneidet die Zone das ab.</p>
+    <p>Lässt man die KI das ganze Bild auf einmal „jung“ machen, bleiben Weg, Mauer und Bank, aber die Beete wandern (<a href="../garten/buehne/schlag-takt/jung.webp">Bild</a>). Deshalb Beet für Beet. Daten: <code>garten/buehne/schlag-takt/bereich.json</code>, Zeichner: <code>garten/buehne.js</code>.</p>
   </details>
 </div>
 
 <script type="module">
-const ORDNER = '../garten/buehne/schlag-takt/';
-const B = 1024, H = 1536, ANZEIGE = 390 / B;
-const lade = (src) => new Promise((ok, nein) => { const i = new Image(); i.onload = () => ok(i); i.onerror = nein; i.src = src; });
-const [frisch, voll, jung, lavendel, erdbeere, stein1, stein2, stein3] = await Promise.all([
-  'frisch', 'voll', 'jung', 'beet-lavendel', 'beet-erdbeere'].map((n) => lade(ORDNER + n + '.webp'))
-  .concat(['trittstein-1', 'trittstein-2', 'trittstein-3'].map((n) => lade('../garten/teile/' + n + '.webp'))));
+import { ladeBuehne, zeichneBuehne } from '../garten/buehne.js';
 
-// Zonen der Beete in Bildpixeln (Vieleck), weich ausgeblendet
-const ZONEN = {
-  lavendel: { bild: lavendel, punkte: [[600, 930], [1024, 900], [1024, 1536], [770, 1536], [640, 1260]] },
-  erdbeere: { bild: erdbeere, punkte: [[0, 1190], [400, 1195], [440, 1536], [0, 1536]] },
-};
+const buehne = await ladeBuehne('../garten/buehne/schlag-takt/', '../garten/teile/');
+const { daten: b, orte } = buehne;
+const ANZEIGE = 390 / b.groesse[0];
+// Reihenfolge wie im Lernweg: je Übung die nötige Station, dann ihre freiwilligen
+const REIHE = b.beete.flatMap((beet) => [beet.station, ...beet.freiwillig]);
+const dpr = Math.min(3, Math.max(2, Math.round(devicePixelRatio || 1)));
 
-// Weg im Grundbild finden: je Zeile die Sandfläche, die an die vorige anschließt
-function wegFinden(img) {
-  const c = document.createElement('canvas'); c.width = B; c.height = H;
-  const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(img, 0, 0);
-  const d = x.getImageData(0, 0, B, H).data;
-  const sand = (i, j) => { const k = (j * B + i) * 4, r = d[k], g = d[k + 1], b = d[k + 2]; return r > 195 && g > 160 && b > 105 && b < 190 && r - b > 40 && Math.abs(r - g) < 48; };
-  const linie = [];
-  let mitte = B / 2;
-  for (let j = H - 6; j > 360; j -= 4) {
-    let beste = null;
-    for (let i = 0; i < B; ) {
-      if (!sand(i, j)) { i++; continue; }
-      let e = i; while (e < B && sand(e, j)) e++;
-      if (e - i > 30) { const m = (i + e) / 2; if (!beste || Math.abs(m - mitte) < Math.abs(beste.m - mitte)) beste = { m, w: e - i }; }
-      i = e;
-    }
-    if (beste && Math.abs(beste.m - mitte) < 90) { mitte = beste.m; linie.push({ x: beste.m, y: j, w: beste.w }); }
+function fuelle(bild, geschafft) {
+  bild.querySelectorAll('canvas, .station, .schild').forEach((e) => e.remove());
+  bild.append(zeichneBuehne(buehne, geschafft, { dpr }));
+  const aktuell = b.stationen.find((id) => !geschafft.has(id));
+  bild.insertAdjacentHTML('beforeend', `<div class="schild">${b.nr}&nbsp;&nbsp;${b.titel}${aktuell ? '<span>Hier bist du</span>' : ''}</div>`);
+  for (const o of orte) {
+    const s = document.createElement('div');
+    s.className = 'station' + (geschafft.has(o.id) ? ' geschafft' : '') + (o.id === aktuell ? ' aktuell' : '');
+    s.style.left = o.x * ANZEIGE + 'px'; s.style.top = o.y * ANZEIGE + 'px'; s.title = o.id;
+    bild.append(s);
   }
-  // glätten
-  return linie.map((p, i) => {
-    const n = linie.slice(Math.max(0, i - 6), i + 7);
-    return { x: n.reduce((s, q) => s + q.x, 0) / n.length, y: p.y, w: n.reduce((s, q) => s + q.w, 0) / n.length };
-  });
 }
-
-function stationen(linie, anzahl, vonY, bisY) {
-  const teil = linie.filter((p) => p.y <= vonY && p.y >= bisY);
-  const l = [0];
-  for (let i = 1; i < teil.length; i++) l.push(l[i - 1] + Math.hypot(teil[i].x - teil[i - 1].x, teil[i].y - teil[i - 1].y));
-  return [...Array(anzahl).keys()].map((n) => {
-    const ziel = (l.at(-1) * n) / (anzahl - 1);
-    const i = l.findIndex((v) => v >= ziel);
-    return teil[Math.max(0, i)];
-  });
-}
-
-const linie = wegFinden(frisch);
-const orte = stationen(linie, 7, 1470, 430);
-const IDS = ['st-schlag', 'st-werte', 'st-welcher', 'st-ergaenzen', 'st-erkennen', 'st-klopfen', 'st-abschluss'];
-
-function zeichne(grund, zonen, steine = true) {
-  const dpr = Math.min(3, Math.max(2, Math.round(devicePixelRatio || 1)));
-  const c = document.createElement('canvas'); c.width = 390 * dpr; c.height = 585 * dpr;
-  const x = c.getContext('2d'); x.scale(c.width / B, c.height / H);
-  x.drawImage(grund, 0, 0);
-  for (const z of zonen) {
-    const ebene = document.createElement('canvas'); ebene.width = B; ebene.height = H;
-    const e = ebene.getContext('2d');
-    e.filter = 'blur(22px)'; e.fillStyle = '#000'; e.beginPath();
-    z.punkte.forEach(([px, py], i) => (i ? e.lineTo(px, py) : e.moveTo(px, py))); e.closePath(); e.fill();
-    e.filter = 'none'; e.globalCompositeOperation = 'source-in'; e.drawImage(z.bild, 0, 0);
-    x.drawImage(ebene, 0, 0);
-  }
-  if (steine) {
-    const st = [stein1, stein2, stein3];
-    orte.forEach((o, i) => {
-      const s = st[i % 3], w = o.w * 0.4, h = (w * s.naturalHeight) / s.naturalWidth;
-      x.save(); x.filter = 'blur(4px)'; x.fillStyle = 'rgba(70,55,20,0.28)';
-      x.beginPath(); x.ellipse(o.x + 2, o.y + h * 0.3, w * 0.5, h * 0.25, 0, 0, 7); x.fill(); x.restore();
-      x.drawImage(s, o.x - w / 2, o.y - h / 2, w, h);
-    });
-  }
-  return c;
-}
-
-const ZUSTAENDE = [
-  { name: 'Frisch', text: 'Das Grundbild: von der KI aus „Voll“ gemacht. Weg, Mauer, Bank und Brunnen sind geblieben, die Beete sind leer.', grund: frisch, zonen: [], geschafft: 0, aktuell: 0 },
-  { name: 'Unterwegs', text: 'Zwei Stationen geschafft. Ihre Beete hat die KI einzeln bearbeitet: Lavendel voll (mit freiwilliger Station), Erdbeeren jung. Der Rest ist das Grundbild.', grund: frisch, zonen: [ZONEN.lavendel, ZONEN.erdbeere], geschafft: 2, aktuell: 2 },
-  { name: 'Voll', text: 'Das Ausgangsbild der KI. Im fertigen Ablauf entstünde „voll“ aus „frisch“ und allen Beeten, damit beim Wachsen nichts springt.', grund: voll, zonen: [], geschafft: 7, aktuell: -1 },
-  { name: 'Warum Beet für Beet?', text: 'Lässt man die KI das ganze Bild „jung“ machen, bleiben Weg, Mauer und Bank, aber die Beete wandern. Deshalb bearbeitet sie jedes Beet einzeln.', grund: jung, zonen: [], geschafft: -1, aktuell: -1, ohneSteine: true },
-];
 
 const reihe = document.getElementById('reihe');
-for (const z of ZUSTAENDE) {
+const abschnitt = (titel, text, extra = '') => {
   const sec = document.createElement('section');
   sec.className = 'zustand';
-  sec.innerHTML = `<h2>${z.name}</h2><p>${z.text}</p><div class="bild" role="img" aria-label="Bereich Schlag und Takt, ${z.name}"></div>`;
-  const bild = sec.querySelector('.bild');
-  bild.append(zeichne(z.grund, z.zonen, !z.ohneSteine));
-  if (!z.ohneSteine) {
-    bild.insertAdjacentHTML('beforeend', `<div class="schild">2&nbsp;&nbsp;Schlag und Takt${z.aktuell >= 0 ? '<span>Hier bist du</span>' : ''}</div>`);
-    orte.forEach((o, i) => {
-      const s = document.createElement('div');
-      s.className = 'station' + (i < z.geschafft ? ' geschafft' : '') + (i === z.aktuell ? ' aktuell' : '');
-      s.style.left = o.x * ANZEIGE + 'px'; s.style.top = o.y * ANZEIGE + 'px'; s.title = IDS[i];
-      bild.append(s);
-    });
-  }
+  sec.innerHTML = `<h2>${titel}</h2><p>${text}</p>${extra}<div class="bild" role="img" aria-label="Bereich ${b.titel}, ${titel}"></div>`;
   reihe.append(sec);
-}
+  return sec;
+};
+
+// zum Durchspielen
+const spiel = abschnitt('Zum Durchspielen', 'Schieb den Regler: Jede Stufe ist eine geschaffte Station, erst die nötige, dann ihre freiwilligen.',
+  `<label class="regler"><span id="regler-text"></span><input id="regler" type="range" min="0" max="${REIHE.length}" value="0"></label>`);
+const regler = spiel.querySelector('#regler');
+const zeige = () => {
+  const n = +regler.value, geschafft = new Set(REIHE.slice(0, n));
+  const letzte = REIHE[n - 1];
+  spiel.querySelector('#regler-text').textContent = n ? `${n} von ${REIHE.length} Stationen geschafft, zuletzt ${letzte}${b.stationen.includes(letzte) ? ' (nötig)' : ' (freiwillig)'}` : 'Noch keine Station geschafft';
+  fuelle(spiel.querySelector('.bild'), geschafft);
+};
+regler.oninput = zeige;
+zeige();
+
+fuelle(abschnitt('Frisch', 'Gerade angekommen. Die Beete sind angelegt, es keimt nur, der Apfelbaum ist ein angebundenes Bäumchen.').querySelector('.bild'), new Set());
+fuelle(abschnitt('Unterwegs', 'Drei nötige Stationen und eine freiwillige geschafft: Lavendel voll, Erdbeeren und Ringelblumen jung.').querySelector('.bild'),
+  new Set(['st-schlag', 'st-schlag-ohne-klick', 'st-werte', 'st-welcher']));
+fuelle(abschnitt('Voll', 'Alle Stationen geschafft, auch alle freiwilligen. Zusammengesetzt aus dem Grundbild und allen Beeten.').querySelector('.bild'), new Set(REIHE));
+const aus = abschnitt('Zum Vergleich: Ausgangsbild', 'So hat die KI den Bereich in einem Stück gemalt, bevor daraus Grundbild und Beete wurden.');
+aus.querySelector('.bild').innerHTML = '<img src="../garten/buehne/schlag-takt/voll.webp" alt="Ausgangsbild der KI, Bereich in voller Blüte">';
+
 document.getElementById('stationen').onclick = (e) => e.target.setAttribute('aria-pressed', String(!reihe.classList.toggle('ohne-stationen')));
 document.getElementById('ohne-farbe').onclick = (e) => e.target.setAttribute('aria-pressed', String(reihe.classList.toggle('ohne-farbe')));
-window.weg = { linie, orte };
+window.buehne = buehne;
 </script>

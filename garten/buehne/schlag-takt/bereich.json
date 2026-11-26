@@ -1,0 +1,27 @@
+{
+ "_hinweis": "Bereich 2 als Bühne (Baustein B). Vorschlag von Claude, 26.11.2026, von Daniel Claude überlassen. Grundbild „frisch“, je Station ein Beet mit den Ebenen „jung“ (nötige Station geschafft) und „voll“ (alle freiwilligen geschafft). zone: Vieleck in Bildpunkten des Grundbilds (1024 × 1536), weich ausgeblendet. Die Stationen findet der Zeichner auf dem Weg im Grundbild.",
+ "id": "schlag-takt",
+ "nr": 2,
+ "titel": "Schlag und Takt",
+ "groesse": [1024, 1536],
+ "grund": "frisch.webp",
+ "weg": { "stationenZwischen": [1470, 430], "suchenAb": 360 },
+ "stationen": ["st-schlag", "st-werte", "st-welcher", "st-ergaenzen", "st-erkennen", "st-klopfen", "st-abschluss"],
+ "steine": ["trittstein-1", "trittstein-2", "trittstein-3"],
+ "beete": [
+  { "station": "st-schlag", "freiwillig": ["st-schlag-ohne-klick"], "name": "Lavendel", "jung": "lavendel-jung.webp", "voll": "lavendel-voll.webp",
+    "zone": [[610, 960], [1024, 920], [1024, 1536], [790, 1536], [700, 1340], [600, 1100]] },
+  { "station": "st-werte", "freiwillig": ["st-werte-namen"], "name": "Erdbeeren", "jung": "erdbeere-jung.webp", "voll": "erdbeere-voll.webp",
+    "zone": [[0, 1215], [380, 1215], [420, 1350], [440, 1536], [0, 1536]] },
+  { "station": "st-welcher", "freiwillig": ["st-welcher-zwei-takte"], "name": "Ringelblumen", "jung": "ringelblume-jung.webp", "voll": "ringelblume-voll.webp",
+    "zone": [[0, 868], [330, 872], [345, 1190], [0, 1190]] },
+  { "station": "st-ergaenzen", "freiwillig": ["st-ergaenzen-finden"], "name": "Mohn und Margeriten", "jung": "mohn-jung.webp", "voll": "mohn-voll.webp",
+    "zone": [[600, 690], [1024, 640], [1024, 955], [640, 985], [580, 860]] },
+  { "station": "st-erkennen", "freiwillig": ["st-erkennen-pausen", "st-erkennen-zwei-takte"], "name": "Kohl", "jung": "kohl-jung.webp", "voll": "kohl-voll.webp",
+    "zone": [[0, 585], [440, 598], [455, 848], [0, 848]] },
+  { "station": "st-klopfen", "freiwillig": ["st-klopfen-zwei-takte", "st-klopfen-ohne-klick"], "name": "Apfelbaum", "jung": "apfel-jung.webp", "voll": "apfel-voll.webp",
+    "zone": [[590, 0], [1024, 0], [1024, 640], [720, 640], [600, 420]] },
+  { "station": "st-abschluss", "freiwillig": [], "name": "Rosen an der Mauer", "voll": "rosen-voll.webp",
+    "zone": [[0, 150], [510, 150], [520, 330], [470, 420], [0, 500]] }
+ ]
+}
