@@ -1,0 +1,290 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten als Bildlauf, Bereich 1 und 2</title>
+<style>
+/* Probeseite (Vorschlag von Claude, 26.11.2026): Bereich 1 und 2 als ein Bildlauf wie in der späteren App.
+   Bild: garten/buehne.js (zeichneGarten), Stationen, Namen und Knöpfe sind HTML darüber.
+   Knöpfe nach ENTSCHEIDUNGEN.md, Ebene 1, Runden 4 bis 7; Verhalten wie in geruest/ebene1-gesamt.html. */
+:root { --seite: #e6e7e8; --blatt: #fbfbfb; --linie: #6b7075; --dunkel: #33373b; --text: #1b1e21; --gras: #a0b53f; --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 70ch; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible, input:focus-visible, .rahmen:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.leiste { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+.leiste > span { font-size: 14px; margin-right: 4px; }
+.regler { display: grid; gap: 2px; margin: 0 0 14px; font-size: 14px; max-width: 390px; }
+.regler input { width: 100%; min-height: 32px; }
+.zwei { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+.info { flex: 1 1 320px; max-width: 60ch; }
+.info h2 { font-size: 17px; margin: 0 0 6px; }
+.info ul { margin: 0 0 14px; padding-left: 20px; }
+.info li { margin: 3px 0; }
+details { margin-top: 10px; }
+details p, details li { font-size: 14px; margin: 6px 0; }
+
+/* der Handy-Rahmen */
+.handy { position: relative; flex: 0 0 auto; width: min(390px, 100%); height: min(780px, 86svh); display: flex; flex-direction: column; overflow: hidden; background: var(--blatt); border: 1px solid var(--linie); border-radius: 12px; }
+.rahmen { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; background: var(--gras); padding-bottom: 76px; }
+.garten { position: relative; }
+.garten canvas { display: block; width: 100%; }
+.ausblick { position: absolute; left: 0; right: 0; top: 0; height: 84px; padding: 10px 16px; background: linear-gradient(rgba(246, 247, 240, 0.96) 35%, rgba(246, 247, 240, 0)); font-size: 14px; color: var(--dunkel); text-align: center; }
+.schild { position: absolute; left: 10px; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 4px 6px 4px 12px; background: rgba(251, 251, 251, 0.94); border: 0; border-radius: 22px; font-size: 15px; font-weight: 600; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); transform: translateY(-50%); }
+.schild span { background: var(--dunkel); color: var(--blatt); font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 12px; }
+.station { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; padding: 0; min-width: 0; border: 0; border-radius: 50%; background: transparent; }
+.station.aktuell { box-shadow: 0 0 0 3px var(--blatt), 0 0 0 6px var(--dunkel); }
+.station.geschafft::after { content: ""; position: absolute; right: -2px; top: -2px; width: 18px; height: 18px; border-radius: 50%; background: var(--blatt) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4.5 9.5l3 3 6-7' fill='none' stroke='%232f6b1f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 18px no-repeat; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+.fest { position: absolute; left: 0; right: 0; bottom: 64px; padding: 10px 14px 12px; display: flex; gap: 8px; pointer-events: none; }
+.fest button { pointer-events: auto; min-height: 52px; min-width: 64px; font-weight: 600; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); }
+.fest .plan { margin-left: auto; }
+.fest .weiter { flex: 1; min-width: 0; background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tabs { flex: 0 0 64px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--linie); background: var(--blatt); font-size: 14px; }
+.tabs span { display: grid; place-items: center; color: var(--linie); }
+.tabs span:first-child { color: var(--text); font-weight: 700; box-shadow: inset 0 3px 0 var(--dunkel); }
+.notiz { position: absolute; left: 14px; right: 14px; top: 14px; z-index: 5; padding: 10px 14px; background: var(--dunkel); color: var(--blatt); border-radius: 6px; font-size: 15px; }
+.ueber { position: absolute; inset: 0; z-index: 3; background: var(--blatt); overflow-y: auto; padding: 10px 12px 16px; }
+.ueber.blatt { top: 30%; border-top: 3px solid var(--dunkel); border-radius: 14px 14px 0 0; box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2); }
+.ueber header { position: sticky; top: -10px; z-index: 1; background: var(--blatt); padding-block: 6px; display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 600; font-size: 18px; }
+.ueber .stand { margin: 0 0 8px; font-size: 15px; }
+.ueber ol { list-style: none; margin: 0; padding: 0; }
+.ueber li button { width: 100%; display: flex; gap: 10px; text-align: left; min-height: 48px; border-radius: 0; border-width: 0 0 1px; border-color: #c3c7cb; align-items: center; background: none; }
+.ueber li.f button { padding-left: 40px; font-size: 14px; }
+.ueber li.n button { font-weight: 600; }
+.zeichen { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--linie); display: grid; place-items: center; font-size: 13px; }
+.zeichen.geschafft { background: var(--dunkel); border-color: var(--dunkel); color: var(--blatt); }
+.zeichen.dran { border: 4px solid var(--dunkel); }
+.zeichen.zu { border-style: dashed; }
+.plan-gitter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.plan-gitter button { position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; min-height: 112px; padding: 6px 8px; text-align: left; font-size: 13px; line-height: 1.2; overflow: hidden; border-radius: 8px; }
+.plan-gitter button b { font-size: 15px; }
+.plan-gitter button canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.plan-gitter button.bild span { position: relative; background: rgba(251, 251, 251, 0.92); padding: 2px 6px; border-radius: 6px; }
+.plan-gitter button.folgt { border-style: dashed; color: var(--linie); background: #f1f2f3; }
+.plan-gitter button.dran { box-shadow: 0 0 0 3px var(--dunkel); }
+.plan-gitter .kapelle { grid-column: 1 / -1; min-height: 56px; align-items: center; justify-content: center; }
+.plan-gitter .haken { position: absolute; right: 6px; top: 6px; width: 20px; height: 20px; border-radius: 50%; background: var(--dunkel); color: var(--blatt); display: grid; place-items: center; font-size: 13px; }
+@media (max-width: 480px) {
+  .handy { width: 100%; border-radius: 0; border-inline: 0; }
+  .zwei > .handy { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); width: calc(100% + 2 * max(16px, env(safe-area-inset-left, 0px))); }
+}
+</style>
+
+<div class="rand">
+  <h1>Garten als Bildlauf, Bereich 1 und 2</h1>
+  <p class="frage">Trägt das Aussehen?</p>
+  <p class="hinweis">So könnte der Weg in der App aussehen. Unten beginnt Bereich 1 „Das Notenbild“, neu gemalt im Blickwinkel von Bereich 2, darüber Bereich 2 „Schlag und Takt“, dazwischen ein Wiesenstreifen. Scroll im Rahmen nach oben. Die Knöpfe sind Attrappen nach deinen Regeln aus Ebene 1: „Zu mir“ nur nach dem Wegscrollen, „Weiter“ nur im Bereich, in dem du gerade bist, „Plan“ immer. Antippen von Station, Namensschild oder Plan zeigt, was dort passieren würde.</p>
+  <div class="leiste" id="staende"><span>Stand:</span></div>
+  <label class="regler"><span id="regler-text"></span><input id="regler" type="range" min="0" value="0"></label>
+</div>
+
+<div class="rand zwei">
+  <div class="handy" id="handy">
+    <div class="rahmen" id="rahmen" tabindex="0" role="region" aria-label="Garten, zum Scrollen">
+      <div class="garten" id="garten"></div>
+    </div>
+    <div class="fest"><button class="zumir" id="zumir" hidden>Zu mir</button><button class="weiter" id="weiter" hidden></button><button class="plan" id="plan">Plan</button></div>
+    <div class="tabs" aria-hidden="true"><span>Weg</span><span>Themen</span><span>Abzeichen</span><span>Üben</span></div>
+    <div class="notiz" id="notiz" role="status" hidden></div>
+    <div class="ueber" id="ueber" hidden></div>
+  </div>
+
+  <div class="info">
+    <h2>Worauf du achten kannst</h2>
+    <ul>
+      <li><b>Übergang:</b> Bereich 2 blendet unten in Wiese aus, der Weg führt durch den Streifen in den Bogen von Bereich 1. Die Wiese ist an das Gras beider Bilder angeglichen.</li>
+      <li><b>Bereich 1:</b> Je nötige Station wächst ein Beet, erst jung, mit den freiwilligen voll. Fünf Reihen Kräuter (Linie oder Zwischenraum), Stockrosen (Höher oder tiefer), Kamille (Schritt oder Sprung), Glockenblumen (Hören und sehen), das Brunnenbeet in vier Farben (Die Stimmen im Chorsatz), der Birnbaum (Abschluss). Die Bezüge zum Thema sind leise gehalten, die Pflanzen sind Vorschlag.</li>
+      <li><b>Knöpfe:</b> Scroll vom Bereich weg, in dem du bist: Dann kommt „Zu mir“, und „Weiter“ verschwindet.</li>
+      <li><b>Was noch roh ist:</b> Bereich 2 hat unten keinen Wiesenstreifen. Deshalb verlieren dort Ringelblumen und Lavendel beim Ausblenden ihren unteren Teil, und die unteren Stationen rücken etwas zusammen. Mit derselben Vorlage wie Bereich 1 neu gemalt, wäre der Übergang ruhiger.</li>
+    </ul>
+    <details>
+      <summary>So ist es entstanden</summary>
+      <p>Ausgangsbild Bereich 1: Z-Image-Turbo (Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo, 26.11.2026, 1024 × 1536 Pixel, 8 Schritte, Seed 42, mit der Eingabe-Vorlage von Bereich 2 (Gouache-Bilderbuch, „from above at about 45 degrees“, Weg von der Mitte unten durch einen Bogen in der Mauer oben), dazu: „starts exactly at the center of the bottom edge … Along the bottom edge a wide strip of plain short grass“. Ohne „center“ trat der Weg unten rechts ins Bild.</p>
+      <p>Grundbild und Beete: Qwen-Image-Edit-2511 (Lizenz Apache 2.0) über den Space kulkas2pintu/QWEN_EDIT_IMAGE, 8 Schritte, Seed 42, jede Ebene aus dem Grundbild. Die KI verwechselt gleich aussehende Beete. Geholfen hat, die Nachbarbeete ausdrücklich unverändert zu nennen („keep their bare brown soil with tiny seedlings“) und das Beet über seine Nachbarn zu beschreiben. Was trotzdem ins Nachbarbeet geht, schneidet die Zone ab.</p>
+      <p>Daten: <code>garten/buehne/notenbild/bereich.json</code>, Zeichner: <code>garten/buehne.js</code> (<code>zeichneGarten</code> setzt die Bereiche mit Wiesenstreifen zusammen).</p>
+    </details>
+  </div>
+</div>
+
+<script type="module">
+import { ladeBuehne, zeichneGarten, stufe } from '../garten/buehne.js';
+import { THEMEN } from '../js/lernweg.js';
+
+const lade = (s) => new Promise((ok, nein) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => nein(new Error(s)); i.src = s; });
+const [b1, b2, wiese] = await Promise.all([
+  ladeBuehne('../garten/buehne/notenbild/', '../garten/teile/'),
+  ladeBuehne('../garten/buehne/schlag-takt/', '../garten/teile/'),
+  lade('../garten/flaechen/wiese.webp'),
+]);
+const BUEHNEN = [b1, b2]; // von unten nach oben
+const ETAPPEN = THEMEN.slice(0, 2);
+const titel = (id) => THEMEN.flatMap((t) => t.stationen).find((s) => s.id === id)?.titel || id;
+// Reihenfolge zum Durchspielen: je Übung die nötige Station, dann ihre freiwilligen
+const REIHE = BUEHNEN.flatMap((bu) => bu.daten.beete.flatMap((x) => [x.station, ...x.freiwillig]));
+const NOETIG = BUEHNEN.flatMap((bu) => bu.daten.stationen);
+const STAENDE = [
+  ['anfang', 'Anfang', []],
+  ['e1', 'In Etappe 1', ['nb-linie', 'nb-linie-aussen', 'nb-linie-hilfslinien', 'nb-hoeher', 'nb-schritt']],
+  ['e2', 'In Etappe 2', ['nb-linie', 'nb-linie-aussen', 'nb-linie-hilfslinien', 'nb-hoeher', 'nb-hoeher-hilfslinien', 'nb-schritt', 'nb-hoeren', 'nb-hoeren-drei', 'nb-chorsatz', 'nb-abschluss', 'st-schlag', 'st-schlag-ohne-klick', 'st-werte', 'st-welcher']],
+  ['alles', 'Alles geschafft', REIHE],
+];
+
+let geschafft = new Set(STAENDE[1][2]);
+let lauf = null, signatur = '';
+const $ = (id) => document.getElementById(id);
+const rahmen = $('rahmen'), garten = $('garten');
+
+const aktuell = () => NOETIG.find((id) => !geschafft.has(id)) || null;
+const bereichVon = (id) => BUEHNEN.findIndex((bu) => bu.daten.stationen.includes(id) || bu.daten.beete.some((x) => x.freiwillig.includes(id)));
+const erreicht = (i) => i === 0 || BUEHNEN[i - 1].daten.stationen.every((id) => geschafft.has(id));
+
+function zeichne() {
+  const breite = Math.round(rahmen.clientWidth);
+  const sig = breite + '|' + BUEHNEN.map((bu) => bu.daten.beete.map((x) => stufe(x, geschafft)).join('')).join('|');
+  if (sig !== signatur) {
+    signatur = sig;
+    lauf = zeichneGarten(BUEHNEN, geschafft, { breite, dpr: Math.min(3, Math.max(2, Math.round(devicePixelRatio || 1))), wiese });
+    garten.querySelector('canvas')?.remove();
+    garten.prepend(lauf.bild);
+    garten.style.height = lauf.hoehe + 'px';
+  }
+  garten.querySelectorAll('.station, .schild, .ausblick').forEach((e) => e.remove());
+  const jetzt = aktuell();
+  garten.insertAdjacentHTML('beforeend', '<div class="ausblick">Weiter oben folgen Bereich 3 bis 11, dann die Kapelle.</div>');
+  lauf.lagen.forEach((lage, i) => {
+    const d = BUEHNEN[i].daten, hier = jetzt && bereichVon(jetzt) === i;
+    const s = document.createElement('button');
+    s.className = 'schild'; s.style.top = lage.mauer + 44 + 'px';
+    s.innerHTML = `${d.nr}&nbsp;&nbsp;${d.titel}${hier ? '<span>Hier bist du</span>' : ''}`;
+    s.onclick = () => blatt(i);
+    garten.append(s);
+    for (const o of lage.orte) {
+      const z = geschafft.has(o.id) ? 'geschafft' : o.id === jetzt ? 'aktuell' : erreicht(i) ? 'offen' : 'zu';
+      const b = document.createElement('button');
+      b.className = 'station ' + z;
+      b.style.left = o.x + 'px'; b.style.top = o.y + 'px';
+      b.setAttribute('aria-label', `${titel(o.id)}, ${{ geschafft: 'geschafft', aktuell: 'hier geht es weiter', offen: 'noch offen', zu: 'noch nicht erreicht' }[z]}`);
+      b.onclick = () => notiz(z === 'zu' ? `Attrappe: „${titel(o.id)}“ ist noch nicht dran.` : z === 'geschafft' ? `Attrappe: „${titel(o.id)}“ noch einmal üben.` : `Attrappe: Hier startet „${titel(o.id)}“.`);
+      garten.append(b);
+    }
+  });
+  knoepfe();
+}
+
+// „Weiter“ nur im eigenen Bereich, „Zu mir“ nur, wenn man weggescrollt ist (wie geruest/ebene1-gesamt.html)
+function knoepfe() {
+  const jetzt = aktuell();
+  const mitte = rahmen.scrollTop + (rahmen.clientHeight - 76) / 2;
+  let da;
+  if (jetzt) { const l = lauf.lagen[bereichVon(jetzt)]; da = mitte >= l.oben && mitte <= l.unten; }
+  else da = rahmen.scrollTop < 120;
+  $('zumir').hidden = da;
+  $('weiter').hidden = !da || !jetzt;
+  if (jetzt) $('weiter').textContent = `Weiter: ${titel(jetzt)}`;
+}
+function zuMir(sanft) {
+  const jetzt = aktuell();
+  let ziel = 0;
+  if (jetzt) { const o = lauf.lagen[bereichVon(jetzt)].orte.find((q) => q.id === jetzt); ziel = o.y - (rahmen.clientHeight - 76) * 0.55; }
+  rahmen.scrollTo({ top: ziel, behavior: sanft ? 'smooth' : 'instant' });
+  if (!sanft) knoepfe();
+}
+
+let notizZeit;
+function notiz(text) {
+  const n = $('notiz'); n.textContent = text; n.hidden = false;
+  clearTimeout(notizZeit); notizZeit = setTimeout(() => { n.hidden = true; }, 2600);
+}
+
+function ueber(kopf, inhalt, klasse) {
+  const u = $('ueber');
+  u.className = 'ueber ' + klasse;
+  u.innerHTML = `<header><span>${kopf}</span><button class="zu">Schließen</button></header>${inhalt}`;
+  u.hidden = false; u.scrollTop = 0;
+  u.querySelector('.zu').onclick = () => { u.hidden = true; };
+  return u;
+}
+
+// Blatt von unten nach Antippen eines Bereichs (Ebene 1, Runde 7, A)
+function blatt(i) {
+  const t = ETAPPEN[i], d = BUEHNEN[i].daten, jetzt = aktuell();
+  const z = (id) => (geschafft.has(id) ? 'geschafft' : id === jetzt ? 'dran' : erreicht(i) ? 'offen' : 'zu');
+  const zeichen = { geschafft: '✓', dran: '', offen: '', zu: '' };
+  const noetig = t.stationen.filter((s) => !s.freiwillig);
+  const zeilen = noetig.map((s) => {
+    const frei = t.stationen.filter((f) => f.freiwillig && f.uebung && f.uebung === s.uebung);
+    const zeile = (x, k, name) => `<li class="${k}"><button data-id="${x.id}"><span class="zeichen ${z(x.id)}">${zeichen[z(x.id)]}</span><span>${name}</span></button></li>`;
+    return zeile(s, 'n', s.titel) + frei.map((f) => zeile(f, 'f', `${f.titel}, ${({ mittel: 'Mittel', schwer: 'Schwer' })[f.stufe] || f.stufe}`)).join('');
+  }).join('');
+  const alle = t.stationen.map((s) => s.id), n = noetig.filter((s) => geschafft.has(s.id)).length, f = alle.filter((id) => !NOETIG.includes(id));
+  const stand = erreicht(i) ? `${n} von ${noetig.length} nötig, ${f.filter((id) => geschafft.has(id)).length} von ${f.length} freiwillig` : 'Noch nicht erreicht.';
+  const u = ueber(`${d.nr}  ${d.titel}`, `<p class="stand">${stand}</p><ol>${zeilen}</ol>`, 'blatt');
+  u.querySelectorAll('[data-id]').forEach((b) => { b.onclick = () => notiz(`Attrappe: Hier startet „${titel(b.dataset.id)}“.`); });
+}
+
+// Gartenplan: der ganze Garten auf einem Bildschirm, Antippen springt hin (Ebene 1, Runde 5)
+function plan() {
+  const jetzt = aktuell(), hier = jetzt ? bereichVon(jetzt) : -1;
+  const kacheln = THEMEN.map((t, i) => {
+    const z = Math.floor(i / 3), s = i % 3, spalte = z % 2 ? 3 - s : s + 1, zeile = 5 - z;
+    const fertig = i < BUEHNEN.length && BUEHNEN[i].daten.stationen.every((id) => geschafft.has(id));
+    const art = i < BUEHNEN.length ? 'bild' : 'folgt';
+    return `<button class="${art}${i === hier ? ' dran' : ''}" data-i="${i}" style="grid-row:${zeile};grid-column:${spalte}">${fertig ? '<i class="haken">✓</i>' : ''}<span><b>${i + 1}</b> ${t.titel}${art === 'folgt' ? '<br>folgt' : ''}</span></button>`;
+  }).join('');
+  const u = ueber('Gartenplan', `<div class="plan-gitter"><button class="kapelle folgt" data-i="-1" style="grid-row:1">Kapelle (folgt)</button>${kacheln}</div>`, '');
+  // Vorschau der fertigen Bereiche aus dem Bildlauf
+  lauf.lagen.forEach((l, i) => {
+    const b = u.querySelector(`[data-i="${i}"]`), c = document.createElement('canvas');
+    const q = lauf.bild.width / rahmen.clientWidth;
+    c.width = 240; c.height = 220;
+    const hoch = (l.unten - l.oben) * q, breit = lauf.bild.width;
+    const m = Math.max(c.width / breit, c.height / hoch);
+    c.getContext('2d').drawImage(lauf.bild, 0, l.oben * q + (hoch - c.height / m) / 2, breit, c.height / m, 0, 0, c.width, c.height);
+    b.prepend(c);
+  });
+  u.querySelectorAll('[data-i]').forEach((b) => {
+    b.onclick = () => {
+      const i = +b.dataset.i;
+      if (i < 0 || i >= BUEHNEN.length) return notiz(i < 0 ? 'Attrappe: Die Kapelle ist das Ziel ganz oben, sie folgt.' : `Attrappe: Bereich ${i + 1} folgt, sobald seine Stationen feststehen.`);
+      u.hidden = true;
+      rahmen.scrollTo({ top: lauf.lagen[i].oben - 20, behavior: 'instant' });
+      knoepfe();
+    };
+  });
+}
+
+rahmen.addEventListener('scroll', knoepfe, { passive: true });
+$('zumir').onclick = () => zuMir(true);
+$('weiter').onclick = () => notiz(`Attrappe: Hier startet „${titel(aktuell())}“.`);
+$('plan').onclick = plan;
+
+// Stand einstellen
+const regler = $('regler');
+regler.max = REIHE.length;
+function setze(neu, quelle) {
+  geschafft = new Set(neu);
+  document.querySelectorAll('#staende button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.s === quelle)));
+  const n = geschafft.size;
+  $('regler-text').textContent = `${n} von ${REIHE.length} Stationen geschafft` + (aktuell() ? `, als Nächstes „${titel(aktuell())}“` : ', Etappe 1 und 2 fertig');
+  $('ueber').hidden = true;
+  zeichne();
+  zuMir(false);
+}
+STAENDE.forEach(([s, name, ids]) => {
+  const b = document.createElement('button');
+  b.dataset.s = s; b.textContent = name;
+  b.onclick = () => { regler.value = ids.length; setze(ids, s); };
+  $('staende').append(b);
+});
+let warte;
+regler.oninput = () => { clearTimeout(warte); warte = setTimeout(() => setze(REIHE.slice(0, +regler.value), ''), 120); };
+new ResizeObserver(() => { if (lauf && Math.round(rahmen.clientWidth) !== +signatur.split('|')[0]) { zeichne(); } }).observe(rahmen);
+regler.value = STAENDE[1][2].length;
+setze(STAENDE[1][2], 'e1');
+window.garten = { BUEHNEN, lauf: () => lauf };
+</script>

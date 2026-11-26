@@ -5,6 +5,8 @@
  "titel": "Schlag und Takt",
  "groesse": [1024, 1536],
  "grund": "frisch.webp",
+ "mauer": 172,
+ "tor": { "x": 535, "r": 45, "oben": 246, "unten": 372 },
  "weg": { "stationenZwischen": [1470, 430], "suchenAb": 360 },
  "stationen": ["st-schlag", "st-werte", "st-welcher", "st-ergaenzen", "st-erkennen", "st-klopfen", "st-abschluss"],
  "steine": ["trittstein-1", "trittstein-2", "trittstein-3"],

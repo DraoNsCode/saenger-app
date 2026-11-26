@@ -26,7 +26,8 @@ h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
 const lade = (s) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = s; });
 const [n1, n2] = await Promise.all([lade('../garten/buehne/notenbild/voll.webp'), lade('../garten/buehne/schlag-takt/voll.webp')]);
 // Oberkante der Mauer im Bild (ab hier nach oben gehört es schon zum nächsten Bereich)
-const MAUER = new Map([[n1, 168], [n2, 172]]);
+// Bereich 1 am 26.11.2026 neu gemalt, Maße angepasst; der Bildlauf wie in der App steht in geruest/garten-lauf.html
+const MAUER = new Map([[n1, 175], [n2, 172]]);
 const B = 1024, H = 1536, F = 390 / B, dpr = 2;
 
 // unten: der untere Bereich, oben: der obere; art „mauer“ schneidet den unteren an seiner Mauer ab,
@@ -50,7 +51,7 @@ function stapel(oben, unten, art) {
   return { c, naht: H };
 }
 // Öffnung des Bogens im Bild (Rechteck mit rundem Oberteil): Mitte x, halbe Breite, Scheitel, Boden
-const TOR = new Map([[n1, { x: 515, r: 38, oben: 222, unten: 332 }], [n2, { x: 531, r: 47, oben: 242, unten: 372 }]]);
+const TOR = new Map([[n1, { x: 529, r: 44, oben: 236, unten: 358 }], [n2, { x: 531, r: 47, oben: 242, unten: 372 }]]);
 const wiese = await lade('../garten/flaechen/wiese.webp');
 
 function wegMitte(img, y) {
