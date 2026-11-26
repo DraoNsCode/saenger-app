@@ -240,3 +240,7 @@ Stil:
   - Frei, je Stil passend: Verlauf und Breite des Weges, Form der Bereiche, Lage von Beeten, Bäumen und Wasser. Wie eine Station aussieht. Wie Bereiche aneinandergrenzen und wo ihr Name steht. Woran man Fortschritt erkennt.
 - **Stilrunde 2 (26.11.2026):** Daniel wählt B, das gemalte Bilderbuch: deckende Farbe mit sichtbaren Pinselstrichen, keine Umrisse. Im Gerüst führt der Weg durch Hügel, eine Mauer mit Bogen trennt die Bereiche, flache Steine im Weg sind die Stationen. Diese Einzelheiten des Gerüsts sind Vorschlag, gewählt ist der Stil.
 - **Plan ab Stil B (26.11.2026):** Daniel: „Passt so.“ Vorgehen: Der Code setzt die Bereiche zusammen, die KI liefert nur Bausteine (Teile und Texturen). Schritte: Bausteine-Probe, Baukasten je Etappe, Kapelle und Übergänge, Einbau in die App, Stilregeln im Skill. Täglicher Termin und Canva nur mit Daniels Ja. Einzelheiten als Vorschlag in GARTEN-NEU.md.
+
+## Reihenfolge der Bausteine (26.11.2026)
+
+- Für die Zeit, in der das KI-Kontingent für den Garten aufgebraucht ist, wählt Daniel „J, dann E“: zuerst die Teile von Baustein J, die kein Gartenbild brauchen, danach Baustein E (Konten). Der Garten (B) bleibt der Hauptstrang. C vorzuziehen hat Daniel nicht gewählt. Welche Teile von J dazugehören und wie E aussieht, bleibt Vorschlag (GEZIELT-UEBEN.md, FAHRPLAN.md).

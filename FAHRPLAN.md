@@ -1,6 +1,6 @@
 # Fahrplan (Vorschlag)
 
-Vorschlag von Claude vom 19.11.2026. Das ist keine Vorgabe: Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Auch die Reihenfolge ist nur ein Vorschlag.
+Vorschlag von Claude vom 19.11.2026, Reihenfolge am 26.11.2026 nach Daniels Wahl angepasst. Das ist keine Vorgabe: Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Auch die Reihenfolge ist nur ein Vorschlag.
 
 Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleibt bewusst grob. Details entstehen erst, wenn ein Baustein drankommt.
 
@@ -12,19 +12,19 @@ Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Er bleib
 | B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Erster Anlauf (24. und 25.11.2026) ist Archiv. Neuanfang Schritt für Schritt (GARTEN-NEU.md), Ebene 0 am 25.11.2026 geklärt. Ebene 1 (graues Gerüst) am 25.11.2026 beantwortet, Ebene 2 (Aussehen) zurückgestellt. Stil am 26.11.2026 gewählt: gemaltes Bilderbuch. Nächster Schritt: Bausteine-Probe (GARTEN-NEU.md, „Stand 26.11.2026“) | A, J |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt; Übungen offen | – |
 | D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Inhalt offen; die Lieder liegen nur als PDF vor | – |
-| E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten) | – |
+| E. Konten | Konten, wenn kostenlos umsetzbar (siehe unten); nach J, in den Wartezeiten von B | – |
 | F. Abzeichen | vorläufig, eventuell später neu; Bronze, Silber und Gold hängen an Leicht, Mittel und Schwer und werden hier neu gefasst (ENTSCHEIDUNGEN.md, 19.11.2026) | B, J |
 | G. Mikrofon | nur als Zusatz | – |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | C, Noten aus den PDFs |
 | I. Testphase mit einigen Sängern, danach Einführung im Chor | offen | – |
-| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege (ENTSCHEIDUNGEN.md); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen | A |
+| J. Gezielt üben nach dem Weg; nicht bearbeitete Übungen und Fortschritt im Garten verbinden | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege (ENTSCHEIDUNGEN.md); Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen; die Teile ohne Gartenbild kommen als Nächstes, in den Wartezeiten von B (Daniels Wahl vom 26.11.2026) | A |
 
 ## Vorgeschlagene Reihenfolge
 
 1. **A**, weil es entschieden und überschaubar ist und der Garten wissen muss, welche Stationen er zeigt. (Erledigt am 19.11.2026.)
-2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss. (Konzept erledigt am 19.11.2026.) Die Teile von J ohne Gartenbild könnten vor oder mit B umgesetzt werden, offene Stellen und Pflege-Zeichen im Garten gehören zu B (GEZIELT-UEBEN.md).
+2. **J** als Konzept, auf Daniels Wunsch vor B. Es bestimmt mit, was der Garten zeigen muss. (Konzept erledigt am 19.11.2026.) Die Teile von J ohne Gartenbild könnten vor oder mit B umgesetzt werden, offene Stellen und Pflege-Zeichen im Garten gehören zu B (GEZIELT-UEBEN.md). Die Teile von J ohne Gartenbild kommen in den Wartezeiten auf das KI-Kontingent, vor E (Daniels Wahl vom 26.11.2026). Der Grund: J ändert, was gespeichert wird, und E gleicht dann gleich das fertige Format ab.
 3. **B**, weil die Optik alle Ansichten prägt. Je früher sie steht, desto weniger wird doppelt gestaltet. (Erster Anlauf am 24. und 25.11.2026, Archiv. Neuanfang vorbereitet, siehe GARTEN-NEU.md.)
-4. **E**, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
+4. **E**, in den Wartezeiten von B, nach J, bevor Sänger Fortschritt sammeln, damit nichts übertragen werden muss und Safari nichts löscht.
 5. **I** mit zwei oder drei Sängern und den Etappen 1 und 2. Echte Rückmeldung zum Grundkonzept, bevor neun weitere Etappen entstehen.
 6. **C, D, F, G, H** danach in der Reihenfolge, die gerade passt. C am besten in Paketen je Etappe. Über die Reihenfolge der Etappen will Daniel nachdenken, wenn alle Inhalte stehen.
 
