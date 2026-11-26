@@ -53,7 +53,7 @@ Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.
 
 Das Design beginnt Schritt für Schritt von vorne, nach den Ebenen und Regeln in [GARTEN-NEU.md](GARTEN-NEU.md) (von Daniel am 25.11.2026 bestätigt). Ebene 0 ist geklärt (25.11.2026), die Ergebnisse stehen in ENTSCHEIDUNGEN.md unter „Garten neu“.
 
-Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Daniel gefallen Aquarell, gemaltes Bilderbuch und altes Kräuterbuch. Nächster Schritt: für jeden dieser Stile ein passendes Gerüst mit KI-Bildern, sobald das kostenlose Kontingent wieder da ist (voraussichtlich am 26.11.2026 nachmittags), danach prüfen, welcher sich bauen lässt. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
+Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Daniel hat am 26.11.2026 den Stil gewählt: gemaltes Bilderbuch (`geruest/stilrunde2.html`, Stil B). Nächster Schritt: prüfen, ob sich B mit Fortschritt und tauschbaren Bereichen aus KI-Bausteinen bauen lässt. Vorschlag: Die Teile von J, die kein Gartenbild brauchen, lassen sich vor oder mit B umsetzen (GEZIELT-UEBEN.md). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 
