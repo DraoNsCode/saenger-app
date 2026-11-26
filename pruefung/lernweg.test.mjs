@@ -241,6 +241,36 @@ test('Stationen der Etappe 7 wie in LERNWEG.md', () => {
   );
 });
 
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 8“.
+test('Stationen der Etappe 8 wie in LERNWEG.md', () => {
+  const t = THEMEN[7];
+  assert.equal(t.id, 'punktierung');
+  assert.deepEqual(
+    t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
+    ['punktierung/leicht', 'punktierung/schwer/frei', 'zwei-schlaege/leicht', 'zwei-schlaege/schwer/frei', 'punkt-hoeren/leicht', 'punkt-hoeren/schwer/frei', 'mischung/gemischt']
+  );
+});
+
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 9“.
+test('Stationen der Etappe 9 wie in LERNWEG.md', () => {
+  const t = THEMEN[8];
+  assert.equal(t.id, 'zusammenklang');
+  assert.deepEqual(
+    t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
+    ['dreiklang/leicht', 'dreiklang/schwer/frei', 'dur-moll/leicht', 'dur-moll/schwer/frei', 'einsatzton/leicht', 'einsatzton/schwer/frei', 'mischung/gemischt']
+  );
+});
+
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 10“.
+test('Stationen der Etappe 10 wie in LERNWEG.md', () => {
+  const t = THEMEN[9];
+  assert.equal(t.id, 'tonarten');
+  assert.deepEqual(
+    t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
+    ['vorzeichen/leicht', 'vorzeichen/schwer/frei', 'tonart/leicht', 'tonart/schwer/frei', 'mischung/gemischt']
+  );
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

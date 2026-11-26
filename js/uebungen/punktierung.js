@@ -23,7 +23,7 @@ export default {
     schwer: 'Auf welche Zählzeit fällt die Note danach?',
   },
   erklaerung: [
-    'Ein **Punkt** hinter einer Note macht sie um die Hälfte länger. Eine Viertel dauert 1 Schlag, eine punktierte Viertel 1½ Schläge. Eine punktierte Halbe dauert 3 Schläge.',
+    'Ein **Punkt** hinter einer Note macht sie um die Hälfte länger. Im 4/4- und 3/4-Takt dauert eine Viertel 1 Schlag, eine punktierte Viertel 1½ Schläge und eine punktierte Halbe 3 Schläge.',
     'Nach einer punktierten Viertel kommt oft eine Achtel. Sie fällt auf das „und“.',
     'Ein **Haltebogen** verbindet zwei Noten mit demselben Ton. Du singst sie als einen langen Ton, ohne neu anzusetzen. Die Dauern werden zusammengezählt.',
   ],
@@ -50,7 +50,8 @@ export default {
     let warum;
     if (stufe === 'leicht') {
       // Ziel: punktierte Note oder der Anfang eines Haltebogens
-      const kandidaten = info.filter((x) => x.n.d === 1.5 || x.n.d === 3 || x.n.bogen).map((x) => [x, 1]);
+      // Keine Note, zu der ein Haltebogen hinführt: Sie klingt nicht neu an
+      const kandidaten = info.filter((x) => (x.n.d === 1.5 || x.n.d === 3 || x.n.bogen) && !(x.i > 0 && takt[x.i - 1].bogen)).map((x) => [x, 1]);
       ziel = gewichtet(kandidaten);
       const dauer = ziel.n.bogen ? ziel.n.d + takt[ziel.i + 1].d : ziel.n.d;
       loesung = dauerText(dauer);
@@ -59,8 +60,8 @@ export default {
       warum = ziel.n.bogen
         ? `Der Haltebogen verbindet zwei Noten: ${dauerText(ziel.n.d)} und ${dauerText(takt[ziel.i + 1].d)}. Zusammen klingt der Ton ${dauerText(dauer)} lang.`
         : ziel.n.d === 1.5
-          ? 'Eine Viertel dauert 1 Schlag, der Punkt fügt die Hälfte dazu: 1½ Schläge.'
-          : 'Eine Halbe dauert 2 Schläge, der Punkt fügt die Hälfte dazu: 3 Schläge.';
+          ? 'Eine Viertel dauert hier 1 Schlag, der Punkt fügt die Hälfte dazu: 1½ Schläge.'
+          : 'Eine Halbe dauert hier 2 Schläge, der Punkt fügt die Hälfte dazu: 3 Schläge.';
     } else {
       // Ziel: die Note nach einer punktierten oder gebundenen Note
       const kandidaten = info.filter((x) => x.i > 0 && !takt[x.i - 1].bogen && (takt[x.i - 1].d === 1.5 || (x.i > 1 && takt[x.i - 2].bogen))).map((x) => [x, 1]);

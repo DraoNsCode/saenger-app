@@ -14,12 +14,15 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 7 sind als Vorschläge spielbar, Daniel testet und entscheidet. Daniel ist unterwegs und hat gesagt, nach dem Plan weiterzumachen: Weitere Etappen entstehen ebenso als spielbare Vorschläge.
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 10 sind als Vorschläge spielbar, Daniel testet und entscheidet. Daniel ist unterwegs und hat gesagt, nach dem Plan weiterzumachen: Weitere Etappen entstehen ebenso als spielbare Vorschläge.
 
 Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
+- Etappe 10 (Vorzeichen und Tonarten, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Kreuz und Be“ und „Die 1 finden“ (`js/uebungen/vorzeichen.js`).
+- Etappe 9 (Zusammenklang, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Der Dreiklang“, „Dur oder Moll?“ und „Der Einsatzton“ (`js/uebungen/zusammenklang.js`). Die eigene Stimme im Satz hören fehlt noch.
+- Etappe 8 (Punktierung und Haltebogen, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Punkt und Haltebogen“, „Wie viele Schläge?“ (2/2 und 6/8 in zwei) und „Punktiert hören“. Takte mit Punkt und Bogen baut `punktTakt` in `js/uebungen/hilfen.js`.
 - Etappe 7 (Intervalle, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Intervalle lesen“ und „Intervalle hören“ (`js/uebungen/intervalle.js`). Merklieder und Singen fehlen noch (LERNWEG.md).
 - Etappe 6 (Zeichen im Notenbild, 26.11.2026) als **Vorschlag, nicht entschieden**, mit drei Übungsarten: „Was bedeutet das Zeichen?“, „Welche Reihenfolge?“ (Wiederholungen, Klammern, D.C., D.S.) und „Welche Strophe?“.
 - Etappe 5 (Tonleiter und Ziffern, 26.11.2026) als **Vorschlag, nicht entschieden**, mit vier Übungsarten: „Ganzton oder Halbton“ (mit Klaviatur als Bild, `klaviaturBild` in `js/uebungen/klavier.js`), „Die Dur-Tonleiter“, „Welche Ziffer?“ und „Ziffern hören“. Hilfen in `js/uebungen/ziffern.js`. Stufen singen fehlt noch (LERNWEG.md).

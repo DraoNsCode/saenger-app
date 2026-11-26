@@ -25,6 +25,11 @@ import zeichen from './zeichen.js';
 import ablauf from './ablauf.js';
 import strophen from './strophen.js';
 import { intervallLesen, intervallHoeren } from './intervalle.js';
+import punktierung from './punktierung.js';
+import zweiSchlaege from './zwei-schlaege.js';
+import punktHoeren from './punkt-hoeren.js';
+import { durMoll, dreiklang, einsatzton } from './zusammenklang.js';
+import { vorzeichen, tonart } from './vorzeichen.js';
 
 export const UEBUNGEN = Object.fromEntries(
   [
@@ -56,5 +61,13 @@ export const UEBUNGEN = Object.fromEntries(
     strophen,
     intervallLesen,
     intervallHoeren,
+    punktierung,
+    zweiSchlaege,
+    punktHoeren,
+    dreiklang,
+    durMoll,
+    einsatzton,
+    vorzeichen,
+    tonart,
   ].map((u) => [u.id, u])
 );

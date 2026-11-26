@@ -17,7 +17,7 @@ test('Intervalle lesen: Lösung passt zur Größe, leicht nur bis zur Quinte', (
         const a = intervallLesen.neu(stufe, { stimme });
         assert.equal(a.loesung, String(a.groesse));
         if (stufe === 'leicht') assert.ok(a.groesse <= 4);
-        assert.ok(a.warum.includes(`${a.groesse + 1} Töne`));
+        assert.ok(a.warum.includes(`Das sind ${a.groesse + 1},`));
       }
 });
 

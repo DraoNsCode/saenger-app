@@ -135,16 +135,44 @@ export const THEMEN = [
     id: 'punktierung',
     titel: 'Punktierung und Haltebogen',
     kurz: 'Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 8“)
+    stationen: [
+      { id: 'pk-punkt', titel: 'Punkt und Haltebogen', uebung: 'punktierung', stufe: 'leicht' },
+      { id: 'pk-punkt-zaehlen', titel: 'Punkt und Haltebogen', uebung: 'punktierung', stufe: 'schwer', freiwillig: true },
+      { id: 'pk-schlaege', titel: 'Wie viele Schläge?', uebung: 'zwei-schlaege', stufe: 'leicht' },
+      { id: 'pk-schlaege-note', titel: 'Wie viele Schläge?', uebung: 'zwei-schlaege', stufe: 'schwer', freiwillig: true },
+      { id: 'pk-hoeren', titel: 'Punktiert hören', uebung: 'punkt-hoeren', stufe: 'leicht' },
+      { id: 'pk-hoeren-bogen', titel: 'Punktiert hören', uebung: 'punkt-hoeren', stufe: 'schwer', freiwillig: true },
+      { id: 'pk-abschluss', titel: 'Abschluss: Punktierung und Haltebogen', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'zusammenklang',
     titel: 'Zusammenklang',
     kurz: 'Dreiklang, Dur oder Moll, der Einsatzton, die eigene Stimme im Satz hören.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 9“)
+    stationen: [
+      { id: 'zk-dreiklang', titel: 'Der Dreiklang', uebung: 'dreiklang', stufe: 'leicht' },
+      { id: 'zk-dreiklang-toene', titel: 'Der Dreiklang', uebung: 'dreiklang', stufe: 'schwer', freiwillig: true },
+      { id: 'zk-durmoll', titel: 'Dur oder Moll?', uebung: 'dur-moll', stufe: 'leicht' },
+      { id: 'zk-durmoll-zusammen', titel: 'Dur oder Moll?', uebung: 'dur-moll', stufe: 'schwer', freiwillig: true },
+      { id: 'zk-einsatz', titel: 'Der Einsatzton', uebung: 'einsatzton', stufe: 'leicht' },
+      { id: 'zk-einsatz-oktave', titel: 'Der Einsatzton', uebung: 'einsatzton', stufe: 'schwer', freiwillig: true },
+      { id: 'zk-abschluss', titel: 'Abschluss: Zusammenklang', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'tonarten',
     titel: 'Vorzeichen und Tonarten',
     kurz: 'Kreuz, Be und Auflösungszeichen, die 1 finden, Moll.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 10“)
+    stationen: [
+      { id: 'tn-vorzeichen', titel: 'Kreuz und Be', uebung: 'vorzeichen', stufe: 'leicht' },
+      { id: 'tn-vorzeichen-takt', titel: 'Kreuz und Be', uebung: 'vorzeichen', stufe: 'schwer', freiwillig: true },
+      { id: 'tn-tonart', titel: 'Die 1 finden', uebung: 'tonart', stufe: 'leicht' },
+      { id: 'tn-tonart-moll', titel: 'Die 1 finden', uebung: 'tonart', stufe: 'schwer', freiwillig: true },
+      { id: 'tn-abschluss', titel: 'Abschluss: Vorzeichen und Tonarten', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'rhythmus-fein',

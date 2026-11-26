@@ -29,8 +29,8 @@ export const intervallLesen = {
     schwer: 'Bis zur Oktave, auch übereinander',
   },
   erklaerung: [
-    'Ein **Intervall** ist der Abstand zwischen zwei Tönen. Sein Name sagt, wie viele Töne er umfasst.',
-    'Zähl beide Noten mit: Von c bis e sind es c, d, e, also drei Töne. Das ist eine **Terz**.',
+    'Ein **Intervall** ist der Abstand zwischen zwei Tönen. Sein Name kommt von einer lateinischen Zahl und sagt, wie viele Notennamen er umfasst.',
+    'Zähl die Notennamen, beide Noten mit: Von c bis e sind es c, d, e, also drei. Das ist eine **Terz** (drei).',
     'Sekunde (2), Terz (3), Quarte (4), Quinte (5), Sexte (6), Septime (7), Oktave (8).',
     'Im Notenbild: Bei einer **Sekunde** steht eine Note auf einer Linie und die andere im Zwischenraum direkt daneben. Bei einer **Terz** stehen beide auf benachbarten Linien oder in benachbarten Zwischenräumen.',
   ],
@@ -43,7 +43,10 @@ export const intervallLesen = {
     do {
       g = waehle(groessen);
       p1 = zufall(von, bis - g);
-    } while (`${g}/${p1}` === letzteLesen || p1 + g > bis);
+      // f–h (Quarte) und h–f (Quinte) klingen anders als die gehörten Quarten und Quinten: weglassen
+      const unten = notenname(diaAusPosIn(s, p1));
+      if ((unten === 'f' && g === 3) || (unten === 'h' && g === 4)) p1 = -99;
+    } while (`${g}/${p1}` === letzteLesen || p1 < von || p1 + g > bis);
     letzteLesen = `${g}/${p1}`;
     const zusammen = stufe === 'schwer' && Math.random() < 0.4;
     const runter = !zusammen && Math.random() < 0.4;
@@ -59,7 +62,7 @@ export const intervallLesen = {
       optionen: optionen(g, groessen, 4),
       spalten: 2,
       loesung: String(g),
-      warum: `Zähl beide Noten mit: ${reihe.join(', ')}. Das sind ${g + 1} Töne, also eine ${INTERVALL[g]}.`,
+      warum: `Zähl die Notennamen, beide Noten mit: ${reihe.join(', ')}. Das sind ${g + 1}, also eine ${INTERVALL[g]}.`,
       nachher: () =>
         zusammen ? akkord([midi(d1), midi(d2)], jetzt() + 0.05, 1.2) : spieleFolge([{ midi: midi(d1), schlaege: 1 }, { midi: midi(d2), schlaege: 1.5 }], { tempo: 80 }),
       groesse: g, // für die Prüfung

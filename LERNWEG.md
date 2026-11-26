@@ -22,9 +22,9 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 7 | Intervalle | Sekunde bis Oktave lesen, hören und singen | Lesen und Hören spielbar als Vorschlag (26.11.2026), nicht entschieden; Merklieder und Singen offen |
-| 8 | Punktierung und Haltebogen | Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen | |
-| 9 | Zusammenklang | Dreiklang, Dur oder Moll, der Einsatzton, die eigene Stimme im Satz hören | |
-| 10 | Vorzeichen und Tonarten | Kreuz, Be und Auflösungszeichen, die 1 finden, Moll | |
+| 8 | Punktierung und Haltebogen | Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen | spielbar als Vorschlag (26.11.2026), nicht entschieden |
+| 9 | Zusammenklang | Dreiklang, Dur oder Moll, der Einsatzton, die eigene Stimme im Satz hören | spielbar als Vorschlag (26.11.2026), nicht entschieden; die eigene Stimme im Satz offen |
+| 10 | Vorzeichen und Tonarten | Kreuz, Be und Auflösungszeichen, die 1 finden, Moll | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 11 | Feinheiten im Rhythmus | Synkopen, Triolen und Sechzehntel | |
 
 ## Stationen der Etappen 1 und 2
@@ -177,6 +177,58 @@ Begründungen in Kürze:
 - Beim Hören hilft die Verbindung zu den Ziffern aus Etappe 5: Eine Quinte klingt wie von der 1 zur 5.
 - **Offen:** die Merklieder aus dem Chorliederbuch (Baustein H). Dafür wählt Daniel die Liedanfänge aus, die Noten kommen mit seinem Skill aus den PDFs. Danach wird „Intervalle hören“ um Merklieder ergänzt. Singen fehlt, weil es ohne Mikrofon nicht prüfbar ist (wie in Etappe 5).
 - Keine Spätblüher in Etappe 7.
+
+## Stationen der Etappe 8 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Punkt und Haltebogen | Wie lange klingt die farbige Note (punktierte Viertel, punktierte Halbe, zwei gebundene Noten)? | Auf welche Zählzeit fällt die Note danach? |
+| Wie viele Schläge? | ein Takt in 2/2, 6/8, 4/4 oder 3/4: Wie viele Schläge zählst du? | Welche Note dauert in diesem Takt einen Schlag? |
+| Punktiert hören | ein 4/4-Takt mit punktierten Noten erklingt, zwei Bilder zur Wahl | mit Haltebogen, auch 3/4, drei Bilder |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- 2/2 und 6/8 werden wie im Chor in zwei Schlägen gezählt (ENTSCHEIDUNGEN.md, „Sprache des Chors“). In 6/8 bekommen die Achtel keine eigene Zählung, die Übung fragt deshalb nur nach den Schlägen.
+- Punktierte Viertel mit Achtel ist der häufigste punktierte Rhythmus im Chor. Die Achtel danach fällt auf das „und“, das verbindet die Etappe mit Etappe 4.
+- Ein Klopfen punktierter Rhythmen ist nicht dabei. Es lässt sich leicht nach dem Muster von „Achtel klopfen“ ergänzen, wenn Daniel es will.
+- Keine Spätblüher in Etappe 8.
+
+## Stationen der Etappe 9 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Der Dreiklang | Welches von drei Bildern zeigt einen Dreiklang? | Welche Töne hat der Dreiklang auf x? |
+| Dur oder Moll? | ein Dreiklang erklingt erst einzeln, dann zusammen: Dur oder Moll? | nur zusammen |
+| Der Einsatzton | Dreiklang, dann ein Ton daraus: Ist er die 1, 3 oder 5? | der Ton kann auch eine Oktave höher oder tiefer liegen |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Der Einsatzton ist die Lage, die der Chor jede Woche erlebt: Das Klavier gibt einen Dreiklang, jede Stimme sucht ihren Ton darin.
+- Nach einer Antwort bei „Dur oder Moll?“ erklingen Dur und Moll auf demselben Grundton zum Vergleich.
+- **Offen:** „die eigene Stimme im Satz hören“. Dafür braucht es gute vierstimmige Hörbeispiele, am besten aus dem Chorliederbuch. Vorschlag: zusammen mit den Liedern im Übe-Teil (Baustein D) angehen.
+- Keine Spätblüher in Etappe 9.
+
+## Stationen der Etappe 10 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Kreuz und Be | eine Note mit Kreuz oder Be: Wie heißt sie (fis, es, b …)? | Gilt das Vorzeichen noch? Dieselbe Note später im Takt, mit Auflösungszeichen oder nach dem Taktstrich |
+| Die 1 finden | Tonart mit bis zu drei Vorzeichen, Dur: Welcher Ton ist die 1? | Dur oder Moll, bis zu vier Vorzeichen |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Deutsche Namen: is und es, mit den Ausnahmen es, as und b. Gefragt werden nur Töne auf schwarzen Tasten, eis, his, ces und fes kommen im Chor kaum vor.
+- Regeln zum Finden der 1: das letzte Kreuz ist die 7, das vorletzte Be ist die 1. In Moll ist der Moll-Grundton die 1 (ENTSCHEIDUNGEN.md, „Sprache des Chors“), drei Halbtöne unter der Dur-1.
+- **Offen:** die schwarzen Tasten auf der Klaviatur aus Etappe 3 (als Spätblüher von „Taste am Klavier“) und Ziffern lesen in anderen Tonarten (als Spätblüher von „Welche Ziffer?“). Beides ist vorbereitet (der Mechanismus für Spätblüher steht), aber noch nicht gebaut.
 
 ## Runden
 

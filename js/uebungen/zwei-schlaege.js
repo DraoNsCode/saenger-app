@@ -17,7 +17,7 @@ const WARUM = {
   '4/4': 'Im 4/4-Takt zählst du vier Schläge, jeder Schlag ist eine Viertel.',
   '3/4': 'Im 3/4-Takt zählst du drei Schläge, jeder Schlag ist eine Viertel.',
   '2/2': 'Im 2/2-Takt zählst du zwei Schläge, jeder Schlag ist eine Halbe.',
-  '6/8': 'Im 6/8-Takt zählst du im Chor zwei Schläge. Je drei Achtel bilden einen Schlag, so lang wie eine punktierte Viertel.',
+  '6/8': 'Im 6/8-Takt zählst du im Chor zwei Schläge, nur „1“ und „2“. Je drei Achtel bilden einen Schlag, so lang wie eine punktierte Viertel.',
 };
 
 let letzte = null;
@@ -32,9 +32,9 @@ export default {
     schwer: 'Welche Note dauert einen Schlag?',
   },
   erklaerung: [
-    'Die Taktangabe sagt, wie viele Noten welcher Art in einen Takt passen. Im Chor zählen wir aber nicht immer jede davon als Schlag.',
-    '**2/2-Takt**: zwei Halbe pro Takt. Du zählst zwei Schläge, jeder Schlag ist eine Halbe.',
-    '**6/8-Takt**: sechs Achtel pro Takt. Du zählst zwei Schläge, je drei Achtel sind ein Schlag.',
+    'Die **Taktangabe**: Die obere Zahl sagt, wie viele Noten in einen Takt passen, die untere, welche (2 = Halbe, 4 = Viertel, 8 = Achtel). Im Chor zählen wir aber nicht immer jede davon als Schlag.',
+    '**2/2-Takt**: zwei Halbe pro Takt. Du zählst zwei Schläge, jeder Schlag ist eine Halbe. Im Gesangbuch steht dafür oft ein durchgestrichenes C.',
+    '**6/8-Takt**: sechs Achtel pro Takt. Du zählst zwei Schläge, je drei Achtel sind ein Schlag. Die drei Achtel zählst du nicht einzeln, du zählst nur „1“ und „2“.',
     'Im 4/4- und 3/4-Takt bleibt es bei vier und drei Schlägen, jeder Schlag ist eine Viertel.',
   ],
   neu(stufe, k) {
