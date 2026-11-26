@@ -21,6 +21,10 @@ import ganzHalbton from './ganz-halbton.js';
 import tonleiter from './tonleiter.js';
 import zifferLesen from './ziffer-lesen.js';
 import stufenHoeren from './stufen-hoeren.js';
+import zeichen from './zeichen.js';
+import ablauf from './ablauf.js';
+import strophen from './strophen.js';
+import { intervallLesen, intervallHoeren } from './intervalle.js';
 
 export const UEBUNGEN = Object.fromEntries(
   [
@@ -47,5 +51,10 @@ export const UEBUNGEN = Object.fromEntries(
     tonleiter,
     zifferLesen,
     stufenHoeren,
+    zeichen,
+    ablauf,
+    strophen,
+    intervallLesen,
+    intervallHoeren,
   ].map((u) => [u.id, u])
 );

@@ -107,11 +107,29 @@ export const THEMEN = [
     id: 'zeichen',
     titel: 'Zeichen im Notenbild',
     kurz: 'Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 6“)
+    stationen: [
+      { id: 'zc-zeichen', titel: 'Was bedeutet das Zeichen?', uebung: 'zeichen', stufe: 'leicht' },
+      { id: 'zc-zeichen-mehr', titel: 'Was bedeutet das Zeichen?', uebung: 'zeichen', stufe: 'schwer', freiwillig: true },
+      { id: 'zc-ablauf', titel: 'Welche Reihenfolge?', uebung: 'ablauf', stufe: 'leicht' },
+      { id: 'zc-ablauf-spruenge', titel: 'Welche Reihenfolge?', uebung: 'ablauf', stufe: 'schwer', freiwillig: true },
+      { id: 'zc-strophen', titel: 'Welche Strophe?', uebung: 'strophen', stufe: 'leicht' },
+      { id: 'zc-strophen-drei', titel: 'Welche Strophe?', uebung: 'strophen', stufe: 'schwer', freiwillig: true },
+      { id: 'zc-abschluss', titel: 'Abschluss: Zeichen im Notenbild', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'intervalle',
     titel: 'Intervalle',
     kurz: 'Sekunde bis Oktave lesen, hören und singen.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 7“)
+    stationen: [
+      { id: 'iv-lesen', titel: 'Intervalle lesen', uebung: 'intervall-lesen', stufe: 'leicht' },
+      { id: 'iv-lesen-alle', titel: 'Intervalle lesen', uebung: 'intervall-lesen', stufe: 'schwer', freiwillig: true },
+      { id: 'iv-hoeren', titel: 'Intervalle hören', uebung: 'intervall-hoeren', stufe: 'leicht' },
+      { id: 'iv-hoeren-alle', titel: 'Intervalle hören', uebung: 'intervall-hoeren', stufe: 'schwer', freiwillig: true },
+      { id: 'iv-abschluss', titel: 'Abschluss: Intervalle', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'punktierung',

@@ -20,8 +20,8 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | spielbar (26.11.2026), Daniel testet |
 | 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | spielbar als Vorschlag (26.11.2026), nicht entschieden |
-| 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |
-| 7 | Intervalle | Sekunde bis Oktave lesen, hören und singen | |
+| 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | spielbar als Vorschlag (26.11.2026), nicht entschieden |
+| 7 | Intervalle | Sekunde bis Oktave lesen, hören und singen | Lesen und Hören spielbar als Vorschlag (26.11.2026), nicht entschieden; Merklieder und Singen offen |
 | 8 | Punktierung und Haltebogen | Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen | |
 | 9 | Zusammenklang | Dreiklang, Dur oder Moll, der Einsatzton, die eigene Stimme im Satz hören | |
 | 10 | Vorzeichen und Tonarten | Kreuz, Be und Auflösungszeichen, die 1 finden, Moll | |
@@ -142,6 +142,41 @@ Begründungen in Kürze:
 - Ganzton und Halbton werden an der Klaviatur aus Etappe 3 erklärt: Halbtöne zwischen weißen Tasten gibt es nur bei e–f und h–c.
 - **Stufen singen** ist nicht dabei. Ohne Mikrofon lässt sich Singen nicht prüfen. Vorschlag: Es kommt mit dem Mikrofon (Baustein G) oder als Übung zum Selbermachen in den Übe-Teil (Baustein D). Offen, Daniel entscheidet.
 - Keine Spätblüher in Etappe 5. Ein möglicher Spätblüher später: Ziffern lesen in anderen Tonarten, sobald Etappe 10 erreicht ist.
+
+## Stationen der Etappe 6 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Was bedeutet das Zeichen? | Wiederholungszeichen, Fermate, Atemzeichen, p, f, Crescendo, Decrescendo: drei Bedeutungen zur Wahl | dazu pp, mp, mf, ff, Klammern 1 und 2, D.C. al Fine, D.S. al Fine |
+| Welche Reihenfolge? | vier Takte A bis D mit Wiederholungszeichen: In welcher Reihenfolge singst du sie? | mit Klammern 1 und 2, D.C. al Fine und D.S. al Fine |
+| Welche Strophe? | zwei Strophen unter denselben Noten: Welche Silbe singst du in Strophe n auf der farbigen Note? | drei Strophen |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- „Welche Reihenfolge?“ übt, was im Chorbuch am häufigsten Fehler macht: wohin man nach einer Wiederholung oder einem Sprung zurückgeht. Die Buchstaben unter den Takten gibt es nur in der Übung.
+- Bei „Welche Strophe?“ sind die falschen Antworten die Silben der anderen Strophen und die Nachbarsilbe, also die typischen Verwechslungen. Die Texte hat Claude für die Übung geschrieben.
+- Coda, D.C. al Coda und D.S. al Coda sind nicht dabei. Sie lassen sich nur mit einem Sprung zum zweiten Coda-Zeichen erklären und dürften im Chorliederbuch selten vorkommen. Daniel kann sie ergänzen lassen.
+- Keine Spätblüher in Etappe 6.
+
+## Stationen der Etappe 7 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Intervalle lesen | zwei Noten nacheinander, Sekunde bis Quinte: Welches Intervall? | bis zur Oktave, auch übereinander |
+| Intervalle hören | zwei Töne nacheinander, aufwärts: Terz, Quinte oder Oktave? | Sekunde bis Oktave |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Intervalle werden gezählt, beide Noten mit („c, d, e: drei Töne, eine Terz“). Groß und klein (etwa große und kleine Terz) unterscheidet die Etappe noch nicht. Gehört wird deshalb nur ab der 1 einer Dur-Tonleiter, also große Sekunde, große Terz, reine Quarte und so weiter.
+- Beim Hören hilft die Verbindung zu den Ziffern aus Etappe 5: Eine Quinte klingt wie von der 1 zur 5.
+- **Offen:** die Merklieder aus dem Chorliederbuch (Baustein H). Dafür wählt Daniel die Liedanfänge aus, die Noten kommen mit seinem Skill aus den PDFs. Danach wird „Intervalle hören“ um Merklieder ergänzt. Singen fehlt, weil es ohne Mikrofon nicht prüfbar ist (wie in Etappe 5).
+- Keine Spätblüher in Etappe 7.
 
 ## Runden
 

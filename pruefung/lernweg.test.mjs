@@ -211,6 +211,36 @@ test('Stationen der Etappe 5 wie in LERNWEG.md', () => {
   });
 });
 
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 6“.
+test('Stationen der Etappe 6 wie in LERNWEG.md', () => {
+  const t = THEMEN[5];
+  assert.equal(t.id, 'zeichen');
+  const ist = Object.fromEntries(
+    uebungenImThema(t).map((uid) => [
+      uid,
+      {
+        noetig: noetigeStationen(t).find((s) => s.uebung === uid).stufe,
+        freiwillig: t.stationen.filter((s) => s.freiwillig && s.uebung === uid).map((s) => s.stufe),
+      },
+    ])
+  );
+  assert.deepEqual(ist, {
+    zeichen: { noetig: 'leicht', freiwillig: ['schwer'] },
+    ablauf: { noetig: 'leicht', freiwillig: ['schwer'] },
+    strophen: { noetig: 'leicht', freiwillig: ['schwer'] },
+  });
+});
+
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 7“.
+test('Stationen der Etappe 7 wie in LERNWEG.md', () => {
+  const t = THEMEN[6];
+  assert.equal(t.id, 'intervalle');
+  assert.deepEqual(
+    t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
+    ['intervall-lesen/leicht', 'intervall-lesen/schwer/frei', 'intervall-hoeren/leicht', 'intervall-hoeren/schwer/frei', 'mischung/gemischt']
+  );
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

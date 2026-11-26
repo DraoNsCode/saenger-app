@@ -14,12 +14,14 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 und 5 sind als Vorschläge spielbar, Daniel testet und entscheidet. Daniel ist unterwegs und hat gesagt, nach dem Plan weiterzumachen: Weitere Etappen entstehen ebenso als spielbare Vorschläge.
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 7 sind als Vorschläge spielbar, Daniel testet und entscheidet. Daniel ist unterwegs und hat gesagt, nach dem Plan weiterzumachen: Weitere Etappen entstehen ebenso als spielbare Vorschläge.
 
 Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
+- Etappe 7 (Intervalle, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Intervalle lesen“ und „Intervalle hören“ (`js/uebungen/intervalle.js`). Merklieder und Singen fehlen noch (LERNWEG.md).
+- Etappe 6 (Zeichen im Notenbild, 26.11.2026) als **Vorschlag, nicht entschieden**, mit drei Übungsarten: „Was bedeutet das Zeichen?“, „Welche Reihenfolge?“ (Wiederholungen, Klammern, D.C., D.S.) und „Welche Strophe?“.
 - Etappe 5 (Tonleiter und Ziffern, 26.11.2026) als **Vorschlag, nicht entschieden**, mit vier Übungsarten: „Ganzton oder Halbton“ (mit Klaviatur als Bild, `klaviaturBild` in `js/uebungen/klavier.js`), „Die Dur-Tonleiter“, „Welche Ziffer?“ und „Ziffern hören“. Hilfen in `js/uebungen/ziffern.js`. Stufen singen fehlt noch (LERNWEG.md).
 - Etappe 4 (Achtel und Auftakt, 26.11.2026) als **Vorschlag, nicht entschieden**, mit vier Übungsarten: „Mitzählen mit „und““, „Der Auftakt“, „Achtel hören“ und „Achtel klopfen“. Takte mit Achteln baut `achtelTakt` in `js/uebungen/hilfen.js`. Daniel testet und entscheidet (LERNWEG.md, „Stationen der Etappe 4“).
 - Etappe 3 (Notennamen, 26.11.2026) mit vier Übungsarten: „Wie heißt die Note?“ (mit Notenwörtern), „Finde die Note“ (auch im anderen Schlüssel), „Weiterzählen“ und „Taste am Klavier“ mit einer Klaviatur aus weißen Tasten. Tonraum je Stimme in `js/musik.js` (`STIMMEN.bereich`), gemeinsame Hilfen in `js/uebungen/namen.js`. Die Stationen sind vorläufig angenommen (LERNWEG.md), Daniel testet sie.

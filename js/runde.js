@@ -46,7 +46,7 @@ function auswahl(body, a, fertig) {
   if (a.bild) {
     const karte = h('div', { class: 'noten-karte' });
     body.append(karte);
-    zeichne(karte, a.bild.abc, { breite: a.bild.breite, scale: a.bild.scale });
+    zeichne(karte, a.bild.abc, { breite: a.bild.breite, scale: a.bild.scale, rechts: a.bild.rechts });
     if (a.bild.markiere) a.bild.markiere(karte);
   }
   // Ein Bild, das kein Notenbild ist, etwa eine Klaviatur (Etappe 5)

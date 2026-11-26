@@ -108,6 +108,9 @@ export { zufall, waehle, mische, gewichtet };
 // Achtel (Etappe 4). Gezählt wird mit Schlägen und „und“ (ENTSCHEIDUNGEN.md, „Sprache des Chors“).
 WERT.note[0.5] = 'Achtel';
 WERT.pause[0.5] = 'Achtelpause';
+// Punktierte Noten (Etappe 8)
+WERT.note[1.5] = 'punktierte Viertel';
+WERT.note[3] = 'punktierte Halbe';
 
 // Ein Takt Schlag für Schlag: Viertel, zwei Achtel oder (mit achtelPausen) Achtel und Achtelpause.
 // Halbe beginnen im 4/4-Takt auf 1 oder 3. Keine Note geht über eine Schlaggrenze hinaus, außer der Halben
@@ -152,7 +155,7 @@ export function abcAchtel(takte, ton = () => 'B') {
         let text = '';
         let vorher = null;
         takt.forEach((n) => {
-          const zeichen = (n.pause ? 'z' : ton(i++)) + laenge(n.d);
+          const zeichen = (n.pause ? 'z' : ton(i++)) + laenge(n.d) + (n.bogen ? '-' : '');
           // Achtel ohne Leerzeichen dazwischen werden gebalkt, aber nur im selben Schlag
           const balken = vorher && !vorher.pause && !n.pause && vorher.d === 0.5 && n.d === 0.5 && Math.floor(vorher.beginn) === Math.floor(pos);
           text += (text && !balken ? ' ' : '') + zeichen;
@@ -196,4 +199,57 @@ export function zaehlWeise(takt) {
       return `${silben} (${n.pause ? WERT.pause[n.d] : WERT.note[n.d]})`;
     })
     .join(' · ');
+}
+
+// ---------------------------------------------------------------------------------------------
+// Punktierung und Haltebogen (Etappe 8)
+
+// Ein Takt mit punktierten Noten: punktierte Viertel + Achtel (auf einem Schlag beginnend), punktierte Halbe (auf 1),
+// dazu Viertel, Achtelpaare und Halbe. bogen: eine Viertel mit Haltebogen an die nächste Note binden.
+export function punktTakt(schlaege, { bogen = false } = {}) {
+  for (let versuch = 0; versuch < 200; versuch++) {
+    const takt = [];
+    let pos = 0;
+    let punktiert = false;
+    while (pos < schlaege) {
+      const rest = schlaege - pos;
+      const moeglich = [['viertel', 2], ['paar', 1]];
+      if (rest >= 2) moeglich.push(['punkt-viertel', 4]);
+      if (rest >= 3 && pos === 0) moeglich.push(['punkt-halbe', 2]);
+      if (rest >= 2 && (schlaege === 3 || pos % 2 === 0)) moeglich.push(['halbe', 1]);
+      const art = gewichtet(moeglich);
+      if (art === 'viertel') takt.push({ d: 1, pause: false });
+      if (art === 'paar') takt.push({ d: 0.5, pause: false }, { d: 0.5, pause: false });
+      if (art === 'punkt-viertel') takt.push({ d: 1.5, pause: false }, { d: 0.5, pause: false });
+      if (art === 'punkt-halbe') takt.push({ d: 3, pause: false });
+      if (art === 'halbe') takt.push({ d: 2, pause: false });
+      if (art.startsWith('punkt')) punktiert = true;
+      pos += { viertel: 1, paar: 1, 'punkt-viertel': 2, 'punkt-halbe': 3, halbe: 2 }[art];
+    }
+    if (!punktiert) continue;
+    if (bogen) {
+      // Eine Viertel, auf die eine weitere Note folgt, wird gebunden
+      const kandidaten = takt.map((n, i) => i).filter((i) => takt[i].d === 1 && i < takt.length - 1);
+      if (!kandidaten.length) continue;
+      takt[waehle(kandidaten)].bogen = true;
+    }
+    return takt;
+  }
+  throw new Error('Kein passender Takt gefunden');
+}
+
+// Klingende Noten: gebundene Noten zu einem Ton zusammengefasst. Ergebnis [{ beginn, d, pause }] in Schlägen.
+export function klingend(takte, schlaegeProTakt) {
+  const liste = [];
+  let gebunden = false;
+  takte.forEach((takt, ti) => {
+    let pos = ti * schlaegeProTakt;
+    takt.forEach((n) => {
+      if (gebunden && liste.length) liste[liste.length - 1].d += n.d;
+      else liste.push({ beginn: pos, d: n.d, pause: n.pause });
+      gebunden = !!n.bogen;
+      pos += n.d;
+    });
+  });
+  return liste;
 }
