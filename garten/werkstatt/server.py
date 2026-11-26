@@ -53,6 +53,8 @@ class Werkstatt(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(roh)
 
     def do_POST(self):
+        if self.path == '/buehne':
+            return self.buehne()
         if self.path != '/teil':
             return self.antworte(404, 'unbekannt')
         laenge = int(self.headers.get('Content-Length') or 0)
@@ -79,6 +81,35 @@ class Werkstatt(http.server.SimpleHTTPRequestHandler):
         schreibe_liste(liste)
         print(f'gespeichert: {name}.webp ({len(daten)} Bytes)', flush=True)
         return self.antworte(200, 'ok')
+
+
+BUEHNE = re.compile(r'^[a-z0-9-]+/[a-z0-9-]+\.webp$')
+
+
+def buehne_speichern(handler):
+    # POST /buehne mit JSON { "pfad": "<bereich>/<name>.webp", "daten": "<WebP als Base64>" } → garten/buehne/<pfad>
+    laenge = int(handler.headers.get('Content-Length') or 0)
+    if laenge <= 0 or laenge > 30_000_000:
+        return handler.antworte(400, 'Größe passt nicht')
+    try:
+        auftrag = json.loads(handler.rfile.read(laenge))
+        pfad = auftrag['pfad']
+        daten = base64.b64decode(auftrag['daten'], validate=True)
+    except (ValueError, KeyError, TypeError):
+        return handler.antworte(400, 'Auftrag nicht lesbar')
+    if not isinstance(pfad, str) or not BUEHNE.match(pfad):
+        return handler.antworte(400, 'Pfad nicht erlaubt')
+    if daten[:4] != b'RIFF' or daten[8:12] != b'WEBP':
+        return handler.antworte(400, 'kein WebP')
+    ziel = os.path.join(WURZEL, 'garten', 'buehne', *pfad.split('/'))
+    os.makedirs(os.path.dirname(ziel), exist_ok=True)
+    with open(ziel, 'wb') as f:
+        f.write(daten)
+    print(f'gespeichert: garten/buehne/{pfad} ({len(daten)} Bytes)', flush=True)
+    return handler.antworte(200, 'ok')
+
+
+Werkstatt.buehne = buehne_speichern
 
 
 def main():
