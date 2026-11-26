@@ -1,0 +1,201 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Werkstatt: Gartenteile freistellen</title>
+<style>
+/* Werkzeug für Claude und Daniel, nicht Teil der App. Läuft nur mit garten/werkstatt/server.py (Speichern). */
+:root { --seite: #e6e7e8; --blatt: #fbfbfb; --linie: #6b7075; --dunkel: #33373b; --text: #1b1e21; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 16px; background: var(--seite); color: var(--text); font: 15px/1.4 "Segoe UI", system-ui, sans-serif; }
+h1 { font-size: 20px; margin: 0 0 8px; }
+.leiste { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 12px; }
+label { display: inline-flex; gap: 6px; align-items: center; }
+input[type="range"] { width: 120px; }
+button, select { font: inherit; min-height: 36px; padding: 0 10px; border: 1px solid var(--linie); border-radius: 6px; background: var(--blatt); cursor: pointer; }
+#meldung { margin: 8px 0; min-height: 1.4em; font-weight: 600; }
+.bogen { position: relative; display: inline-block; max-width: 100%; }
+.bogen canvas { max-width: min(100%, 640px); height: auto; display: block; border-radius: 6px; }
+.teile { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-top: 16px; }
+.teil { background: var(--blatt); border: 1px solid #c9ccd0; border-radius: 8px; padding: 8px; }
+.teil .flaechen { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.teil canvas { width: 100%; height: 120px; object-fit: contain; display: block; border-radius: 4px; cursor: crosshair; }
+.karo { background: repeating-conic-gradient(#d4d4d4 0 25%, #f4f4f4 0 50%) 0 0 / 16px 16px; }
+.gras { background: #8aa83a; }
+.teil input { width: 100%; font: inherit; margin-top: 6px; padding: 4px 6px; }
+.teil small { color: var(--linie); }
+</style>
+
+<h1>Werkstatt: Gartenteile freistellen</h1>
+<div class="leiste">
+  <label>Bogen <select id="bogen"></select></label>
+  <label>Toleranz <input id="tol" type="range" min="6" max="70" value="26"><span id="tol-w"></span></label>
+  <label>Kante <input id="kante" type="range" min="0" max="3" step="0.5" value="1"><span id="kante-w"></span></label>
+  <label>Zusammenhalt <input id="halt" type="range" min="0" max="40" value="12"><span id="halt-w"></span></label>
+  <label>Mindestgröße <input id="mind" type="number" min="0" value="600" style="width:6em"></label>
+  <label><input id="loecher" type="checkbox" checked> Löcher</label>
+  <label>Hintergrund <select id="art"><option value="glatt">glatt</option><option value="schatten">farbig mit Schatten</option><option value="gras">gemaltes Gras</option></select></label>
+  <button id="los">Freistellen</button>
+  <button id="speichern" disabled>Alle speichern</button>
+</div>
+<p id="meldung"></p>
+<div class="bogen"><canvas id="vorschau"></canvas></div>
+<div class="teile" id="teile"></div>
+
+<script type="module">
+import { freistellen } from './freistellen.js';
+
+const $ = (id) => document.getElementById(id);
+const meldung = (t) => ($('meldung').textContent = t);
+const daten = await (await fetch('../boegen/boegen.json')).json();
+let bild = null, ergebnis = null;
+
+for (const [k, b] of Object.entries(daten.boegen)) $('bogen').append(new Option(`${k} (${b.datei})`, k));
+const params = new URLSearchParams(location.search);
+if (params.get('bogen')) $('bogen').value = params.get('bogen');
+for (const id of ['tol', 'kante', 'halt']) {
+  const w = () => ($(id + '-w').textContent = $(id).value);
+  $(id).oninput = w; w();
+}
+
+async function ladeBild(src) {
+  const img = new Image();
+  img.src = src;
+  await img.decode();
+  return img;
+}
+
+async function laden() {
+  const b = daten.boegen[$('bogen').value];
+  const src = params.get('quelle') || '../boegen/' + b.datei;
+  try {
+    bild = await ladeBild(src);
+  } catch {
+    bild = null;
+    meldung(`Bogen ${src} fehlt noch.`);
+    return false;
+  }
+  return true;
+}
+
+function zeigeBogen() {
+  const c = $('vorschau');
+  c.width = bild.naturalWidth; c.height = bild.naturalHeight;
+  const x = c.getContext('2d');
+  x.drawImage(bild, 0, 0);
+  x.lineWidth = 3; x.font = 'bold 28px system-ui';
+  ergebnis.teile.forEach((t, i) => {
+    const [bx, by, bw, bh] = t.ausschnitt;
+    x.strokeStyle = '#d0006f'; x.strokeRect(bx, by, bw, bh);
+    x.fillStyle = '#d0006f'; x.fillText(String(i + 1), bx + 6, by + 30);
+    x.beginPath(); x.arc(bx + t.anker[0], by + t.anker[1], 6, 0, 7); x.fill();
+  });
+}
+
+const STUFEN_GROESSE = [0.45, 0.72, 1];
+function zielbreiten(b, teile) {
+  // neun Werte: Zielbreite je Teil. Drei Werte: Zielbreite von Stufe 3 je Zeile; Stufe 1 und 2 werden mit
+  // festen Anteilen ihrer längeren Seite gezeichnet, weil die KI junge Pflanzen fast so groß malt wie ausgewachsene.
+  if (b.breite.length === teile.length) return b.breite.slice();
+  const aus = [];
+  const zeilen = [...new Set(teile.map((t) => t.zeile))];
+  zeilen.forEach((z, zi) => {
+    const inZeile = teile.filter((t) => t.zeile === z);
+    const voll = inZeile.at(-1), m3 = (b.breite[zi] ?? b.breite.at(-1)) / voll.canvas.width;
+    const d3 = Math.max(voll.canvas.width, voll.canvas.height) * m3;
+    inZeile.forEach((t, s) => {
+      const m = ((STUFEN_GROESSE[s] ?? 1) * d3) / Math.max(t.canvas.width, t.canvas.height);
+      aus[teile.indexOf(t)] = Math.round(t.canvas.width * m * 10) / 10;
+    });
+  });
+  return aus;
+}
+
+function zeigeTeile() {
+  const b = daten.boegen[$('bogen').value];
+  const ziel = $('teile');
+  ziel.innerHTML = '';
+  const breiten = zielbreiten(b, ergebnis.teile);
+  ergebnis.teile.forEach((t, i) => {
+    t.breite = breiten[i];
+    const kasten = document.createElement('div');
+    kasten.className = 'teil';
+    const name = b.teile[i] || `${$('bogen').value}-${i + 1}`;
+    kasten.innerHTML = `<div class="flaechen"></div><input value="${name}" aria-label="Name von Teil ${i + 1}"><small>${i + 1}: ${t.canvas.width} × ${t.canvas.height}, Zeile ${t.zeile + 1}, Breite im Garten ${t.breite} px</small>`;
+    for (const art of ['karo', 'gras']) {
+      const c = document.createElement('canvas');
+      c.className = art; c.width = t.canvas.width; c.height = t.canvas.height;
+      const x = c.getContext('2d');
+      const male = () => {
+        x.clearRect(0, 0, c.width, c.height);
+        x.drawImage(t.canvas, 0, 0);
+        x.fillStyle = '#d0006f'; x.fillRect(t.anker[0] - 4, t.anker[1] - 4, 8, 8);
+      };
+      male();
+      // Anker von Hand setzen: in das Teil klicken
+      c.onclick = (e) => {
+        const r = c.getBoundingClientRect(), f = Math.min(r.width / c.width, r.height / c.height);
+        const ox = (r.width - c.width * f) / 2, oy = (r.height - c.height * f) / 2;
+        t.anker = [Math.round((e.clientX - r.left - ox) / f), Math.round((e.clientY - r.top - oy) / f)];
+        kasten.querySelectorAll('canvas').forEach((k) => k.dispatchEvent(new Event('neu')));
+        zeigeBogen();
+      };
+      c.addEventListener('neu', male);
+      kasten.querySelector('.flaechen').append(c);
+    }
+    t.namensfeld = kasten.querySelector('input');
+    ziel.append(kasten);
+  });
+}
+
+async function los(eigenesBild) {
+  if (eigenesBild) bild = await ladeBild(eigenesBild);
+  else if (!(await laden())) return;
+  meldung('Stelle frei …');
+  await new Promise((r) => setTimeout(r, 20));
+  const t0 = performance.now();
+  ergebnis = freistellen(bild, {
+    toleranz: +$('tol').value, kante: +$('kante').value, zusammenhalt: +$('halt').value,
+    mindestgroesse: +$('mind').value, loecher: $('loecher').checked, schatten: $('art').value === 'schatten', gras: $('art').value === 'gras', zeilen: 3,
+  });
+  zeigeBogen();
+  zeigeTeile();
+  const b = daten.boegen[$('bogen').value];
+  const soll = b.teile.length, ist = ergebnis.teile.length;
+  meldung(`${ist} Teile gefunden (erwartet ${soll}), Hintergrund ${ergebnis.hintergrund.join(', ')}, ${Math.round(performance.now() - t0)} ms.` + (ist !== soll ? ' Anzahl passt nicht: Regler ändern oder Namen von Hand anpassen.' : ''));
+  $('speichern').disabled = false;
+}
+
+async function speichern() {
+  const k = $('bogen').value, b = daten.boegen[k];
+  const heute = new Date().toISOString().slice(0, 10);
+  let n = 0;
+  for (const t of ergebnis.teile) {
+    const name = t.namensfeld.value.trim();
+    const blob = await new Promise((r) => t.canvas.toBlob(r, 'image/webp', 0.9));
+    const roh = new Uint8Array(await blob.arrayBuffer());
+    let s = '';
+    for (let i = 0; i < roh.length; i += 0x8000) s += String.fromCharCode(...roh.subarray(i, i + 0x8000));
+    const meta = {
+      bogen: k, quelle: 'garten/boegen/' + b.datei, ausschnitt: t.ausschnitt, groesse: [t.canvas.width, t.canvas.height],
+      anker: t.anker, breite: t.breite, werkzeug: daten.werkzeug, einstellungen: daten.einstellungen, lizenz: 'Apache 2.0 (Z-Image-Turbo)',
+      freigestellt: { toleranz: +$('tol').value, kante: +$('kante').value, zusammenhalt: +$('halt').value, loecher: $('loecher').checked, hintergrund: $('art').value }, erstellt: heute,
+    };
+    const antwort = await fetch('/teil', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, daten: btoa(s), meta }) });
+    if (!antwort.ok) { meldung(`Fehler bei ${name}: ${await antwort.text()}`); return; }
+    n++;
+  }
+  meldung(`${n} Teile gespeichert in garten/teile/.`);
+}
+
+$('los').onclick = () => los();
+$('speichern').onclick = speichern;
+const vorgaben = () => {
+  const b = daten.boegen[$('bogen').value];
+  $('art').value = { hellblau: 'schatten', gras: 'gras' }[b.hintergrund] || 'glatt';
+  if (b.freistellen) for (const [k, v] of Object.entries(b.freistellen)) { $(k).value = v; $(k).dispatchEvent(new Event('input')); }
+};
+vorgaben();
+$('bogen').onchange = () => { vorgaben(); ergebnis = null; $('teile').innerHTML = ''; $('speichern').disabled = true; los(); };
+window.werkstatt = { los, speichern, ergebnis: () => ergebnis };
+los();
+</script>

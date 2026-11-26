@@ -1,0 +1,14 @@
+{
+ "_hinweis": "Flächen für Boden und Weg (Baustein B, Bausteine-Probe). Vorschlag von Claude, 26.11.2026.",
+ "wiese": {
+  "datei": "wiese.webp",
+  "werkzeug": "Z-Image-Turbo (Tongyi-MAI, Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo",
+  "einstellungen": { "aufloesung": "864x1536", "schritte": 8, "shift": 3, "seed": 42 },
+  "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A plain gently varied meadow of short green grass seen from above at about 45 degrees, filling the whole picture edge to edge, soft lighter and darker green brush strokes, a few tiny pale yellow dots, nothing else, no path, no plants, no flowers, no bushes, no stones, no objects, no horizon, no sky. No text.",
+  "erstellt": "2026-11-26"
+ },
+ "sand": {
+  "datei": "../../geruest/stil2/b-geruest.webp",
+  "hinweis": "Ausschnitte aus dem Weg im gewählten Bild B. Eine eigene Sandfläche hat der Schutzfilter des Space dreimal fälschlich gesperrt (Bild „maybe not safe“)."
+ }
+}

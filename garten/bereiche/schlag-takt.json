@@ -1,0 +1,154 @@
+{
+ "_hinweis": "Bereich 2 (Schlag und Takt) als Daten für garten/zeichner.js. Vorschlag von Claude, 26.11.2026, für die Bausteine-Probe. Maße in Gartenpixeln, 390 breit, y wächst nach unten. Jede Gruppe gehört zu einer nötigen Station: Ist sie geschafft, wächst die Gruppe auf Stufe 2; ihre freiwilligen Stationen bringen nach und nach Stufe 3.",
+ "id": "schlag-takt",
+ "nr": 2,
+ "titel": "Schlag und Takt",
+ "breite": 390,
+ "hoehe": 560,
+ "belaege": {
+  "wiese": {
+   "quelle": "garten/flaechen/wiese.webp",
+   "ganz": true
+  },
+  "weg": {
+   "quelle": "geruest/stil2/b-geruest.webp",
+   "felder": [[110, 1238, 560, 74], [372, 1430, 120, 140], [372, 1700, 140, 230]],
+   "flicken": 64,
+   "grund": "#e3c58c",
+   "massstab": 0.6,
+   "saat": 9
+  }
+ },
+ "weg": {
+  "punkte": [[204, 560], [204, 534], [150, 478], [122, 412], [158, 350], [250, 300], [282, 236], [246, 168], [208, 118], [204, 60], [204, 0]],
+  "breite": [50, 38],
+  "stationenZwischen": [522, 92],
+  "rand": "rgba(52, 88, 22, 0.55)",
+  "halme": []
+ },
+ "stationen": ["st-schlag", "st-werte", "st-welcher", "st-ergaenzen", "st-erkennen", "st-klopfen", "st-abschluss"],
+ "steine": ["trittstein-1", "trittstein-2", "trittstein-3"],
+ "mauer": {
+  "teil": "mauer-bogen",
+  "unten": 60,
+  "stauchen": 0.72
+ },
+ "gruppen": [
+  {
+   "station": "st-schlag",
+   "freiwillig": ["st-schlag-ohne-klick"],
+   "beet": {
+    "teil": "beet-leer",
+    "ort": [238, 474, 140, 76]
+   },
+   "pflanzen": [
+    {
+     "arten": ["lavendel"],
+     "ort": [250, 478, 116, 58],
+     "reihen": 2,
+     "spalten": 3,
+     "saat": 4
+    }
+   ]
+  },
+  {
+   "station": "st-werte",
+   "freiwillig": ["st-werte-namen"],
+   "beet": {
+    "teil": "beet-leer",
+    "ort": [10, 486, 104, 66]
+   },
+   "pflanzen": [
+    {
+     "arten": ["erdbeere"],
+     "ort": [20, 490, 84, 50],
+     "reihen": 2,
+     "spalten": 2,
+     "saat": 5
+    }
+   ]
+  },
+  {
+   "station": "st-welcher",
+   "freiwillig": ["st-welcher-zwei-takte"],
+   "beet": {
+    "teil": "beet-leer",
+    "ort": [206, 366, 156, 72]
+   },
+   "pflanzen": [
+    {
+     "arten": ["mohn", "margerite"],
+     "ort": [216, 370, 136, 54],
+     "reihen": 2,
+     "spalten": 3,
+     "saat": 6
+    }
+   ]
+  },
+  {
+   "station": "st-ergaenzen",
+   "freiwillig": ["st-ergaenzen-finden"],
+   "beet": {
+    "teil": "beet-leer",
+    "ort": [10, 268, 122, 70]
+   },
+   "pflanzen": [
+    {
+     "arten": [
+      "kohl",
+      {
+       "stufen": ["margerite-1", "ringelblume-2", "ringelblume-3"]
+      }
+     ],
+     "ort": [20, 272, 102, 52],
+     "reihen": 2,
+     "spalten": 3,
+     "saat": 7
+    }
+   ]
+  },
+  {
+   "station": "st-erkennen",
+   "freiwillig": ["st-erkennen-pausen", "st-erkennen-zwei-takte"],
+   "einzeln": [
+    {
+     "art": "apfelbaum",
+     "ort": [352, 262],
+     "faktor": 0.82
+    }
+   ]
+  },
+  {
+   "station": "st-klopfen",
+   "freiwillig": ["st-klopfen-zwei-takte", "st-klopfen-ohne-klick"],
+   "pflanzen": [
+    {
+     "arten": ["rose"],
+     "ort": [112, 176, 112, 40],
+     "reihen": 1,
+     "spalten": 2,
+     "saat": 8,
+     "faktor": 0.9
+    }
+   ]
+  },
+  {
+   "station": "st-abschluss",
+   "einzeln": [
+    {
+     "vorher": "brunnen-leer",
+     "nachher": "brunnen-voll",
+     "ort": [70, 150],
+     "faktor": 0.86
+    }
+   ]
+  }
+ ],
+ "schmuck": [
+  {
+   "teil": "bank",
+   "ort": [336, 120],
+   "faktor": 0.9
+  }
+ ]
+}

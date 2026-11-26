@@ -53,7 +53,7 @@ Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.
 
 Das Design beginnt Schritt für Schritt von vorne, nach den Ebenen und Regeln in [GARTEN-NEU.md](GARTEN-NEU.md) (von Daniel am 25.11.2026 bestätigt). Ebene 0 ist geklärt (25.11.2026), die Ergebnisse stehen in ENTSCHEIDUNGEN.md unter „Garten neu“.
 
-Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Daniel hat am 26.11.2026 den Stil gewählt: gemaltes Bilderbuch (`geruest/stilrunde2.html`, Stil B). Plan und Stand stehen in GARTEN-NEU.md, Abschnitt „Stand 26.11.2026“. Nächster Schritt: zuerst den Fahrplan der ganzen App durchgehen, dann Schritt 1 (Bausteine-Probe), sobald das KI-Kontingent da ist. Daniel hat am 26.11.2026 gewählt: In den Wartezeiten auf das Kontingent kommen zuerst die Teile von J ohne Gartenbild, dann E (ENTSCHEIDUNGEN.md, „Reihenfolge der Bausteine“). Die übrigen Stationen testet Daniel nebenher.
+Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Daniel hat am 26.11.2026 den Stil gewählt: gemaltes Bilderbuch (`geruest/stilrunde2.html`, Stil B). Plan und Stand stehen in GARTEN-NEU.md, Abschnitt „Stand 26.11.2026“. Der Fahrplan ist durchgegangen (26.11.2026). Schritt 1, die Bausteine-Probe, steht in `geruest/bausteine.html` (Werkzeuge in `garten/`). Nächster Schritt: Daniel sagt, ob sie trägt. Daniel hat am 26.11.2026 gewählt: In den Wartezeiten auf das Kontingent kommen zuerst die Teile von J ohne Gartenbild, dann E (ENTSCHEIDUNGEN.md, „Reihenfolge der Bausteine“). Die übrigen Stationen testet Daniel nebenher.
 
 ## Technik
 
@@ -80,6 +80,7 @@ Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengefüh
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
 | `probe/` | Archiv und Werkzeuge zu Baustein B: Ansichten im Vergleich, erster Gartenbereich, Stilvarianten, Bilder und Zeichenwerkzeug, nicht Teil der App |
+| `garten/` | Bausteine des Gartens (Baustein B): KI-Bögen, freigestellte Teile, Flächen, Bereiche als Daten, Zeichner und Werkstatt. Noch nicht Teil der App |
 | `.claude/skills/garten-grafik/` | Arbeitsweise für die Gartengrafik, später die gewählten Stilregeln |
 
 ### Eine neue Übungsart

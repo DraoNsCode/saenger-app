@@ -1,0 +1,121 @@
+{
+ "_hinweis": "Bögen für die Bausteine-Probe (Baustein B, Schritt 1). Vorschlag von Claude, 26.11.2026. Jeder Bogen ist ein KI-Bild mit neun Teilen, gelesen zeilenweise von links oben. teile: Name je Teil in dieser Reihenfolge. breite: drei Werte = Zielbreite des größten Teils je Zeile in Pixeln bei 390 Pixeln Gartenbreite, die Stufen 1 und 2 werden mit 45 und 72 Prozent der Größe von Stufe 3 gezeichnet (gemessen an der längeren Seite), weil die KI junge Pflanzen fast so groß malt wie ausgewachsene; neun Werte = Zielbreite je Teil.",
+ "werkzeug": "Z-Image-Turbo (Tongyi-MAI, Lizenz Apache 2.0) über den Hugging-Face-Space mcp-tools/Z-Image-Turbo",
+ "einstellungen": {
+  "aufloesung": "1280x1280",
+  "schritte": 8,
+  "shift": 3,
+  "seed": 42
+ },
+ "stil": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines.",
+ "boegen": {
+  "kraeuter": {
+   "datei": "kraeuter.webp",
+   "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A neat sheet of nine separate garden plant studies arranged in a 3 by 3 grid on a plain flat light grey background, nothing else, no cast shadows, generous empty space between the items, every plant seen from above at about 45 degrees, soft daylight from the upper left. Top row, left to right: a tiny lavender seedling with three short grey-green shoots and no flowers, a small young lavender clump with only grey-green leaves and no flowers yet, a large round lavender bush full of purple flower spikes. Middle row, left to right: a tiny strawberry seedling with three small leaves, a young strawberry plant with green leaves and a few small white flowers, a large strawberry plant full of ripe red strawberries. Bottom row, left to right: a tiny cabbage seedling with two small leaves, a young cabbage plant with loose open leaves, a large round green cabbage head with wide outer leaves. Every plant stands directly on the plain background without any soil, pot or ground. Each item complete and isolated, not touching the edges of the picture. No text, no labels, no frames.",
+   "hintergrund": "hellgrau",
+   "teile": [
+    "lavendel-1",
+    "lavendel-2",
+    "lavendel-3",
+    "erdbeere-1",
+    "erdbeere-2",
+    "erdbeere-3",
+    "kohl-1",
+    "kohl-2",
+    "kohl-3"
+   ],
+   "breite": [
+    40,
+    44,
+    36
+   ]
+  },
+  "blumen": {
+   "datei": "blumen.webp",
+   "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A neat sheet of nine separate garden flower studies arranged in a 3 by 3 grid on a plain flat light grey background, nothing else, no cast shadows, generous empty space between the items, every plant seen from above at about 45 degrees, soft daylight from the upper left. Top row, left to right: a tiny poppy seedling with two small leaves and no flower, a young poppy clump with closed green buds, a large clump of red poppies in full bloom. Middle row, left to right: a tiny daisy seedling with two small leaves and no flower, a young daisy clump with a few closed buds, a large clump of white daisies in full bloom. Bottom row, left to right: a tiny marigold seedling with two small leaves and no flower, a young marigold plant with closed green buds, a large marigold bush full of orange and yellow blossoms. Every plant stands directly on the plain background without any soil, pot or ground. Each item complete and isolated, not touching the edges of the picture. No text, no labels, no frames.",
+   "hintergrund": "hellgrau",
+   "teile": [
+    "mohn-1",
+    "mohn-2",
+    "mohn-3",
+    "margerite-1",
+    "margerite-2",
+    "margerite-3",
+    "ringelblume-1",
+    "ringelblume-2",
+    "ringelblume-3"
+   ],
+   "breite": [
+    44,
+    42,
+    42
+   ]
+  },
+  "gehoelz": {
+   "datei": "gehoelz.webp",
+   "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A neat sheet of nine separate garden tree and shrub studies arranged in a 3 by 3 grid on a plain flat light grey background, nothing else, no ground, no soil, no grass, no cast shadows, generous empty space between the items, everything seen from above at about 45 degrees, soft daylight from the upper left. Top row, left to right: a thin apple sapling tied to a wooden stake, a young apple tree with a small leafy crown, a large apple tree with a round leafy crown full of red apples. Middle row, left to right: a small rose bush cut back to a few short bare stems close to the ground, a leafy green rose bush with closed buds, a large rose bush covered in pink roses. Bottom row, left to right: a small low redcurrant bush of bare twigs without leaves or berries, a leafy green redcurrant bush without berries, a large round redcurrant bush hung with bright red berries. Each item complete and isolated, not touching the edges of the picture. No text, no labels, no frames.",
+   "hintergrund": "hellgrau",
+   "teile": [
+    "apfelbaum-1",
+    "apfelbaum-2",
+    "apfelbaum-3",
+    "rose-1",
+    "rose-2",
+    "rose-3",
+    "johannisbeere-1",
+    "johannisbeere-2",
+    "johannisbeere-3"
+   ],
+   "breite": [
+    130,
+    60,
+    52
+   ]
+  },
+  "bauten": {
+   "datei": "bauten.webp",
+   "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A neat sheet of nine separate monastery garden objects arranged in a 3 by 3 grid on a plain flat even muted grass-green background, nothing else, no grass blades, no cast shadows, generous empty space between the items, everything seen from above at about 45 degrees, soft daylight from the upper left. Top row, left to right: an empty rectangular garden bed with low wooden plank edging filled with bare brown soil, a small round stone fountain basin that is completely dry with a bare stone bottom and no water at all, the same small round stone fountain basin filled to the brim with clear blue water. Middle row, left to right: a simple wooden garden bench, a stone sundial on a short round pedestal, a zinc watering can. Bottom row, left to right: three flat round grey stepping stones, each a slightly different shape. Each item complete and isolated, not touching the edges of the picture. No text, no labels, no frames.",
+   "hintergrund": "gras",
+   "teile": [
+    "beet-leer",
+    "brunnen-leer",
+    "brunnen-voll",
+    "bank",
+    "sonnenuhr",
+    "giesskanne",
+    "trittstein-1",
+    "trittstein-2",
+    "trittstein-3"
+   ],
+   "breite": [
+    130,
+    90,
+    90,
+    62,
+    30,
+    24,
+    34,
+    34,
+    34
+   ],
+   "freistellen": {
+    "tol": 26,
+    "halt": 6,
+    "mind": 3000
+   }
+  },
+  "mauer": {
+   "datei": "mauer.webp",
+   "aufloesung": "1680x720",
+   "eingabe": "Opaque gouache storybook illustration, thick matte paint, visible broad brush strokes, rich warm colors, simplified shapes, no outlines. A long low dry-stone garden wall made of rounded beige and grey stones with flat capstones, seen from above at about 45 degrees, running straight and level across the whole picture from the left edge to the right edge, with one small round-topped stone archway in the exact middle, the opening of the archway is empty. Plain flat pale sky-blue background above and below the wall and inside the archway, nothing else, no ground, no grass, no plants, no shadows. No text.",
+   "hintergrund": "hellblau",
+   "teile": [
+    "mauer-bogen"
+   ],
+   "breite": [
+    390
+   ]
+  }
+ },
+ "verlauf": "26.11.2026: Kräuter, Blumen und Gehölz im zweiten Anlauf (genauere Eingaben, Salbei durch Erdbeere ersetzt, weil er wie Lavendel aussah). Bauten im zweiten Anlauf auf grünem Grund (auf Hellblau malte die KI Schatten, die sich von grauen Steinen nicht trennen ließen; auf Grün malt sie Gras und deutlicher im Gouache-Stil). Mauer im ersten. Verworfene Fassungen liegen nicht im Repository."
+}

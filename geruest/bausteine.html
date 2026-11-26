@@ -1,0 +1,120 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Bausteine-Probe</title>
+<style>
+/* Aufbau: oben die Frage, darunter Bereich 2 in drei Zuständen, zusammengesetzt aus KI-Bausteinen (garten/zeichner.js),
+   daneben das gewählte KI-Bild B zum Vergleich. Stationen und Namen sind HTML über dem Bild. */
+:root {
+  --seite: #e6e7e8;
+  --blatt: #fbfbfb;
+  --linie: #6b7075;
+  --dunkel: #33373b;
+  --text: #1b1e21;
+  --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
+.rand { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; max-width: 34ch; text-wrap: balance; }
+.hinweis { margin: 0 0 12px; max-width: 70ch; }
+.leiste { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 14px; }
+button { font: inherit; font-size: 15px; min-height: 44px; min-width: 44px; padding: 0 12px; background: var(--blatt); color: var(--text); border: 1px solid var(--linie); border-radius: 6px; cursor: pointer; }
+button[aria-pressed="true"] { background: var(--dunkel); color: var(--blatt); border-color: var(--dunkel); }
+button:focus-visible { outline: 3px solid var(--dunkel); outline-offset: 2px; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x proximity; scroll-padding-left: 16px; align-items: flex-start; }
+.zustand { flex: 0 0 390px; scroll-snap-align: start; }
+.zustand h2 { font-size: 18px; margin: 0; }
+.zustand p { margin: 2px 0 8px; font-size: 14px; min-height: 4.4em; }
+.bild { position: relative; width: 390px; height: 640px; overflow: hidden; border-radius: 10px; background: #9bbd4f; }
+.bild canvas { position: absolute; inset: 0; width: 390px; height: 640px; }
+.vergleich .bild { height: auto; }
+.vergleich img { display: block; width: 390px; }
+.ohne-farbe canvas, .ohne-farbe img { filter: grayscale(1); }
+.schild { position: absolute; left: 10px; top: 8px; display: flex; align-items: center; gap: 8px; padding: 5px 6px 5px 12px; background: rgba(251, 251, 251, 0.94); border-radius: 18px; font-size: 15px; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.25); }
+.schild span { background: var(--dunkel); color: var(--blatt); font-size: 13px; padding: 3px 10px; border-radius: 12px; }
+.station { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; }
+.station.aktuell { box-shadow: 0 0 0 3px var(--blatt), 0 0 0 5px var(--dunkel); width: 40px; height: 40px; margin: -20px 0 0 -20px; }
+.station.geschafft::after { content: ""; position: absolute; right: -2px; top: -2px; width: 18px; height: 18px; border-radius: 50%; background: var(--blatt) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4.5 9.5l3 3 6-7' fill='none' stroke='%232f6b1f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 18px no-repeat; box-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+.reihe.ohne-stationen .station, .reihe.ohne-stationen .schild { display: none; }
+.fehlt { color: #8a1c1c; font-weight: 600; }
+details { max-width: 80ch; margin-top: 16px; }
+details p, details li { font-size: 14px; margin: 6px 0; }
+details code { font-size: 12px; }
+@media (max-width: 480px) {
+  .reihe { gap: 0; padding-inline: 0; scroll-snap-type: x mandatory; scroll-padding-left: 0; }
+  .zustand { flex-basis: 100%; }
+  .zustand h2, .zustand p { padding-inline: 16px; }
+  .bild { border-radius: 0; margin-inline: auto; }
+}
+</style>
+
+<div class="rand">
+  <h1>Bausteine-Probe, Bereich 2</h1>
+  <p class="frage">Trägt der Baukasten?</p>
+  <p class="hinweis">Derselbe Bereich in drei Zuständen, in Handygröße. Der Code legt Weg, Stationen und Beete fest. Die KI hat nur die Teile gemalt: Pflanzen in drei Wachstumsstufen, Beet, Brunnen, Bank, Trittsteine, Mauer und Wiese. Rechts zum Vergleich das KI-Bild B, das du gewählt hast. Es ist in einem Stück gemalt und lässt sich nicht verändern.</p>
+  <p class="fehlt" id="fehlt" hidden></p>
+  <div class="leiste">
+    <button id="stationen" aria-pressed="true">Stationen</button>
+    <button id="ohne-farbe" aria-pressed="false">Ohne Farbe ansehen</button>
+  </div>
+</div>
+<div class="reihe rand" id="reihe"></div>
+<div class="rand">
+  <details>
+    <summary>So ist es entstanden</summary>
+    <div id="herkunft"></div>
+  </details>
+</div>
+
+<script type="module">
+import { ladeJson, ladeBild, ladeTeile, zeichneBereich, stationsOrte, benoetigteVorlagen } from '../garten/zeichner.js';
+
+const OBEN = 80; // Blick auf den nächsten Bereich über der Mauer
+const basis = '../garten/';
+const bereich = await ladeJson(basis + 'bereiche/schlag-takt.json');
+const { teile, fehlt } = await ladeTeile(basis, bereich);
+if (fehlt.length) { const f = document.getElementById('fehlt'); f.hidden = false; f.textContent = 'Es fehlen Teile: ' + fehlt.join(', '); }
+const vorlagen = {};
+for (const q of benoetigteVorlagen(bereich)) vorlagen[q] = await ladeBild('../' + q);
+
+const alle = ['st-schlag', 'st-schlag-ohne-klick', 'st-werte', 'st-werte-namen', 'st-welcher', 'st-welcher-zwei-takte', 'st-ergaenzen', 'st-ergaenzen-finden', 'st-erkennen', 'st-erkennen-pausen', 'st-erkennen-zwei-takte', 'st-klopfen', 'st-klopfen-zwei-takte', 'st-klopfen-ohne-klick', 'st-abschluss'];
+const ZUSTAENDE = [
+  { k: 'frisch', name: 'Frisch', text: 'Gerade angekommen, noch keine Station geschafft. Die Beete sind angelegt, es keimt nur.', geschafft: [], aktuell: 'st-schlag' },
+  { k: 'unterwegs', name: 'Unterwegs', text: 'Drei Stationen geschafft, eine freiwillige dazu. Neben jeder geschafften Station wächst ein Beet, der Lavendel blüht schon voll.', geschafft: ['st-schlag', 'st-schlag-ohne-klick', 'st-werte', 'st-welcher'], aktuell: 'st-ergaenzen' },
+  { k: 'voll', name: 'Voll', text: 'Alle Stationen geschafft, auch alle freiwilligen. Mit dem Abschluss füllt sich der Brunnen.', geschafft: alle, aktuell: null },
+];
+
+const dpr = Math.min(3, Math.max(2, Math.round(devicePixelRatio || 1)));
+const reihe = document.getElementById('reihe');
+const orte = stationsOrte(bereich);
+for (const z of ZUSTAENDE) {
+  const sec = document.createElement('section');
+  sec.className = 'zustand';
+  sec.innerHTML = `<h2>${z.name}</h2><p>${z.text}</p><div class="bild" role="img" aria-label="Bereich Schlag und Takt, ${z.name}"></div>`;
+  const bild = sec.querySelector('.bild');
+  const c = zeichneBereich(bereich, teile, { geschafft: new Set(z.geschafft) }, { dpr, vorlagen, oben: OBEN });
+  bild.append(c);
+  bild.insertAdjacentHTML('beforeend', `<div class="schild">${bereich.nr}&nbsp;&nbsp;${bereich.titel}${z.aktuell ? '<span>Hier bist du</span>' : ''}</div>`);
+  for (const o of orte) {
+    const s = document.createElement('div');
+    s.className = 'station' + (z.geschafft.includes(o.id) ? ' geschafft' : '') + (o.id === z.aktuell ? ' aktuell' : '');
+    s.style.left = o.x + 'px'; s.style.top = o.y + OBEN + 'px';
+    s.title = o.id;
+    bild.append(s);
+  }
+  reihe.append(sec);
+}
+reihe.insertAdjacentHTML('beforeend', `<section class="zustand vergleich"><h2>Zum Vergleich: Bild B</h2><p>Das KI-Bild aus der Stilrunde 2, in einem Stück gemalt, gleiche Breite. Es zeigt zwei Bereiche übereinander.</p><div class="bild"><img src="stil2/b-geruest.webp" alt="KI-Bild B mit zwei Gartenbereichen"></div></section>`);
+
+// Herkunft
+const boegen = await ladeJson(basis + 'boegen/boegen.json');
+const flaechen = await ladeJson(basis + 'flaechen/flaechen.json');
+const esc = (t) => t.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c]);
+document.getElementById('herkunft').innerHTML = `<p>${esc(boegen.werkzeug)}, 26.11.2026, 8 Schritte, Seed 42. Jeder Bogen ist ein KI-Bild mit neun Teilen auf glattem Grund. Die Werkstatt (<code>garten/werkstatt/</code>) hat sie im Browser freigestellt, der Zeichner (<code>garten/zeichner.js</code>) setzt sie nach <code>garten/bereiche/schlag-takt.json</code> zusammen. Junge Pflanzen zeichnet er kleiner, als die KI sie gemalt hat. Schatten unter den Teilen sind vom Code.</p><ul>${Object.entries(boegen.boegen).map(([k, b]) => `<li><b>${k}</b> (${b.aufloesung || boegen.einstellungen.aufloesung}): ${esc(b.eingabe)}</li>`).join('')}<li><b>Wiese</b> (864x1536): ${esc(flaechen.wiese.eingabe)}</li><li><b>Weg</b>: ${esc(flaechen.sand.hinweis)}</li></ul><p>${esc(boegen.verlauf)}</p>`;
+
+document.getElementById('stationen').onclick = (e) => e.target.setAttribute('aria-pressed', String(!reihe.classList.toggle('ohne-stationen')));
+document.getElementById('ohne-farbe').onclick = (e) => e.target.setAttribute('aria-pressed', String(reihe.classList.toggle('ohne-farbe')));
+</script>
