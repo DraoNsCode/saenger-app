@@ -18,6 +18,8 @@ description: Stilregeln und Arbeitsweise für die Grafik des Klostergartens (Bau
 
 Noch keine eigenen. Gewählt ist der Stil B (ENTSCHEIDUNGEN.md, „Stilrunde 2“, 26.11.2026). Jede Regel hier mit Datum und Verweis auf den Eintrag in `ENTSCHEIDUNGEN.md`.
 
+- **Bereiche deutlich unterscheiden (26.11.2026, ENTSCHEIDUNGEN.md, „Bildlauf Bereich 1 und 2“):** Daniel fand Bereich 1 und 2 zu ähnlich, „gar nicht im Ambiente und den Farben und zu wenig in den Details“. Bevor alle Etappen ausgearbeitet werden, zuerst überlegen, wie jede Etappe aussehen soll.
+
 ## Eingabe-Regeln für einen Bereich (Vorschlag von Claude, 26.11.2026, nicht von Daniel entschieden)
 
 Bewährt an Bereich 1 und 2 (`garten/buehne/`, Seiten `geruest/buehne.html` und `geruest/garten-lauf.html`).
