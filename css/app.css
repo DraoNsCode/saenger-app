@@ -1236,3 +1236,69 @@ a {
     opacity: 0.5;
   }
 }
+
+/* Klaviatur (Etappe 3, „Taste am Klavier“). Weiße Tasten als Reihe, schwarze darüber an den Grenzen. */
+.optionen.klaviatur {
+  display: flex;
+  position: relative;
+  gap: 0;
+  height: 190px;
+  margin: 8px 0 4px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.taste {
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.taste.weiss {
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0 10px;
+  border: 2px solid var(--tinte);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-radius: 0 0 8px 8px;
+  background: var(--blatt);
+  color: var(--tinte);
+}
+.taste.weiss:first-child {
+  border-left-width: 2px;
+}
+.taste.weiss:last-of-type {
+  border-right-width: 2px;
+}
+.taste.weiss:active {
+  background: #eef1f6;
+}
+.taste.schwarz {
+  position: absolute;
+  top: 0;
+  width: 6.2%;
+  height: 60%;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 0 0 5px 5px;
+  background: var(--tinte);
+  z-index: 2;
+}
+.tasten-name {
+  visibility: hidden;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.klaviatur.beantwortet .tasten-name {
+  visibility: visible;
+}
+.taste.weiss.richtig,
+.taste.weiss.loesung {
+  background: var(--gruen-hell);
+  border-color: var(--gruen);
+}
+.taste.weiss.falsch {
+  background: var(--rot-hell);
+  border-color: var(--rot);
+}

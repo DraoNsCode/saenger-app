@@ -147,6 +147,28 @@ test('Stationen der Etappen 1 und 2 wie in LERNWEG.md', () => {
   });
 });
 
+// Vorläufig angenommen am 26.11.2026: LERNWEG.md, „Stationen der Etappe 3“ (ENTSCHEIDUNGEN.md, „Etappe 3“).
+test('Stationen der Etappe 3 wie in LERNWEG.md', () => {
+  const t = THEMEN[2];
+  assert.equal(t.id, 'notennamen');
+  const ist = Object.fromEntries(
+    uebungenImThema(t).map((uid) => [
+      uid,
+      {
+        noetig: noetigeStationen(t).find((s) => s.uebung === uid).stufe,
+        freiwillig: t.stationen.filter((s) => s.freiwillig && s.uebung === uid).map((s) => s.stufe),
+      },
+    ])
+  );
+  assert.deepEqual(ist, {
+    notenname: { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+    'finde-note': { noetig: 'leicht', freiwillig: ['mittel', 'schwer'] },
+    weiterzaehlen: { noetig: 'leicht', freiwillig: ['schwer'] },
+    klavier: { noetig: 'leicht', freiwillig: ['schwer'] },
+  });
+  assert.ok(!t.stationen.some((s) => s.abThema), 'Etappe 3 hat keine Spätblüher');
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

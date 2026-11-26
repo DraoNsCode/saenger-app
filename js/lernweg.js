@@ -55,6 +55,20 @@ export const THEMEN = [
     id: 'notennamen',
     titel: 'Notennamen',
     kurz: 'c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier.',
+    // Vorläufig angenommen am 26.11.2026 (ENTSCHEIDUNGEN.md, „Etappe 3“; LERNWEG.md, „Stationen der Etappe 3“)
+    stationen: [
+      { id: 'nn-name', titel: 'Wie heißt die Note?', uebung: 'notenname', stufe: 'leicht' },
+      { id: 'nn-name-system', titel: 'Wie heißt die Note?', uebung: 'notenname', stufe: 'mittel', freiwillig: true },
+      { id: 'nn-name-woerter', titel: 'Notenwörter', uebung: 'notenname', stufe: 'schwer', freiwillig: true },
+      { id: 'nn-finden', titel: 'Finde die Note', uebung: 'finde-note', stufe: 'leicht' },
+      { id: 'nn-finden-nah', titel: 'Finde die Note', uebung: 'finde-note', stufe: 'mittel', freiwillig: true },
+      { id: 'nn-finden-anderer', titel: 'Finde die Note im anderen Schlüssel', uebung: 'finde-note', stufe: 'schwer', freiwillig: true },
+      { id: 'nn-zaehlen', titel: 'Weiterzählen', uebung: 'weiterzaehlen', stufe: 'leicht' },
+      { id: 'nn-zaehlen-spruenge', titel: 'Weiterzählen', uebung: 'weiterzaehlen', stufe: 'schwer', freiwillig: true },
+      { id: 'nn-klavier', titel: 'Taste am Klavier', uebung: 'klavier', stufe: 'leicht' },
+      { id: 'nn-klavier-noten', titel: 'Taste am Klavier', uebung: 'klavier', stufe: 'schwer', freiwillig: true },
+      { id: 'nn-abschluss', titel: 'Abschluss: Notennamen', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'achtel',

@@ -14,12 +14,13 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt): Etappe 3 „Notennamen“, zuerst Claudes Vorschlag für Übungen und Stationen, dann Daniels Entscheidung, dann Umsetzung.
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Als Nächstes Claudes Vorschlag für Etappe 4 „Achtel und Auftakt“.
 
-Umgesetzt (19.11.2026, seitdem unverändert):
+Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
+- Etappe 3 (Notennamen, 26.11.2026) mit vier Übungsarten: „Wie heißt die Note?“ (mit Notenwörtern), „Finde die Note“ (auch im anderen Schlüssel), „Weiterzählen“ und „Taste am Klavier“ mit einer Klaviatur aus weißen Tasten. Tonraum je Stimme in `js/musik.js` (`STIMMEN.bereich`), gemeinsame Hilfen in `js/uebungen/namen.js`. Die Stationen sind vorläufig angenommen (LERNWEG.md), Daniel testet sie.
 - Nötige und freiwillige Stationen (Baustein A): je Übung eine nötige Station, dazu freiwillige; ein Abschluss je Etappe, der die nötigen Stationen mischt. Der Mechanismus für Spätblüher ist eingebaut, bei den vorhandenen Übungen gibt es keinen.
 - Stufen nach Inhalt: Leicht, Mittel und Schwer sind nur grobe Orientierungswerte, nicht jede Übung hat alle drei. „Die Stimmen im Chorsatz“ hat nur eine Stufe.
 - Fortschritt im Browser des Geräts

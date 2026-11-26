@@ -17,7 +17,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | --- | --- | --- | --- |
 | 1 | Das Notenbild | Linien und Zwischenräume, höher und tiefer, Schritt und Sprung, die vier Stimmen im Chorsatz | spielbar |
 | 2 | Schlag und Takt | Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt | spielbar |
-| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | in Arbeit |
+| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | spielbar (26.11.2026), Daniel testet |
 | 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | |
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |

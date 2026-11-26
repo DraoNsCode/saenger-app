@@ -4,12 +4,24 @@
 const HALBTOENE = [0, 2, 4, 5, 7, 9, 11];
 const BUCHSTABEN = 'CDEFGAB';
 
+// bereich: Tonraum, den die Stimme in einem Laienchor meist singt, als [tiefste, höchste] diatonische Zahl.
+// Claudes Wahl, von Daniel überlassen (ENTSCHEIDUNGEN.md, „Etappe 3“, 26.11.2026). Daniel korrigiert, falls nötig.
 export const STIMMEN = {
-  S: { name: 'Sopran', schluessel: 'treble', unten: 30 }, // unterste Linie e'
-  A: { name: 'Alt', schluessel: 'treble', unten: 30 },
-  T: { name: 'Tenor', schluessel: 'bass', unten: 18 }, // unterste Linie G (im Chor singt der Tenor im Bassschlüssel)
-  B: { name: 'Bass', schluessel: 'bass', unten: 18 },
+  S: { name: 'Sopran', schluessel: 'treble', unten: 30, bereich: [28, 39] }, // unterste Linie e'; c' bis g''
+  A: { name: 'Alt', schluessel: 'treble', unten: 30, bereich: [26, 36] }, // a bis d''
+  T: { name: 'Tenor', schluessel: 'bass', unten: 18, bereich: [21, 31] }, // unterste Linie G (im Chor singt der Tenor im Bassschlüssel); c bis f'
+  B: { name: 'Bass', schluessel: 'bass', unten: 18, bereich: [17, 28] }, // F bis c'
 };
+
+// Unterste Linie je Schlüssel, für Bilder, die nicht im Schlüssel der eigenen Stimme stehen
+export const UNTEN = { treble: 30, bass: 18 };
+export const ANDERER_SCHLUESSEL = { treble: 'bass', bass: 'treble' };
+
+// Notennamen ohne Oktave (ENTSCHEIDUNGEN.md, „Etappe 3“: Der Buchstabe reicht)
+export const NAMEN = ['c', 'd', 'e', 'f', 'g', 'a', 'h'];
+export function notenname(dia) {
+  return NAMEN[((dia % 7) + 7) % 7];
+}
 
 export const SCHLUESSEL_NAME = { treble: 'Violinschlüssel', bass: 'Bassschlüssel' };
 

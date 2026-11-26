@@ -8,6 +8,7 @@ import { THEMEN, STUFEN } from '../js/lernweg.js';
 
 const STIMMEN = ['S', 'A', 'T', 'B'];
 const SCHLUESSEL = { S: 'treble', A: 'treble', T: 'bass', B: 'bass' };
+const ANDERER = { treble: 'bass', bass: 'treble' };
 const DURCHLAEUFE = 200; // Aufgaben je Übung, Stufe und Stimme (die Aufgaben sind zufällig)
 
 // Übungen, deren Bild nicht die eigene Stimme zeigt, sind von der Schlüsselprüfung ausgenommen:
@@ -50,11 +51,14 @@ for (const [id, u] of Object.entries(UEBUNGEN)) {
           assert.equal(new Set(inhalte).size, inhalte.length, `zwei Antworten sehen gleich aus (${wo})`);
 
           if (!ALLE_SCHLUESSEL.has(id)) {
+            // Manche freiwilligen Stationen zeigen absichtlich den anderen Schlüssel (ENTSCHEIDUNGEN.md, „Etappe 3“)
+            const anders = (u.andererSchluessel || []).includes(stufe);
+            const erwartet = anders ? ANDERER[SCHLUESSEL[stimme]] : SCHLUESSEL[stimme];
             const bilder = [a.bild?.abc, ...a.optionen.map((o) => o.abc)].filter(Boolean);
             for (const abc of bilder) {
               for (const [, schluessel] of abc.matchAll(/clef=(\w+)/g)) {
                 if (schluessel === 'perc') continue; // reine Rhythmen ohne Tonhöhe
-                assert.equal(schluessel, SCHLUESSEL[stimme], `falscher Schlüssel für Stimme ${stimme} (${wo})`);
+                assert.equal(schluessel, erwartet, `falscher Schlüssel für Stimme ${stimme} (${wo})`);
               }
             }
           }
