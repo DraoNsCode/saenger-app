@@ -2,7 +2,7 @@
 
 Vorschlag von Claude, am 26.11.2026 abends neu gefasst nach Daniels Reihenfolge: „Erst Übungsinhalte festlegen, dann Optik des Gartens, der Abzeichen und der ganzen App in Worten möglichst genau festlegen, sodass möglichst nichts schief gehen kann, dann Optik entwickeln.“ Die Testphase mit einigen Sängern ist gestrichen. Daniel testet parallel zur Entwicklung (ENTSCHEIDUNGEN.md, „Plan und Aufräumen“).
 
-**Noch nicht bestätigt.** Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den früheren Plan vom 26.11.2026 (mit Testphase) ersetzt dieser Vorschlag.
+**Von Daniel am 26.11.2026 bestätigt („Passt so“).** Die Einzelheiten der Schritte bleiben Vorschlag, festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht. Den früheren Plan vom 26.11.2026 (mit Testphase) ersetzt dieser Plan.
 
 Der Fahrplan soll jeder Sitzung zeigen, wo ihr Auftrag im Ganzen steht. Details entstehen erst, wenn ein Schritt drankommt.
 

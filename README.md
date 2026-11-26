@@ -14,7 +14,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Daniel bestätigt den Plan in FAHRPLAN.md (Vorschlag vom 26.11.2026 abends, nach Daniels Reihenfolge: Inhalte, Optik in Worten, Optik entwickeln) und gibt sein Wort, den aufgeräumten Zweig `baustein-b/probe-ansichten` nach `main` zu übernehmen. Danach wird nur noch auf `main` gearbeitet. Dann beginnt Phase 1 mit Etappe 3.
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt): Etappe 3 „Notennamen“, zuerst Claudes Vorschlag für Übungen und Stationen, dann Daniels Entscheidung, dann Umsetzung.
 
 Umgesetzt (19.11.2026, seitdem unverändert):
 
