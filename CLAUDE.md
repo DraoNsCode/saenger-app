@@ -8,7 +8,7 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 - **LERNWEG.md**, **GEZIELT-UEBEN.md**, **FAHRPLAN.md** und der Skill **`garten-grafik`** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
 - **Der Code** zeigt den umgesetzten Stand. Er kann hinter den Entscheidungen zurückliegen. Was abgelöst ist, steht in README.md unter „Stand“ und als Kommentar in der betroffenen Datei.
 - **Der Stand** (umgesetzt, abgelöst, vorläufig, nächster Schritt) steht nur in README.md unter „Stand“. Zu Beginn einer Sitzung dort nachlesen.
-- **Das Archiv** (ARCHIV.md, Git-Tag `archiv/2026-11-26`) nur lesen, wenn Daniel danach fragt.
+- **Das Archiv** (ARCHIV.md, Commit `a904728`) nur lesen, wenn Daniel danach fragt.
 
 ## Prüfen
 

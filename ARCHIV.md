@@ -1,6 +1,6 @@
 # Archiv
 
-Am 26.11.2026 hat Claude auf Daniels Wunsch aufgeräumt („Räume auf“). Was aus dem Arbeitsstand genommen wurde, liegt unverändert im Git-Tag `archiv/2026-11-26`. Nur lesen, wenn Daniel danach fragt. Die alten Entwürfe lenken sonst in eine Richtung, die Daniel nicht gewählt hat.
+Am 26.11.2026 hat Claude auf Daniels Wunsch aufgeräumt („Räume auf“). Was aus dem Arbeitsstand genommen wurde, liegt unverändert im Commit `a904728`, dem Stand direkt vor dem Aufräumen. Nur lesen, wenn Daniel danach fragt. Die alten Entwürfe lenken sonst in eine Richtung, die Daniel nicht gewählt hat.
 
 ## Was im Archiv liegt
 
@@ -20,14 +20,14 @@ Am 26.11.2026 hat Claude auf Daniels Wunsch aufgeräumt („Räume auf“). Was 
 Einzelne Dateien:
 
 ```sh
-git fetch origin tag archiv/2026-11-26
-git checkout archiv/2026-11-26 -- GARTEN-NEU.md
+git fetch --depth=50 origin main      # nur nötig in einer flachen Kopie
+git checkout a904728 -- GARTEN-NEU.md
 ```
 
 Den ganzen alten Stand ansehen, ohne etwas zu ändern:
 
 ```sh
-git switch --detach archiv/2026-11-26
+git switch --detach a904728
 ```
 
 Danach mit `git switch main` zurück.

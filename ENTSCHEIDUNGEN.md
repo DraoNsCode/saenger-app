@@ -256,7 +256,7 @@ Stil:
 
 Daniels Antworten auf die Bewertung des Stands:
 
-- **Aufräumen:** Daniel: „Räume auf.“ Umgesetzt von Claude: Archiv, Proben und der abgelöste Baukasten sind aus dem Arbeitsstand genommen und über den Tag `archiv/2026-11-26` wiederherstellbar ([ARCHIV.md](ARCHIV.md)). Der Zweig `baustein-b/probe-ansichten` ist in `main` übernommen. Am Code der App hat sich nichts geändert.
+- **Aufräumen:** Daniel: „Räume auf.“ Umgesetzt von Claude: Archiv, Proben und der abgelöste Baukasten sind aus dem Arbeitsstand genommen und über den Commit `a904728` wiederherstellbar ([ARCHIV.md](ARCHIV.md)). Am Code der App hat sich nichts geändert. Ob der Zweig `baustein-b/probe-ansichten` nach `main` übernommen wird, entscheidet Daniel.
 - **Testphase:** Daniel: „Testphase streichen. Ganze App entwickeln, parallel teste ich.“ Die Testphase mit zwei oder drei Sängern (Baustein I, Plan vom 26.11.2026) entfällt.
 - **Konten:** Daniel: „Konten ja.“ Die App bekommt Konten (Baustein E). Offen bleiben die Anmeldeart und ob die App ohne Konto nutzbar bleibt.
 - **Reihenfolge**, Daniels Vorschlag: „Erst Übungsinhalte festlegen, dann Optik des Gartens, der Abzeichen und der ganzen App in Worten möglichst genau festlegen, sodass möglichst nichts schief gehen kann, dann Optik entwickeln.“ Claudes Plan dazu steht in [FAHRPLAN.md](FAHRPLAN.md) und ist noch nicht bestätigt.
