@@ -49,6 +49,8 @@ function auswahl(body, a, fertig) {
     zeichne(karte, a.bild.abc, { breite: a.bild.breite, scale: a.bild.scale });
     if (a.bild.markiere) a.bild.markiere(karte);
   }
+  // Ein Bild, das kein Notenbild ist, etwa eine Klaviatur (Etappe 5)
+  if (a.bildEl) body.append(a.bildEl());
   let klangTimer = null;
   if (a.klang) {
     const knopf = h('button', { class: 'knopf zweit anhoeren', type: 'button' }, icon('anhoeren', 22), 'Anhören');

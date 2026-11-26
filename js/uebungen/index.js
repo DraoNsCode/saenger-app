@@ -13,6 +13,10 @@ import notenname from './notenname.js';
 import findeNote from './finde-note.js';
 import weiterzaehlen from './weiterzaehlen.js';
 import klavier from './klavier.js';
+import mitzaehlen from './mitzaehlen.js';
+import auftakt from './auftakt.js';
+import achtelHoeren from './achtel-hoeren.js';
+import achtelKlopfen from './achtel-klopfen.js';
 
 export const UEBUNGEN = Object.fromEntries(
   [
@@ -31,5 +35,9 @@ export const UEBUNGEN = Object.fromEntries(
     findeNote,
     weiterzaehlen,
     klavier,
+    mitzaehlen,
+    auftakt,
+    achtelHoeren,
+    achtelKlopfen,
   ].map((u) => [u.id, u])
 );

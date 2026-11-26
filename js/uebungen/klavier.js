@@ -124,3 +124,19 @@ function klaviatur(el, { ziel, notenBild, notenText, reihe }, fertig) {
 
   return () => stopAlles();
 }
+
+// Klaviatur nur zum Ansehen (Etappe 5): markiert = Indizes der weißen Tasten, die hervorgehoben sind.
+// namen: Namen auf den weißen Tasten zeigen.
+export function klaviaturBild(reihe, { markiert = [], namen = false } = {}) {
+  const brett = h('div', { class: 'klaviatur bild', role: 'img', 'aria-label': 'Klaviatur' + (markiert.length ? ' mit hervorgehobenen Tasten' : '') });
+  reihe.forEach((t, i) => {
+    brett.append(h('div', { class: 'taste weiss' + (markiert.includes(i) ? ' markiert' : '') }, namen ? h('span', { class: 'tasten-name sichtbar' }, t.name) : null));
+  });
+  reihe.forEach((t, i) => {
+    if (!t.schwarzDanach) return;
+    const b = h('div', { class: 'taste schwarz' });
+    b.style.left = `${((i + 1) / reihe.length) * 100}%`;
+    brett.append(b);
+  });
+  return brett;
+}

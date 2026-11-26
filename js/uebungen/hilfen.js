@@ -103,3 +103,97 @@ export function diasAusPositionen(stimme, positionen) {
 }
 
 export { zufall, waehle, mische, gewichtet };
+
+// ---------------------------------------------------------------------------------------------
+// Achtel (Etappe 4). Gezählt wird mit Schlägen und „und“ (ENTSCHEIDUNGEN.md, „Sprache des Chors“).
+WERT.note[0.5] = 'Achtel';
+WERT.pause[0.5] = 'Achtelpause';
+
+// Ein Takt Schlag für Schlag: Viertel, zwei Achtel oder (mit achtelPausen) Achtel und Achtelpause.
+// Halbe beginnen im 4/4-Takt auf 1 oder 3. Keine Note geht über eine Schlaggrenze hinaus, außer der Halben
+// (Synkopen kommen erst in Etappe 11). mindAchtel: so viele Schläge mit Achteln mindestens.
+export function achtelTakt(schlaege, { halbe = true, pausen = 0, achtelPausen = false, mindAchtel = 1 } = {}) {
+  for (let versuch = 0; versuch < 200; versuch++) {
+    const takt = [];
+    let pos = 0;
+    let achtelSchlaege = 0;
+    while (pos < schlaege) {
+      const rest = schlaege - pos;
+      const moeglich = [['viertel', 3], ['paar', 3]];
+      if (halbe && rest >= 2 && (schlaege === 3 || pos % 2 === 0)) moeglich.push(['halbe', 1]);
+      if (achtelPausen) moeglich.push(['achtel-pause', 1], ['pause-achtel', 1]);
+      const art = gewichtet(moeglich);
+      if (art === 'viertel') takt.push({ d: 1, pause: false });
+      if (art === 'halbe') takt.push({ d: 2, pause: false });
+      if (art === 'paar') takt.push({ d: 0.5, pause: false }, { d: 0.5, pause: false });
+      if (art === 'achtel-pause') takt.push({ d: 0.5, pause: false }, { d: 0.5, pause: true });
+      if (art === 'pause-achtel') takt.push({ d: 0.5, pause: true }, { d: 0.5, pause: false });
+      if (art !== 'viertel' && art !== 'halbe') achtelSchlaege++;
+      pos += art === 'halbe' ? 2 : 1;
+    }
+    if (achtelSchlaege < mindAchtel) continue;
+    // Viertelpausen: nie die erste Note
+    const viertel = takt.map((n, i) => i).filter((i) => i > 0 && takt[i].d === 1);
+    mische(viertel)
+      .slice(0, pausen)
+      .forEach((i) => (takt[i].pause = true));
+    if (takt.some((n) => !n.pause)) return takt;
+  }
+  throw new Error('Kein passender Takt gefunden');
+}
+
+// Notenwerte als ABC, Achtel innerhalb eines Schlags zusammengebalkt. ton(i) liefert die Tonhöhe der i-ten Note.
+export function abcAchtel(takte, ton = () => 'B') {
+  let i = 0;
+  return (
+    takte
+      .map((takt) => {
+        let pos = 0;
+        let text = '';
+        let vorher = null;
+        takt.forEach((n) => {
+          const zeichen = (n.pause ? 'z' : ton(i++)) + laenge(n.d);
+          // Achtel ohne Leerzeichen dazwischen werden gebalkt, aber nur im selben Schlag
+          const balken = vorher && !vorher.pause && !n.pause && vorher.d === 0.5 && n.d === 0.5 && Math.floor(vorher.beginn) === Math.floor(pos);
+          text += (text && !balken ? ' ' : '') + zeichen;
+          vorher = { ...n, beginn: pos };
+          pos += n.d;
+        });
+        return text;
+      })
+      .join(' | ') + ' |]'
+  );
+}
+
+// Zählsilbe für einen Beginn in Schlägen ab Taktanfang: 0 → „1“, 1.5 → „2 und“
+export function zaehlSilbe(beginn) {
+  return Number.isInteger(beginn) ? String(beginn + 1) : `${Math.floor(beginn) + 1} und`;
+}
+
+// Alle Zählsilben eines Takts als Antworten: 1, 1 und, 2, 2 und …
+export function silbenOptionen(schlaege) {
+  return Array.from({ length: schlaege * 2 }, (_, i) => {
+    const t = zaehlSilbe(i / 2);
+    return { text: t, wert: t };
+  });
+}
+
+// Die Zählsilben einer Spanne in halben Schlägen: ab 2 für 1,5 Schläge → „2 und 3“
+export function silbenSpanne(beginn, dauer) {
+  return Array.from({ length: Math.round(dauer * 2) }, (_, k) => {
+    const p = beginn + k / 2;
+    return Number.isInteger(p) ? String(p + 1) : 'und';
+  }).join(' ');
+}
+
+// So zählst du, durchgehend mit „und“: 1 und (Viertel) · 2 (Achtel) · und (Achtel) · 3 und 4 und (Halbe)
+export function zaehlWeise(takt) {
+  let pos = 0;
+  return takt
+    .map((n) => {
+      const silben = silbenSpanne(pos, n.d);
+      pos += n.d;
+      return `${silben} (${n.pause ? WERT.pause[n.d] : WERT.note[n.d]})`;
+    })
+    .join(' · ');
+}

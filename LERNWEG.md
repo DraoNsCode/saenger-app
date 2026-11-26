@@ -18,7 +18,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | 1 | Das Notenbild | Linien und Zwischenräume, höher und tiefer, Schritt und Sprung, die vier Stimmen im Chorsatz | spielbar |
 | 2 | Schlag und Takt | Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt | spielbar |
 | 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | spielbar (26.11.2026), Daniel testet |
-| 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | |
+| 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |
 | 7 | Intervalle | Sekunde bis Oktave lesen, hören und singen | |
@@ -102,6 +102,26 @@ Begründungen in Kürze:
 - Keine Spätblüher in Etappe 3.
 - Erklärungen, die in die Übungen gehören: die Reihe c d e f g a h und dann wieder c; Merknoten (der Violinschlüssel legt sich um das g auf der zweiten Linie, die zwei Punkte des Bassschlüssels umschließen das f auf der vierten Linie); auf der Klaviatur liegt das c links neben den zwei schwarzen Tasten.
 - Neu zu bauen ist nur die Klaviatur. Die übrigen Übungen folgen den Mustern aus Etappe 1.
+
+## Stationen der Etappe 4 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden.** Daniel war unterwegs und hat gesagt: „fahre einfach entsprechend dem Plan fort mit der Entwicklung“. Deshalb ist der Vorschlag gleich spielbar umgesetzt, damit Daniel ihn testen kann. Was er ändern will, wird geändert.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Mitzählen mit „und“ | ein Takt mit Vierteln, Halben und Achteln, 4/4 oder 3/4: Auf welche Zählzeit (1, 1 und, 2 …) fällt die farbige Note? | auch mit Achtelpausen und einzelnen Achteln |
+| Der Auftakt | eine Melodie mit Auftakt aus ganzen Schlägen: Auf welche Zählzeit fällt die erste Note? | auch Auftakte mit Achteln (etwa auf „4 und“) |
+| Achtel hören | ein 4/4-Takt erklingt, zwei Bilder zur Wahl | mit Achtelpausen, auch 3/4, drei ähnliche Bilder |
+| Achtel klopfen | ein 4/4-Takt mit Achteln tippen, mit Klick und Mitlese-Hilfe (Runde mit 4 Aufgaben, alle 4 nötig) | zwei Takte ohne Klick, mit Achtelpausen, auch 3/4 |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Achtel werden nur mit „und“ gezählt, wie im Chor (ENTSCHEIDUNGEN.md, „Sprache des Chors“). Die Antworten heißen deshalb „1“, „1 und“, „2“ und so weiter.
+- Zwei Achtel im selben Schlag sind gebalkt, wie im Chorbuch. Keine Note geht über eine Schlaggrenze hinaus, außer der Halben. Synkopen kommen erst in Etappe 11.
+- „Auftakt“ meint nur den unvollständigen ersten Takt (ENTSCHEIDUNGEN.md). Die Übung lehrt, vom ersten Taktstrich aus rückwärts zu zählen.
+- Hören und Klopfen folgen den Übungen aus Etappe 2, damit die Bedienung bekannt ist.
+- Keine Spätblüher in Etappe 4.
 
 ## Runden
 

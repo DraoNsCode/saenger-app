@@ -169,6 +169,27 @@ test('Stationen der Etappe 3 wie in LERNWEG.md', () => {
   assert.ok(!t.stationen.some((s) => s.abThema), 'Etappe 3 hat keine Spätblüher');
 });
 
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 4“.
+test('Stationen der Etappe 4 wie in LERNWEG.md', () => {
+  const t = THEMEN[3];
+  assert.equal(t.id, 'achtel');
+  const ist = Object.fromEntries(
+    uebungenImThema(t).map((uid) => [
+      uid,
+      {
+        noetig: noetigeStationen(t).find((s) => s.uebung === uid).stufe,
+        freiwillig: t.stationen.filter((s) => s.freiwillig && s.uebung === uid).map((s) => s.stufe),
+      },
+    ])
+  );
+  assert.deepEqual(ist, {
+    mitzaehlen: { noetig: 'leicht', freiwillig: ['schwer'] },
+    auftakt: { noetig: 'leicht', freiwillig: ['schwer'] },
+    'achtel-hoeren': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'achtel-klopfen': { noetig: 'leicht', freiwillig: ['schwer'] },
+  });
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

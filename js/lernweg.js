@@ -74,6 +74,18 @@ export const THEMEN = [
     id: 'achtel',
     titel: 'Achtel und Auftakt',
     kurz: 'Zählen mit „und“, Achtelpausen, der Auftakt.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 4“)
+    stationen: [
+      { id: 'ac-zaehlen', titel: 'Mitzählen mit „und“', uebung: 'mitzaehlen', stufe: 'leicht' },
+      { id: 'ac-zaehlen-pausen', titel: 'Mitzählen mit „und“', uebung: 'mitzaehlen', stufe: 'schwer', freiwillig: true },
+      { id: 'ac-auftakt', titel: 'Der Auftakt', uebung: 'auftakt', stufe: 'leicht' },
+      { id: 'ac-auftakt-achtel', titel: 'Der Auftakt', uebung: 'auftakt', stufe: 'schwer', freiwillig: true },
+      { id: 'ac-hoeren', titel: 'Achtel hören', uebung: 'achtel-hoeren', stufe: 'leicht' },
+      { id: 'ac-hoeren-pausen', titel: 'Achtel hören', uebung: 'achtel-hoeren', stufe: 'schwer', freiwillig: true },
+      { id: 'ac-klopfen', titel: 'Achtel klopfen', uebung: 'achtel-klopfen', stufe: 'leicht' },
+      { id: 'ac-klopfen-ohne-klick', titel: 'Achtel klopfen', uebung: 'achtel-klopfen', stufe: 'schwer', freiwillig: true },
+      { id: 'ac-abschluss', titel: 'Abschluss: Achtel und Auftakt', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'ziffern',

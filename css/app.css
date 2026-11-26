@@ -1302,3 +1302,25 @@ a {
   background: var(--rot-hell);
   border-color: var(--rot);
 }
+/* Klaviatur nur zum Ansehen (Etappe 5) */
+.klaviatur.bild {
+  display: flex;
+  position: relative;
+  height: 150px;
+  margin: 0 0 16px;
+}
+.klaviatur.bild .taste {
+  cursor: default;
+}
+.klaviatur.bild .taste.weiss:last-child,
+.klaviatur.bild .taste.weiss:nth-last-child(1 of .weiss) {
+  border-right-width: 2px;
+}
+.taste.weiss.markiert {
+  background: #f6ecc8;
+  border-color: var(--gold-tief);
+  border-width: 3px;
+}
+.tasten-name.sichtbar {
+  visibility: visible;
+}
