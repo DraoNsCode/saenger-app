@@ -17,7 +17,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | --- | --- | --- | --- |
 | 1 | Das Notenbild | Linien und Zwischenräume, höher und tiefer, Schritt und Sprung, die vier Stimmen im Chorsatz | spielbar |
 | 2 | Schlag und Takt | Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt | spielbar |
-| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | Vorschlag für Stationen (26.11.2026) |
+| 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | in Arbeit |
 | 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | |
 | 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |
@@ -70,9 +70,9 @@ Begründungen in Kürze:
 
 Im Code tragen die Stufen weiterhin die Namen Leicht, Mittel und Schwer. Sie sind nur eine grobe Einordnung, etwa für den Reiter „Themen“ und die Abzeichen. Nicht jede Übung hat alle drei. Die Aufgaben entstehen jedes Mal neu.
 
-## Stationen der Etappe 3 (Vorschlag)
+## Stationen der Etappe 3
 
-Vorschlag von Claude vom 26.11.2026, noch nicht entschieden. Festgelegt sind nur Daniels Antworten in ENTSCHEIDUNGEN.md, „Etappe 3“: Der Buchstabe reicht, Tonraum und Klavier hat Daniel Claude überlassen.
+Vorschlag von Claude vom 26.11.2026. Daniel hat ihn vorläufig angenommen („Passt“) und testet ihn in der App (ENTSCHEIDUNGEN.md, „Etappe 3“). Der Buchstabe reicht, Tonraum und Klavier hat Daniel Claude überlassen. Die Noten im anderen Schlüssel sind auf Daniels Wunsch als freiwillige Station dazugekommen.
 
 **Tonraum je Stimme** (Claudes Wahl, Daniel korrigiert, falls nötig): Die nötigen Stationen bleiben im Bereich, den die eigene Stimme in einem Laienchor meist singt, mit den Hilfslinien, die dort vorkommen. Darüber hinaus wird es freiwillig.
 
@@ -87,8 +87,8 @@ Vorschlag von Claude vom 26.11.2026, noch nicht entschieden. Festgelegt sind nur
 
 | Übung | nötige Station | freiwillige Stationen |
 | --- | --- | --- |
-| Wie heißt die Note? | eine Note im Bereich der eigenen Stimme, den Buchstaben wählen | ganzes System und bis zu drei Hilfslinien · Notenwörter: drei bis fünf Noten ergeben ein Wort, das Wort wählen |
-| Finde die Note | ein Buchstabe, das passende von drei Notenbildern wählen, im Bereich der eigenen Stimme | vier Notenbilder mit Nachbartönen und Hilfslinien |
+| Wie heißt die Note? | eine Note im Bereich der eigenen Stimme, den Buchstaben wählen | ganzes System und bis zu drei Hilfslinien · Notenwörter: drei bis sechs Noten ergeben ein Wort, das Wort wählen |
+| Finde die Note | ein Buchstabe, das passende von drei Notenbildern wählen, im Bereich der eigenen Stimme | vier Notenbilder mit Nachbartönen und Hilfslinien · im anderen Schlüssel (Sopran und Alt im Bassschlüssel, Tenor und Bass im Violinschlüssel) |
 | Weiterzählen | eine Note ist benannt, die nächste liegt einen Schritt darüber oder darunter: Wie heißt sie? Auch über h und c hinweg | kleine und große Sprünge, bis zur Quinte |
 | Taste am Klavier | ein Buchstabe, die passende weiße Taste auf einer Klaviatur antippen, sie klingt | eine Note im Notenbild, die passende Taste antippen |
 | Abschluss | gemischt aus den nötigen Stationen | – |

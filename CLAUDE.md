@@ -27,7 +27,7 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 - Welches Werkzeug passt (Chat, Claude Code im Web, Desktop-App mit Vorschau), überlässt Daniel Claude. Ist für eine Aufgabe ein anderes Werkzeug deutlich besser, das zu Beginn kurz sagen.
 - Vor einer neuen Art von Aufgabe (z. B. Mikrofon, Grafik, Konten) kurz prüfen, ob eine erprobte Bibliothek, ein Skill oder ein Plugin sie besser oder einfacher löst. Treffer als Vorschlag mit Vor- und Nachteilen vorlegen. Nichts ohne Daniels Zustimmung einbauen.
 - FAHRPLAN.md zeigt, wo ein Auftrag im Ganzen steht. Ist ein Schritt fertig oder ändert sich etwas, ihn dort anpassen.
-- Gearbeitet wird auf `main`. `main` ist über GitHub Pages sofort live, Daniel testet dort parallel. Commits als Claude <noreply@anthropic.com>, gepusht wird auf Daniels Wort.
+- Gearbeitet wird auf `main`. `main` ist über GitHub Pages sofort live, Daniel testet dort parallel. Commits als Claude <noreply@anthropic.com>. Jeder Commit wird ohne Rückfrage direkt gepusht (Daniel, 26.11.2026), deshalb vorher `npm test`.
 - Mit Daniel entscheiden: Varianten deutlich verschieden zeigen, in echter Größe und im Zusammenhang. Sagt Daniel mehrmals „kann ich nicht entscheiden“, den Ansatz prüfen statt mit Annahmen weiterzumachen. Bei „nimm, was du für gut hältst“ eine Annahme eintragen, keine Entscheidung.
 
 ## Gartengrafik

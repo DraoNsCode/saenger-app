@@ -261,7 +261,10 @@ Von Daniel Claude überlassen („Entscheide selbst“). So hat Claude gewählt,
 - **Tonraum:** Die nötigen Stationen bleiben im Bereich, den die eigene Stimme in einem Laienchor meist singt (Sopran c′ bis g″, Alt a bis d″, Tenor c bis f′ im Bassschlüssel, Bass F bis c′), mit den Hilfslinien, die dort vorkommen. Das ganze System und weitere Hilfslinien sind freiwillig. Begründung: Gebraucht wird zuerst das Lesen der eigenen Stimme.
 - **Klavier:** Nur die weißen Tasten, als eine eigene, eher leichte Übung. Die schwarzen Tasten kommen mit den Vorzeichen in Etappe 10. Begründung: Die Klaviatur auf dem Bildschirm braucht kein eigenes Klavier, lässt den Ton hören und zeigt, dass sich die sieben Namen wiederholen.
 
-Die Übungen und Stationen der Etappe 3 stehen als Vorschlag in [LERNWEG.md](LERNWEG.md).
+Die Übungen und Stationen der Etappe 3 stehen in [LERNWEG.md](LERNWEG.md), „Stationen der Etappe 3“.
+
+- **Vorschlag für Etappe 3:** Daniel: „Passt.“ Vorläufig angenommen wie in LERNWEG.md. Daniel testet die Stationen in der App.
+- **Noten im anderen Schlüssel:** Daniel: „Als optionale Aufgabe.“ Wo sie steht, hat Claude gewählt (Daniel korrigiert, falls nötig): als freiwillige Station bei „Finde die Note“. Sopran und Alt suchen die Note im Bassschlüssel, Tenor und Bass im Violinschlüssel.
 
 ## Plan und Aufräumen (26.11.2026, abends)
 
@@ -271,4 +274,5 @@ Daniels Antworten auf die Bewertung des Stands:
 - **Testphase:** Daniel: „Testphase streichen. Ganze App entwickeln, parallel teste ich.“ Die Testphase mit zwei oder drei Sängern (Baustein I, Plan vom 26.11.2026) entfällt.
 - **Konten:** Daniel: „Konten ja.“ Die App bekommt Konten (Baustein E). Offen bleiben die Anmeldeart und ob die App ohne Konto nutzbar bleibt.
 - **Reihenfolge**, Daniels Vorschlag: „Erst Übungsinhalte festlegen, dann Optik des Gartens, der Abzeichen und der ganzen App in Worten möglichst genau festlegen, sodass möglichst nichts schief gehen kann, dann Optik entwickeln.“ Claudes Plan dazu steht in [FAHRPLAN.md](FAHRPLAN.md).
+- **Pushen:** Daniel: „Ja, immer. Pushe auch immer direkt automatisch.“ Claude pusht jeden Commit ohne Rückfrage direkt nach `main`.
 - **Plan:** Daniel zum Plan in FAHRPLAN.md (Inhalte, Funktionen, Optik in Worten, Optik entwickeln, Abschluss): „Passt so.“ Die Einzelheiten der Schritte bleiben Vorschlag und werden entschieden, wenn sie drankommen.
