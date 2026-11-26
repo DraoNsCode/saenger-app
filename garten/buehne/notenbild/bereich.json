@@ -1,0 +1,26 @@
+{
+ "_hinweis": "Bereich 1 als Bühne (Baustein B). Vorschlag von Claude, 26.11.2026, wie Bereich 2 (ENTSCHEIDUNGEN.md, „Ein Bild je Bereich“). Ausgangsbild voll.webp (Z-Image-Turbo, Seed 42, Eingabe-Vorlage von Bereich 2 plus Wiesenstreifen unten), Grundbild frisch.webp und Beet-Ebenen mit Qwen-Image-Edit-2511 (Seed 42). Brunnenbeet und Birnbaum haben nur „voll“, weil ihre Stationen keine freiwilligen haben. Zonen aus dem Vergleich jeder Ebene mit dem Grundbild gemessen, noch nicht im Bild geprüft.",
+ "id": "notenbild",
+ "nr": 1,
+ "titel": "Das Notenbild",
+ "groesse": [1024, 1536],
+ "grund": "frisch.webp",
+ "mauer": 175,
+ "weg": { "stationenZwischen": [1460, 420], "suchenAb": 360 },
+ "stationen": ["nb-linie", "nb-hoeher", "nb-schritt", "nb-hoeren", "nb-chorsatz", "nb-abschluss"],
+ "steine": ["trittstein-1", "trittstein-2", "trittstein-3"],
+ "beete": [
+  { "station": "nb-linie", "freiwillig": ["nb-linie-aussen", "nb-linie-hilfslinien"], "name": "Fünf Reihen Kräuter", "jung": "kraeuter-jung.webp", "voll": "kraeuter-voll.webp",
+    "zone": [[675, 915], [1024, 915], [1024, 1395], [735, 1395], [680, 1150]] },
+  { "station": "nb-hoeher", "freiwillig": ["nb-hoeher-hilfslinien"], "name": "Stockrosen", "jung": "stockrosen-jung.webp", "voll": "stockrosen-voll.webp",
+    "zone": [[0, 885], [360, 885], [365, 1000], [330, 1400], [0, 1410]] },
+  { "station": "nb-schritt", "freiwillig": ["nb-schritt-hilfslinien"], "name": "Kamille", "jung": "kamille-jung.webp", "voll": "kamille-voll.webp",
+    "zone": [[0, 672], [392, 672], [400, 860], [0, 860]] },
+  { "station": "nb-hoeren", "freiwillig": ["nb-hoeren-drei", "nb-hoeren-vier"], "name": "Glockenblumen", "jung": "glockenblumen-jung.webp", "voll": "glockenblumen-voll.webp",
+    "zone": [[650, 668], [1024, 668], [1024, 885], [645, 885]] },
+  { "station": "nb-chorsatz", "freiwillig": [], "name": "Brunnenbeet in vier Farben", "voll": "brunnenbeet-voll.webp",
+    "zone": [[0, 395], [455, 395], [455, 645], [0, 645]] },
+  { "station": "nb-abschluss", "freiwillig": [], "name": "Birnbaum", "voll": "birnbaum-voll.webp",
+    "zone": [[585, 0], [1024, 0], [1024, 660], [700, 660], [692, 430], [615, 390]] }
+ ]
+}
