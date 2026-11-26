@@ -190,6 +190,27 @@ test('Stationen der Etappe 4 wie in LERNWEG.md', () => {
   });
 });
 
+// Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden: LERNWEG.md, „Stationen der Etappe 5“.
+test('Stationen der Etappe 5 wie in LERNWEG.md', () => {
+  const t = THEMEN[4];
+  assert.equal(t.id, 'ziffern');
+  const ist = Object.fromEntries(
+    uebungenImThema(t).map((uid) => [
+      uid,
+      {
+        noetig: noetigeStationen(t).find((s) => s.uebung === uid).stufe,
+        freiwillig: t.stationen.filter((s) => s.freiwillig && s.uebung === uid).map((s) => s.stufe),
+      },
+    ])
+  );
+  assert.deepEqual(ist, {
+    'ganz-halbton': { noetig: 'leicht', freiwillig: ['schwer'] },
+    tonleiter: { noetig: 'leicht', freiwillig: [] },
+    'ziffer-lesen': { noetig: 'leicht', freiwillig: ['schwer'] },
+    'stufen-hoeren': { noetig: 'leicht', freiwillig: ['schwer'] },
+  });
+});
+
 test('Freischalten: nötige nacheinander, freiwillige nach ihrer nötigen Station', () => {
   zuruecksetzen();
   const noetige = noetigeStationen();

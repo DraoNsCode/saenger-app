@@ -9,10 +9,11 @@ import { istHalbton } from './ziffern.js';
 
 let letzte = null;
 
-function warumText(n1, n2, halb) {
+// tief und hoch: die beiden Namen von unten nach oben
+function warumText(tief, hoch, halb) {
   return halb
-    ? `Zwischen ${n1} und ${n2} liegt keine schwarze Taste: Das ist ein Halbton. Halbtöne zwischen weißen Tasten gibt es nur bei e–f und h–c.`
-    : `Zwischen ${n1} und ${n2} liegt eine schwarze Taste: Das ist ein Ganzton, also zwei Halbtöne.`;
+    ? `Zwischen ${tief} und dem ${hoch} darüber liegt keine schwarze Taste: Das ist ein Halbton. Halbtöne zwischen weißen Tasten gibt es nur bei e–f und h–c.`
+    : `Zwischen ${tief} und dem ${hoch} darüber liegt eine schwarze Taste: Das ist ein Ganzton, also zwei Halbtöne.`;
 }
 
 export default {
@@ -28,6 +29,7 @@ export default {
     'Ein **Halbton** ist der kleinste Schritt: von einer Taste zur direkt nächsten, egal ob weiß oder schwarz.',
     'Ein **Ganzton** besteht aus zwei Halbtönen. Zwischen zwei weißen Tasten mit einer schwarzen dazwischen liegt ein Ganzton.',
     'Zwischen **e und f** und zwischen **h und c** gibt es keine schwarze Taste. Dort ist der Schritt nur ein Halbton.',
+    'Im Notenbild sehen beide Schritte gleich aus. Lies dort die Notennamen und denk an die Klaviatur.',
   ],
   neu(stufe, k) {
     const st = STIMMEN[k.stimme];
@@ -66,10 +68,11 @@ export default {
     const [n1, n2] = [notenname(d1), notenname(d2)];
     return {
       frage: 'Ganzton oder Halbton?',
+      hinweis: 'Im Notenbild sehen beide Schritte gleich aus. Lies die Notennamen und denk an die Klaviatur.',
       bild: { abc: kopf({ schluessel: st.schluessel }) + `x ${abcTon(d1)}2 ${abcTon(d2)}2 x |]`, breite: 180, scale: 1.8 },
       optionen: [{ text: 'Ganzton', wert: 'ganz' }, { text: 'Halbton', wert: 'halb' }],
       loesung: halb ? 'halb' : 'ganz',
-      warum: `Die Noten sind ${n1} und ${n2}. ${warumText(n1, n2, halb)}`,
+      warum: `Von ${n1} geht es einen Schritt ${richtung > 0 ? 'hinauf' : 'hinunter'} zum ${n2}. ${richtung > 0 ? warumText(n1, n2, halb) : warumText(n2, n1, halb)}`,
       nachher: () => spieleFolge([{ midi: midi(d1), schlaege: 1 }, { midi: midi(d2), schlaege: 1.5 }], { tempo: 80 }),
       halb,
       namen: [n1, n2],

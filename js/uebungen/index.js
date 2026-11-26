@@ -17,6 +17,10 @@ import mitzaehlen from './mitzaehlen.js';
 import auftakt from './auftakt.js';
 import achtelHoeren from './achtel-hoeren.js';
 import achtelKlopfen from './achtel-klopfen.js';
+import ganzHalbton from './ganz-halbton.js';
+import tonleiter from './tonleiter.js';
+import zifferLesen from './ziffer-lesen.js';
+import stufenHoeren from './stufen-hoeren.js';
 
 export const UEBUNGEN = Object.fromEntries(
   [
@@ -39,5 +43,9 @@ export const UEBUNGEN = Object.fromEntries(
     auftakt,
     achtelHoeren,
     achtelKlopfen,
+    ganzHalbton,
+    tonleiter,
+    zifferLesen,
+    stufenHoeren,
   ].map((u) => [u.id, u])
 );

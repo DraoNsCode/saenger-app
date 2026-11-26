@@ -91,6 +91,17 @@ export const THEMEN = [
     id: 'ziffern',
     titel: 'Tonleiter und Ziffern',
     kurz: 'Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen.',
+    // Vorschlag von Claude vom 26.11.2026, umgesetzt, von Daniel noch nicht entschieden (LERNWEG.md, „Stationen der Etappe 5“)
+    stationen: [
+      { id: 'zf-halbton', titel: 'Ganzton oder Halbton', uebung: 'ganz-halbton', stufe: 'leicht' },
+      { id: 'zf-halbton-noten', titel: 'Ganzton oder Halbton', uebung: 'ganz-halbton', stufe: 'schwer', freiwillig: true },
+      { id: 'zf-tonleiter', titel: 'Die Dur-Tonleiter', uebung: 'tonleiter', stufe: 'leicht' },
+      { id: 'zf-ziffer', titel: 'Welche Ziffer?', uebung: 'ziffer-lesen', stufe: 'leicht' },
+      { id: 'zf-ziffer-ohne', titel: 'Welche Ziffer?', uebung: 'ziffer-lesen', stufe: 'schwer', freiwillig: true },
+      { id: 'zf-hoeren', titel: 'Ziffern hören', uebung: 'stufen-hoeren', stufe: 'leicht' },
+      { id: 'zf-hoeren-alle', titel: 'Ziffern hören', uebung: 'stufen-hoeren', stufe: 'schwer', freiwillig: true },
+      { id: 'zf-abschluss', titel: 'Abschluss: Tonleiter und Ziffern', mischung: true, stufe: 'gemischt' },
+    ],
   },
   {
     id: 'zeichen',

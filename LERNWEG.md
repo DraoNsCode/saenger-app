@@ -19,7 +19,7 @@ Grundidee und Reihenfolge hat Daniel vorläufig bestätigt.
 | 2 | Schlag und Takt | Grundschlag, Ganze, Halbe und Viertel, Pausen, 4/4- und 3/4-Takt | spielbar |
 | 3 | Notennamen | c d e f g a h im eigenen Schlüssel, Hilfslinien, die Tasten am Klavier | spielbar (26.11.2026), Daniel testet |
 | 4 | Achtel und Auftakt | Zählen mit „und“, Achtelpausen, der Auftakt | spielbar als Vorschlag (26.11.2026), nicht entschieden |
-| 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | |
+| 5 | Tonleiter und Ziffern | Ganz- und Halbton, die Dur-Tonleiter, die Ziffern 1 bis 7, Stufen hören und singen | spielbar als Vorschlag (26.11.2026), nicht entschieden |
 | 6 | Zeichen im Notenbild | Wiederholungen, Strophen, Klammern, laut und leise, Atemzeichen, Fermate, D.C., D.S. und Coda | |
 | 7 | Intervalle | Sekunde bis Oktave lesen, hören und singen | |
 | 8 | Punktierung und Haltebogen | Punktierte Noten, Haltebogen, 2/2- und 6/8-Takt in zwei Schlägen | |
@@ -122,6 +122,26 @@ Begründungen in Kürze:
 - „Auftakt“ meint nur den unvollständigen ersten Takt (ENTSCHEIDUNGEN.md). Die Übung lehrt, vom ersten Taktstrich aus rückwärts zu zählen.
 - Hören und Klopfen folgen den Übungen aus Etappe 2, damit die Bedienung bekannt ist.
 - Keine Spätblüher in Etappe 4.
+
+## Stationen der Etappe 5 (Vorschlag)
+
+Vorschlag von Claude vom 26.11.2026. **Nicht entschieden**, aus demselben Grund wie Etappe 4 gleich spielbar umgesetzt.
+
+| Übung | nötige Station | freiwillige Stationen |
+| --- | --- | --- |
+| Ganzton oder Halbton | zwei benachbarte weiße Tasten auf einer Klaviatur: Ganzton oder Halbton? | im Notenbild, ohne Klaviatur |
+| Die Dur-Tonleiter | C-Dur mit Ziffern 1 bis 1, zwei Nachbartöne markiert: Ganzton oder Halbton? (nur eine Stufe) | – |
+| Welche Ziffer? | in C-Dur, die 1 steht als erste Note da: Welche Ziffer hat die zweite? | nur die Note, Hinweis „das c ist die 1“ |
+| Ziffern hören | 1–3–5–3–1 in wechselnden Tonarten, dann ein Ton: 1, 3 oder 5? | alle Ziffern von 1 bis 7 |
+| Abschluss | gemischt aus den nötigen Stationen | – |
+
+Begründungen in Kürze:
+
+- Ziffern wie im Chor: Die 1 ist der Grundton, die obere 1 bleibt die 1 (ENTSCHEIDUNGEN.md, „Sprache des Chors“).
+- Gelesen wird nur in C-Dur, weil Vorzeichen und „die 1 finden“ erst in Etappe 10 kommen. Gehört wird in wechselnden Tonarten, denn beim Hören zählt nur der Abstand zur 1.
+- Ganzton und Halbton werden an der Klaviatur aus Etappe 3 erklärt: Halbtöne zwischen weißen Tasten gibt es nur bei e–f und h–c.
+- **Stufen singen** ist nicht dabei. Ohne Mikrofon lässt sich Singen nicht prüfen. Vorschlag: Es kommt mit dem Mikrofon (Baustein G) oder als Übung zum Selbermachen in den Übe-Teil (Baustein D). Offen, Daniel entscheidet.
+- Keine Spätblüher in Etappe 5. Ein möglicher Spätblüher später: Ziffern lesen in anderen Tonarten, sobald Etappe 10 erreicht ist.
 
 ## Runden
 
