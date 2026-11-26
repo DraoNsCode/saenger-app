@@ -1,6 +1,5 @@
 node_modules/
 pruefung/ausgabe/
 __pycache__/
-# laesst sich mit probe/werkzeug/stilbilder.mjs neu rechnen
-probe/bilder/stile/
+# Rohdateien der KI, nicht im Repository (Skill garten-grafik)
 garten/buehne/*/roh/

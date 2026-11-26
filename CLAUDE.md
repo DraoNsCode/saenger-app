@@ -5,9 +5,10 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 ## Welche Datei gilt
 
 - **ENTSCHEIDUNGEN.md** ist maßgeblich. Nur dort steht, was Daniel festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere.
-- **LERNWEG.md**, **WEG.md**, **GEZIELT-UEBEN.md**, **GARTEN-NEU.md**, **GARTEN-BILD.md** (Archiv) und **FAHRPLAN.md** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
+- **LERNWEG.md**, **GEZIELT-UEBEN.md**, **FAHRPLAN.md** und der Skill **`garten-grafik`** enthalten Vorschläge von Claude. Sie sind keine Vorgaben, solange sie nicht in ENTSCHEIDUNGEN.md stehen.
 - **Der Code** zeigt den umgesetzten Stand. Er kann hinter den Entscheidungen zurückliegen. Was abgelöst ist, steht in README.md unter „Stand“ und als Kommentar in der betroffenen Datei.
 - **Der Stand** (umgesetzt, abgelöst, vorläufig, nächster Schritt) steht nur in README.md unter „Stand“. Zu Beginn einer Sitzung dort nachlesen.
+- **Das Archiv** (ARCHIV.md, Git-Tag `archiv/2026-11-26`) nur lesen, wenn Daniel danach fragt.
 
 ## Prüfen
 
@@ -25,12 +26,14 @@ Dieses Repository enthält die Choristen-App (Sänger-App) für Daniels Gemeinde
 
 - Welches Werkzeug passt (Chat, Claude Code im Web, Desktop-App mit Vorschau), überlässt Daniel Claude. Ist für eine Aufgabe ein anderes Werkzeug deutlich besser, das zu Beginn kurz sagen.
 - Vor einer neuen Art von Aufgabe (z. B. Mikrofon, Grafik, Konten) kurz prüfen, ob eine erprobte Bibliothek, ein Skill oder ein Plugin sie besser oder einfacher löst. Treffer als Vorschlag mit Vor- und Nachteilen vorlegen. Nichts ohne Daniels Zustimmung einbauen.
-- FAHRPLAN.md zeigt, wo ein Auftrag im Ganzen steht. Ist ein Baustein fertig oder ändert sich etwas, die Tabelle dort anpassen.
+- FAHRPLAN.md zeigt, wo ein Auftrag im Ganzen steht. Ist ein Schritt fertig oder ändert sich etwas, ihn dort anpassen.
+- Gearbeitet wird auf `main`. `main` ist über GitHub Pages sofort live, Daniel testet dort parallel. Commits als Claude <noreply@anthropic.com>, gepusht wird auf Daniels Wort.
+- Mit Daniel entscheiden: Varianten deutlich verschieden zeigen, in echter Größe und im Zusammenhang. Sagt Daniel mehrmals „kann ich nicht entscheiden“, den Ansatz prüfen statt mit Annahmen weiterzumachen. Bei „nimm, was du für gut hältst“ eine Annahme eintragen, keine Entscheidung.
 
 ## Gartengrafik
 
-- Für das Design des Gartens ist seit dem 25.11.2026 ein Neuanfang vorbereitet, Schritt für Schritt. Vor jeder Arbeit daran **GARTEN-NEU.md** lesen: Ebenen, Regeln je Runde und was nicht gelesen werden soll. Der Skill `garten-grafik` verweist darauf und nimmt später die gewählten Stilregeln auf.
-- GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md und die Seiten in `probe/` sind Archiv.
+- Bild und Optik des Gartens kommen laut Plan (FAHRPLAN.md) erst in Phase 3 (in Worten) und Phase 4 (entwickeln).
+- Vor jeder Arbeit daran den Skill `garten-grafik` lesen: Stand, Werkzeuge, bewährte Eingaben und Fallen.
 
 ## Regeln für Dokumente
 

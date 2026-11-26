@@ -6,7 +6,8 @@
 <style>
 /* Probeseite (Vorschlag von Claude, 26.11.2026): Bereich 1 und 2 als ein Bildlauf wie in der späteren App.
    Bild: garten/buehne.js (zeichneGarten), Stationen, Namen und Knöpfe sind HTML darüber.
-   Knöpfe nach ENTSCHEIDUNGEN.md, Ebene 1, Runden 4 bis 7; Verhalten wie in geruest/ebene1-gesamt.html. */
+   Knöpfe nach ENTSCHEIDUNGEN.md, Ebene 1, Runden 4 bis 7.
+   Stand: Vorarbeit für Baustein B, siehe README.md, „Stand“. Die Bilder von Bereich 1 und 2 sind nicht endgültig. */
 :root { --seite: #e6e7e8; --blatt: #fbfbfb; --linie: #6b7075; --dunkel: #33373b; --text: #1b1e21; --gras: #a0b53f; --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding-block: 16px 24px; }
@@ -176,7 +177,7 @@ function zeichne() {
   knoepfe();
 }
 
-// „Weiter“ nur im eigenen Bereich, „Zu mir“ nur, wenn man weggescrollt ist (wie geruest/ebene1-gesamt.html)
+// „Weiter“ nur im eigenen Bereich, „Zu mir“ nur, wenn man weggescrollt ist (ENTSCHEIDUNGEN.md, Ebene 1, Runde 6)
 function knoepfe() {
   const jetzt = aktuell();
   const mitte = rahmen.scrollTop + (rahmen.clientHeight - 76) / 2;

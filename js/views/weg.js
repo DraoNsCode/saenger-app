@@ -1,5 +1,6 @@
 // Der Leitfaden als geschwungene Notenzeile. Stationen sind Notenköpfe.
-// ABGELÖST: Diese Darstellung wird durch den Klostergarten ersetzt (ENTSCHEIDUNGEN.md, WEG.md). Nicht weiterentwickeln.
+// ABGELÖST: Diese Darstellung wird durch den Klostergarten ersetzt (ENTSCHEIDUNGEN.md). Nicht weiterentwickeln.
+// Bis der Garten eingebaut ist, bleibt sie die Ansicht, in der Daniel neue Etappen testet (README.md, „Stand“).
 // Bis dahin zeigt die Notenzeile nur die nötigen Stationen; die freiwilligen stehen im Blatt ihrer nötigen Station.
 import { h, icon, blatt } from '../ui.js';
 import { THEMEN, noetigeRichtige, verfuegbar, noetigeStationen, freiwilligeZu } from '../lernweg.js';

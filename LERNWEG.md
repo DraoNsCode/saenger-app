@@ -97,7 +97,7 @@ Die Zahlen für Bronze, Silber und Gold gehen auf Daniels spontanes Beispiel zur
 
 ## Das Bild des Leitfadens
 
-Die Notenzeile, die im Code noch zu sehen ist, ist abgelöst. Der Leitfaden wird zum Klostergarten, siehe [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) und [WEG.md](WEG.md).
+Die Notenzeile, die im Code noch zu sehen ist, ist abgelöst. Der Leitfaden wird zum Klostergarten, siehe [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md).
 
 ## Rückmeldung
 

@@ -3,57 +3,56 @@
 Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, Rhythmus und Gehör spielerisch üben. Ein Leitfaden führt durch die Themen, jedes Thema lässt sich auch gezielt üben, und es gibt Abzeichen.
 
 - [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md): was Daniel festgelegt hat, mit Datum. Diese Datei gilt.
+- [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für den Plan bis zum Schluss und die Bausteine
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
-- [WEG.md](WEG.md): Vorschlag für den Weg als Klostergarten
 - [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md): Vorschlag für das gezielte Üben und die Verbindung zum Garten (Baustein J)
-- [GARTEN-NEU.md](GARTEN-NEU.md): Startseite für das neue Design des Gartens, Schritt für Schritt (Baustein B)
-- Archiv: [GARTEN-BILD.md](GARTEN-BILD.md): Vorschlag für Bild und Optik des Gartens: was der Garten können muss, Wege zur Grafik, Probe (Baustein B)
-- Archiv: [GARTEN-WORTE.md](GARTEN-WORTE.md): Entwurf des Gartens in Worten aus einer anderen Sitzung, ungeprüftes Brainstorming (Baustein B)
-- Archiv: [GARTEN-VERGLEICH.md](GARTEN-VERGLEICH.md): Vorschlag, beide Entwürfe im Vergleich (Baustein B)
-- [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für Bausteine und Reihenfolge der Entwicklung
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
+- [Skill `garten-grafik`](.claude/skills/garten-grafik/SKILL.md): Stand, Werkzeuge und Erfahrungen zur Gartengrafik (Baustein B)
+- [ARCHIV.md](ARCHIV.md): was am 26.11.2026 beim Aufräumen ins Archiv kam und wie man es zurückholt
 
 ## Stand
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-Umgesetzt (19.11.2026):
+**Nächster Schritt:** Daniel bestätigt den Plan in FAHRPLAN.md (Vorschlag vom 26.11.2026 abends, nach Daniels Reihenfolge: Inhalte, Optik in Worten, Optik entwickeln). Dann beginnt Phase 1 mit Etappe 3.
+
+Umgesetzt (19.11.2026, seitdem unverändert):
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
-- Nötige und freiwillige Stationen (Baustein A): je Übung eine nötige Station, dazu freiwillige; ein Abschluss je Etappe, der die nötigen Stationen mischt. Der Mechanismus für Spätblüher ist eingebaut, bei den vorhandenen Übungen gibt es keinen. Die Aufteilung steht in LERNWEG.md und ist vorläufig angenommen; Daniel testet sie in der App.
+- Nötige und freiwillige Stationen (Baustein A): je Übung eine nötige Station, dazu freiwillige; ein Abschluss je Etappe, der die nötigen Stationen mischt. Der Mechanismus für Spätblüher ist eingebaut, bei den vorhandenen Übungen gibt es keinen.
 - Stufen nach Inhalt: Leicht, Mittel und Schwer sind nur grobe Orientierungswerte, nicht jede Übung hat alle drei. „Die Stimmen im Chorsatz“ hat nur eine Stufe.
 - Fortschritt im Browser des Geräts
 - Prüfung: Tests und Klick-Test in `pruefung/` (siehe unten)
 
 Abgelöst, nicht weiterentwickeln:
 
-- Der Leitfaden als Notenzeile in `js/views/weg.js`. Bis zum Klostergarten zeigt sie nur die nötigen Stationen, die freiwilligen stehen im Blatt ihrer nötigen Station.
+- Der Leitfaden als Notenzeile in `js/views/weg.js`. Er zeigt nur die nötigen Stationen, die freiwilligen stehen im Blatt ihrer nötigen Station. Bis der Garten eingebaut ist (Phase 4), bleibt er die Ansicht, in der Daniel neue Etappen testet.
 
 In Frage gestellt (nicht weiterentwickeln, bis das neue System steht):
 
-- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel will ein besseres System für das gezielte Üben nach dem Weg (ENTSCHEIDUNGEN.md, „Gezielt üben nach dem Weg“). Daniel hat Richtung 3 aus GEZIELT-UEBEN.md gewählt (Ausbau und Pflege nebeneinander). Die Einzelheiten sind noch Vorschlag.
+- Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel hat für das gezielte Üben Richtung 3 aus GEZIELT-UEBEN.md gewählt (Ausbau und Pflege nebeneinander). Die Einzelheiten sind noch Vorschlag.
 
 Vorläufig:
 
-- Die Gestaltung in `css/app.css`. Die Optik wird erst nach der Geschichte des Weges gesucht.
-- Die Aufteilung der Stationen (LERNWEG.md, „Stationen der Etappen 1 und 2“), bis Daniel sie in der App getestet hat. Bestätigt sind schon „Im Schlag tippen“, „Schritt oder Sprung“, „Höher oder tiefer“ und der Abschluss (ENTSCHEIDUNGEN.md).
+- Die Gestaltung in `css/app.css`. Die Optik wird in Phase 3 in Worten festgelegt.
+- Die Aufteilung der Stationen (LERNWEG.md, „Stationen der Etappen 1 und 2“), bis Daniel sie getestet hat. Bestätigt sind schon „Im Schlag tippen“, „Schritt oder Sprung“, „Höher oder tiefer“ und der Abschluss (ENTSCHEIDUNGEN.md).
 - Wann sich freiwillige Stationen öffnen (sobald die nötige Station derselben Übung geschafft ist): Vorschlag von Claude, so umgesetzt.
 
 Entschieden, aber noch nicht umgesetzt:
 
 - Der Leitfaden wird zum Klostergarten mit der Kapelle als Ziel.
-- Ein Thema lässt sich erst gezielt üben, wenn es im Weg freigeschaltet ist, also wenn seine nötigen Stationen geschafft sind (Claudes Wahl, ENTSCHEIDUNGEN.md). Der Reiter „Themen“ zeigt alle Themen, gesperrte sichtbar. Heute sind dort alle fertigen Themen sofort frei.
+- Ein Thema lässt sich erst gezielt üben, wenn seine nötigen Stationen geschafft sind (Claudes Wahl, ENTSCHEIDUNGEN.md). Der Reiter „Themen“ zeigt alle Themen, gesperrte sichtbar. Heute sind dort alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
-- Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen für lange nicht geübte oder fehleranfällige Übungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
+- Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
+- Konten (26.11.2026). Offen: Anmeldeart und ob die App ohne Konto nutzbar bleibt.
 
-Baustein J ist als Konzept abgeschlossen (19.11.2026). Was davon erst in B oder bei der Umsetzung entschieden wird, steht in GEZIELT-UEBEN.md.
+Vorarbeit für die Optik (Baustein B, nicht in der App):
 
-Baustein B (Bild und Optik des Gartens) läuft. Der erste Anlauf (24. und 25.11.2026) hat Anforderungen, Wege zur Grafik, einen ganzen ersten Bereich, viele Varianten und einen zweiten Entwurf in Worten gebracht. Er ist Archiv (GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md, `probe/`). Was Daniel dabei gesagt hat, steht in ENTSCHEIDUNGEN.md. Die App selbst ist unverändert, in ihr gibt es noch keinen Garten.
-
-Das Design beginnt Schritt für Schritt von vorne, nach den Ebenen und Regeln in [GARTEN-NEU.md](GARTEN-NEU.md) (von Daniel am 25.11.2026 bestätigt). Ebene 0 ist geklärt (25.11.2026), die Ergebnisse stehen in ENTSCHEIDUNGEN.md unter „Garten neu“.
-
-Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengeführt in `geruest/ebene1-gesamt.html`. Ebene 2 (Aussehen) hat Daniel zurückgestellt, weil sie nur Feinheiten eines einzigen Stils zeigte. Jetzt läuft zuerst die Stilrunde (`geruest/stilrunde1.html`), mit KI-Proben. Daniel hat am 26.11.2026 den Stil gewählt: gemaltes Bilderbuch (`geruest/stilrunde2.html`, Stil B). Plan und Stand stehen in GARTEN-NEU.md, Abschnitt „Stand 26.11.2026“. Der Fahrplan ist durchgegangen (26.11.2026). Die Bausteine-Probe (`geruest/bausteine.html`) ist abgelöst: Jeder Bereich wird ein KI-Bild, dessen Beete Station für Station wachsen (`geruest/buehne.html`, `garten/buehne.js`, ENTSCHEIDUNGEN.md, „Ein Bild je Bereich“). Bereich 2 ist fertig, der Anschluss zwischen zwei Bereichen ist geprüft (`geruest/anschluss.html`, Wiesenstreifen). Daniel: „Richtung passt vorerst.“ Bereich 1 ist neu gemalt, beide Bereiche liegen als Bildlauf wie in der App vor (`geruest/garten-lauf.html`, 26.11.2026), Daniel: „Optik passt grundsätzlich“, Bereich 1 und 2 sind ihm aber zu ähnlich in Ambiente, Farben und Details. Vor dem Ausarbeiten aller Etappen soll zuerst überlegt werden, wie jede aussieht (ENTSCHEIDUNGEN.md). Weiter nach dem Plan in FAHRPLAN.md (von Daniel bestätigt): J ohne Gartenbild, dann Einbau in die App und Konten. Die übrigen Bereiche erst, wenn ihre Stationen feststehen (C). Daniel hat am 26.11.2026 gewählt: In den Wartezeiten auf das Kontingent kommen zuerst die Teile von J ohne Gartenbild, dann E (ENTSCHEIDUNGEN.md, „Reihenfolge der Bausteine“). Die übrigen Stationen testet Daniel nebenher.
+- Stil gewählt: gemaltes Bilderbuch (26.11.2026, Bild `geruest/stil2/b-geruest.webp`).
+- Technik „ein KI-Bild je Bereich, die Beete wachsen Station für Station“: Claudes Wahl, Daniel: „Richtung passt vorerst.“ Zeichner `garten/buehne.js`, Bilder in `garten/buehne/`.
+- Bereich 1 und 2 als Bildlauf wie in der App: `geruest/garten-lauf.html`. Daniel: „Optik passt grundsätzlich“, die beiden Bereiche sind ihm aber zu ähnlich. Die Bilder sind nicht endgültig. Ob sie bleiben, ergibt sich aus Phase 3.
+- Werkzeuge, bewährte Eingaben und Fallen stehen im Skill `garten-grafik`.
 
 ## Technik
 
@@ -79,9 +78,9 @@ Ebene 1 (graues Gerüst) hat Daniel in sieben Runden beantwortet, zusammengefüh
 | `js/klang.js`, `js/noten.js`, `js/musik.js` | Klang, Notenbild, Tonhöhen |
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
-| `probe/` | Archiv und Werkzeuge zu Baustein B: Ansichten im Vergleich, erster Gartenbereich, Stilvarianten, Bilder und Zeichenwerkzeug, nicht Teil der App |
-| `garten/` | Bausteine des Gartens (Baustein B): KI-Bögen, freigestellte Teile, Flächen, Bereiche als Daten, Zeichner und Werkstatt. Noch nicht Teil der App |
-| `.claude/skills/garten-grafik/` | Arbeitsweise für die Gartengrafik, später die gewählten Stilregeln |
+| `geruest/garten-lauf.html` | Vorarbeit zu Baustein B: Bereich 1 und 2 als Bildlauf wie in der App, nicht Teil der App |
+| `garten/` | Vorarbeit zu Baustein B: Zeichner `buehne.js`, Bereiche mit Grundbild und Beet-Ebenen (`buehne/`), Wiese (`flaechen/`), Trittsteine (`teile/`), kleiner Server zum Ablegen von Bildern (`werkstatt/server.py`). Noch nicht Teil der App |
+| `.claude/skills/garten-grafik/` | Stand, Werkzeuge und Erfahrungen zur Gartengrafik, später die gewählten Stilregeln |
 
 ### Eine neue Übungsart
 

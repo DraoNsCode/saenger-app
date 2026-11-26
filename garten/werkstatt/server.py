@@ -1,8 +1,9 @@
-# Werkstatt für Gartenteile: liefert das Repository aus und nimmt freigestellte Teile entgegen.
+# Kleiner Server für die Gartengrafik: liefert das Repository aus und nimmt Bilder als WebP entgegen.
 # Nur Python-Standardbibliothek, nichts zu installieren.
 #
 #   python garten/werkstatt/server.py [port]        (aus dem Repository-Ordner, Port Vorgabe 8010)
-#   dann http://127.0.0.1:8010/garten/werkstatt/werkstatt.html öffnen
+#
+# Die Seite zum Freistellen von Einzelteilen (werkstatt.html) gehörte zum abgelösten Baukasten und liegt im Archiv (ARCHIV.md).
 #
 # POST /teil  mit JSON { "name": "lavendel-3", "daten": "<WebP als Base64>", "meta": { … } }
 #   legt garten/teile/<name>.webp ab und trägt meta in garten/teile/teile.json ein.
@@ -116,7 +117,7 @@ def main():
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8010
     handler = functools.partial(Werkstatt, directory=WURZEL)
     with http.server.ThreadingHTTPServer(('127.0.0.1', port), handler) as s:
-        print(f'Werkstatt: http://127.0.0.1:{port}/garten/werkstatt/werkstatt.html', flush=True)
+        print(f'Server: http://127.0.0.1:{port}/', flush=True)
         s.serve_forever()
 
 

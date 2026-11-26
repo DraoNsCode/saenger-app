@@ -124,7 +124,7 @@ Daniels Antworten vom 19.11.2026 stehen in ENTSCHEIDUNGEN.md. Frage 1 und den er
 
 ## Was nach dem Konzept noch offen ist (Vorschlag, wohin es gehört)
 
-- **Baustein B (Bild und Optik):** wie die offenen Stellen und die Pflege-Zeichen im Garten aussehen; wie viele Stellen jeder Bereich hat und wofür sie stehen (je Bereich zu entscheiden, ENTSCHEIDUNGEN.md); wie die Unterseite im Weg aussieht. Zusammengestellt am 24.11.2026 in [GARTEN-BILD.md](GARTEN-BILD.md), Schritt 1.
+- **Baustein B (Bild und Optik):** wie die offenen Stellen und die Pflege-Zeichen im Garten aussehen; wie viele Stellen jeder Bereich hat und wofür sie stehen (je Bereich zu entscheiden, ENTSCHEIDUNGEN.md); wie die Unterseite im Weg aussieht. Zusammengestellt am 24.11.2026 in GARTEN-BILD.md, Schritt 1 (heute im Archiv, ARCHIV.md).
 - **Umsetzung:** ab wann eine Übung als lange nicht geübt oder fehleranfällig gilt; in welcher Reihenfolge die App auswählt (Vorschlag: zuerst offene Stellen, danach Pflege); wonach man im Reiter „Themen“ wählt (Vorschlag: nach dem Inhalt der Stationen).
 - **Baustein F (Abzeichen):** Bronze, Silber und Gold neu fassen.
 - **Ohne Gartenbild umsetzbar** (Vorschlag, vor oder mit B): Freischalten nach den nötigen Stationen, Runden im Reiter „Themen“ zählen für die Stationen, Reiter „Themen“ ohne Leicht, Mittel und Schwer, Fortschritt je Thema.

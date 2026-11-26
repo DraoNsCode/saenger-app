@@ -1,6 +1,8 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [WEG.md](WEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [GARTEN-NEU.md](GARTEN-NEU.md), [GARTEN-BILD.md](GARTEN-BILD.md) und [FAHRPLAN.md](FAHRPLAN.md) und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [FAHRPLAN.md](FAHRPLAN.md) und im Skill `garten-grafik` und gelten erst, wenn sie hier eingetragen sind.
+
+Ältere Einträge verweisen teils auf Dateien, die seit dem Aufräumen am 26.11.2026 nicht mehr im Repository stehen (WEG.md, GARTEN-NEU.md, GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md, `probe/` und die meisten Seiten in `geruest/`). Sie liegen im Archiv, siehe [ARCHIV.md](ARCHIV.md). Die Einträge selbst gelten weiter.
 
 ## Ziel und Rahmen
 
@@ -59,7 +61,7 @@ Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprech
 - Zuerst wird die Geschichte oder das Bild gesucht, danach die passende Optik, eventuell für die ganze App.
 - Daniel will es mit dem Klostergarten versuchen: Jede Etappe ist ein Gartenbereich, die Stationen liegen am Weg durch den Garten. (Daniel kann sich am 25.11.2026 nicht erinnern, festgelegt zu haben, dass die Stationen am Weg liegen. Der Satz wurde am 19.11. von Claude formuliert. Dieser Teil gilt seitdem als offen. Am selben Tag in Ebene 1, Runde 2 geklärt, siehe „Garten neu“.)
 - Die Etappen sollen eine logische Reihenfolge und ein richtiges Ziel haben. Das Ziel ist die Kapelle.
-- Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung ist ein Vorschlag, siehe [WEG.md](WEG.md). (Am 25.11.2026 eingeschränkt: sofern das möglich ist, siehe „Garten neu“.)
+- Jeder Gartenbereich passt zum Thema seiner Etappe. Die konkrete Zuordnung war ein Vorschlag in WEG.md (heute im Archiv). (Am 25.11.2026 eingeschränkt: sofern das möglich ist, siehe „Garten neu“.)
 - Der Garten zieht sich in die Länge: Man beginnt unten und bewegt sich beim Scrollen nach oben. Vorstellbar ist die Ansicht von oben oder schräg von oben.
 - Nötige und freiwillige Stationen: Das Ziel erreicht man, wenn alle nötigen Stationen geschafft sind. Schwerere Stufen sind freiwillig. Sie entwickeln den Gartenbereich zusätzlich weiter, sind aber nicht nötig, um den nächsten Bereich freizuschalten. (Die andere Möglichkeit, für das Ziel alle Stufen zu verlangen, ist damit verworfen.)
 - Nötig ist bei jeder Übung die Stufe, die den Kern ihrer Etappe abdeckt. Das ist nicht immer die leichteste Stufe. Übungen, die immer einfach sind, bekommen nur eine Station.
@@ -245,7 +247,16 @@ Stil:
 
 ## Reihenfolge der Bausteine (26.11.2026)
 
-- Für die Zeit, in der das KI-Kontingent für den Garten aufgebraucht ist, wählt Daniel „J, dann E“: zuerst die Teile von Baustein J, die kein Gartenbild brauchen, danach Baustein E (Konten). Der Garten (B) bleibt der Hauptstrang. C vorzuziehen hat Daniel nicht gewählt. Welche Teile von J dazugehören und wie E aussieht, bleibt Vorschlag (GEZIELT-UEBEN.md, FAHRPLAN.md).
-- **Plan bis zum Schluss (26.11.2026):** Daniel zu Claudes Plan in FAHRPLAN.md (Testversion mit Etappen 1 und 2, Testphase, Pakete je Etappe aus Inhalt und Gartenbereich, Abschluss): „Plan passt.“
+- (Abgelöst am 26.11.2026 abends durch Daniels Reihenfolge, siehe „Plan und Aufräumen“.) Für die Zeit, in der das KI-Kontingent für den Garten aufgebraucht ist, wählt Daniel „J, dann E“: zuerst die Teile von Baustein J, die kein Gartenbild brauchen, danach Baustein E (Konten). Der Garten (B) bleibt der Hauptstrang. C vorzuziehen hat Daniel nicht gewählt. Welche Teile von J dazugehören und wie E aussieht, bleibt Vorschlag (GEZIELT-UEBEN.md, FAHRPLAN.md).
+- **Plan bis zum Schluss (26.11.2026):** Daniel zu Claudes Plan in FAHRPLAN.md (Testversion mit Etappen 1 und 2, Testphase, Pakete je Etappe aus Inhalt und Gartenbereich, Abschluss): „Plan passt.“ (Abgelöst am 26.11.2026 abends, siehe „Plan und Aufräumen“.)
 - **Garten (26.11.2026):** Daniel zu „ein Bild je Bereich“ nach dem Ansehen: „Richtung passt vorerst.“
 - **Bildlauf Bereich 1 und 2 (26.11.2026):** Daniel zu `geruest/garten-lauf.html`: „Optik passt grundsätzlich.“ Aber: „Bereich 1 & 2 sind zu ähnlich. Sie unterscheiden sich gar nicht im Ambiente und den Farben und zu wenig in den Details. Wenn du soweit bist, alle Etappen auszuarbeiten, überlege zuerst wie jede Etappe aussehen soll.“ Wann Bereich 1 und 2 deutlicher unterschieden werden, ist nicht festgelegt.
+
+## Plan und Aufräumen (26.11.2026, abends)
+
+Daniels Antworten auf die Bewertung des Stands:
+
+- **Aufräumen:** Daniel: „Räume auf.“ Umgesetzt von Claude: Archiv, Proben und der abgelöste Baukasten sind aus dem Arbeitsstand genommen und über den Tag `archiv/2026-11-26` wiederherstellbar ([ARCHIV.md](ARCHIV.md)). Der Zweig `baustein-b/probe-ansichten` ist in `main` übernommen. Am Code der App hat sich nichts geändert.
+- **Testphase:** Daniel: „Testphase streichen. Ganze App entwickeln, parallel teste ich.“ Die Testphase mit zwei oder drei Sängern (Baustein I, Plan vom 26.11.2026) entfällt.
+- **Konten:** Daniel: „Konten ja.“ Die App bekommt Konten (Baustein E). Offen bleiben die Anmeldeart und ob die App ohne Konto nutzbar bleibt.
+- **Reihenfolge**, Daniels Vorschlag: „Erst Übungsinhalte festlegen, dann Optik des Gartens, der Abzeichen und der ganzen App in Worten möglichst genau festlegen, sodass möglichst nichts schief gehen kann, dann Optik entwickeln.“ Claudes Plan dazu steht in [FAHRPLAN.md](FAHRPLAN.md) und ist noch nicht bestätigt.

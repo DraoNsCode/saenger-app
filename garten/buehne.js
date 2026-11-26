@@ -112,7 +112,7 @@ function wegRand(img, y, mitte, B) {
   return l.length ? [med(l), med(r)] : [mitte - 80, mitte + 80];
 }
 
-// Setzt mehrere Bereiche zu einem Bildlauf zusammen (Vorschlag von Claude, 26.11.2026, Grundlage geruest/anschluss.html).
+// Setzt mehrere Bereiche zu einem Bildlauf zusammen (Vorschlag von Claude, 26.11.2026; die Probe dazu liegt im Archiv, ARCHIV.md).
 // buehnen von unten nach oben. Zwischen zwei Bereichen liegt ein Wiesenstreifen: Der obere blendet unten in Wiese aus,
 // der Code führt den Weg durch den Streifen in den Bogen des unteren, dessen Öffnung ausgeschnitten ist. Die Wiese wird
 // oben an das Gras des oberen, unten an das des unteren Bereichs angeglichen, der Sand im Streifen stammt aus dem Weg des
