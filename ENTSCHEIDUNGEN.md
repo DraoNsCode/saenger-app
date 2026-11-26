@@ -1,6 +1,6 @@
 # Entscheidungen
 
-Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [FAHRPLAN.md](FAHRPLAN.md) und im Skill `garten-grafik` und gelten erst, wenn sie hier eingetragen sind.
+Hier steht nur, was Daniel selbst festgelegt hat, jeweils mit Datum. Widersprechen sich zwei Einträge, gilt der jüngere. Vorschläge von Claude stehen in [LERNWEG.md](LERNWEG.md), [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md), [UEBEN.md](UEBEN.md), [FAHRPLAN.md](FAHRPLAN.md) und im Skill `garten-grafik` und gelten erst, wenn sie hier eingetragen sind.
 
 Ältere Einträge verweisen teils auf Dateien, die seit dem Aufräumen am 26.11.2026 nicht mehr im Repository stehen (WEG.md, GARTEN-NEU.md, GARTEN-BILD.md, GARTEN-WORTE.md, GARTEN-VERGLEICH.md, `probe/` und die meisten Seiten in `geruest/`). Sie liegen im Archiv, siehe [ARCHIV.md](ARCHIV.md). Die Einträge selbst gelten weiter.
 
@@ -276,3 +276,17 @@ Daniels Antworten auf die Bewertung des Stands:
 - **Reihenfolge**, Daniels Vorschlag: „Erst Übungsinhalte festlegen, dann Optik des Gartens, der Abzeichen und der ganzen App in Worten möglichst genau festlegen, sodass möglichst nichts schief gehen kann, dann Optik entwickeln.“ Claudes Plan dazu steht in [FAHRPLAN.md](FAHRPLAN.md).
 - **Pushen:** Daniel: „Ja, immer. Pushe auch immer direkt automatisch.“ Claude pusht jeden Commit ohne Rückfrage direkt nach `main`.
 - **Plan:** Daniel zum Plan in FAHRPLAN.md (Inhalte, Funktionen, Optik in Worten, Optik entwickeln, Abschluss): „Passt so.“ Die Einzelheiten der Schritte bleiben Vorschlag und werden entschieden, wenn sie drankommen.
+
+## Übe-Teil (26.11.2026, Baustein D)
+
+Daniels Auftrag: „In der Sänger App sollst du jetzt den noch offenen Üben Bereich entwickeln. Aktuell sind zwei Bereiche darin geplant: 1. Übungen und Erklärungen zum besseren Singen. 2. Chorlieder üben: Alle Lieder unseres Repertoire sollen angeschaut, angehört und auch eigene Stimme angehört werden. Gerne weitere Vorschläge.“
+
+Antworten auf Claudes Fragen:
+
+- **Umfang:** Daniel: „Inhalt reicht zuerst.“ Zuerst wird nur der Inhalt festgelegt (Phase 1), umgesetzt wird später.
+- **Lieder:** Daniel: „Lieder aus dem Repertoire. Nur pdf, liegen und werden hinzugefügt unter“ dem privaten Speicher „noten“ im Supabase-Projekt der Dirigenten-App.
+- **Sichtbarkeit:** Die Noten „dürfen nicht öffentlich sein“.
+- **Quellen der Stimmbildung:** Daniel: „Steinbruch kann genutzt werden, tatsächliche Übungen der Dirigenten-App können genutzt werden und neue Übungen erstellt werden. Prüfe und setze um, was sinnvoll ist.“ Gemeint sind die Repositories „chor-uebungen“ und „dirigenten-app-uebungen“.
+- **Lieder der Woche** (Claudes Frage, ob die Sänger-App zeigen soll, was diese Woche dran ist): Daniel: „Interessant, wobei kann auch extra eingestellt werden.“ Wie „extra eingestellt“ gemeint ist, ist offen (UEBEN.md, Frage 4).
+
+Claudes Vorschlag zum Inhalt steht in [UEBEN.md](UEBEN.md).

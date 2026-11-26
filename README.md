@@ -6,6 +6,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 - [FAHRPLAN.md](FAHRPLAN.md): Vorschlag für den Plan bis zum Schluss und die Bausteine
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
 - [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md): Vorschlag für das gezielte Üben und die Verbindung zum Garten (Baustein J)
+- [UEBEN.md](UEBEN.md): Vorschlag für den Inhalt des Übe-Teils: Stimmbildung, Chorlieder üben (Baustein D)
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 - [Skill `garten-grafik`](.claude/skills/garten-grafik/SKILL.md): Stand, Werkzeuge und Erfahrungen zur Gartengrafik (Baustein B)
 - [ARCHIV.md](ARCHIV.md): was am 26.11.2026 beim Aufräumen ins Archiv kam und wie man es zurückholt
@@ -14,11 +15,11 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Danach Phase 2 (Funktionen).
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt seit dem 26.11.2026 ein Vorschlag in UEBEN.md, Daniel prüft ihn und beantwortet die Fragen dort. Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
-- Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer) und Einstellungen
+- Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer, Inhalt als Vorschlag in UEBEN.md) und Einstellungen
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
 - Etappe 11 (Feinheiten im Rhythmus, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Synkopen“ und „Triolen und Sechzehntel“ (`js/uebungen/rhythmus-fein.js`).
 - Etappe 10 (Vorzeichen und Tonarten, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Kreuz und Be“ und „Die 1 finden“ (`js/uebungen/vorzeichen.js`).
