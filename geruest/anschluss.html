@@ -1,0 +1,118 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klostergarten, Anschluss zwischen Bereichen</title>
+<style>
+/* Prüfseite: zwei KI-Bereiche übereinander in Handybreite, die Naht in der Mitte des Rahmens. */
+:root { --seite: #e6e7e8; --blatt: #fbfbfb; --linie: #6b7075; --dunkel: #33373b; --text: #1b1e21; --schrift: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--seite); color: var(--text); font: 16px/1.45 var(--schrift); padding: 16px; }
+h1 { font-size: 15px; font-weight: 600; margin: 0 0 4px; color: var(--linie); }
+.frage { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 8px; }
+.hinweis { margin: 0 0 12px; max-width: 72ch; }
+.reihe { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 12px; align-items: flex-start; }
+.variante { flex: 0 0 390px; }
+.variante h2 { font-size: 18px; margin: 0; }
+.variante p { margin: 2px 0 8px; font-size: 14px; min-height: 4.4em; }
+.rahmen { width: 390px; height: 720px; overflow-y: auto; border-radius: 10px; background: #9bbd4f; }
+.rahmen canvas { display: block; width: 390px; }
+</style>
+<h1>Anschluss zwischen Bereichen</h1>
+<p class="frage">Wie gehen zwei Bereiche ineinander über?</p>
+<p class="hinweis">Bereich 1 („Das Notenbild“, neu) und Bereich 2 („Schlag und Takt“), beide voll, in Handybreite. Jeder Rahmen beginnt an der Naht, man kann darin scrollen.</p>
+<div class="reihe" id="reihe"></div>
+<script type="module">
+const lade = (s) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = s; });
+const [n1, n2] = await Promise.all([lade('../garten/buehne/notenbild/voll.webp'), lade('../garten/buehne/schlag-takt/voll.webp')]);
+// Oberkante der Mauer im Bild (ab hier nach oben gehört es schon zum nächsten Bereich)
+const MAUER = new Map([[n1, 168], [n2, 172]]);
+const B = 1024, H = 1536, F = 390 / B, dpr = 2;
+
+// unten: der untere Bereich, oben: der obere; art „mauer“ schneidet den unteren an seiner Mauer ab,
+// „blende“ lässt den Streifen über der Mauer weich in den oberen Bereich übergehen.
+function stapel(oben, unten, art) {
+  const m = MAUER.get(unten), band = art === 'blende' ? m : 0;
+  const hoehe = H + (H - m) + band;
+  const c = document.createElement('canvas'); c.width = 390 * dpr; c.height = Math.round(hoehe * F * dpr);
+  const x = c.getContext('2d'); x.scale(F * dpr, F * dpr);
+  x.drawImage(oben, 0, 0);
+  if (art === 'mauer') x.drawImage(unten, 0, m, B, H - m, 0, H, B, H - m);
+  else {
+    // unterer Bereich ganz, sein oberer Streifen liegt über dem unteren Rand des oberen und blendet ein
+    const y0 = H - m;
+    const e = document.createElement('canvas'); e.width = B; e.height = H; const q = e.getContext('2d');
+    q.drawImage(unten, 0, 0);
+    const v = q.createLinearGradient(0, 0, 0, m * 1.6); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,1)');
+    q.globalCompositeOperation = 'destination-in'; q.fillStyle = v; q.fillRect(0, 0, B, H);
+    x.drawImage(e, 0, y0);
+  }
+  return { c, naht: H };
+}
+// Öffnung des Bogens im Bild (Rechteck mit rundem Oberteil): Mitte x, halbe Breite, Scheitel, Boden
+const TOR = new Map([[n1, { x: 515, r: 38, oben: 222, unten: 332 }], [n2, { x: 531, r: 47, oben: 242, unten: 372 }]]);
+const wiese = await lade('../garten/flaechen/wiese.webp');
+
+function wegMitte(img, y) {
+  const c = document.createElement('canvas'); c.width = B; c.height = 1; const x = c.getContext('2d', { willReadFrequently: true });
+  x.drawImage(img, 0, y, B, 1, 0, 0, B, 1); const d = x.getImageData(0, 0, B, 1).data;
+  let von = -1, bis = -1;
+  for (let i = 150; i < 874; i++) { const k = i * 4, r = d[k], g = d[k + 1], b = d[k + 2]; if (r > 195 && g > 160 && b > 105 && b < 190 && r - b > 40 && Math.abs(r - g) < 48) { if (von < 0) von = i; bis = i; } }
+  return [von, bis];
+}
+
+// Wiesenstreifen: der obere Bereich blendet unten aus, der Weg läuft im Streifen bis in den Bogen des unteren
+function streifen(oben, unten) {
+  const m = MAUER.get(unten), t = TOR.get(unten), G = 150, AUS = 260;
+  const hoehe = H + G + (H - m);
+  const c = document.createElement('canvas'); c.width = 390 * dpr; c.height = Math.round(hoehe * F * dpr);
+  const x = c.getContext('2d'); x.scale(F * dpr, F * dpr);
+  // Wiese als Grund unter dem ganzen Übergang
+  const wh = (B * wiese.naturalHeight) / wiese.naturalWidth;
+  x.drawImage(wiese, 0, H - AUS - 100, B, wh);
+  // Weg im Streifen: vom Weg am unteren Rand des oberen Bereichs bis zum Boden des Bogens im unteren
+  const [v0, b0] = wegMitte(oben, H - AUS);
+  const yTor = H + G + (t.unten - m);
+  const weg = new Path2D();
+  weg.moveTo(v0, H - AUS);
+  weg.bezierCurveTo(v0, H, t.x - t.r - 6, H + G * 0.4, t.x - t.r - 4, yTor);
+  weg.lineTo(t.x + t.r + 4, yTor);
+  weg.bezierCurveTo(t.x + t.r + 6, H + G * 0.4, b0, H, b0, H - AUS);
+  weg.closePath();
+  x.save(); x.filter = 'blur(5px)'; x.fillStyle = 'rgba(60,90,25,0.45)'; x.lineWidth = 14; x.stroke(weg); x.restore();
+  x.save(); x.clip(weg);
+  // Sand aus dem oberen Bereich gestreckt: ein Streifen Weg kurz über dem Ausblenden
+  x.drawImage(oben, v0, H - AUS - 120, b0 - v0, 120, Math.min(v0, t.x - t.r) - 10, H - AUS, Math.max(b0, t.x + t.r) - Math.min(v0, t.x - t.r) + 20, yTor - (H - AUS));
+  x.restore();
+  // oberer Bereich, unten weich ausgeblendet
+  const e = document.createElement('canvas'); e.width = B; e.height = H; const q = e.getContext('2d');
+  q.drawImage(oben, 0, 0);
+  const v = q.createLinearGradient(0, H - AUS, 0, H); v.addColorStop(0, 'rgba(0,0,0,1)'); v.addColorStop(1, 'rgba(0,0,0,0)');
+  q.globalCompositeOperation = 'destination-in'; q.fillStyle = v; q.fillRect(0, 0, B, H);
+  // nur außerhalb des Wegs ausblenden: der Weg selbst bleibt bis zum Rand, damit er durchgeht
+  x.drawImage(e, 0, 0);
+  // unterer Bereich ab seiner Mauer, Bogenöffnung ausgeschnitten
+  const u = document.createElement('canvas'); u.width = B; u.height = H - m; const w = u.getContext('2d');
+  w.drawImage(unten, 0, m, B, H - m, 0, 0, B, H - m);
+  w.globalCompositeOperation = 'destination-out'; w.beginPath();
+  w.moveTo(t.x - t.r, t.unten - m); w.lineTo(t.x - t.r, t.oben + t.r - m); w.arc(t.x, t.oben + t.r - m, t.r, Math.PI, 0); w.lineTo(t.x + t.r, t.unten - m); w.closePath(); w.fill();
+  x.drawImage(u, 0, H + G);
+  return { c, naht: H + G / 2 };
+}
+
+const VARIANTEN = [
+  { titel: 'Wiesenstreifen mit Weg', text: 'Der obere Bereich blendet unten in Wiese aus, der Code führt den Weg durch den Streifen in den Bogen des unteren Bereichs.', oben: n2, unten: n1, art: 'streifen' },
+  { titel: 'Wiesenstreifen, getauscht', text: 'Dieselbe Regel in umgekehrter Reihenfolge.', oben: n1, unten: n2, art: 'streifen' },
+  { titel: 'An der Mauer', text: 'Bereich 1 endet an seiner Mauer, darüber beginnt Bereich 2 mit seinem unteren Rand. Der Bogen ist das Tor.', oben: n2, unten: n1, art: 'mauer' },
+  { titel: 'An der Mauer, getauscht', text: 'Dieselbe Regel in umgekehrter Reihenfolge: Bereich 2 endet an seiner Mauer, darüber Bereich 1.', oben: n1, unten: n2, art: 'mauer' },
+  { titel: 'Weich überblendet', text: 'Der Hang über der Mauer von Bereich 1 blendet in den unteren Rand von Bereich 2 über.', oben: n2, unten: n1, art: 'blende' },
+];
+for (const v of VARIANTEN) {
+  const sec = document.createElement('section'); sec.className = 'variante';
+  sec.innerHTML = `<h2>${v.titel}</h2><p>${v.text}</p><div class="rahmen"></div>`;
+  const { c, naht } = v.art === 'streifen' ? streifen(v.oben, v.unten) : stapel(v.oben, v.unten, v.art);
+  const r = sec.querySelector('.rahmen'); r.append(c);
+  document.getElementById('reihe').append(sec);
+  requestAnimationFrame(() => (r.scrollTop = naht * F - 360));
+}
+</script>

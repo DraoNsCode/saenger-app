@@ -53,10 +53,15 @@ export function stationsOrte(weg, b) {
   const teil = weg.filter((p) => p.y <= vonY && p.y >= bisY);
   const l = [0];
   for (let i = 1; i < teil.length; i++) l.push(l[i - 1] + Math.hypot(teil[i].x - teil[i - 1].x, teil[i].y - teil[i - 1].y));
-  return b.stationen.map((id, n) => {
+  const orte = b.stationen.map((id, n) => {
     const ziel = (l.at(-1) * n) / (b.stationen.length - 1);
     const p = teil[Math.max(0, l.findIndex((v) => v >= ziel))];
     return { id, x: p.x, y: p.y, w: p.w };
+  });
+  // Wegbreite über benachbarte Stationen ausgleichen (Abzweige machen einzelne Stellen breit)
+  return orte.map((o, i) => {
+    const w = [orte[i - 1], o, orte[i + 1]].filter(Boolean).map((q) => q.w).sort((a, z) => a - z);
+    return { ...o, w: w[w.length >> 1] };
   });
 }
 
