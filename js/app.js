@@ -10,6 +10,9 @@ import { zeigeThemen, zeigeThema } from './views/themen.js';
 import { zeigeAbzeichen } from './views/abzeichen.js';
 import { zeigeUeben, seitenTitel } from './views/ueben.js';
 import { zeigeEinstellungen, zeigeStart } from './views/einstellungen.js';
+import { zeigeAnmeldung } from './views/anmeldung.js';
+import { angemeldetAls } from './konto.js';
+import { starteAbgleich } from './abgleich.js';
 
 const inhalt = document.getElementById('inhalt');
 let aufraeumen = null;
@@ -41,6 +44,18 @@ function zeige() {
 
   const teile = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   const [name, a, b] = teile;
+
+  // Ohne Anmeldung keine App (Daniel, 27.11.2026: „Die App an sich soll ja über Konten laufen“)
+  if (!angemeldetAls()) {
+    seite('Anmelden', '', true);
+    zeigeAnmeldung(inhalt, async () => {
+      await starteAbgleich();
+      setzeLautstaerke(zustand().einstellungen.lautstaerke);
+      if (location.hash === '#/weg') zeige();
+      else location.hash = '#/weg';
+    });
+    return;
+  }
 
   if (!zustand().stimme) {
     seite('', '', true);
@@ -136,3 +151,9 @@ function zeige() {
 
 window.addEventListener('hashchange', zeige);
 zeige();
+// Beim Start mit dem Konto abgleichen; hat ein anderes Gerät etwas geändert, die Seite neu zeigen (nicht mitten in einer Runde)
+if (angemeldetAls()) {
+  starteAbgleich(() => {
+    if (!document.body.classList.contains('in-runde')) zeige();
+  });
+}

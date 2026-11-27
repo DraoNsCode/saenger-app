@@ -1,4 +1,4 @@
-// Fortschritt pro Gerät im Browser (localStorage).
+// Fortschritt im Browser (localStorage). Mit dem Konto gleicht js/abgleich.js ihn ab (Daniel, 27.11.2026: Die App läuft über Konten).
 import { thema, verfuegbar, THEMEN, noetigeRichtige, noetigeStationen, noetigeStationVon, station } from './lernweg.js';
 
 const SCHLUESSEL = 'choristen-app/v1';
@@ -31,12 +31,37 @@ function lade() {
   return leer();
 }
 
-export function speichere() {
+let beiAenderung = null;
+// Wird nach jedem Speichern aufgerufen (Abgleich mit dem Konto)
+export function setzeBeiAenderung(fn) {
+  beiAenderung = fn;
+}
+
+function schreibe() {
   try {
     localStorage.setItem(SCHLUESSEL, JSON.stringify(z));
   } catch (e) {
     /* Speicher voll oder gesperrt */
   }
+}
+
+export function speichere() {
+  schreibe();
+  if (beiAenderung) beiAenderung();
+}
+
+// Ganzen Zustand ersetzen (nach dem Abgleich), ohne erneut einen Abgleich anzustoßen
+export function ersetzeZustand(neu) {
+  z = { ...leer(), ...neu };
+  schreibe();
+}
+
+// Beim Abmelden: alles auf diesem Gerät löschen, der Fortschritt liegt im Konto
+export function leeren() {
+  const lautstaerke = z.einstellungen?.lautstaerke;
+  z = leer();
+  if (lautstaerke != null) z.einstellungen.lautstaerke = lautstaerke;
+  schreibe();
 }
 
 export function zustand() {

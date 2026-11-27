@@ -28,7 +28,7 @@ Zwei Bereiche. Ein dritter war vorgeschlagen und geht in den Lernweg:
 | Bereich | Worum es geht | braucht ein Konto? |
 | --- | --- | --- |
 | 1. Besser singen | Stimmbildung: Übungen zum Mitmachen mit Begleitung aus der App, kurze Erklärungen, ein kurzer Ablauf zum Einsingen zu Hause | nein, die Texte sind wie der Lernweg Teil der öffentlichen App |
-| 2. Chorlieder üben | alle Lieder des Repertoires ansehen, übertragene Lieder anhören, die eigene Stimme hervorheben, mitsingen | ja, die Noten sind privat |
+| 2. Chorlieder üben | alle Lieder des Repertoires ansehen, übertragene Lieder anhören, die eigene Stimme hervorheben, mitsingen | ja, die Noten sind privat (seit 27.11.2026 braucht die ganze App ein Konto) |
 | ~~3. Selbst singen, dann vergleichen~~ | kommt als freiwillige Stationen in den Lernweg (27.11.2026), siehe LERNWEG.md | – |
 
 Für alle drei gilt als Vorschlag: keine Punkte, keine Runden, kein Fortschritt, der etwas freischaltet. Höchstens „zuletzt gemacht“, damit man sieht, was lange liegt.
@@ -276,7 +276,7 @@ Zwei Wege:
 
 Daniel hat Weg A gewählt (27.11.2026). Die Konten der Sänger liegen damit auch im eigenen Projekt.
 
-Umsetzung (27.11.2026, Claudes Wahl): Statt einer Kopie liest eine kleine Funktion im Projekt der Dirigenten-App die Liedliste und gibt befristete Links auf die PDFs, aber nur an angemeldete Sänger. Sie prüft deren Token mit den öffentlichen Schlüsseln des Sänger-Projekts. So braucht es keine Schlüssel zwischen den Projekten und keinen Abgleich, die Liste ist immer aktuell, und Konten und Regeln der Dirigenten-App bleiben unverändert. Nachteil: Das Projekt der Dirigenten-App muss wach sein. Es wird jede Woche genutzt. Das Bereitstellen dieser Funktion im Projekt der Dirigenten-App braucht Daniels Ja (Stand 27.11.2026: noch offen). Quelltext: `supabase/dirigenten/saenger-lieder`.
+Umsetzung (27.11.2026, Claudes Wahl): Statt einer Kopie liest eine kleine Funktion im Projekt der Dirigenten-App die Liedliste und gibt befristete Links auf die PDFs, aber nur an angemeldete Sänger. Sie prüft deren Token mit den öffentlichen Schlüsseln des Sänger-Projekts. So braucht es keine Schlüssel zwischen den Projekten und keinen Abgleich, die Liste ist immer aktuell, und Konten und Regeln der Dirigenten-App bleiben unverändert. Nachteil: Das Projekt der Dirigenten-App muss wach sein. Es wird jede Woche genutzt. Daniel hat die Wahl Claude überlassen („Baue es so, wie es am sinnvollsten ist“), die Funktion ist am 27.11.2026 bereitgestellt. Eine eigene Anmeldung für die Lieder gibt es nicht, die ganze App läuft über Konten (Daniel, 27.11.2026). Quelltext: `supabase/dirigenten/saenger-lieder`.
 
 (Zurückgestellt am 27.11.2026, die Lieder der Woche bleiben vorerst draußen.) Weil die Dirigenten dort die Lieder der Woche auswählen, bräuchte das Projekt zwei Rollen: Sänger lesen, Dirigenten dürfen zusätzlich die Lieder der Woche einstellen. Vorschlag: Die Dirigenten melden sich in der Sänger-App an und sehen dann eine kleine Seite „Lieder der Woche“: Woche wählen, Lieder aus der Liste antippen. Das ist eine eigene Anmeldung, getrennt von der Dirigenten-App (Frage 9).
 

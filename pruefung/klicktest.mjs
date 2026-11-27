@@ -152,6 +152,37 @@ async function pruefeGeraet(browser, basis, geraet) {
     }
   }
 
+  // Supabase ohne Netz: Konto, Fortschritt und Liederliste werden gespielt (kein echtes Konto, nichts wird gesendet)
+  await seite.route('**/rest/v1/fortschritt**', (r) =>
+    r.request().method() === 'GET'
+      ? r.fulfill({ contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: '[]' })
+      : r.fulfill({ status: 201, headers: { 'Access-Control-Allow-Origin': '*' }, body: '' })
+  );
+  await seite.route('**/auth/v1/**', (r) => r.fulfill({ contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: '{}' }));
+  await seite.route('**/functions/v1/saenger-lieder', (r) =>
+    r.fulfill({
+      contentType: 'application/json',
+      headers: { 'Access-Control-Allow-Origin': '*' },
+      body: JSON.stringify({
+        gueltigBis: Date.now() + 3 * 3600 * 1000,
+        lieder: [
+          { id: 1, sprache: 'D', kennung: 'D 1', nummer: 1, titel: 'Vater unser', kategorie: 'Gebet', noten: 'about:blank' },
+          { id: 2, sprache: 'D', kennung: 'D 47', nummer: 47, titel: 'Ein Lied mit einem sehr langen Titel, der umbrechen muss', kategorie: 'Trost', noten: 'about:blank' },
+          { id: 3, sprache: 'R', kennung: 'R 3', nummer: 3, titel: 'Отче наш', kategorie: 'Gebet', noten: null },
+        ],
+      }),
+    })
+  );
+
+  await schritt('anmeldung', async () => {
+    await seite.goto(basis, { waitUntil: 'networkidle' });
+    await bild('anmeldung');
+    await seite.locator('.chip', { hasText: 'Konto anlegen' }).click();
+    await bild('anmeldung-konto-anlegen');
+    // Ein gespieltes Konto, damit der Test hinter die Anmeldung kommt
+    await seite.evaluate(() => localStorage.setItem('choristen-app/konto', JSON.stringify({ token: 'probe', erneuern: 'probe', bis: Date.now() + 24 * 3600000, email: 'probe@example.org' })));
+  });
+
   await schritt('start', async () => {
     await seite.goto(basis, { waitUntil: 'networkidle' });
     await bild('start');
@@ -209,35 +240,11 @@ async function pruefeGeraet(browser, basis, geraet) {
       await bild(`ueben-ablauf-${ablauf}-weiter`);
     });
   }
+  // Liederliste mit der gespielten Antwort von oben
   await schritt('ueben-lieder', async () => {
     await geheZu('#/ueben/lieder');
-    await bild('ueben-lieder');
-    await seite.locator('.chip', { hasText: 'Konto anlegen' }).click();
-    await bild('ueben-lieder-konto-anlegen');
-  });
-  // Liederliste mit einer gespielten Antwort (ohne Netz, ohne echtes Konto)
-  await schritt('ueben-lieder-liste', async () => {
-    await seite.route('**/functions/v1/saenger-lieder', (r) =>
-      r.fulfill({
-        contentType: 'application/json',
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        body: JSON.stringify({
-          gueltigBis: Date.now() + 3 * 3600 * 1000,
-          lieder: [
-            { id: 1, sprache: 'D', kennung: 'D 1', nummer: 1, titel: 'Vater unser', kategorie: 'Gebet', noten: 'about:blank' },
-            { id: 2, sprache: 'D', kennung: 'D 47', nummer: 47, titel: 'Ein Lied mit einem sehr langen Titel, der umbrechen muss', kategorie: 'Trost', noten: 'about:blank' },
-            { id: 3, sprache: 'R', kennung: 'R 3', nummer: 3, titel: 'Отче наш', kategorie: 'Gebet', noten: null },
-          ],
-        }),
-      })
-    );
-    await seite.evaluate(() => localStorage.setItem('choristen-app/konto', JSON.stringify({ token: 'probe', erneuern: 'probe', bis: Date.now() + 3600000, email: 'probe@example.org' })));
-    await geheZu('#/weg');
-    await geheZu('#/ueben/lieder');
     await seite.waitForSelector('.lied');
-    await bild('ueben-lieder-liste');
-    await seite.evaluate(() => localStorage.removeItem('choristen-app/konto'));
-    await seite.unroute('**/functions/v1/saenger-lieder');
+    await bild('ueben-lieder');
   });
 
   const erste = alleStationen()[0];

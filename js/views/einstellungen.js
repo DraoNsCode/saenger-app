@@ -1,8 +1,9 @@
 import { h, icon, bestaetigen } from '../ui.js';
 import { STIMMEN, SCHLUESSEL_NAME } from '../musik.js';
-import { zustand, aendere, zuruecksetzen } from '../speicher.js';
+import { zustand, aendere, zuruecksetzen, leeren } from '../speicher.js';
 import { setzeLautstaerke, spieleFolge, audio } from '../klang.js';
 import { angemeldetAls, abmelden } from '../konto.js';
+import { sichern, stoppeAbgleich } from '../abgleich.js';
 
 export function stimmWahl(beiWahl) {
   const aktuell = zustand().stimme;
@@ -104,25 +105,43 @@ export function zeigeEinstellungen(wurzel) {
         h('span', {}, 'Ich habe einen dünnen Trinkhalm zum Üben (Übung „Singen durch den Strohhalm“). Dann kommt er im Ablauf „Einsingen zu Hause“ vor.')
       ),
       h('h2', { class: 'abschnitt-titel' }, 'Konto'),
-      angemeldetAls()
-        ? h(
-            'p',
-            { class: 'unterzeile konto-zeile' },
-            `Angemeldet als ${angemeldetAls()} (für die Chorlieder) · `,
-            h('button', { type: 'button', class: 'knopf text', onclick: () => { abmelden(); neuZeichnen(); } }, 'Abmelden')
-          )
-        : h('p', { class: 'unterzeile' }, 'Ein Konto brauchst du nur für die Chorlieder unter „Üben“. ', h('a', { href: '#/ueben/lieder' }, 'Anmelden oder Konto anlegen')),
+      h('p', { class: 'unterzeile' }, `Angemeldet als ${angemeldetAls()}. Dein Fortschritt wird in deinem Konto gespeichert.`),
+      h(
+        'button',
+        {
+          class: 'knopf zweit',
+          type: 'button',
+          onclick: async () => {
+            let gesichert = true;
+            try {
+              await Promise.race([sichern(), new Promise((_, nein) => setTimeout(() => nein(new Error('Zeit')), 5000))]);
+            } catch (e) {
+              gesichert = false;
+            }
+            const frage = gesichert
+              ? 'Abmelden? Dein Fortschritt ist in deinem Konto gespeichert und kommt beim nächsten Anmelden zurück.'
+              : 'Dein Fortschritt konnte gerade nicht ins Konto gespeichert werden, etwa weil keine Internetverbindung besteht. Die App speichert von selbst, sobald das Internet wieder da ist. Tipp deshalb lieber auf „Abbrechen“ und versuch es später noch einmal. Wenn du dich jetzt trotzdem abmeldest, geht verloren, was du zuletzt geübt hast.';
+            if (!(await bestaetigen(frage, 'Abmelden'))) return;
+            stoppeAbgleich();
+            abmelden();
+            leeren();
+            location.hash = '#/weg';
+          },
+        },
+        'Abmelden'
+      ),
       h('h2', { class: 'abschnitt-titel' }, 'Fortschritt'),
-      h('p', { class: 'unterzeile' }, 'Dein Fortschritt wird nur in diesem Browser auf diesem Gerät gespeichert.'),
+      h('p', { class: 'unterzeile' }, 'Dein Fortschritt wird auf diesem Gerät und in deinem Konto gespeichert.'),
       h(
         'button',
         {
           class: 'knopf warnung-text',
           type: 'button',
           onclick: async () => {
-            const ja = await bestaetigen('Fortschritt und Abzeichen auf diesem Gerät löschen? Das lässt sich nicht rückgängig machen.', 'Löschen');
+            const ja = await bestaetigen('Fortschritt und Abzeichen löschen, auf diesem Gerät und im Konto? Das lässt sich nicht rückgängig machen.', 'Löschen');
             if (ja) {
               zuruecksetzen();
+              sichern().catch(() => {});
               location.hash = '#/weg';
             }
           },

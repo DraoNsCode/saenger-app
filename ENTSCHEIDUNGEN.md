@@ -311,3 +311,8 @@ Umsetzung (27.11.2026):
 - Daniel: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst. Lass die Funktion mit dem Lied der Woche erst ganz raus.“
 - Die Lieder der Woche kommen vorerst nicht in die App.
 - Wie umgesetzt wird, hat Daniel Claude überlassen. Was Claude dabei gewählt hat, steht als Annahme in README.md unter „Stand“ und gilt nicht als Entscheidung. Daniel korrigiert, falls nötig.
+
+Konten und Lieder (27.11.2026, mittags):
+
+- **Liederliste:** Zu Claudes Frage, ob die Liste über eine Lesefunktion im Projekt der Dirigenten-App (Weg A der Frage) oder über einen Schlüssel im Sänger-Projekt (Weg B) kommt: „Baue es so, wie es am sinnvollsten ist.“ Claude hat die Lesefunktion gewählt (Annahme, README.md „Stand“).
+- **Die App läuft über Konten:** Daniel: „Wenn die Lieder nicht öffentlich liegen, ist das schon gut. Die App an sich soll ja über Konten laufen, auf denen man sich anmelden muss. Deswegen braucht die Liedfunktion kein extra Login.“ Damit ist die offene Frage aus „Plan und Aufräumen“ beantwortet: Die App ist nicht ohne Konto nutzbar, man meldet sich an, bevor man sie nutzt. Die Chorlieder haben keine eigene Anmeldung.

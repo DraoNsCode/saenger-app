@@ -16,12 +16,14 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Daniel testet den Übe-Teil (27.11.2026): „Besser singen“ mit Klang je Stimme, „Selbst singen“ im Lernweg, Konto anlegen. Offen für die Chorlieder: Daniels Ja zur Lesefunktion `saenger-lieder` im Projekt der Dirigenten-App, danach das erste Lied übertragen und das Anhören bauen (Stufe 2). Daneben Phase 1 des Plans in FAHRPLAN.md: Etappe 3 testet Daniel, Etappen 4 bis 11 sind als Vorschläge spielbar und warten auf seine Entscheidungen, dazu die Reihenfolge der Etappen, die Merklieder (Etappe 7) und die eigene Stimme im Satz (Etappe 9). Danach Phase 2 (Funktionen).
+**Nächster Schritt:** Daniel legt sein Konto an und testet (27.11.2026): Anmeldung, Fortschritt im Konto, „Besser singen“ mit Klang je Stimme, „Selbst singen“ im Lernweg, die Liederliste. Für die Chorlieder danach das erste Lied übertragen und das Anhören bauen (Stufe 2). Daneben Phase 1 des Plans in FAHRPLAN.md: Etappe 3 testet Daniel, Etappen 4 bis 11 sind als Vorschläge spielbar und warten auf seine Entscheidungen, dazu die Reihenfolge der Etappen, die Merklieder (Etappe 7) und die eigene Stimme im Satz (Etappe 9). Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil und Einstellungen
-- Übe-Teil „Chorlieder üben“, Stufe 1 (27.11.2026): Anmelden und Konto anlegen mit Chor-Code (`js/konto.js`, eigenes Supabase-Projekt, FAHRPLAN.md „Konten: Umsetzung“), Liste aller Lieder mit Suche und Link auf das PDF (`js/views/lieder.js`). Die Liste kommt von der Funktion `saenger-lieder` im Projekt der Dirigenten-App. **Sie ist noch nicht bereitgestellt** (braucht Daniels Ja), bis dahin meldet die Seite nach dem Anmelden „nicht erreichbar“. Anhören (Stufe 2) noch nicht. Lieder der Woche vorerst nicht (Daniel, 27.11.2026).
+- Konten (27.11.2026): Die App beginnt mit Anmelden oder Konto anlegen (mit Chor-Code), ohne Anmeldung keine App (Daniel, 27.11.2026). Eigenes Supabase-Projekt, FAHRPLAN.md „Konten: Umsetzung“. Code: `js/konto.js`, `js/views/anmeldung.js`.
+- Fortschritt im Konto (27.11.2026): Der Browser bleibt der erste Speicher. Nach dem Anmelden, beim Start und kurz nach jeder Änderung gleicht die App mit dem Konto ab, zusammengeführt ohne Verlust (`js/abgleich.js`, Tabelle `fortschritt`). Abmelden in den Einstellungen löscht den Stand auf dem Gerät, im Konto bleibt er.
+- Übe-Teil „Chorlieder üben“, Stufe 1 (27.11.2026): Liste aller Lieder mit Suche und Link auf das PDF (`js/views/lieder.js`), ohne eigene Anmeldung. Die Liste kommt von der Funktion `saenger-lieder` im Projekt der Dirigenten-App (bereitgestellt am 27.11.2026). Anhören (Stufe 2) noch nicht. Lieder der Woche vorerst nicht (Daniel, 27.11.2026).
 - „Selbst singen“ im Lernweg (27.11.2026): freiwillige Stationen „Ziffern singen“, „Intervalle singen“ und „Einsatzton singen“ als Stufe „mittel“ der Hör-Übungen, mit Selbsteinschätzung (LERNWEG.md, `js/uebungen/singen.js`).
 - Übe-Teil „Besser singen“ (27.11.2026): 18 Übungen mit Varianten, 7 Erklärungen, die Abläufe „Einsingen zu Hause“ und „Nach dem Singen“, Begleitung je Stimme, Einstellung „Ich habe einen Strohhalm“. Daten in `js/ueben/stimmbildung.js` (daraus wird `inhalt/stimmbildung.md` erzeugt), Begleitung in `js/ueben/spieler.js`, Ansichten in `js/views/ueben.js`. Die Texte sind Vorschlag, Daniel prüft sie und den Klang.
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
@@ -36,7 +38,7 @@ Umgesetzt:
 - Etappe 3 (Notennamen, 26.11.2026) mit vier Übungsarten: „Wie heißt die Note?“ (mit Notenwörtern), „Finde die Note“ (auch im anderen Schlüssel), „Weiterzählen“ und „Taste am Klavier“ mit einer Klaviatur aus weißen Tasten. Tonraum je Stimme in `js/musik.js` (`STIMMEN.bereich`), gemeinsame Hilfen in `js/uebungen/namen.js`. Die Stationen sind vorläufig angenommen (LERNWEG.md), Daniel testet sie.
 - Nötige und freiwillige Stationen (Baustein A): je Übung eine nötige Station, dazu freiwillige; ein Abschluss je Etappe, der die nötigen Stationen mischt. Der Mechanismus für Spätblüher ist eingebaut, bei den vorhandenen Übungen gibt es keinen.
 - Stufen nach Inhalt: Leicht, Mittel und Schwer sind nur grobe Orientierungswerte, nicht jede Übung hat alle drei. „Die Stimmen im Chorsatz“ hat nur eine Stufe.
-- Fortschritt im Browser des Geräts
+- Fortschritt im Browser des Geräts und im Konto
 - Prüfung: Tests und Klick-Test in `pruefung/` (siehe unten)
 
 Abgelöst, nicht weiterentwickeln:
@@ -54,7 +56,8 @@ Annahmen bei der Umsetzung des Übe-Teils (Daniel, 27.11.2026: „Setze jetzt al
 - Das Tempo lässt sich vor dem Start in Zehnerschritten zwischen 60 und 150 Prozent ändern.
 - In den Abläufen erscheint „Weiter“ nach zwei mitgesungenen Durchgängen, bei Übungen ohne Begleitung gleich.
 - Keine Anzeige „zuletzt gemacht“ und kein Fortschritt im Übe-Teil.
-- Konten: E-Mail und Passwort ohne Bestätigungsmail, ein Konto nur mit Chor-Code, nur für die Chorlieder. Die übrige App bleibt ohne Konto nutzbar.
+- Konten: E-Mail und Passwort ohne Bestätigungsmail, ein Konto nur mit Chor-Code. Passwort vergessen: Daniel setzt es im Dashboard zurück.
+- Fortschritt: zuerst im Browser, dann mit dem Konto abgleichen. Beim Zusammenführen gilt das Bessere aus beiden Ständen (geschafft bleibt geschafft), die Einstellungen kommen vom Gerät, auf einem neuen Gerät aus dem Konto.
 - Lieder: Statt einer Kopie liest eine Funktion im Projekt der Dirigenten-App die Liste nur für angemeldete Sänger (UEBEN.md, „Privat“). Zuerst sind alle PDFs zum Ansehen da, Anhören kommt Lied für Lied.
 - Selbst singen: freiwillige Stufe „mittel“ der Hör-Übungen, Selbsteinschätzung, 6 von 8 (LERNWEG.md).
 
@@ -70,8 +73,7 @@ Entschieden, aber noch nicht umgesetzt:
 - Ein Thema lässt sich erst gezielt üben, wenn seine nötigen Stationen geschafft sind (Claudes Wahl, ENTSCHEIDUNGEN.md). Der Reiter „Themen“ zeigt alle Themen, gesperrte sichtbar. Heute sind dort alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 - Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
-- Konten (26.11.2026), in einem eigenen Supabase-Projekt der Sänger-App (27.11.2026). Offen: Anmeldeart und ob die App ohne Konto nutzbar bleibt.
-- Übe-Teil (Baustein D, 26. und 27.11.2026): Stimmbildung nach der Übungsliste in UEBEN.md, mit Lippenflattern und Strohhalm. Chorlieder aus dem Repertoire, nicht öffentlich, kopiert aus dem Projekt der Dirigenten-App. Lieder der Woche wählen die Dirigenten eigens für die Sänger-App aus. Übertragen wird zuerst, was „in Arbeit“ ist und bald dran ist. Abläufe „Einsingen zu Hause“ und „Nach dem Singen“. Keine Hinweise der Dirigenten. Heute ist der Übe-Teil noch leer.
+- Übe-Teil (Baustein D): Anhören der Chorlieder und die eigene Stimme (Stufe 2), sobald das erste Lied übertragen ist. Übertragen wird zuerst, was „in Arbeit“ ist und bald dran ist (27.11.2026). Lieder der Woche vorerst nicht (27.11.2026).
 
 Vorarbeit für die Optik (Baustein B, nicht in der App):
 
@@ -82,10 +84,10 @@ Vorarbeit für die Optik (Baustein B, nicht in der App):
 
 ## Technik
 
-- Reine statische Web-App: HTML, CSS und JavaScript-Module, ohne Build-Schritt. Für die Chorlieder ein eigenes Supabase-Projekt mit Anmeldung (siehe FAHRPLAN.md, „Konten: Umsetzung“).
+- Reine statische Web-App: HTML, CSS und JavaScript-Module, ohne Build-Schritt. Konten, Fortschritt und Zugang zu den Liedern über ein eigenes Supabase-Projekt (siehe FAHRPLAN.md, „Konten: Umsetzung“).
 - Notenbild mit [abcjs](https://github.com/paulrosen/abcjs) (MIT-Lizenz, liegt in `vendor/`).
 - Klang wird im Browser erzeugt (Web Audio), ohne Klangdateien.
-- Schriften liegen im Repository: Atkinson Hyperlegible, EB Garamond und die Ziffern aus Figtree (alle SIL Open Font License, siehe `fonts/`). Es werden keine Daten an fremde Server geschickt, außer beim Anmelden und bei den Chorliedern an Supabase.
+- Schriften liegen im Repository: Atkinson Hyperlegible, EB Garamond und die Ziffern aus Figtree (alle SIL Open Font License, siehe `fonts/`). Daten gehen nur an Supabase: Anmeldung, Fortschritt und die Chorlieder.
 - Adressen mit `#/…`, damit GitHub Pages ohne Server-Regeln reicht.
 - `package.json` und `pruefung/` dienen nur der Prüfung während der Entwicklung. Die App selbst braucht weder npm noch einen Build-Schritt.
 
@@ -105,7 +107,8 @@ Vorarbeit für die Optik (Baustein B, nicht in der App):
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
 | `js/ueben/` | Übe-Teil: Inhalte der Stimmbildung (`stimmbildung.js`) und Begleitung (`spieler.js`) |
-| `js/konto.js` | Konto und Liedliste für „Chorlieder üben“ |
+| `js/konto.js` | Anmeldung, Konto anlegen, Liedliste |
+| `js/abgleich.js` | Fortschritt mit dem Konto abgleichen und zusammenführen |
 | `inhalt/stimmbildung.md` | Texte der Stimmbildung zum Lesen, erzeugt aus `js/ueben/stimmbildung.js` |
 | `supabase/` | Quelltexte der Supabase-Funktionen (`saenger/` im Projekt der Sänger-App, `dirigenten/` im Projekt der Dirigenten-App) |
 | `geruest/garten-lauf.html` | Vorarbeit zu Baustein B: Bereich 1 und 2 als Bildlauf wie in der App, nicht Teil der App |
