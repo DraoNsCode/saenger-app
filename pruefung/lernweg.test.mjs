@@ -207,7 +207,8 @@ test('Stationen der Etappe 5 wie in LERNWEG.md', () => {
     'ganz-halbton': { noetig: 'leicht', freiwillig: ['schwer'] },
     tonleiter: { noetig: 'leicht', freiwillig: [] },
     'ziffer-lesen': { noetig: 'leicht', freiwillig: ['schwer'] },
-    'stufen-hoeren': { noetig: 'leicht', freiwillig: ['schwer'] },
+    // „mittel“ = Ziffern singen, freiwillig (Daniel, 27.11.2026: „Lernweg, nicht verpflichtend“)
+    'stufen-hoeren': { noetig: 'leicht', freiwillig: ['schwer', 'mittel'] },
   });
 });
 
@@ -237,7 +238,7 @@ test('Stationen der Etappe 7 wie in LERNWEG.md', () => {
   assert.equal(t.id, 'intervalle');
   assert.deepEqual(
     t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
-    ['intervall-lesen/leicht', 'intervall-lesen/schwer/frei', 'intervall-hoeren/leicht', 'intervall-hoeren/schwer/frei', 'mischung/gemischt']
+    ['intervall-lesen/leicht', 'intervall-lesen/schwer/frei', 'intervall-hoeren/leicht', 'intervall-hoeren/schwer/frei', 'intervall-hoeren/mittel/frei', 'mischung/gemischt']
   );
 });
 
@@ -257,7 +258,7 @@ test('Stationen der Etappe 9 wie in LERNWEG.md', () => {
   assert.equal(t.id, 'zusammenklang');
   assert.deepEqual(
     t.stationen.map((s) => `${s.uebung || 'mischung'}/${s.stufe}${s.freiwillig ? '/frei' : ''}`),
-    ['dreiklang/leicht', 'dreiklang/schwer/frei', 'dur-moll/leicht', 'dur-moll/schwer/frei', 'einsatzton/leicht', 'einsatzton/schwer/frei', 'mischung/gemischt']
+    ['dreiklang/leicht', 'dreiklang/schwer/frei', 'dur-moll/leicht', 'dur-moll/schwer/frei', 'einsatzton/leicht', 'einsatzton/schwer/frei', 'einsatzton/mittel/frei', 'mischung/gemischt']
   );
 });
 
@@ -333,4 +334,11 @@ test('Spätblüher: erscheinen erst, wenn ihre Etappe erreicht ist', () => {
     t1.stationen.pop();
     zuruecksetzen();
   }
+});
+
+// „Selbst singen, dann vergleichen“: freiwillig im Lernweg (Daniel, 27.11.2026: „Lernweg, nicht verpflichtend“)
+test('Selbst singen: nur freiwillige Stationen, nie im Abschluss', () => {
+  const singen = alleStationen().filter((s) => ['zf-singen', 'iv-singen', 'zk-singen'].includes(s.id));
+  assert.equal(singen.length, 3);
+  for (const s of singen) assert.ok(s.freiwillig, `${s.id} ist nicht freiwillig`);
 });

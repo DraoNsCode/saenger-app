@@ -16,11 +16,13 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt ein Vorschlag in UEBEN.md. Das meiste ist am 27.11.2026 entschieden, offen sind die Fragen 5, 9 und 10 dort. Die Texte der Stimmbildung stehen als Vorschlag in `inhalt/stimmbildung.md`, Daniel prüft sie. „Selbst singen, dann vergleichen“ kommt freiwillig in die Etappen 5, 7 und 9 (LERNWEG.md). Danach Phase 2 (Funktionen).
+**Nächster Schritt:** Daniel testet den Übe-Teil (27.11.2026): „Besser singen“ mit Klang je Stimme, „Selbst singen“ im Lernweg, Konto anlegen. Offen für die Chorlieder: Daniels Ja zur Lesefunktion `saenger-lieder` im Projekt der Dirigenten-App, danach das erste Lied übertragen und das Anhören bauen (Stufe 2). Daneben Phase 1 des Plans in FAHRPLAN.md: Etappe 3 testet Daniel, Etappen 4 bis 11 sind als Vorschläge spielbar und warten auf seine Entscheidungen, dazu die Reihenfolge der Etappen, die Merklieder (Etappe 7) und die eigene Stimme im Satz (Etappe 9). Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
 - Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil und Einstellungen
+- Übe-Teil „Chorlieder üben“, Stufe 1 (27.11.2026): Anmelden und Konto anlegen mit Chor-Code (`js/konto.js`, eigenes Supabase-Projekt, FAHRPLAN.md „Konten: Umsetzung“), Liste aller Lieder mit Suche und Link auf das PDF (`js/views/lieder.js`). Die Liste kommt von der Funktion `saenger-lieder` im Projekt der Dirigenten-App. **Sie ist noch nicht bereitgestellt** (braucht Daniels Ja), bis dahin meldet die Seite nach dem Anmelden „nicht erreichbar“. Anhören (Stufe 2) noch nicht. Lieder der Woche vorerst nicht (Daniel, 27.11.2026).
+- „Selbst singen“ im Lernweg (27.11.2026): freiwillige Stationen „Ziffern singen“, „Intervalle singen“ und „Einsatzton singen“ als Stufe „mittel“ der Hör-Übungen, mit Selbsteinschätzung (LERNWEG.md, `js/uebungen/singen.js`).
 - Übe-Teil „Besser singen“ (27.11.2026): 18 Übungen mit Varianten, 7 Erklärungen, die Abläufe „Einsingen zu Hause“ und „Nach dem Singen“, Begleitung je Stimme, Einstellung „Ich habe einen Strohhalm“. Daten in `js/ueben/stimmbildung.js` (daraus wird `inhalt/stimmbildung.md` erzeugt), Begleitung in `js/ueben/spieler.js`, Ansichten in `js/views/ueben.js`. Die Texte sind Vorschlag, Daniel prüft sie und den Klang.
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
 - Etappe 11 (Feinheiten im Rhythmus, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Synkopen“ und „Triolen und Sechzehntel“ (`js/uebungen/rhythmus-fein.js`).
@@ -52,6 +54,9 @@ Annahmen bei der Umsetzung des Übe-Teils (Daniel, 27.11.2026: „Setze jetzt al
 - Das Tempo lässt sich vor dem Start in Zehnerschritten zwischen 60 und 150 Prozent ändern.
 - In den Abläufen erscheint „Weiter“ nach zwei mitgesungenen Durchgängen, bei Übungen ohne Begleitung gleich.
 - Keine Anzeige „zuletzt gemacht“ und kein Fortschritt im Übe-Teil.
+- Konten: E-Mail und Passwort ohne Bestätigungsmail, ein Konto nur mit Chor-Code, nur für die Chorlieder. Die übrige App bleibt ohne Konto nutzbar.
+- Lieder: Statt einer Kopie liest eine Funktion im Projekt der Dirigenten-App die Liste nur für angemeldete Sänger (UEBEN.md, „Privat“). Zuerst sind alle PDFs zum Ansehen da, Anhören kommt Lied für Lied.
+- Selbst singen: freiwillige Stufe „mittel“ der Hör-Übungen, Selbsteinschätzung, 6 von 8 (LERNWEG.md).
 
 Vorläufig:
 
@@ -77,10 +82,10 @@ Vorarbeit für die Optik (Baustein B, nicht in der App):
 
 ## Technik
 
-- Reine statische Web-App: HTML, CSS und JavaScript-Module, ohne Build-Schritt.
+- Reine statische Web-App: HTML, CSS und JavaScript-Module, ohne Build-Schritt. Für die Chorlieder ein eigenes Supabase-Projekt mit Anmeldung (siehe FAHRPLAN.md, „Konten: Umsetzung“).
 - Notenbild mit [abcjs](https://github.com/paulrosen/abcjs) (MIT-Lizenz, liegt in `vendor/`).
 - Klang wird im Browser erzeugt (Web Audio), ohne Klangdateien.
-- Schriften liegen im Repository: Atkinson Hyperlegible, EB Garamond und die Ziffern aus Figtree (alle SIL Open Font License, siehe `fonts/`). Es werden keine Daten an fremde Server geschickt.
+- Schriften liegen im Repository: Atkinson Hyperlegible, EB Garamond und die Ziffern aus Figtree (alle SIL Open Font License, siehe `fonts/`). Es werden keine Daten an fremde Server geschickt, außer beim Anmelden und bei den Chorliedern an Supabase.
 - Adressen mit `#/…`, damit GitHub Pages ohne Server-Regeln reicht.
 - `package.json` und `pruefung/` dienen nur der Prüfung während der Entwicklung. Die App selbst braucht weder npm noch einen Build-Schritt.
 
@@ -99,7 +104,10 @@ Vorarbeit für die Optik (Baustein B, nicht in der App):
 | `js/klang.js`, `js/noten.js`, `js/musik.js` | Klang, Notenbild, Tonhöhen |
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
-| `inhalt/stimmbildung.md` | Texte und Noten der Stimmbildung für den Übe-Teil, Vorschlag, noch nicht in der App |
+| `js/ueben/` | Übe-Teil: Inhalte der Stimmbildung (`stimmbildung.js`) und Begleitung (`spieler.js`) |
+| `js/konto.js` | Konto und Liedliste für „Chorlieder üben“ |
+| `inhalt/stimmbildung.md` | Texte der Stimmbildung zum Lesen, erzeugt aus `js/ueben/stimmbildung.js` |
+| `supabase/` | Quelltexte der Supabase-Funktionen (`saenger/` im Projekt der Sänger-App, `dirigenten/` im Projekt der Dirigenten-App) |
 | `geruest/garten-lauf.html` | Vorarbeit zu Baustein B: Bereich 1 und 2 als Bildlauf wie in der App, nicht Teil der App |
 | `garten/` | Vorarbeit zu Baustein B: Zeichner `buehne.js`, Bereiche mit Grundbild und Beet-Ebenen (`buehne/`), Wiese (`flaechen/`), Trittsteine (`teile/`), kleiner Server zum Ablegen von Bildern (`werkstatt/server.py`). Noch nicht Teil der App |
 | `.claude/skills/garten-grafik/` | Stand, Werkzeuge und Erfahrungen zur Gartengrafik, später die gewählten Stilregeln |

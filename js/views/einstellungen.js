@@ -2,6 +2,7 @@ import { h, icon, bestaetigen } from '../ui.js';
 import { STIMMEN, SCHLUESSEL_NAME } from '../musik.js';
 import { zustand, aendere, zuruecksetzen } from '../speicher.js';
 import { setzeLautstaerke, spieleFolge, audio } from '../klang.js';
+import { angemeldetAls, abmelden } from '../konto.js';
 
 export function stimmWahl(beiWahl) {
   const aktuell = zustand().stimme;
@@ -100,8 +101,17 @@ export function zeigeEinstellungen(wurzel) {
           box.addEventListener('change', () => aendere((s) => (s.einstellungen.strohhalm = box.checked)));
           return box;
         })(),
-        h('span', {}, 'Ich habe einen Strohhalm zum Üben. Dann kommt er im Ablauf „Einsingen zu Hause“ vor.')
+        h('span', {}, 'Ich habe einen dünnen Trinkhalm zum Üben (Übung „Singen durch den Strohhalm“). Dann kommt er im Ablauf „Einsingen zu Hause“ vor.')
       ),
+      h('h2', { class: 'abschnitt-titel' }, 'Konto'),
+      angemeldetAls()
+        ? h(
+            'p',
+            { class: 'unterzeile konto-zeile' },
+            `Angemeldet als ${angemeldetAls()} (für die Chorlieder) · `,
+            h('button', { type: 'button', class: 'knopf text', onclick: () => { abmelden(); neuZeichnen(); } }, 'Abmelden')
+          )
+        : h('p', { class: 'unterzeile' }, 'Ein Konto brauchst du nur für die Chorlieder unter „Üben“. ', h('a', { href: '#/ueben/lieder' }, 'Anmelden oder Konto anlegen')),
       h('h2', { class: 'abschnitt-titel' }, 'Fortschritt'),
       h('p', { class: 'unterzeile' }, 'Dein Fortschritt wird nur in diesem Browser auf diesem Gerät gespeichert.'),
       h(

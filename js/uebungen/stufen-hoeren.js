@@ -4,6 +4,7 @@
 import { zufall, waehle } from '../musik.js';
 import { spieleFolge } from '../klang.js';
 import { ziffer, halbtoeneBis, GRUNDTON } from './ziffern.js';
+import { singAufgabe } from './singen.js';
 
 let letzte = null;
 
@@ -11,9 +12,12 @@ export default {
   id: 'stufen-hoeren',
   titel: 'Ziffern hören',
   themaId: 'ziffern',
+  singTitel: 'Ziffern singen', // Titel der Stufe „mittel“ (Selbst singen)
   aufgaben: 8,
   stufen: {
     leicht: 'Die 1, 3 oder 5',
+    // „mittel“ ist hier keine Schwierigkeit, sondern das Selbersingen (freiwillige Station „Ziffern singen“, 27.11.2026)
+    mittel: 'Ziffern selbst singen',
     schwer: 'Alle Ziffern von 1 bis 7',
   },
   erklaerung: [
@@ -30,6 +34,7 @@ export default {
     while (st === letzte);
     letzte = st;
     const m = (x) => grund + halbtoeneBis(x);
+    if (stufe === 'mittel') return ziffernSingen(grund, m);
     const folge = [0, 2, 4, 2, 0].map((x) => ({ midi: m(x), schlaege: 0.75 })).concat([{ midi: null, schlaege: 1 }, { midi: m(st), schlaege: 2 }]);
     const spiele = () => spieleFolge(folge, { tempo: 96 });
     const z = ziffer(st);
@@ -47,3 +52,20 @@ export default {
     };
   },
 };
+
+let letzteGesungen = null;
+function ziffernSingen(grund, m) {
+  let st;
+  do st = waehle([1, 2, 3, 4]);
+  while (st === letzteGesungen);
+  letzteGesungen = st;
+  const z = ziffer(st);
+  return singAufgabe({
+    frage: `Sing die ${z}.`,
+    hinweis: `Zuerst hörst du 1 – 3 – 5 – 3 – 1. Die 1 ist der erste und der letzte Ton. Sing von der 1 aus die Tonleiter hinauf bis zur ${z} und halte die ${z}. Danach tippst du auf „Lösung hören“: Die App spielt die Tonleiter bis zur ${z}, ihr letzter Ton ist die Lösung.`,
+    vorspiel: () => spieleFolge([0, 2, 4, 2, 0].map((x) => ({ midi: m(x), schlaege: 0.75 })), { tempo: 96 }),
+    loesung: () => spieleFolge(Array.from({ length: st + 1 }, (_, x) => ({ midi: m(x), schlaege: x === st ? 2 : 0.6 })), { tempo: 96 }),
+    nachherText: `Der letzte Ton der Lösung ist die ${z}.`,
+    trefferFrage: `Hast du die ${z} getroffen?`,
+  });
+}

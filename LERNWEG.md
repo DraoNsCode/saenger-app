@@ -290,4 +290,9 @@ Daniel am 27.11.2026: „Lernweg, nicht verpflichtend.“ Gemeint sind Übungen,
 | 7 Intervalle | Intervalle singen | Die App spielt den ersten Ton und nennt das Intervall, später mit dem Merklied. Du singst den zweiten Ton, dann hörst du ihn. |
 | 9 Zusammenklang | Einsatzton singen | Die App spielt den Akkord, du singst deinen Anfangston, dann hörst du ihn. |
 
-Offen: Wie gilt eine solche Station als geschafft, wenn die App nicht prüfen kann? Vorstellbar: Du schätzt nach jeder Aufgabe selbst ein („getroffen“, „daneben“), und die Runde zählt wie sonst ab 6 von 8. Oder die Station zählt als geschafft, sobald man sie einmal durchgespielt hat. Mit dem Mikrofon (Baustein G) könnte die App später selbst prüfen.
+Umgesetzt am 27.11.2026 (Daniel: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst“). Claudes Wahl, Daniel korrigiert, falls nötig:
+
+- Jede Station ist eine freiwillige Stufe „mittel“ der passenden Hör-Übung: „Ziffern hören“ (`zf-singen`), „Intervalle hören“ (`iv-singen`) und „Der Einsatzton“ (`zk-singen`). So erscheint sie im Blatt der nötigen Station und auch im Reiter „Themen“. „Mittel“ ist hier keine Schwierigkeit, sondern das Selbersingen.
+- Gesungen werden die Ziffern 2 bis 5, die Terz, Quarte und Quinte aufwärts und die 1, 3 oder 5 eines Dreiklangs, jeweils in der Lage der eigenen Stimme.
+- Nach dem Singen hört man die Lösung und schätzt sich selbst ein („Getroffen“, „Daneben“). Die Runde zählt wie sonst ab 6 von 8. Mit dem Mikrofon (Baustein G) könnte die App später selbst prüfen.
+- Code: `js/uebungen/singen.js` und die Stufe „mittel“ in `stufen-hoeren.js`, `intervalle.js`, `zusammenklang.js`.

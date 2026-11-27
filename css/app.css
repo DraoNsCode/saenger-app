@@ -1522,3 +1522,106 @@ a {
   margin-top: 2px;
   flex: none;
 }
+
+/* Chorlieder üben (27.11.2026), Optik vorläufig */
+.formular {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 28em;
+  margin-top: 8px;
+}
+.feld {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 700;
+}
+.eingabe {
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 2px solid var(--linie);
+  background: var(--blatt);
+  font: 400 1.05rem/1.2 var(--schrift);
+  color: var(--tinte);
+}
+.eingabe:focus {
+  border-color: var(--tinte-3);
+  outline: none;
+}
+.formular-fehler {
+  margin: 0;
+  min-height: 1.3em;
+  color: var(--rot);
+}
+.konto-zeile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.konto-zeile .knopf.text {
+  min-height: 32px;
+  padding: 0 4px;
+}
+.lieder-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0 6px;
+}
+.lieder-liste {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.lied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px 10px 14px;
+  border-radius: var(--rad);
+  background: var(--blatt);
+  box-shadow: var(--schatten);
+}
+.lied-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.lied-kennung {
+  font-size: 0.85rem;
+  color: var(--tinte-2);
+  font-weight: 700;
+}
+.lied-titel {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.lied-kategorie {
+  font-size: 0.85rem;
+  color: var(--tinte-3);
+}
+.lied-ohne {
+  font-size: 0.85rem;
+  color: var(--tinte-3);
+}
+.lied .knopf {
+  flex: none;
+}
+
+/* Selbst singen im Lernweg (27.11.2026) */
+.singen-knoepfe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 16px;
+}
+.singen-knoepfe .knopf {
+  flex: 1 1 140px;
+}

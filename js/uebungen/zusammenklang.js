@@ -5,6 +5,7 @@ import { kopf } from '../noten.js';
 import { spieleFolge, akkord, jetzt, audio } from '../klang.js';
 import { notenname, diaAusPosIn } from './namen.js';
 import { GRUNDTON } from './ziffern.js';
+import { singAufgabe } from './singen.js';
 
 const DUR = [0, 4, 7];
 const MOLL = [0, 3, 7];
@@ -137,9 +138,12 @@ export const einsatzton = {
   id: 'einsatzton',
   titel: 'Der Einsatzton',
   themaId: 'zusammenklang',
+  singTitel: 'Einsatzton singen', // Titel der Stufe „mittel“ (Selbst singen)
   aufgaben: 8,
   stufen: {
     leicht: 'Der Ton liegt im Dreiklang',
+    // „mittel“ ist hier keine Schwierigkeit, sondern das Selbersingen (freiwillige Station „Einsatzton singen“, 27.11.2026)
+    mittel: 'Den Einsatzton selbst singen',
     schwer: 'Der Ton liegt auch eine Oktave höher oder tiefer',
   },
   erklaerung: [
@@ -150,6 +154,7 @@ export const einsatzton = {
   neu(stufe, k) {
     const [tief, hoch] = GRUNDTON[k.stimme] || GRUNDTON.S;
     const grund = zufall(tief, hoch);
+    if (stufe === 'mittel') return einsatztonSingen(grund);
     let st;
     do st = waehle([0, 1, 2]);
     while (st === letzteEinsatz);
@@ -179,3 +184,28 @@ export const einsatzton = {
     };
   },
 };
+
+let letzteGesungen = null;
+function einsatztonSingen(grund) {
+  let st;
+  do st = waehle([0, 1, 2]);
+  while (st === letzteGesungen);
+  letzteGesungen = st;
+  const toene = DUR.map((x) => grund + x);
+  const z = ['1', '3', '5'][st];
+  const welcher = ['den tiefsten Ton', 'den mittleren Ton', 'den höchsten Ton'][st];
+  const vorspiel = () => {
+    const c = audio();
+    const t0 = c.currentTime + 0.1;
+    spieleFolge(toene.map((m) => ({ midi: m, schlaege: 0.7 })), { tempo: 96, start: t0 });
+    akkord(toene, t0 + (60 / 96) * 2.3, 1.4);
+  };
+  return singAufgabe({
+    frage: `Sing die ${z} des Dreiklangs.`,
+    hinweis: `Du hörst die drei Töne von unten nach oben, die 1, die 3 und die 5. Dann klingen sie zusammen, so wie das Klavier vor dem Einsatz. Sing daraus die ${z}, also ${welcher}. Danach tippst du auf „Lösung hören“ und vergleichst.`,
+    vorspiel,
+    loesung: () => spieleFolge([{ midi: toene[st], schlaege: 2 }], { tempo: 90 }),
+    nachherText: `Die Lösung spielt die ${z} des Dreiklangs.`,
+    trefferFrage: `Hast du die ${z} getroffen?`,
+  });
+}

@@ -6,6 +6,7 @@ import { kopf } from '../noten.js';
 import { spieleFolge, akkord, jetzt } from '../klang.js';
 import { notenname, bereichPos, diaAusPosIn } from './namen.js';
 import { halbtoeneBis, GRUNDTON } from './ziffern.js';
+import { singAufgabe } from './singen.js';
 
 // Größe in Notenschritten (1 = Sekunde) → Name
 export const INTERVALL = { 1: 'Sekunde', 2: 'Terz', 3: 'Quarte', 4: 'Quinte', 5: 'Sexte', 6: 'Septime', 7: 'Oktave' };
@@ -77,9 +78,12 @@ export const intervallHoeren = {
   id: 'intervall-hoeren',
   titel: 'Intervalle hören',
   themaId: 'intervalle',
+  singTitel: 'Intervalle singen', // Titel der Stufe „mittel“ (Selbst singen)
   aufgaben: 8,
   stufen: {
     leicht: 'Terz, Quinte oder Oktave',
+    // „mittel“ ist hier keine Schwierigkeit, sondern das Selbersingen (freiwillige Station „Intervalle singen“, 27.11.2026)
+    mittel: 'Intervalle selbst singen',
     schwer: 'Sekunde bis Oktave',
   },
   erklaerung: [
@@ -90,6 +94,7 @@ export const intervallHoeren = {
   neu(stufe, k) {
     const [tief, hoch] = GRUNDTON[k.stimme] || GRUNDTON.S;
     const grund = zufall(tief, hoch);
+    if (stufe === 'mittel') return intervallSingen(grund);
     const groessen = stufe === 'leicht' ? [2, 4, 7] : [1, 2, 3, 4, 5, 6, 7];
     let g;
     do g = waehle(groessen);
@@ -111,3 +116,21 @@ export const intervallHoeren = {
     };
   },
 };
+
+let letzteGesungen = null;
+// Terz, Quarte oder Quinte aufwärts: in jeder Stimme bequem zu singen
+function intervallSingen(grund) {
+  let g;
+  do g = waehle([2, 3, 4]);
+  while (g === letzteGesungen);
+  letzteGesungen = g;
+  const zweiter = grund + halbtoeneBis(g);
+  return singAufgabe({
+    frage: `Sing eine ${INTERVALL[g]} nach oben.`,
+    hinweis: `Du hörst einen Ton, das ist deine 1. Sing ihn nach und dann den Ton eine ${INTERVALL[g]} höher, wie ${ZIFFER_HILFE[g]}. Danach tippst du auf „Lösung hören“ und vergleichst den zweiten Ton.`,
+    vorspiel: () => spieleFolge([{ midi: grund, schlaege: 2 }], { tempo: 76 }),
+    loesung: () => spieleFolge([{ midi: grund, schlaege: 1.2 }, { midi: zweiter, schlaege: 2 }], { tempo: 76 }),
+    nachherText: `Eine ${INTERVALL[g]} klingt wie ${ZIFFER_HILFE[g]}.`,
+    trefferFrage: 'Hast du den zweiten Ton getroffen?',
+  });
+}

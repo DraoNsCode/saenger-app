@@ -23,8 +23,8 @@ Daniel testet die ganze Zeit mit. Was fertig und geprüft ist, geht mit Daniels 
 1. **Je Etappe (3 bis 11, Themen in LERNWEG.md):** Claude schlägt Übungsarten und Stationen vor (nötig, freiwillig, Spätblüher, Abschluss), mit kurzen Erklärungstexten. Daniel entscheidet. Claude setzt die Etappe spielbar um, mit Tests und dem Prüfblick eines Sängers ohne Notenkenntnis. Während Daniel testet, bereitet Claude die nächste Etappe vor. Muster sind die Etappen 1 und 2.
 2. **Etappe 7 mit Merkliedern (H):** Welche Liedanfänge aus dem Chorliederbuch zu welchem Intervall gehören, entscheidet Daniel. Die Noten kommen mit seinem Skill „noten-uebertragen“ aus den PDFs.
 3. **Reihenfolge prüfen:** Wenn alle Etappen stehen, prüft Daniel die Reihenfolge (ENTSCHEIDUNGEN.md, 19.11.2026). Danach Spätblüher nachziehen.
-4. **Übe-Teil (D), nur Inhalt:** was zur Stimmbildung gehört und was „ein Lied aus dem Repertoire üben“ in der App heißt. Welche Lieder hinein und wie sie übertragen werden. Stand 27.11.2026: Vorschlag in [UEBEN.md](UEBEN.md). Übungsliste, Ort der Lieder (eigenes Projekt), Lieder der Woche und Reihenfolge beim Übertragen sind entschieden. Später am 27.11.2026 auch Abläufe, Probestück, keine Hinweise und „Selbst singen“ in den Lernweg. Die Texte der Stimmbildung stehen als Vorschlag in [inhalt/stimmbildung.md](inhalt/stimmbildung.md), Daniel prüft sie. Offen sind die Fragen 5, 9 und 10 in UEBEN.md.
-5. **Selbst singen, dann vergleichen:** freiwillige Stationen in den Etappen 5, 7 und 9 (Daniel, 27.11.2026: „Lernweg, nicht verpflichtend“). Vorschlag in LERNWEG.md, offen ist, wie eine solche Station als geschafft gilt.
+4. **Übe-Teil (D), nur Inhalt:** was zur Stimmbildung gehört und was „ein Lied aus dem Repertoire üben“ in der App heißt. Welche Lieder hinein und wie sie übertragen werden. Stand 27.11.2026: Vorschlag in [UEBEN.md](UEBEN.md). Übungsliste, Ort der Lieder (eigenes Projekt), Lieder der Woche und Reihenfolge beim Übertragen sind entschieden. Später am 27.11.2026 auch Abläufe, Probestück, keine Hinweise und „Selbst singen“ in den Lernweg. Danach hat Daniel die Umsetzung Claude überlassen (ohne Lieder der Woche), siehe Phase 2.
+5. **Selbst singen, dann vergleichen:** freiwillige Stationen in den Etappen 5, 7 und 9 (Daniel, 27.11.2026: „Lernweg, nicht verpflichtend“). Umgesetzt am 27.11.2026, Einzelheiten in LERNWEG.md.
 6. **Nebenher:** Daniel testet die übrigen Stationen der Etappen 1 und 2.
 
 Die Notenzeile bleibt bis Phase 4 die Ansicht, in der neue Etappen getestet werden. Sie wird nicht weiterentwickelt.
@@ -34,7 +34,7 @@ Die Notenzeile bleibt bis Phase 4 die Ansicht, in der neue Etappen getestet werd
 1. **J ohne Gartenbild:** Ein Thema wird frei, sobald seine nötigen Stationen geschafft sind. Üben im Reiter „Themen“ zählt für die Stationen. Fortschritt je Thema. Je Übung „zuletzt geübt“ und Fehlerquote. Pflege: ab wann eine Übung wiederholt werden soll und in welcher Reihenfolge die App auswählt. Eine Runde mit Daniel: wonach man im Reiter statt Leicht, Mittel und Schwer wählt.
 2. **F, Abzeichen:** Bedingungen neu fassen, ohne Leicht, Mittel und Schwer. Wo die Abzeichen in der App liegen, gehört schon zur Optik (Phase 3).
 3. **E, Konten:** Daniel beantwortet zwei Fragen: welche Anmeldeart und ob die App ohne Konto nutzbar bleibt. Dann ein eigenes Supabase-Projekt mit Daniels Ja, Fortschritt auf dem Gerät mit Abgleich (siehe unten).
-4. **D, Übe-Teil:** umsetzen, was in Phase 1 festgelegt wurde.
+4. **D, Übe-Teil:** am 27.11.2026 vorgezogen (Daniel: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst“). Umgesetzt: „Besser singen“ ganz, „Chorlieder üben“ Stufe 1 mit Konto im eigenen Projekt. Offen: Daniels Ja zur Lesefunktion im Projekt der Dirigenten-App, danach Stufe 2 (Anhören) mit dem ersten übertragenen Lied. Lieder der Woche: vorerst nicht.
 
 Die Ansichten dieser Phase sind schlicht. Ihr endgültiges Aussehen kommt aus Phase 3.
 
@@ -69,13 +69,23 @@ Mikrofon als Zusatz (G), wenn Daniel es dann noch will. Lieder im Übe-Teil verv
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie | – |
 | B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Stil gewählt: gemaltes Bilderbuch. Technik „ein KI-Bild je Bereich“ als Vorarbeit, Bereich 1 und 2 als Bildlauf (`geruest/garten-lauf.html`), „Optik passt grundsätzlich“, aber zu ähnlich. Noch nicht in der App | 3, 4 |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt. Etappe 3 spielbar (26.11.2026), Daniel testet; Etappen 4 bis 11 als Vorschläge spielbar, nicht entschieden. Offen: Merklieder, Singen, die eigene Stimme im Satz | 1 |
-| D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Lieder aus dem Repertoire, nur PDF im Speicher der Dirigenten-App, nicht öffentlich (26.11.2026); Übungsliste, eigenes Projekt, Lieder der Woche von den Dirigenten, Reihenfolge beim Übertragen (27.11.2026); Inhalt als Vorschlag in UEBEN.md, offene Fragen dort | 1, 2, 5 |
-| E. Konten | Konten ja (26.11.2026); eigenes Supabase-Projekt der Sänger-App (27.11.2026); offen: Anmeldeart, ohne Konto nutzbar?, wie Dirigenten die Lieder der Woche einstellen | 2 |
+| D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | „Besser singen“ umgesetzt (27.11.2026, Texte Vorschlag); „Chorlieder üben“ Stufe 1 umgesetzt, wartet auf die Lesefunktion im Projekt der Dirigenten-App; Stufe 2 (Anhören) mit dem ersten übertragenen Lied; Lieder der Woche vorerst nicht | 2, 5 |
+| E. Konten | Konten ja (26.11.2026); eigenes Supabase-Projekt der Sänger-App (27.11.2026), angelegt am 27.11.2026: E-Mail und Passwort mit Chor-Code, nur für die Chorlieder, übrige App ohne Konto (Claudes Wahl). Offen: Fortschritt mit dem Konto abgleichen | 2 |
 | F. Abzeichen | vorläufig; Bronze, Silber und Gold hängen an Leicht, Mittel und Schwer und werden neu gefasst | 2, 3 |
 | G. Mikrofon | nur als Zusatz | 5 |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | 1 |
 | I. Einführung im Chor | Testphase mit einigen Sängern gestrichen (26.11.2026) | 5 |
 | J. Gezielt üben nach dem Weg | Konzept abgeschlossen am 19.11.2026: Richtung 3, Ausbau und Pflege; Einzelheiten Vorschlag in GEZIELT-UEBEN.md; Umsetzung offen | 2, Zeichen im Garten in 3 und 4 |
+
+## Konten: Umsetzung vom 27.11.2026
+
+- **Projekt:** „Sänger-App“ (`riykqydzhrdgkweesrze`, Frankfurt), in derselben kostenlosen Organisation wie die Dirigenten-App.
+- **Anmelden:** E-Mail und Passwort. Ein Konto legt die Funktion `konto-anlegen` an, wenn der Chor-Code stimmt. Das Konto ist sofort bestätigt, es wird keine Mail verschickt. Der Chor-Code steht in der Tabelle `zugang` (nicht im Repository, das öffentlich ist). Ändern im SQL-Editor des Projekts: `update public.zugang set code = '…' where id = 1;`
+- **Passwort vergessen:** Daniel setzt es im Dashboard zurück (Authentication, Users).
+- **Lieder:** Die Funktion `saenger-lieder` im Projekt der Dirigenten-App gibt angemeldeten Sängern die Liste und befristete Links auf die PDFs (UEBEN.md, „Privat“). Stand 27.11.2026: noch nicht bereitgestellt, das braucht Daniels Ja.
+- **Quelltexte** der Funktionen: `supabase/` im Repository.
+- **Zum Prüfen** liegt im Projekt die Erweiterung `http`. Entfernen: `drop extension http;` (am 27.11.2026 versucht, die Rückfrage von Supabase blieb ohne Antwort).
+- **Noch nicht:** Fortschritt mit dem Konto abgleichen. Die App bleibt ohne Konto nutzbar, das Konto braucht man nur für die Chorlieder.
 
 ## Konten: Prüfung vom 19.11.2026
 

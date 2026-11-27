@@ -99,9 +99,10 @@ function zeige() {
         location.replace('#/themen');
         return;
       }
-      seite(u.titel, 'themen', true);
+      const rundenTitel = (b === 'mittel' && u.singTitel) || u.titel;
+      seite(rundenTitel, 'themen', true);
       aufraeumen = starteRunde(inhalt, {
-        titel: u.titel,
+        titel: rundenTitel,
         themaId: u.themaId,
         uebungen: [u.id],
         stufe: b,

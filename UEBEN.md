@@ -1,6 +1,6 @@
 # Übe-Teil – Vorschlag zur Prüfung
 
-Stand 26.11.2026, Baustein D, Phase 1 (nur Inhalt). Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht (Abschnitt „Übe-Teil“). Umgesetzt wird in Phase 2 (FAHRPLAN.md).
+Stand 26.11.2026, Baustein D, Phase 1 (nur Inhalt). **Umgesetzt am 27.11.2026** (Daniel: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst. Lass die Funktion mit dem Lied der Woche erst ganz raus.“): „Besser singen“ vollständig, „Chorlieder üben“ Stufe 1 (Liste und PDF) mit Konto, „Selbst singen“ im Lernweg. Was dabei gewählt wurde, steht in README.md unter „Stand“. Lieder der Woche: vorerst nicht. Diese Seite enthält Vorschläge von Claude. Festgelegt ist nur, was in [ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md) steht (Abschnitt „Übe-Teil“). Umgesetzt wird in Phase 2 (FAHRPLAN.md).
 
 ## Was schon feststeht
 
@@ -276,7 +276,9 @@ Zwei Wege:
 
 Daniel hat Weg A gewählt (27.11.2026). Die Konten der Sänger liegen damit auch im eigenen Projekt.
 
-Weil die Dirigenten dort die Lieder der Woche auswählen, braucht das Projekt zwei Rollen: Sänger lesen, Dirigenten dürfen zusätzlich die Lieder der Woche einstellen. Vorschlag: Die Dirigenten melden sich in der Sänger-App an und sehen dann eine kleine Seite „Lieder der Woche“: Woche wählen, Lieder aus der Liste antippen. Das ist eine eigene Anmeldung, getrennt von der Dirigenten-App (Frage 9).
+Umsetzung (27.11.2026, Claudes Wahl): Statt einer Kopie liest eine kleine Funktion im Projekt der Dirigenten-App die Liedliste und gibt befristete Links auf die PDFs, aber nur an angemeldete Sänger. Sie prüft deren Token mit den öffentlichen Schlüsseln des Sänger-Projekts. So braucht es keine Schlüssel zwischen den Projekten und keinen Abgleich, die Liste ist immer aktuell, und Konten und Regeln der Dirigenten-App bleiben unverändert. Nachteil: Das Projekt der Dirigenten-App muss wach sein. Es wird jede Woche genutzt. Das Bereitstellen dieser Funktion im Projekt der Dirigenten-App braucht Daniels Ja (Stand 27.11.2026: noch offen). Quelltext: `supabase/dirigenten/saenger-lieder`.
+
+(Zurückgestellt am 27.11.2026, die Lieder der Woche bleiben vorerst draußen.) Weil die Dirigenten dort die Lieder der Woche auswählen, bräuchte das Projekt zwei Rollen: Sänger lesen, Dirigenten dürfen zusätzlich die Lieder der Woche einstellen. Vorschlag: Die Dirigenten melden sich in der Sänger-App an und sehen dann eine kleine Seite „Lieder der Woche“: Woche wählen, Lieder aus der Liste antippen. Das ist eine eigene Anmeldung, getrennt von der Dirigenten-App (Frage 9).
 
 Damit hängt Bereich 2 an den Konten (Baustein E). Bereich 1 und 3 brauchen keine.
 
@@ -296,6 +298,6 @@ Beantwortet am 27.11.2026: Fragen 1 bis 4, 6, 7 und 8 und ein Teil von 5. Die An
 
 Noch offen:
 
-- **Frage 5, Lieder ansehen:** Sollen zuerst alle PDFs zum Ansehen da sein (Stufe 1), bevor Lied für Lied übertragen wird?
-- **Frage 9, Lieder der Woche auswählen:** Passt eine kleine Seite in der Sänger-App, auf der sich Dirigenten anmelden und die Lieder auswählen? Oder hast du dir das anders vorgestellt?
-- **Frage 10, Klavier, Solo, geteilte Stimmen:** Passt der Vorschlag oben unter „Die Noten: vom PDF zum Klang“?
+- ~~**Frage 5, Lieder ansehen**~~ (am 27.11.2026 so umgesetzt: zuerst alle PDFs zum Ansehen, Claudes Wahl)
+- ~~**Frage 9, Lieder der Woche auswählen**~~ (zurückgestellt am 27.11.2026, die Funktion bleibt vorerst draußen)
+- **Frage 10, Klavier, Solo, geteilte Stimmen:** Passt der Vorschlag oben unter „Die Noten: vom PDF zum Klang“? Wird erst beim Anhören (Stufe 2) gebraucht.
