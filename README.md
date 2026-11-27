@@ -7,6 +7,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 - [LERNWEG.md](LERNWEG.md): Vorschlag für Lernweg, Stationen und Abzeichen
 - [GEZIELT-UEBEN.md](GEZIELT-UEBEN.md): Vorschlag für das gezielte Üben und die Verbindung zum Garten (Baustein J)
 - [UEBEN.md](UEBEN.md): Vorschlag für den Inhalt des Übe-Teils: Stimmbildung, Chorlieder üben (Baustein D)
+- [inhalt/stimmbildung.md](inhalt/stimmbildung.md): Vorschlag für die Texte der Stimmbildung: 18 Übungen, 7 Erklärungen, 2 Abläufe (Baustein D)
 - [CLAUDE.md](CLAUDE.md): Hinweise für Arbeitssitzungen
 - [Skill `garten-grafik`](.claude/skills/garten-grafik/SKILL.md): Stand, Werkzeuge und Erfahrungen zur Gartengrafik (Baustein B)
 - [ARCHIV.md](ARCHIV.md): was am 26.11.2026 beim Aufräumen ins Archiv kam und wie man es zurückholt
@@ -15,7 +16,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt ein Vorschlag in UEBEN.md. Ein Teil ist am 27.11.2026 entschieden, offen sind die Fragen 2 und 5 bis 9 dort, vor allem das Probestück (Frage 8). Danach Phase 2 (Funktionen).
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt ein Vorschlag in UEBEN.md. Das meiste ist am 27.11.2026 entschieden, offen sind die Fragen 5, 9 und 10 dort. Die Texte der Stimmbildung stehen als Vorschlag in `inhalt/stimmbildung.md`, Daniel prüft sie. „Selbst singen, dann vergleichen“ kommt freiwillig in die Etappen 5, 7 und 9 (LERNWEG.md). Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
@@ -56,7 +57,7 @@ Entschieden, aber noch nicht umgesetzt:
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 - Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
 - Konten (26.11.2026), in einem eigenen Supabase-Projekt der Sänger-App (27.11.2026). Offen: Anmeldeart und ob die App ohne Konto nutzbar bleibt.
-- Übe-Teil (Baustein D, 26. und 27.11.2026): Stimmbildung nach der Übungsliste in UEBEN.md, mit Lippenflattern und Strohhalm. Chorlieder aus dem Repertoire, nicht öffentlich, kopiert aus dem Projekt der Dirigenten-App. Lieder der Woche wählen die Dirigenten eigens für die Sänger-App aus. Übertragen wird zuerst, was „in Arbeit“ ist und bald dran ist. Heute ist der Übe-Teil noch leer.
+- Übe-Teil (Baustein D, 26. und 27.11.2026): Stimmbildung nach der Übungsliste in UEBEN.md, mit Lippenflattern und Strohhalm. Chorlieder aus dem Repertoire, nicht öffentlich, kopiert aus dem Projekt der Dirigenten-App. Lieder der Woche wählen die Dirigenten eigens für die Sänger-App aus. Übertragen wird zuerst, was „in Arbeit“ ist und bald dran ist. Abläufe „Einsingen zu Hause“ und „Nach dem Singen“. Keine Hinweise der Dirigenten. Heute ist der Übe-Teil noch leer.
 
 Vorarbeit für die Optik (Baustein B, nicht in der App):
 
@@ -89,6 +90,7 @@ Vorarbeit für die Optik (Baustein B, nicht in der App):
 | `js/klang.js`, `js/noten.js`, `js/musik.js` | Klang, Notenbild, Tonhöhen |
 | `js/views/` | die Ansichten (Weg, Themen, Abzeichen, Üben, Einstellungen) |
 | `pruefung/` | Tests und Klick-Test |
+| `inhalt/stimmbildung.md` | Texte und Noten der Stimmbildung für den Übe-Teil, Vorschlag, noch nicht in der App |
 | `geruest/garten-lauf.html` | Vorarbeit zu Baustein B: Bereich 1 und 2 als Bildlauf wie in der App, nicht Teil der App |
 | `garten/` | Vorarbeit zu Baustein B: Zeichner `buehne.js`, Bereiche mit Grundbild und Beet-Ebenen (`buehne/`), Wiese (`flaechen/`), Trittsteine (`teile/`), kleiner Server zum Ablegen von Bildern (`werkstatt/server.py`). Noch nicht Teil der App |
 | `.claude/skills/garten-grafik/` | Stand, Werkzeuge und Erfahrungen zur Gartengrafik, später die gewählten Stilregeln |

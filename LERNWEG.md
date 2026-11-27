@@ -140,7 +140,7 @@ Begründungen in Kürze:
 - Ziffern wie im Chor: Die 1 ist der Grundton, die obere 1 bleibt die 1 (ENTSCHEIDUNGEN.md, „Sprache des Chors“).
 - Gelesen wird nur in C-Dur, weil Vorzeichen und „die 1 finden“ erst in Etappe 10 kommen. Gehört wird in wechselnden Tonarten, denn beim Hören zählt nur der Abstand zur 1.
 - Ganzton und Halbton werden an der Klaviatur aus Etappe 3 erklärt: Halbtöne zwischen weißen Tasten gibt es nur bei e–f und h–c.
-- **Stufen singen** ist nicht dabei. Ohne Mikrofon lässt sich Singen nicht prüfen. Vorschlag: Es kommt mit dem Mikrofon (Baustein G) oder als Übung zum Selbermachen in den Übe-Teil (Baustein D). Offen, Daniel entscheidet.
+- **Stufen singen** ist nicht dabei. Ohne Mikrofon lässt sich Singen nicht prüfen. Daniel am 27.11.2026 zu „Selbst singen, dann vergleichen“: „Lernweg, nicht verpflichtend“ (ENTSCHEIDUNGEN.md, „Übe-Teil“). Vorschlag: eine freiwillige Station „Ziffern singen“ in dieser Etappe, siehe unten „Selbst singen, dann vergleichen“.
 - Keine Spätblüher in Etappe 5. Ein möglicher Spätblüher später: Ziffern lesen in anderen Tonarten, sobald Etappe 10 erreicht ist.
 
 ## Stationen der Etappe 6 (Vorschlag)
@@ -175,7 +175,7 @@ Begründungen in Kürze:
 
 - Intervalle werden gezählt, beide Noten mit („c, d, e: drei Töne, eine Terz“). Groß und klein (etwa große und kleine Terz) unterscheidet die Etappe noch nicht. Gehört wird deshalb nur ab der 1 einer Dur-Tonleiter, also große Sekunde, große Terz, reine Quarte und so weiter.
 - Beim Hören hilft die Verbindung zu den Ziffern aus Etappe 5: Eine Quinte klingt wie von der 1 zur 5.
-- **Offen:** die Merklieder aus dem Chorliederbuch (Baustein H). Dafür wählt Daniel die Liedanfänge aus, die Noten kommen mit seinem Skill aus den PDFs. Danach wird „Intervalle hören“ um Merklieder ergänzt. Singen fehlt, weil es ohne Mikrofon nicht prüfbar ist (wie in Etappe 5).
+- **Offen:** die Merklieder aus dem Chorliederbuch (Baustein H). Dafür wählt Daniel die Liedanfänge aus, die Noten kommen mit seinem Skill aus den PDFs. Danach wird „Intervalle hören“ um Merklieder ergänzt. Singen fehlt, weil es ohne Mikrofon nicht prüfbar ist (wie in Etappe 5). Vorschlag: eine freiwillige Station „Intervalle singen“, siehe unten „Selbst singen, dann vergleichen“.
 - Keine Spätblüher in Etappe 7.
 
 ## Stationen der Etappe 8 (Vorschlag)
@@ -279,3 +279,15 @@ Die Notenzeile, die im Code noch zu sehen ist, ist abgelöst. Der Leitfaden wird
 ## Rückmeldung
 
 Am 19.11.2026 hat Daniel Grundidee, Reihenfolge, Abzeichen, die Grenze für eine geschaffte Runde und die Anrede vorläufig bestätigt. Das Bild als Notenzeile hat er zunächst bestätigt und am selben Tag durch den Klostergarten ersetzt.
+
+## Selbst singen, dann vergleichen (Vorschlag, 27.11.2026)
+
+Daniel am 27.11.2026: „Lernweg, nicht verpflichtend.“ Gemeint sind Übungen, bei denen man selbst singt und danach die Lösung hört. Sie waren zuerst für den Übe-Teil vorgeschlagen (UEBEN.md). Festgelegt ist nur, dass sie freiwillig in den Lernweg kommen. Der Rest ist Vorschlag.
+
+| Etappe | freiwillige Station | Ablauf |
+| --- | --- | --- |
+| 5 Tonleiter und Ziffern | Ziffern singen | Die App gibt die 1 und zeigt eine Ziffer oder eine kurze Folge. Du singst, dann tippst du und hörst die Lösung. |
+| 7 Intervalle | Intervalle singen | Die App spielt den ersten Ton und nennt das Intervall, später mit dem Merklied. Du singst den zweiten Ton, dann hörst du ihn. |
+| 9 Zusammenklang | Einsatzton singen | Die App spielt den Akkord, du singst deinen Anfangston, dann hörst du ihn. |
+
+Offen: Wie gilt eine solche Station als geschafft, wenn die App nicht prüfen kann? Vorstellbar: Du schätzt nach jeder Aufgabe selbst ein („getroffen“, „daneben“), und die Runde zählt wie sonst ab 6 von 8. Oder die Station zählt als geschafft, sobald man sie einmal durchgespielt hat. Mit dem Mikrofon (Baustein G) könnte die App später selbst prüfen.

@@ -15,16 +15,21 @@ Kurzfassung, maßgeblich ist ENTSCHEIDUNGEN.md:
 - Die Themen und Übungen in Bereich 1 passen, Lippenflattern und Strohhalm gehören dazu (27.11.2026). Die Texte der einzelnen Übungen sind noch zu schreiben.
 - Die Lieder liegen für die Sänger in einem eigenen Supabase-Projekt der Sänger-App, kopiert aus dem Projekt der Dirigenten-App (Weg A unten, 27.11.2026).
 - Übertragen wird zuerst, was in der Dirigenten-App „in Arbeit“ ist, und was in den nächsten Wochen dran ist, danach der Rest nach Bedarf (27.11.2026).
+- Es gibt die kurzen Abläufe „Einsingen zu Hause“ und „Nach dem Singen“ (27.11.2026).
+- Das Probestück „Vom Summen ins a“ passt. Die übrigen Übungen werden in derselben Form geschrieben (27.11.2026). Die Texte stehen in [inhalt/stimmbildung.md](inhalt/stimmbildung.md) und bleiben Vorschlag, bis Daniel sie prüft.
+- Hinweise der Dirigenten zeigt die Sänger-App vorerst nicht (27.11.2026).
+- „Selbst singen, dann vergleichen“ kommt nicht in den Übe-Teil, sondern freiwillig in den Lernweg (27.11.2026).
+- In manchen Liedern gibt es eine eigene Klavierstimme, Solos oder geteilte Stimmen (27.11.2026).
 
 ## Überblick
 
-Drei Bereiche, der dritte ist ein zusätzlicher Vorschlag:
+Zwei Bereiche. Ein dritter war vorgeschlagen und geht in den Lernweg:
 
 | Bereich | Worum es geht | braucht ein Konto? |
 | --- | --- | --- |
 | 1. Besser singen | Stimmbildung: Übungen zum Mitmachen mit Begleitung aus der App, kurze Erklärungen, ein kurzer Ablauf zum Einsingen zu Hause | nein, die Texte sind wie der Lernweg Teil der öffentlichen App |
 | 2. Chorlieder üben | alle Lieder des Repertoires ansehen, übertragene Lieder anhören, die eigene Stimme hervorheben, mitsingen | ja, die Noten sind privat |
-| 3. Selbst singen, dann vergleichen (Vorschlag) | eine Ziffer, ein Intervall oder einen Einsatzton selbst singen und danach die Lösung hören | nein |
+| ~~3. Selbst singen, dann vergleichen~~ | kommt als freiwillige Stationen in den Lernweg (27.11.2026), siehe LERNWEG.md | – |
 
 Für alle drei gilt als Vorschlag: keine Punkte, keine Runden, kein Fortschritt, der etwas freischaltet. Höchstens „zuletzt gemacht“, damit man sieht, was lange liegt.
 
@@ -166,11 +171,11 @@ Ein Vorschlag, damit man nicht selbst aus 18 Übungen wählen muss. Die App füh
 4. „Fünf Töne abwärts“
 5. eine Übung aus „Vokale“ oder „Beweglichkeit“, abwechselnd
 
-Etwa fünf Minuten. Die App wechselt die Stufen von Mal zu Mal, damit es nicht immer gleich ist. Dazu vielleicht ein zweiter Ablauf „Nach dem Singen“ mit „Stimme abkühlen“. Ob es feste Abläufe geben soll und wie lang sie sind, ist offen (Frage 2).
+Etwa fünf Minuten. Die App wechselt die Stufen von Mal zu Mal, damit es nicht immer gleich ist. Dazu vielleicht ein zweiter Ablauf „Nach dem Singen“ mit „Stimme abkühlen“. Daniel: Beide Abläufe soll es geben (27.11.2026). Die Texte stehen in inhalt/stimmbildung.md.
 
 ### Probestück
 
-Eine Übung im vorgeschlagenen Aufbau, damit Daniel Form und Ton prüfen kann. Grundlage ist D „Summen und öffnen“.
+Eine Übung im vorgeschlagenen Aufbau, damit Daniel Form und Ton prüfen kann. Grundlage ist D „Summen und öffnen“. Daniel: „passt“ (27.11.2026). Die übrigen Übungen stehen in derselben Form in inhalt/stimmbildung.md.
 
 > **Vom Summen ins „a“**
 >
@@ -193,7 +198,7 @@ Eine Übung im vorgeschlagenen Aufbau, damit Daniel Form und Ton prüfen kann. G
 > - mit „ng“ statt „m“ summen, wie am Ende von „singen“: Der Mund ist dabei leicht offen.
 > - länger: bis zur 5 hinauf und wieder zurück. Das „a“ kommt erst auf dem letzten Ton.
 
-Nach einem Prüfblick aus Sicht eines Sängers ohne Notenkenntnis überarbeitet (26.11.2026). Daraus für alle Übungen: Fachwörter wie „gebunden“ und „absetzen“ vermeiden. Im Text für die Sänger heißen die Stufen „Varianten“, weil „Stufen“ im Chor die Ziffern meint. Jede Übung sagt, wie man aufhört und was die App gerade tut.
+Nach einem Prüfblick aus Sicht eines Sängers ohne Notenkenntnis überarbeitet (26.11.2026). In inhalt/stimmbildung.md ist Schritt 4 nach einem zweiten Prüfblick (27.11.2026) um das Ende der Übung ergänzt. Daraus für alle Übungen: Fachwörter wie „gebunden“ und „absetzen“ vermeiden. Im Text für die Sänger heißen die Stufen „Varianten“, weil „Stufen“ im Chor die Ziffern meint. Jede Übung sagt, wie man aufhört und was die App gerade tut.
 
 ## 2. Chorlieder üben
 
@@ -228,12 +233,10 @@ Daraus vier Arten, ein Lied anzuhören. Man wählt sie frei, eine kurze Erkläru
 | Meine Stimme im Notenbild | die eigene Stimme hervorgehoben, mitlaufende Markierung | ja |
 | Ziffern einblenden | über der eigenen Stimme, als Brücke zum Lernweg | ja |
 | Meine Lieder | eine eigene Merkliste, nur für dich sichtbar | nein |
-| Hinweise der Dirigenten | etwa „Takt 12: Alt atmet erst nach ‚Herr‘“ | nein |
+| ~~Hinweise der Dirigenten~~ | vorerst nicht, Daniel sieht dafür keinen Einsatz (27.11.2026) | – |
 | Sich selbst aufnehmen | mit Begleitung singen und sich danach anhören, ohne Bewertung | ja, und Mikrofon (Phase 5) |
 
 Zur Verbindung mit dem Lernweg: Übertragene Lieder können auch die Merklieder für die Intervalle liefern (Etappe 7) und Hörbeispiele für „die eigene Stimme im Satz“ (Etappe 9). Das ist dort schon als offener Punkt notiert (LERNWEG.md).
-
-Die Hinweise in der Dirigenten-App sind für die Dirigenten geschrieben. Ob Sänger sie sehen, und dann vielleicht nur eine eigene Art „für Sänger“, entscheidet Daniel (Frage 6).
 
 ### Die Noten: vom PDF zum Klang
 
@@ -243,6 +246,14 @@ Ansehen geht sofort, Anhören erst nach dem Übertragen. Deshalb zwei Stufen:
 - **Stufe 2, Lied für Lied:** Das PDF wird mit Daniels Skill „noten-uebertragen“ in eine MuseScore-Datei übertragen. Daniel prüft sie, denn falsche Noten würden die Sänger falsch lernen. Dann kommt eine MusicXML-Datei in den privaten Speicher. Erst damit gibt es Klang, die eigene Stimme und die Markierung.
 
 Was die Übertragung für die App enthalten muss: die vier Stimmen getrennt erkennbar (auch wenn zwei auf einem System stehen), den Text der Strophen, Wiederholungen und Klammern, die Tonart und das Tempo.
+
+Manche Lieder haben eine eigene Klavierstimme, Solos oder geteilte Stimmen (Daniel, 27.11.2026). Vorschlag, wie die App damit umgeht:
+
+- **Klavierstimme:** eine eigene Spur. Beim Anhören lässt sie sich zu- und abschalten, so wie das Klavier in der Probe mitspielt oder nicht. Hat ein Lied keine eigene Klavierstimme, gibt es nur die vier Chorstimmen.
+- **Solo:** eine eigene Spur mit Namen („Solo Sopran“). Sie zählt nicht als die eigene Stimme, klingt aber beim Anhören mit.
+- **Geteilte Stimmen:** Teilt sich die eigene Stimme (etwa Sopran oben und unten), zeigt die App beide Linien. Man wählt, welche man singt, die App merkt sich die Wahl je Lied.
+
+Beim Übertragen heißt das: Klavier, Solo und die Teile einer geteilten Stimme müssen getrennt erkennbar bleiben.
 
 Bei 159 Liedern ist Stufe 2 der größte Aufwand. Reihenfolge, von Daniel bestätigt (27.11.2026): zuerst die Lieder „in Arbeit“ und die der nächsten Wochen, danach die übrigen nach Bedarf. Laut Fahrplan werden die Lieder in Phase 5 vervollständigt.
 
@@ -269,25 +280,22 @@ Weil die Dirigenten dort die Lieder der Woche auswählen, braucht das Projekt zw
 
 Damit hängt Bereich 2 an den Konten (Baustein E). Bereich 1 und 3 brauchen keine.
 
-## 3. Selbst singen, dann vergleichen (Vorschlag)
+## 3. Selbst singen, dann vergleichen (geht in den Lernweg)
 
-Für Dinge, die im Lernweg ohne Mikrofon offen sind (LERNWEG.md):
+Daniel am 27.11.2026: „Lernweg, nicht verpflichtend.“ Diese Übungen werden freiwillige Stationen im Lernweg, nicht Teil des Übe-Teils. Weiter geplant wird in LERNWEG.md. Der ursprüngliche Vorschlag zum Nachlesen:
 
 - **Ziffern singen** (Stufen singen, Etappe 5): Die App gibt die 1 und zeigt eine Ziffer oder eine kurze Folge. Du singst, dann tippst du und hörst die Lösung.
 - **Intervalle singen** (Etappe 7): Die App spielt den ersten Ton und nennt das Intervall, eventuell mit dem Merklied. Du singst den zweiten Ton, dann hörst du ihn.
 - **Einsatzton finden** (Etappe 9): Die App spielt den Akkord, du singst deinen Anfangston, dann hörst du ihn.
 
-Höchstens eine eigene Einschätzung („getroffen“, „daneben“), keine Punkte. Später kann das Mikrofon prüfen (Phase 5). Ob das in den Übe-Teil gehört, als freiwillige Station in den Lernweg oder gar nicht, ist offen (Frage 7).
+Höchstens eine eigene Einschätzung („getroffen“, „daneben“), keine Punkte. Später kann das Mikrofon prüfen (Phase 5).
 
 ## Fragen an Daniel
 
-Beantwortet am 27.11.2026: 1 (Übungen), 3 (Ort der Lieder), 4 (Lieder der Woche) und die Reihenfolge aus 5. Die Antworten stehen in ENTSCHEIDUNGEN.md.
+Beantwortet am 27.11.2026: Fragen 1 bis 4, 6, 7 und 8 und ein Teil von 5. Die Antworten stehen in ENTSCHEIDUNGEN.md.
 
 Noch offen:
 
-- **Frage 2, Ablauf:** Soll es den kurzen Ablauf „Einsingen zu Hause“ geben, und eventuell „Nach dem Singen“?
-- **Frage 5, Lieder übertragen:** Sollen zuerst alle PDFs zum Ansehen da sein (Stufe 1), bevor Lied für Lied übertragen wird? Gibt es Lieder mit eigener Klavierstimme, Solo oder geteilten Stimmen, die beim Übertragen besonders zu beachten sind?
-- **Frage 6, Hinweise:** Sollen Sänger Hinweise der Dirigenten sehen, alle oder nur eigens für Sänger geschriebene?
-- **Frage 7, Bereich 3:** In den Übe-Teil, in den Lernweg oder weglassen?
-- **Frage 8, Probestück:** Passen Form und Ton von „Vom Summen ins a“? Davon hängt ab, wie die übrigen 17 Übungen geschrieben werden.
+- **Frage 5, Lieder ansehen:** Sollen zuerst alle PDFs zum Ansehen da sein (Stufe 1), bevor Lied für Lied übertragen wird?
 - **Frage 9, Lieder der Woche auswählen:** Passt eine kleine Seite in der Sänger-App, auf der sich Dirigenten anmelden und die Lieder auswählen? Oder hast du dir das anders vorgestellt?
+- **Frage 10, Klavier, Solo, geteilte Stimmen:** Passt der Vorschlag oben unter „Die Noten: vom PDF zum Klang“?
