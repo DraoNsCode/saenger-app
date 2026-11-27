@@ -287,6 +287,13 @@ Antworten auf Claudes Fragen:
 - **Lieder:** Daniel: „Lieder aus dem Repertoire. Nur pdf, liegen und werden hinzugefügt unter“ dem privaten Speicher „noten“ im Supabase-Projekt der Dirigenten-App.
 - **Sichtbarkeit:** Die Noten „dürfen nicht öffentlich sein“.
 - **Quellen der Stimmbildung:** Daniel: „Steinbruch kann genutzt werden, tatsächliche Übungen der Dirigenten-App können genutzt werden und neue Übungen erstellt werden. Prüfe und setze um, was sinnvoll ist.“ Gemeint sind die Repositories „chor-uebungen“ und „dirigenten-app-uebungen“.
-- **Lieder der Woche** (Claudes Frage, ob die Sänger-App zeigen soll, was diese Woche dran ist): Daniel: „Interessant, wobei kann auch extra eingestellt werden.“ Wie „extra eingestellt“ gemeint ist, ist offen (UEBEN.md, Frage 4).
+- **Lieder der Woche** (Claudes Frage, ob die Sänger-App zeigen soll, was diese Woche dran ist): Daniel: „Interessant, wobei kann auch extra eingestellt werden.“ Wie „extra eingestellt“ gemeint ist, hat Daniel am 27.11.2026 geklärt (siehe unten).
 
 Claudes Vorschlag zum Inhalt steht in [UEBEN.md](UEBEN.md).
+
+Antworten auf den Vorschlag in UEBEN.md (27.11.2026):
+
+- **Stimmbildung:** Auf die Frage, ob die Themen und Übungen in Bereich 1 passen und ob Lippenflattern und Strohhalm für zu Hause hineinsollen: „ja“. Die Liste in UEBEN.md, Bereich 1, gilt damit als Grundlage, Lippenflattern und Strohhalm gehören dazu. Die Texte der einzelnen Übungen sind noch nicht geschrieben und bleiben Vorschlag, bis Daniel sie prüft.
+- **Ort der Lieder:** Auf die Frage, ob die Lieder in einem eigenen Supabase-Projekt der Sänger-App liegen sollen, mit einer Kopie aus dem Projekt der Dirigenten-App: „ja“. Das ist Weg A in UEBEN.md. Die Konten der Sänger (Baustein E) liegen damit ebenfalls in diesem eigenen Projekt, nicht im Projekt der Dirigenten-App.
+- **Lieder der Woche:** Sie werden „von den Dirigenten getrennt von der Dirigenten-App für die Sänger-App ausgewählt“, also nicht aus dem Wochenplan der Dirigenten-App übernommen. Wo und wie die Dirigenten sie auswählen, ist offen.
+- **Reihenfolge beim Übertragen:** Zu Claudes Vorschlag, zuerst die Lieder zu übertragen, die in der Dirigenten-App „in Arbeit“ sind, und die der nächsten Wochen, danach die übrigen nach Bedarf: „ok“.

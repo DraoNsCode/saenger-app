@@ -23,7 +23,7 @@ Daniel testet die ganze Zeit mit. Was fertig und geprüft ist, geht mit Daniels 
 1. **Je Etappe (3 bis 11, Themen in LERNWEG.md):** Claude schlägt Übungsarten und Stationen vor (nötig, freiwillig, Spätblüher, Abschluss), mit kurzen Erklärungstexten. Daniel entscheidet. Claude setzt die Etappe spielbar um, mit Tests und dem Prüfblick eines Sängers ohne Notenkenntnis. Während Daniel testet, bereitet Claude die nächste Etappe vor. Muster sind die Etappen 1 und 2.
 2. **Etappe 7 mit Merkliedern (H):** Welche Liedanfänge aus dem Chorliederbuch zu welchem Intervall gehören, entscheidet Daniel. Die Noten kommen mit seinem Skill „noten-uebertragen“ aus den PDFs.
 3. **Reihenfolge prüfen:** Wenn alle Etappen stehen, prüft Daniel die Reihenfolge (ENTSCHEIDUNGEN.md, 19.11.2026). Danach Spätblüher nachziehen.
-4. **Übe-Teil (D), nur Inhalt:** was zur Stimmbildung gehört und was „ein Lied aus dem Repertoire üben“ in der App heißt. Welche Lieder hinein und wie sie übertragen werden. Stand 26.11.2026: Vorschlag in [UEBEN.md](UEBEN.md), Daniel prüft ihn. Wo die Lieder für die Sänger liegen, hängt an den Konten (E).
+4. **Übe-Teil (D), nur Inhalt:** was zur Stimmbildung gehört und was „ein Lied aus dem Repertoire üben“ in der App heißt. Welche Lieder hinein und wie sie übertragen werden. Stand 27.11.2026: Vorschlag in [UEBEN.md](UEBEN.md). Übungsliste, Ort der Lieder (eigenes Projekt), Lieder der Woche und Reihenfolge beim Übertragen sind entschieden. Offen sind die Fragen 2 und 5 bis 9 in UEBEN.md. Ist das Probestück bestätigt, schreibt Claude die übrigen Übungen in derselben Form.
 5. **Nebenher:** Daniel testet die übrigen Stationen der Etappen 1 und 2.
 
 Die Notenzeile bleibt bis Phase 4 die Ansicht, in der neue Etappen getestet werden. Sie wird nicht weiterentwickelt.
@@ -68,8 +68,8 @@ Mikrofon als Zusatz (G), wenn Daniel es dann noch will. Lieder im Übe-Teil verv
 | A. Stationen: nötig, freiwillig, Spätblüher | umgesetzt am 19.11.2026; Aufteilung vorläufig angenommen, Daniel testet sie | – |
 | B. Weg als Klostergarten: Bild und Optik | Klostergarten mit Kapelle als Ziel entschieden. Stil gewählt: gemaltes Bilderbuch. Technik „ein KI-Bild je Bereich“ als Vorarbeit, Bereich 1 und 2 als Bildlauf (`geruest/garten-lauf.html`), „Optik passt grundsätzlich“, aber zu ähnlich. Noch nicht in der App | 3, 4 |
 | C. Etappen 3 bis 11 | Themen vorläufig bestätigt. Etappe 3 spielbar (26.11.2026), Daniel testet; Etappen 4 bis 11 als Vorschläge spielbar, nicht entschieden. Offen: Merklieder, Singen, die eigene Stimme im Satz | 1 |
-| D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Lieder aus dem Repertoire, nur PDF im Speicher der Dirigenten-App, nicht öffentlich (26.11.2026); Inhalt als Vorschlag in UEBEN.md, Daniel prüft | 1, 2, 5 |
-| E. Konten | Konten ja (26.11.2026); offen: Anmeldeart, ohne Konto nutzbar? | 2 |
+| D. Übe-Teil: Stimmbildung, Lieder aus dem Repertoire | dass es ihn gibt, ist entschieden; Lieder aus dem Repertoire, nur PDF im Speicher der Dirigenten-App, nicht öffentlich (26.11.2026); Übungsliste, eigenes Projekt, Lieder der Woche von den Dirigenten, Reihenfolge beim Übertragen (27.11.2026); Inhalt als Vorschlag in UEBEN.md, offene Fragen dort | 1, 2, 5 |
+| E. Konten | Konten ja (26.11.2026); eigenes Supabase-Projekt der Sänger-App (27.11.2026); offen: Anmeldeart, ohne Konto nutzbar?, wie Dirigenten die Lieder der Woche einstellen | 2 |
 | F. Abzeichen | vorläufig; Bronze, Silber und Gold hängen an Leicht, Mittel und Schwer und werden neu gefasst | 2, 3 |
 | G. Mikrofon | nur als Zusatz | 5 |
 | H. Merklieder für Intervalle aus dem Chorliederbuch | Idee bestätigt | 1 |
@@ -86,7 +86,7 @@ Ergebnis: kostenlos umsetzbar, mit diesen Bedingungen. Daniel hat am 26.11.2026 
   - E-Mail und Passwort ohne Bestätigungsmail. Es werden keine Mails verschickt, ein vergessenes Passwort setzt Daniel im Dashboard zurück.
   - Mit Google anmelden. Es werden keine Mails verschickt, aber nicht jeder hat oder will ein Google-Konto.
   - Code oder Link per E-Mail. Das braucht einen externen E-Mail-Dienst mit kostenlosem Kontingent, mehr Einrichtung, und Mails können im Spam landen.
-- **Befund vom 26.11.2026:** Im Projekt der Dirigenten-App darf jeder angemeldete Nutzer auch schreiben (Wochenplan, Stand der Lieder, Hinweise, Zettel-Noten). Sänger-Konten dort bräuchten deshalb Rollen und neue Regeln für die ganze Dirigenten-App. Die Lieder für den Übe-Teil liegen dort (Speicher „noten“). Wege A und B stehen in UEBEN.md unter „Privat“.
+- **Befund vom 26.11.2026:** Im Projekt der Dirigenten-App darf jeder angemeldete Nutzer auch schreiben (Wochenplan, Stand der Lieder, Hinweise, Zettel-Noten). Sänger-Konten dort bräuchten deshalb Rollen und neue Regeln für die ganze Dirigenten-App. Die Lieder für den Übe-Teil liegen dort (Speicher „noten“). Wege A und B stehen in UEBEN.md unter „Privat“. Daniel hat am 27.11.2026 Weg A gewählt: ein eigenes Projekt für die Sänger-App, mit einer Kopie der Liedliste und der PDFs.
 - **Offen:** welche Anmeldeart, und ob die App ohne Konto weiter nutzbar bleibt. Vor dem Einbau die Bedingungen von Supabase noch einmal prüfen, sie können sich seit dem 19.11.2026 geändert haben.
 
 ## Strukturen

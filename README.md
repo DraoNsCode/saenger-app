@@ -15,7 +15,7 @@ Eine Lern-App für die Sängerinnen und Sänger des Gemeindechors: Noten lesen, 
 
 Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
-**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt seit dem 26.11.2026 ein Vorschlag in UEBEN.md, Daniel prüft ihn und beantwortet die Fragen dort. Danach Phase 2 (Funktionen).
+**Nächster Schritt:** Phase 1 des Plans in FAHRPLAN.md (von Daniel am 26.11.2026 bestätigt). Etappe 3 ist spielbar, Daniel testet sie. Etappen 4 bis 11 sind als Vorschläge spielbar, Daniel testet und entscheidet (Daniel war unterwegs und hat gesagt, nach dem Plan weiterzumachen). Damit sind alle elf Etappen spielbar. Offen in Phase 1: Daniels Entscheidungen zu den Etappen 4 bis 11, die Reihenfolge der Etappen, die Merklieder (Etappe 7), Stufen singen (ohne Mikrofon nicht prüfbar), die eigene Stimme im Satz (Etappe 9) und der Inhalt des Übe-Teils (Baustein D). Für den Übe-Teil liegt ein Vorschlag in UEBEN.md. Ein Teil ist am 27.11.2026 entschieden, offen sind die Fragen 2 und 5 bis 9 dort, vor allem das Probestück (Frage 8). Danach Phase 2 (Funktionen).
 
 Umgesetzt:
 
@@ -55,7 +55,8 @@ Entschieden, aber noch nicht umgesetzt:
 - Ein Thema lässt sich erst gezielt üben, wenn seine nötigen Stationen geschafft sind (Claudes Wahl, ENTSCHEIDUNGEN.md). Der Reiter „Themen“ zeigt alle Themen, gesperrte sichtbar. Heute sind dort alle fertigen Themen sofort frei.
 - Üben außerhalb des Weges zählt für den Garten. Heute zählen Runden im Reiter „Themen“ nicht für die Stationen.
 - Gezielt üben nach Richtung 3: Ausbau (der Fortschritt eines Themas steigt nur) und Pflege (die App stößt Wiederholungen an, mit kleinen Zeichen im Garten). Heute gibt es weder Fortschritt je Thema noch Pflege.
-- Konten (26.11.2026). Offen: Anmeldeart und ob die App ohne Konto nutzbar bleibt.
+- Konten (26.11.2026), in einem eigenen Supabase-Projekt der Sänger-App (27.11.2026). Offen: Anmeldeart und ob die App ohne Konto nutzbar bleibt.
+- Übe-Teil (Baustein D, 26. und 27.11.2026): Stimmbildung nach der Übungsliste in UEBEN.md, mit Lippenflattern und Strohhalm. Chorlieder aus dem Repertoire, nicht öffentlich, kopiert aus dem Projekt der Dirigenten-App. Lieder der Woche wählen die Dirigenten eigens für die Sänger-App aus. Übertragen wird zuerst, was „in Arbeit“ ist und bald dran ist. Heute ist der Übe-Teil noch leer.
 
 Vorarbeit für die Optik (Baustein B, nicht in der App):
 

@@ -11,7 +11,10 @@ Kurzfassung, maßgeblich ist ENTSCHEIDUNGEN.md:
 - Zuerst wird nur der Inhalt festgelegt (26.11.2026).
 - Die Lieder kommen aus dem Repertoire. Sie liegen nur als PDF vor, im privaten Speicher „noten“ der Dirigenten-App, und es kommen weitere dazu. Sie dürfen nicht öffentlich sein (26.11.2026).
 - Für die Stimmbildung dürfen der Steinbruch „chor-uebungen“ und die Übungen der Dirigenten-App genutzt werden. Neue Übungen dürfen dazukommen (26.11.2026).
-- Die Lieder der Woche findet Daniel interessant, „wobei kann auch extra eingestellt werden“ (26.11.2026). Wie das gemeint ist, ist offen (Frage 4 unten).
+- Die Lieder der Woche findet Daniel interessant (26.11.2026). Sie werden von den Dirigenten getrennt von der Dirigenten-App für die Sänger-App ausgewählt (27.11.2026). Wo und wie, ist offen.
+- Die Themen und Übungen in Bereich 1 passen, Lippenflattern und Strohhalm gehören dazu (27.11.2026). Die Texte der einzelnen Übungen sind noch zu schreiben.
+- Die Lieder liegen für die Sänger in einem eigenen Supabase-Projekt der Sänger-App, kopiert aus dem Projekt der Dirigenten-App (Weg A unten, 27.11.2026).
+- Übertragen wird zuerst, was in der Dirigenten-App „in Arbeit“ ist, und was in den nächsten Wochen dran ist, danach der Rest nach Bedarf (27.11.2026).
 
 ## Überblick
 
@@ -78,7 +81,7 @@ Quelle: **D** = Familie aus „dirigenten-app-uebungen“, **S** = Übung oder E
 | Lippenflattern | über fünf Töne, gleitend durch den Umfang | S (Entwurf) | ja |
 | Singen durch den Strohhalm | – | S (Entwurf) | ja |
 
-In der Dirigenten-App fehlt Lippenflattern, weil ungewohnt wirkende Übungen im Chor unseriös ankommen können (Notiz „grundlage-stimme-gehoer-haltung“ dort). Allein zu Hause fällt dieser Grund weg. Der Strohhalm braucht einen Strohhalm, dafür entlastet er die Stimme gut. Beide gehören nur hinein, wenn Daniel das will (Frage 1).
+In der Dirigenten-App fehlt Lippenflattern, weil ungewohnt wirkende Übungen im Chor unseriös ankommen können (Notiz „grundlage-stimme-gehoer-haltung“ dort). Allein zu Hause fällt dieser Grund weg. Der Strohhalm braucht einen Strohhalm, dafür entlastet er die Stimme gut. Daniel: Beide kommen hinein (27.11.2026).
 
 **Höhe und Tiefe**
 
@@ -218,7 +221,7 @@ Daraus vier Arten, ein Lied anzuhören. Man wählt sie frei, eine kurze Erkläru
 | Funktion | Inhalt | braucht ein übertragenes Lied? |
 | --- | --- | --- |
 | Liederliste | alle Lieder des Repertoires, Suche nach Nummer und Titel, deutsch und russisch, Kategorien; Kennzeichen, welche Lieder schon zum Anhören da sind | nein |
-| Lieder der Woche | oben in der Liste: was in der nächsten Probe und am Sonntag dran ist | nein |
+| Lieder der Woche | oben in der Liste: was in der nächsten Probe und am Sonntag dran ist, von den Dirigenten eigens für die Sänger-App ausgewählt | nein |
 | Noten ansehen | das PDF des Liedes, wie im Buch | nein |
 | Anhören | die vier Arten oben, mit Tempo, Stelle wählen und Schleife | ja |
 | Einsatzton | Akkord und eigener Anfangston, auch mitten im Lied | ja |
@@ -241,7 +244,7 @@ Ansehen geht sofort, Anhören erst nach dem Übertragen. Deshalb zwei Stufen:
 
 Was die Übertragung für die App enthalten muss: die vier Stimmen getrennt erkennbar (auch wenn zwei auf einem System stehen), den Text der Strophen, Wiederholungen und Klammern, die Tonart und das Tempo.
 
-Bei 159 Liedern ist Stufe 2 der größte Aufwand. Vorschlag für die Reihenfolge: zuerst die Lieder „in Arbeit“ und die der nächsten Wochen, danach die übrigen nach Bedarf (Frage 5). Laut Fahrplan werden die Lieder in Phase 5 vervollständigt.
+Bei 159 Liedern ist Stufe 2 der größte Aufwand. Reihenfolge, von Daniel bestätigt (27.11.2026): zuerst die Lieder „in Arbeit“ und die der nächsten Wochen, danach die übrigen nach Bedarf. Laut Fahrplan werden die Lieder in Phase 5 vervollständigt.
 
 Für Klang und Notenbild gibt es mehrere technische Wege. Gewählt wird in Phase 2, nichts wird ohne Daniels Zustimmung eingebaut:
 
@@ -257,10 +260,12 @@ Befund vom 26.11.2026: Im Supabase-Projekt der Dirigenten-App darf jeder angemel
 
 Zwei Wege:
 
-- **A, eigenes Projekt für die Sänger-App** (wie in FAHRPLAN.md für die Konten vorgeschlagen). Der zweite kostenlose Platz ist frei, heute gibt es nur das Projekt der Dirigenten-App. Ein Ablauf auf GitHub kopiert die Liedliste und die PDFs, später die MusicXML-Dateien und auf Wunsch die Lieder der Woche, nur lesend aus dem Projekt der Dirigenten-App. Das geschieht etwa einmal täglich oder auf Knopfdruck. Die Dirigenten-App bleibt unberührt.
+- **A, eigenes Projekt für die Sänger-App** (wie in FAHRPLAN.md für die Konten vorgeschlagen). Der zweite kostenlose Platz ist frei, heute gibt es nur das Projekt der Dirigenten-App. Ein Ablauf auf GitHub kopiert die Liedliste und die PDFs, nur lesend aus dem Projekt der Dirigenten-App. Die MusicXML-Dateien der übertragenen Lieder kommen direkt in das Projekt der Sänger-App. Die Lieder der Woche werden nicht kopiert, die Dirigenten wählen sie eigens aus. Das geschieht etwa einmal täglich oder auf Knopfdruck. Die Dirigenten-App bleibt unberührt.
 - **B, dasselbe Projekt mit Rollen** (Dirigent und Sänger). Das spart die Kopie, aber jede Regel der Dirigenten-App müsste umgeschrieben werden. Ein Fehler dort träfe die Dirigenten-App.
 
-Claude hält A für den sichereren Weg. Entschieden wird mit Baustein E (Frage 3).
+Daniel hat Weg A gewählt (27.11.2026). Die Konten der Sänger liegen damit auch im eigenen Projekt.
+
+Weil die Dirigenten dort die Lieder der Woche auswählen, braucht das Projekt zwei Rollen: Sänger lesen, Dirigenten dürfen zusätzlich die Lieder der Woche einstellen. Vorschlag: Die Dirigenten melden sich in der Sänger-App an und sehen dann eine kleine Seite „Lieder der Woche“: Woche wählen, Lieder aus der Liste antippen. Das ist eine eigene Anmeldung, getrennt von der Dirigenten-App (Frage 9).
 
 Damit hängt Bereich 2 an den Konten (Baustein E). Bereich 1 und 3 brauchen keine.
 
@@ -276,11 +281,13 @@ Höchstens eine eigene Einschätzung („getroffen“, „daneben“), keine Pun
 
 ## Fragen an Daniel
 
-1. **Übungen:** Passen die Themen und Übungen in Bereich 1? Sollen Lippenflattern und Strohhalm hinein? Fehlt etwas, das du im Chor oder mit dem Gesangslehrer machst?
-2. **Ablauf:** Soll es den kurzen Ablauf „Einsingen zu Hause“ geben, und eventuell „Nach dem Singen“?
-3. **Ort der Lieder:** Weg A (eigenes Projekt mit Kopie) oder B (Rollen im Projekt der Dirigenten-App)?
-4. **Lieder der Woche:** Wie meinst du „kann auch extra eingestellt werden“? Mögliche Lesarten: (a) Der Sänger schaltet die Anzeige selbst ein oder aus. (b) Die Lieder der Woche werden für die Sänger-App eigens eingestellt, nicht aus dem Wochenplan der Dirigenten-App übernommen. (c) beides.
-5. **Lieder übertragen:** Erst alle PDFs ansehen (Stufe 1), dann Lied für Lied übertragen? Mit welchen Liedern anfangen? Gibt es Lieder mit eigener Klavierstimme, Solo oder geteilten Stimmen, die beim Übertragen besonders zu beachten sind?
-6. **Hinweise:** Sollen Sänger Hinweise der Dirigenten sehen, alle oder nur eigens für Sänger geschriebene?
-7. **Bereich 3:** In den Übe-Teil, in den Lernweg oder weglassen?
-8. **Probestück:** Passen Form und Ton von „Vom Summen ins a“?
+Beantwortet am 27.11.2026: 1 (Übungen), 3 (Ort der Lieder), 4 (Lieder der Woche) und die Reihenfolge aus 5. Die Antworten stehen in ENTSCHEIDUNGEN.md.
+
+Noch offen:
+
+- **Frage 2, Ablauf:** Soll es den kurzen Ablauf „Einsingen zu Hause“ geben, und eventuell „Nach dem Singen“?
+- **Frage 5, Lieder übertragen:** Sollen zuerst alle PDFs zum Ansehen da sein (Stufe 1), bevor Lied für Lied übertragen wird? Gibt es Lieder mit eigener Klavierstimme, Solo oder geteilten Stimmen, die beim Übertragen besonders zu beachten sind?
+- **Frage 6, Hinweise:** Sollen Sänger Hinweise der Dirigenten sehen, alle oder nur eigens für Sänger geschriebene?
+- **Frage 7, Bereich 3:** In den Übe-Teil, in den Lernweg oder weglassen?
+- **Frage 8, Probestück:** Passen Form und Ton von „Vom Summen ins a“? Davon hängt ab, wie die übrigen 17 Übungen geschrieben werden.
+- **Frage 9, Lieder der Woche auswählen:** Passt eine kleine Seite in der Sänger-App, auf der sich Dirigenten anmelden und die Lieder auswählen? Oder hast du dir das anders vorgestellt?
