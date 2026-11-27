@@ -8,7 +8,7 @@ import { starteRunde } from './runde.js';
 import { zeigeWeg } from './views/weg.js';
 import { zeigeThemen, zeigeThema } from './views/themen.js';
 import { zeigeAbzeichen } from './views/abzeichen.js';
-import { zeigeUeben } from './views/ueben.js';
+import { zeigeUeben, seitenTitel } from './views/ueben.js';
 import { zeigeEinstellungen, zeigeStart } from './views/einstellungen.js';
 
 const inhalt = document.getElementById('inhalt');
@@ -67,8 +67,8 @@ function zeige() {
       zeigeAbzeichen(inhalt);
       break;
     case 'ueben':
-      seite('Üben', 'ueben');
-      zeigeUeben(inhalt);
+      seite(seitenTitel(a, b) || 'Üben', 'ueben');
+      aufraeumen = zeigeUeben(inhalt, a, b) || null;
       break;
     case 'einstellungen':
       seite('Einstellungen', 'weg');

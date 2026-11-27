@@ -1,6 +1,8 @@
 # Stimmbildung: Texte für den Übe-Teil (Vorschlag)
 
-Stand 27.11.2026, Baustein D. Vorschlag von Claude. Festgelegt sind nur die Übungsliste (UEBEN.md, Bereich 1), die Form des Probestücks „Vom Summen ins a“ und die beiden Abläufe, siehe [ENTSCHEIDUNGEN.md](../ENTSCHEIDUNGEN.md), Abschnitt „Übe-Teil“. Die Texte unten prüft Daniel. Umgesetzt wird in Phase 2.
+Stand 27.11.2026, Baustein D. Vorschlag von Claude. Festgelegt sind nur die Übungsliste (UEBEN.md, Bereich 1), die Form des Probestücks „Vom Summen ins a“ und die beiden Abläufe, siehe [ENTSCHEIDUNGEN.md](../ENTSCHEIDUNGEN.md), Abschnitt „Übe-Teil“. Die Texte unten prüft Daniel.
+
+**Diese Datei wird erzeugt** aus `js/ueben/stimmbildung.js` (`node pruefung/stimmbildung-md.mjs`). Änderungen dort vornehmen, nicht hier. In der App stehen die Übungen unter „Üben“, „Besser singen“.
 
 ## Für alle Übungen
 
@@ -150,6 +152,8 @@ w: sch sch sch
 
 *Für die App, Varianten:* „p – t – k“ Viertel = 100. „ha auf einem Ton“: ein Ton zwischen es′ und g′, Viertel = 92.
 
+*Noten zu „p – t – k“:*
+
 ```abc
 X:1
 M:3/4
@@ -160,6 +164,8 @@ K:C clef=perc stafflines=1
 w: p t k
 ```
 
+*Noten zu „Kurz – kurz – lang“:*
+
 ```abc
 X:1
 M:4/4
@@ -169,6 +175,8 @@ K:C clef=perc stafflines=1
 |: B B B2 :|
 w: sch sch sch
 ```
+
+*Noten zu „„ha“ auf einem Ton“:*
 
 ```abc
 X:1
@@ -235,6 +243,20 @@ w: mm _ _ _ a
 - **Länger:** neun Töne, bis zur 5 hinauf und wieder zurück. Das „a“ kommt erst auf dem letzten Ton.
 
 *Für die App, Varianten:* „Länger“: Tonarten C bis E.
+
+*Noten zu „Mit „ng““:*
+
+```abc
+X:1
+M:4/4
+L:1/4
+Q:1/4=66
+K:C
+(C D E D | C4) |]
+w: ng _ _ _ a
+```
+
+*Noten zu „Länger“:*
 
 ```abc
 X:1
@@ -353,6 +375,8 @@ w: nu _ _ _ _
 
 *Für die App, Varianten:* „Die ganze Tonleiter abwärts“ von der oberen 1, Tonarten C bis D.
 
+*Noten zu „Abwärts gleiten“:*
+
 ```abc
 X:1
 M:4/4
@@ -362,6 +386,8 @@ K:C
 (G2 C2) |]
 w: u _
 ```
+
+*Noten zu „Die ganze Tonleiter abwärts“:*
 
 ```abc
 X:1
@@ -390,8 +416,8 @@ w: no _ _ _ _ _ _ _
 **Typischer Fehler:** An dieser Stelle wird es lauter, und die Stimme bricht. **Was hilft:** Dort nicht lauter, sondern leichter werden. Oben kehrst du um, bevor es eng wird.
 
 **Varianten:**
-- **Mit flatternden Lippen** statt „ng“.
-- **Nur abwärts,** wie ein langer Seufzer.
+- **Mit flatternden Lippen:** Gleite mit flatternden Lippen statt auf „ng“.
+- **Nur abwärts:** Gleite nur von oben nach unten, wie ein langer Seufzer.
 - **Kleine Sirenen:** nur ein Stück hinauf und zurück. Die App spielt jedes Mal einen etwas höheren Anfangston, mit „Stopp“ hörst du auf.
 
 *Für die App, Varianten:* „Kleine Sirenen“: Anfangston halbtonweise aufwärts, C bis F.
@@ -435,6 +461,8 @@ w: u o a e i
 
 *Für die App, Varianten:* „Auf fünf Tönen“: 1 – 2 – 3 – 2 – 1, Tonarten C bis F, mit Zuhör-Durchgang wie bei den Mustern.
 
+*Noten zu „Mit „n“ davor“:*
+
 ```abc
 X:1
 M:4/4
@@ -445,6 +473,8 @@ F2 F2 | F2 F2 | F4 |]
 w: nu no na ne ni
 ```
 
+*Noten zu „Vom „u“ zum „i““:*
+
 ```abc
 X:1
 M:4/4
@@ -454,6 +484,8 @@ K:C
 (F2 F2 | F4) |]
 w: u i u
 ```
+
+*Noten zu „Auf fünf Tönen“:*
 
 ```abc
 X:1
@@ -500,6 +532,8 @@ w: no no
 
 *Für die App, Varianten:* „Eine Zeile, eine Farbe“ und „Eine Melodie, zwei Farben“: Tonarten C bis E, mit Zuhör-Durchgang wie bei den Mustern.
 
+*Noten zu „Fließend“:*
+
 ```abc
 X:1
 M:4/4
@@ -510,6 +544,8 @@ K:C
 w: no _
 ```
 
+*Noten zu „Eine Zeile, eine Farbe“:*
+
 ```abc
 X:1
 M:4/4
@@ -519,6 +555,8 @@ K:C
 "^hell"G F E D | C4 || "^dunkel"G F E D | C4 |]
 w: no no no no no no no no no no
 ```
+
+*Noten zu „Eine Melodie, zwei Farben“:*
 
 ```abc
 X:1
@@ -570,6 +608,8 @@ w: ha ha ha ha ha
 
 *Für die App, Varianten:* „Bis zur oberen 1“: Tonarten C bis E. „Lauf“: Viertel = 100, Tonarten C bis G.
 
+*Noten zu „Erst kurz, dann verbunden“:*
+
 ```abc
 X:1
 M:4/4
@@ -580,6 +620,8 @@ K:C
 w: ha ha ha ha ha ja _ _ _ _
 ```
 
+*Noten zu „Bis zur oberen 1“:*
+
 ```abc
 X:1
 M:4/4
@@ -589,6 +631,8 @@ K:C
 .C.E.G.c .G.E.C2 |]
 w: ha ha ha ha ha ha ha
 ```
+
+*Noten zu „Lauf“:*
 
 ```abc
 X:1
@@ -640,6 +684,8 @@ w: no _ no _
 
 *Für die App, Varianten:* „Aufwärts leiser, abwärts lauter“: Viertel = 80, Tonarten C bis E, mit Zuhör-Durchgang wie bei den Mustern.
 
+*Noten zu „In einem Atem“:*
+
 ```abc
 X:1
 M:4/4
@@ -649,6 +695,8 @@ K:C
 !p!!<(!F2-F2- | !<)!!f!!>(!F2-F2- | !>)!!p!F4 |]
 w: no _ _ _ _
 ```
+
+*Noten zu „Aufwärts leiser, abwärts lauter“:*
 
 ```abc
 X:1
@@ -698,6 +746,8 @@ C,4- | C,4- | C,4- | C,4- | C,4 |]
 **Varianten:**
 - **Langer Ton auf der 5:** Die App spielt zuerst kurz deine 1 und hält dann einen höheren langen Ton, die 5. Du singst dieselbe Tonleiter. Bei der 4 klingen die beiden Töne unruhig zusammen. Bleib trotzdem genau auf deinem Ton.
 
+*Noten zu „Langer Ton auf der 5“:*
+
 ```abc
 X:1
 M:4/4
@@ -745,9 +795,11 @@ w: Lob und Dank sei Gott
 
 **Varianten:**
 - **Fünf Töne abwärts:** Die App spielt fünf Töne abwärts vor, du singst die Zeile darauf, eine Silbe je Ton. Die Konsonanten bleiben so deutlich, auch wenn sich der Ton bewegt.
+- **Leise, aber deutlich:** Dieselbe Zeile leise. Die Vokale werden leise, die Konsonanten nicht.
 
 *Für die App, Varianten:* „Fünf Töne abwärts“: 5 – 4 – 3 – 2 – 1, Tonarten C bis E, mit Zuhör-Durchgang wie bei den Mustern.
-- **Leise, aber deutlich:** Dieselbe Zeile leise. Die Vokale werden leise, die Konsonanten nicht.
+
+*Noten zu „Fünf Töne abwärts“:*
 
 ```abc
 X:1
@@ -758,6 +810,8 @@ K:C
 G F E D | C2 "^t"z2 |]
 w: Lob und Dank sei Gott
 ```
+
+*Noten zu „Leise, aber deutlich“:*
 
 ```abc
 X:1
@@ -811,11 +865,11 @@ w: m _ _ _ _ _ _ _
 
 ## Erklärungen
 
-Kurze Texte zum Lesen. Grafiken gibt es im Steinbruch zu „Atem“, „Brust- und Kopfstimme“ und „Aufrecht“. Ob sie übernommen werden, zeigt sich in Phase 2.
+Kurze Texte zum Lesen. Grafiken gibt es im Steinbruch zu „Atem“, „Brust- und Kopfstimme“ und „Aufrecht“. Sie sind noch nicht übernommen.
 
 ### Atem und Stütze
 
-*Für die App: Quelle S „Zwerchfell und Stütze“, D Themenseite „Atem“ · passt zu: In die Flanken atmen, Langes Ausatmen*
+*Für die App: Quelle S „Zwerchfell und Stütze“, D Themenseite „Atem“ · passt zu: In die Flanken atmen, Langes Ausatmen auf „s“*
 
 **Kurz:** Singen ist langsames Ausatmen. Stütze heißt, die Weite vom Einatmen zu halten und die Luft langsam abzugeben, nicht, sie herauszudrücken.
 
@@ -909,26 +963,27 @@ Konsonanten kommen kurz vor dem Schlag, damit der Vokal pünktlich ist (Übung �
 
 ## Abläufe
 
-Daniel: Beide Abläufe soll es geben (27.11.2026). Wie sie aufgebaut sind, ist Vorschlag.
+Daniel: Beide Abläufe soll es geben (27.11.2026). Wie sie aufgebaut sind, ist Vorschlag. Je Schritt wählt die App von Mal zu Mal die nächste Möglichkeit. Bei Übungen mit Begleitung erscheint „Weiter“ nach zwei Durchgängen, bei Übungen ohne Begleitung gleich. Den Strohhalm wählt die App nur, wenn in den Einstellungen „Ich habe einen Strohhalm“ an ist.
 
 ### Einsingen zu Hause
 
 **Kurz:** Etwa fünf Minuten. Die App führt dich durch fünf Übungen. Mit „Weiter“ kommst du zur nächsten.
 
-| Schritt | Übung | wechselt von Mal zu Mal zwischen |
-| --- | --- | --- |
-| 1 | Körper | Nacken und Schultern lösen · Strecken und gähnen · Ausschütteln |
-| 2 | Atem | In die Flanken atmen · Langes Ausatmen auf „s“ · Kurze Stöße |
-| 3 | Stimme in Gang bringen | Vom Summen ins „a“ · Lippenflattern · Singen durch den Strohhalm |
-| 4 | Von oben | Fünf Töne abwärts, abwechselnd auf „nu“, „no“ und „na“ |
-| 5 | Klang oder Beweglichkeit | Vokale auf einem Ton · Kurze Töne auf „ha“ |
-
-Jeder Schritt zeigt eine Übung oder eine ihrer Varianten wie sonst auch, nur ohne die Liste der übrigen Varianten. Bei Übungen mit Begleitung reichen zwei bis drei Durchgänge, danach erscheint „Weiter“. Bei Übungen ohne Begleitung ist „Weiter“ gleich da, du tippst darauf, wenn du fertig bist. Der Strohhalm wird nur gewählt, wenn man in den Einstellungen angibt, dass man einen hat.
+| Schritt | Möglichkeiten, von Mal zu Mal die nächste |
+| --- | --- |
+| Körper | Nacken und Schultern lösen · Nacken und Schultern lösen: Strecken und gähnen · Nacken und Schultern lösen: Ausschütteln |
+| Atem | In die Flanken atmen · Langes Ausatmen auf „s“ · Kurze Stöße: sch – sch – sch |
+| Stimme in Gang bringen | Vom Summen ins „a“ · Lippenflattern · Singen durch den Strohhalm (nur mit Strohhalm) |
+| Von oben | Fünf Töne abwärts · Fünf Töne abwärts: Auf „no“ und „na“ |
+| Klang oder Beweglichkeit | Vokale auf einem Ton · Kurze Töne auf „ha“ |
 
 ### Nach dem Singen
 
 **Kurz:** Etwa drei Minuten, nach der Probe oder nach langem Singen.
 
-1. **Stimme abkühlen**, bis die Töne bei der Sprechstimme angekommen sind.
-2. **Wer einen Strohhalm hat:** ein bis zwei Minuten leise durch den Strohhalm gleiten, langsam von tief nach hoch und zurück.
-3. **Zum Schluss** ein Satz zum Lesen: „Sprich jetzt ruhig weiter, nicht flüsternd und nicht laut, und trink etwas.“
+| Schritt | Möglichkeiten, von Mal zu Mal die nächste |
+| --- | --- |
+| Stimme abkühlen | Stimme abkühlen |
+| Strohhalm | Singen durch den Strohhalm: Nach dem Singen (nur mit Strohhalm) |
+
+Zum Schluss: „Sprich jetzt ruhig weiter, nicht flüsternd und nicht laut, und trink etwas.“

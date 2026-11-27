@@ -5,7 +5,8 @@ export const TINTE = '#15233F';
 // Zeichnet ABC-Noten in ein Element. breite = Breite des Systems in abcjs-Einheiten.
 // Auf großen Bildschirmen bleibt die natürliche Größe, auf kleinen wird verkleinert.
 // rechts: Platz rechts vom System, etwa für „D.C. al Fine“ über der letzten Note
-export function zeichne(el, abc, { breite = 260, scale = 1.6, oben = 4, unten = 4, rechts = 8 } = {}) {
+// transponieren: Halbtöne für das Bild (abcjs visualTranspose), etwa im Übe-Teil
+export function zeichne(el, abc, { breite = 260, scale = 1.6, oben = 4, unten = 4, rechts = 8, transponieren = 0 } = {}) {
   el.innerHTML = '';
   const huelle = document.createElement('div');
   huelle.className = 'noten-huelle';
@@ -24,6 +25,7 @@ export function zeichne(el, abc, { breite = 260, scale = 1.6, oben = 4, unten = 
     paddingbottom: unten,
     paddingleft: 4,
     paddingright: rechts,
+    visualTranspose: transponieren,
   });
   const svg = ziel.querySelector('svg');
   if (svg) {

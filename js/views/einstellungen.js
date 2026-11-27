@@ -91,6 +91,17 @@ export function zeigeEinstellungen(wurzel) {
           'Klang testen'
         )
       ),
+      h('h2', { class: 'abschnitt-titel' }, 'Üben'),
+      h(
+        'label',
+        { class: 'schalter-zeile' },
+        (() => {
+          const box = h('input', { type: 'checkbox', checked: !!z.einstellungen.strohhalm });
+          box.addEventListener('change', () => aendere((s) => (s.einstellungen.strohhalm = box.checked)));
+          return box;
+        })(),
+        h('span', {}, 'Ich habe einen Strohhalm zum Üben. Dann kommt er im Ablauf „Einsingen zu Hause“ vor.')
+      ),
       h('h2', { class: 'abschnitt-titel' }, 'Fortschritt'),
       h('p', { class: 'unterzeile' }, 'Dein Fortschritt wird nur in diesem Browser auf diesem Gerät gespeichert.'),
       h(

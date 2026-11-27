@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright-core';
 import { UEBUNGEN } from '../js/uebungen/index.js';
 import { THEMEN, alleStationen } from '../js/lernweg.js';
+import { UEBUNGEN as SB_UEBUNGEN, ERKLAERUNGEN as SB_ERKLAERUNGEN } from '../js/ueben/stimmbildung.js';
 
 const WURZEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const AUSGABE = path.join(WURZEL, 'pruefung', 'ausgabe');
@@ -164,6 +165,54 @@ async function pruefeGeraet(browser, basis, geraet) {
       await bild(ansicht.replace('/', '-'));
     });
   }
+
+  // Übe-Teil „Besser singen“ (Baustein D): Übersicht, jede Übung (schnell: nur einige), Begleitung kurz anspielen,
+  // eine Variante, eine Erklärung, beide Abläufe und die Seite „Chorlieder üben“.
+  await schritt('ueben-singen', async () => {
+    await geheZu('#/ueben/singen');
+    await bild('ueben-singen');
+  });
+  const sbAuswahl = SCHNELL ? SB_UEBUNGEN.filter((u) => ['summen', 'stoesse', 'vokalreihe', 'langer-ton', 'nacken'].includes(u.id)) : SB_UEBUNGEN;
+  for (const u of sbAuswahl) {
+    await schritt(`ueben-${u.id}`, async () => {
+      await geheZu(`#/ueben/uebung/${u.id}`);
+      await bild(`ueben-${u.id}`);
+      const start = seite.locator('.sb-steuerung .knopf', { hasText: 'Start' });
+      if (await start.count()) {
+        await start.click();
+        await seite.waitForTimeout(1600);
+        await bild(`ueben-${u.id}-laeuft`);
+        await seite.locator('.sb-steuerung .knopf', { hasText: 'Stopp' }).click();
+      }
+      if (u.varianten?.length && (!SCHNELL || u.id === 'summen')) {
+        await seite.locator('.sb-varianten .chip').last().click();
+        await seite.waitForTimeout(150);
+        await bild(`ueben-${u.id}-variante`);
+      }
+    });
+  }
+  await schritt('ueben-erklaerung', async () => {
+    await geheZu(`#/ueben/erklaerung/${SB_ERKLAERUNGEN[0].id}`);
+    await bild('ueben-erklaerung');
+  });
+  for (const ablauf of ['einsingen', 'nachher']) {
+    await schritt(`ueben-ablauf-${ablauf}`, async () => {
+      await geheZu(`#/ueben/ablauf/${ablauf}`);
+      await bild(`ueben-ablauf-${ablauf}-1`);
+      // Weiter, solange der Knopf frei ist (Übungen ohne Begleitung); sonst Begleitung bis zwei Durchgänge nicht abwarten
+      for (let i = 0; i < 6; i++) {
+        const weiter = seite.locator('.ablauf-weiter .knopf.haupt:not([disabled])');
+        if (!(await weiter.count())) break;
+        await weiter.click();
+        await seite.waitForTimeout(150);
+      }
+      await bild(`ueben-ablauf-${ablauf}-weiter`);
+    });
+  }
+  await schritt('ueben-lieder', async () => {
+    await geheZu('#/ueben/lieder');
+    await bild('ueben-lieder');
+  });
 
   const erste = alleStationen()[0];
   await schritt(`station-${erste.id}`, async () => {

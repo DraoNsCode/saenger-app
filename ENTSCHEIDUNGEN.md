@@ -295,7 +295,7 @@ Antworten auf den Vorschlag in UEBEN.md (27.11.2026):
 
 - **Stimmbildung:** Auf die Frage, ob die Themen und Übungen in Bereich 1 passen und ob Lippenflattern und Strohhalm für zu Hause hineinsollen: „ja“. Die Liste in UEBEN.md, Bereich 1, gilt damit als Grundlage, Lippenflattern und Strohhalm gehören dazu. Die Texte der einzelnen Übungen sind noch nicht geschrieben und bleiben Vorschlag, bis Daniel sie prüft.
 - **Ort der Lieder:** Auf die Frage, ob die Lieder in einem eigenen Supabase-Projekt der Sänger-App liegen sollen, mit einer Kopie aus dem Projekt der Dirigenten-App: „ja“. Das ist Weg A in UEBEN.md. Die Konten der Sänger (Baustein E) liegen damit ebenfalls in diesem eigenen Projekt, nicht im Projekt der Dirigenten-App.
-- **Lieder der Woche:** Sie werden „von den Dirigenten getrennt von der Dirigenten-App für die Sänger-App ausgewählt“, also nicht aus dem Wochenplan der Dirigenten-App übernommen. Wo und wie die Dirigenten sie auswählen, ist offen.
+- **Lieder der Woche:** Sie werden „von den Dirigenten getrennt von der Dirigenten-App für die Sänger-App ausgewählt“, also nicht aus dem Wochenplan der Dirigenten-App übernommen. Wo und wie die Dirigenten sie auswählen, ist offen. (Am selben Tag zurückgestellt: Die Funktion bleibt vorerst ganz draußen, siehe „Umsetzung“.)
 - **Reihenfolge beim Übertragen:** Zu Claudes Vorschlag, zuerst die Lieder zu übertragen, die in der Dirigenten-App „in Arbeit“ sind, und die der nächsten Wochen, danach die übrigen nach Bedarf: „ok“.
 
 Weitere Antworten (27.11.2026, später), die Nummern sind die Fragen in UEBEN.md:
@@ -305,3 +305,9 @@ Weitere Antworten (27.11.2026, später), die Nummern sind die Fragen in UEBEN.md
 - **Hinweise der Dirigenten (Frage 6):** „Ich sehe aktuell keinen Einsatz dafür.“ Die Sänger-App zeigt vorerst keine Hinweise der Dirigenten.
 - **Selbst singen, dann vergleichen (Frage 7):** „Lernweg, nicht verpflichtend.“ Diese Übungen kommen nicht in den Übe-Teil, sondern als freiwillige Stationen in den Lernweg. In welche Etappen, ist Vorschlag (LERNWEG.md).
 - **Probestück (Frage 8):** Zu „Vom Summen ins a“: „passt“. Form und Ton gelten für die übrigen Übungen der Stimmbildung. Deren Texte bleiben Vorschlag, bis Daniel sie prüft.
+
+Umsetzung (27.11.2026):
+
+- Daniel: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst. Lass die Funktion mit dem Lied der Woche erst ganz raus.“
+- Die Lieder der Woche kommen vorerst nicht in die App.
+- Wie umgesetzt wird, hat Daniel Claude überlassen. Was Claude dabei gewählt hat, steht als Annahme in README.md unter „Stand“ und gilt nicht als Entscheidung. Daniel korrigiert, falls nötig.

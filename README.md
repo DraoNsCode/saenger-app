@@ -20,7 +20,8 @@ Der Stand steht nur hier. CLAUDE.md verweist darauf.
 
 Umgesetzt:
 
-- Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil (noch leer, Inhalt als Vorschlag in UEBEN.md) und Einstellungen
+- Startseite mit Stimmwahl, Leitfaden, Themen, Abzeichen, Übe-Teil und Einstellungen
+- Übe-Teil „Besser singen“ (27.11.2026): 18 Übungen mit Varianten, 7 Erklärungen, die Abläufe „Einsingen zu Hause“ und „Nach dem Singen“, Begleitung je Stimme, Einstellung „Ich habe einen Strohhalm“. Daten in `js/ueben/stimmbildung.js` (daraus wird `inhalt/stimmbildung.md` erzeugt), Begleitung in `js/ueben/spieler.js`, Ansichten in `js/views/ueben.js`. Die Texte sind Vorschlag, Daniel prüft sie und den Klang.
 - Etappen 1 (Das Notenbild) und 2 (Schlag und Takt) mit elf Übungsarten
 - Etappe 11 (Feinheiten im Rhythmus, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Synkopen“ und „Triolen und Sechzehntel“ (`js/uebungen/rhythmus-fein.js`).
 - Etappe 10 (Vorzeichen und Tonarten, 26.11.2026) als **Vorschlag, nicht entschieden**, mit „Kreuz und Be“ und „Die 1 finden“ (`js/uebungen/vorzeichen.js`).
@@ -43,6 +44,14 @@ Abgelöst, nicht weiterentwickeln:
 In Frage gestellt (nicht weiterentwickeln, bis das neue System steht):
 
 - Der Reiter „Themen“ in `js/views/themen.js` mit der Auswahl nach Leicht, Mittel und Schwer. Daniel hat für das gezielte Üben Richtung 3 aus GEZIELT-UEBEN.md gewählt (Ausbau und Pflege nebeneinander). Die Einzelheiten sind noch Vorschlag.
+
+Annahmen bei der Umsetzung des Übe-Teils (Daniel, 27.11.2026: „Setze jetzt alles so um, wie du es für am sinnvollsten hältst“). Claudes Wahl, keine Entscheidungen, Daniel korrigiert, falls nötig:
+
+- Tonräume der Begleitung: Frauen singen wie notiert, Männer eine Oktave tiefer. Sopran und Tenor gehen zwei Halbtöne weiter nach oben, Alt und Bass liegen zwei Halbtöne tiefer (`js/ueben/spieler.js`).
+- Bei Übungen auf einem Ton klingt der Ton leise als Orgelton weiter, die Klicks laufen mit. Bei „Gegen einen langen Ton“ liegt der lange Ton für Frauen eine Oktave unter ihrer 1, für Männer auf ihrer 1.
+- Das Tempo lässt sich vor dem Start in Zehnerschritten zwischen 60 und 150 Prozent ändern.
+- In den Abläufen erscheint „Weiter“ nach zwei mitgesungenen Durchgängen, bei Übungen ohne Begleitung gleich.
+- Keine Anzeige „zuletzt gemacht“ und kein Fortschritt im Übe-Teil.
 
 Vorläufig:
 

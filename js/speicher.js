@@ -15,6 +15,7 @@ function leer() {
     abzeichen: {}, // id -> Datum
     gesehen: {}, // Erklärungen, die schon gezeigt wurden
     einstellungen: { lautstaerke: 0.8 },
+    ueben: { ablauf: {} }, // Übe-Teil: wie oft jeder Ablauf gestartet wurde (für die Auswahl reihum)
   };
 }
 
